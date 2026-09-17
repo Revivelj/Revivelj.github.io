@@ -312,7 +312,9 @@
             <div class="overview-list">
 
 
-                <!-- ================= 项目汇总 ================= -->
+                <!-- =================================================
+                     项目汇总
+                ================================================== -->
 
                 <div class="overview-group">
 
@@ -425,7 +427,9 @@
                 </div>
 
 
-                <!-- ================= 竞赛汇总 ================= -->
+                <!-- =================================================
+                     竞赛汇总
+                ================================================== -->
 
                 <div class="overview-group">
 
@@ -440,7 +444,7 @@
                     </div>
 
 
-                    <a href="#competitions"
+                    <a href="#robocup-detail"
                        class="overview-item">
 
                         <div class="overview-item-index">
@@ -464,7 +468,7 @@
                     </a>
 
 
-                    <a href="#competitions"
+                    <a href="#robomaster-detail"
                        class="overview-item">
 
                         <div class="overview-item-index">
@@ -488,7 +492,7 @@
                     </a>
 
 
-                    <a href="#competitions"
+                    <a href="#mechanical-detail"
                        class="overview-item">
 
                         <div class="overview-item-index">
@@ -544,7 +548,7 @@
 
 
             <!-- =================================================
-                 四足机器人详情
+                 四足机器人项目
             ================================================== -->
 
             <article class="project-detail-block"
@@ -571,8 +575,6 @@
                     基于深度强化学习构建从仿真训练到实际机器人部署的运动控制流程。
                 </p>
 
-
-                <!-- 项目图片 -->
 
                 <div class="project-detail-image">
 
@@ -647,7 +649,7 @@
 
 
             <!-- =================================================
-                 无人机详情
+                 无人机项目
             ================================================== -->
 
             <article class="project-detail-block"
@@ -675,8 +677,6 @@
                     实现从目标搜索到抓取运输的完整任务流程。
                 </p>
 
-
-                <!-- 项目图片 -->
 
                 <div class="project-detail-image">
 
@@ -746,8 +746,6 @@
                 </div>
 
 
-                <!-- 核心公式 -->
-
                 <div class="project-formula-row">
 
                     <div class="mini-formula">
@@ -756,7 +754,7 @@
                             NMPC Objective
                         </span>
 
-                        $$
+                        $$ 
                         J =
                         \sum_{k=0}^{N-1}
                         \left\|x_k-x_k^{ref}\right\|_Q^2
@@ -816,7 +814,7 @@
 
 
             <!-- =================================================
-                 模型部署详情
+                 模型部署项目
             ================================================== -->
 
             <article class="project-detail-block"
@@ -843,8 +841,6 @@
                     开展模型转换、推理优化、性能测试与部署适配工作。
                 </p>
 
-
-                <!-- 项目图片 -->
 
                 <div class="project-detail-image">
 
@@ -919,7 +915,7 @@
 
 
             <!-- =================================================
-                 标定详情
+                 相机雷达标定项目
             ================================================== -->
 
             <article class="project-detail-block"
@@ -946,8 +942,6 @@
                     外参标定和多传感器数据融合方法。
                 </p>
 
-
-                <!-- 项目图片 -->
 
                 <div class="project-detail-image">
 
@@ -1023,7 +1017,7 @@
 
 
         <!-- =================================================
-             比赛经历
+             比赛经历详细介绍
         ================================================== -->
 
         <section class="competitions-section"
@@ -1050,13 +1044,22 @@
             <div class="competition-list">
 
 
-                <!-- ================= RoboCup ================= -->
+                <!-- =================================================
+                     RoboCup 2021
+                ================================================== -->
 
-                <article class="competition-card">
+                <article class="competition-card"
+                         id="robocup-detail">
 
-                    <div class="competition-icon">
-                        <i class="fas fa-futbol"></i>
+                    <div class="competition-image">
+
+                        <img
+                            src="assets/images/robocup2021.jpg"
+                            alt="RoboCup 2021"
+                        >
+
                     </div>
+
 
                     <div class="competition-main">
 
@@ -1076,16 +1079,66 @@
                             RoboCup 2021
                         </h3>
 
-                        <p>
-                            参与机器人足球相关竞赛，
-                            负责机器人系统调试、控制策略设计及比赛现场问题排查。
+                        <p class="competition-intro">
+                            参与机器人足球相关竞赛，围绕机器人自主运动、
+                            控制策略和比赛任务执行开展系统调试与工程实践。
                         </p>
+
+
+                        <div class="competition-detail-grid">
+
+                            <div>
+
+                                <h4>
+                                    比赛背景
+                                </h4>
+
+                                <p>
+                                    RoboCup 机器人足球竞赛要求机器人在动态环境中
+                                    完成自主定位、运动控制、目标识别和团队协作等任务，
+                                    对系统稳定性、实时性和现场调试能力具有较高要求。
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <h4>
+                                    主要工作
+                                </h4>
+
+                                <ul>
+
+                                    <li>
+                                        参与机器人运动控制与任务策略设计
+                                    </li>
+
+                                    <li>
+                                        负责机器人系统调试和运行状态检查
+                                    </li>
+
+                                    <li>
+                                        分析比赛过程中出现的控制与通信问题
+                                    </li>
+
+                                    <li>
+                                        配合团队完成赛前测试及现场问题排查
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
 
                         <div class="competition-tags">
 
                             <span>Robot Control</span>
-                            <span>Teamwork</span>
                             <span>System Debugging</span>
+                            <span>Teamwork</span>
+                            <span>Competition Practice</span>
 
                         </div>
 
@@ -1094,13 +1147,22 @@
                 </article>
 
 
-                <!-- ================= RoboMaster ================= -->
+                <!-- =================================================
+                     RoboMaster 2022
+                ================================================== -->
 
-                <article class="competition-card">
+                <article class="competition-card"
+                         id="robomaster-detail">
 
-                    <div class="competition-icon">
-                        <i class="fas fa-robot"></i>
+                    <div class="competition-image">
+
+                        <img
+                            src="assets/images/robomaster2022.jpg"
+                            alt="RoboMaster 2022"
+                        >
+
                     </div>
+
 
                     <div class="competition-main">
 
@@ -1120,15 +1182,65 @@
                             RoboMaster 2022
                         </h3>
 
-                        <p>
-                            参与 RoboMaster 机器人竞赛，
-                            主要涉及机器人控制、系统集成、机械结构与电控协同调试。
+                        <p class="competition-intro">
+                            参与 RoboMaster 机器人竞赛，围绕机器人控制、
+                            机械结构、电控系统与整机协同开展工程实践。
                         </p>
+
+
+                        <div class="competition-detail-grid">
+
+                            <div>
+
+                                <h4>
+                                    比赛背景
+                                </h4>
+
+                                <p>
+                                    RoboMaster 是面向机器人系统综合能力的工程类竞赛，
+                                    需要团队完成机械结构设计、电控系统开发、
+                                    运动控制、传感器接入和整机联调等工作。
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <h4>
+                                    主要工作
+                                </h4>
+
+                                <ul>
+
+                                    <li>
+                                        参与机器人控制系统与底层功能调试
+                                    </li>
+
+                                    <li>
+                                        配合完成机械结构和电控系统联调
+                                    </li>
+
+                                    <li>
+                                        开展传感器、执行机构及通信模块测试
+                                    </li>
+
+                                    <li>
+                                        参与整机运行测试和现场故障排查
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
 
                         <div class="competition-tags">
 
                             <span>Robot System</span>
-                            <span>Control</span>
+                            <span>Motion Control</span>
+                            <span>Electrical Debugging</span>
                             <span>Engineering</span>
 
                         </div>
@@ -1138,13 +1250,22 @@
                 </article>
 
 
-                <!-- ================= Mechanical Design ================= -->
+                <!-- =================================================
+                     全国大学生机械创新设计大赛
+                ================================================== -->
 
-                <article class="competition-card">
+                <article class="competition-card"
+                         id="mechanical-detail">
 
-                    <div class="competition-icon">
-                        <i class="fas fa-gears"></i>
+                    <div class="competition-image">
+
+                        <img
+                            src="assets/images/mechanical-design.jpg"
+                            alt="全国大学生机械创新设计大赛"
+                        >
+
                     </div>
+
 
                     <div class="competition-main">
 
@@ -1164,16 +1285,66 @@
                             全国大学生机械创新设计大赛
                         </h3>
 
-                        <p>
-                            参与机械创新设计类竞赛，
-                            负责方案设计、机械结构分析、功能实现与作品展示。
+                        <p class="competition-intro">
+                            参与机械创新设计类竞赛，围绕机械结构设计、
+                            功能实现和作品原型制作开展综合工程实践。
                         </p>
+
+
+                        <div class="competition-detail-grid">
+
+                            <div>
+
+                                <h4>
+                                    比赛背景
+                                </h4>
+
+                                <p>
+                                    机械创新设计竞赛强调机械系统的创新性、
+                                    实用性与工程可实现性，需要将设计构思、
+                                    结构分析和实体原型制作结合起来。
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <h4>
+                                    主要工作
+                                </h4>
+
+                                <ul>
+
+                                    <li>
+                                        参与产品方案设计与功能需求分析
+                                    </li>
+
+                                    <li>
+                                        进行机械结构设计和空间布局分析
+                                    </li>
+
+                                    <li>
+                                        参与零部件加工、装配和原型调试
+                                    </li>
+
+                                    <li>
+                                        完成功能测试、作品优化与展示准备
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
 
                         <div class="competition-tags">
 
                             <span>Mechanical Design</span>
-                            <span>Innovation</span>
+                            <span>Structural Analysis</span>
                             <span>Prototyping</span>
+                            <span>Innovation</span>
 
                         </div>
 
