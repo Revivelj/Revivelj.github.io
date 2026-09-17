@@ -4,879 +4,789 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="李佳个人学术主页，研究方向包括人工智能、深度强化学习、机器人运动控制与多传感器融合。">
 
     <title>李佳 | Academic Homepage</title>
 
-    <meta name="description"
-          content="李佳的个人学术主页，研究方向包括人工智能、强化学习、运动控制、机器人与多传感器融合。">
-
-    <!-- 网站样式 -->
-    <link rel="stylesheet" href="/assets/css/style.css?v=2">
+    <!-- 主样式 -->
+    <link rel="stylesheet"
+          href="/assets/css/style.css?v=5">
 
     <!-- Font Awesome 图标 -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- MathJax 数学公式支持 -->
+    <!-- MathJax 数学公式 -->
     <script>
         window.MathJax = {
             tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            svg: {
+                fontCache: 'global'
             }
         };
     </script>
 
     <script async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
     </script>
-
 </head>
 
 
 <body>
 
-<!-- =====================================================
-     顶部导航栏
-===================================================== -->
+    <!-- =========================
+         顶部导航栏
+    ========================== -->
 
-<header class="navbar">
+    <header class="navbar">
 
-    <div class="nav-container">
+        <div class="nav-container">
 
-        <a href="index.html" class="nav-logo">
-            LJ
-        </a>
-
-        <nav class="nav-menu">
-
-            <a href="index.html" class="active">
-                首页
+            <a href="index.html" class="logo">
+                LJ
             </a>
 
-            <a href="about.html">
-                关于我
-            </a>
+            <nav>
+                <ul class="nav-links">
 
-            <a href="research.html">
-                研究方向
-            </a>
+                    <li>
+                        <a href="index.html" class="active">
+                            首页
+                        </a>
+                    </li>
 
-            <a href="projects.html">
-                项目经历
-            </a>
+                    <li>
+                        <a href="about.html">
+                            关于我
+                        </a>
+                    </li>
 
-            <a href="experience.html">
-                实习经历
-            </a>
+                    <li>
+                        <a href="research.html">
+                            研究方向
+                        </a>
+                    </li>
 
-            <a href="publications.html">
-                科研成果
-            </a>
+                    <li>
+                        <a href="projects.html">
+                            项目经历
+                        </a>
+                    </li>
 
-            <a href="cv.html">
-                简历
-            </a>
+                    <li>
+                        <a href="experience.html">
+                            实习经历
+                        </a>
+                    </li>
 
-        </nav>
+                    <li>
+                        <a href="publications.html">
+                            科研成果
+                        </a>
+                    </li>
 
-        <!-- 移动端菜单按钮 -->
-        <button class="menu-toggle" id="menuToggle">
-            <i class="fas fa-bars"></i>
-        </button>
+                    <li>
+                        <a href="cv.html">
+                            简历
+                        </a>
+                    </li>
 
-    </div>
-
-</header>
-
-
-<!-- =====================================================
-     页面主体
-===================================================== -->
-
-<main class="main-container">
-
-
-    <!-- =================================================
-         左侧个人信息栏
-    ================================================== -->
-
-    <aside class="sidebar">
-
-        <!-- 头像 -->
-        <div class="profile-image">
-
-            <img src="assets/images/personal_Image.jpg"
-                 alt="李佳个人头像">
+                </ul>
+            </nav>
 
         </div>
 
-
-        <!-- 姓名 -->
-        <h1 class="profile-name">
-            李佳
-        </h1>
+    </header>
 
 
-        <!-- 英文名 / GitHub 名 -->
-        <p class="profile-title">
-            Li Jia
-        </p>
+    <!-- =========================
+         页面主体
+    ========================== -->
+
+    <div class="page-wrapper">
 
 
-        <!-- 学校 -->
-        <p class="profile-affiliation">
-            东南大学<br>
-            自动化学院
-        </p>
+        <!-- =========================
+             左侧个人信息栏
+        ========================== -->
 
+        <aside class="sidebar">
 
-        <!-- 专业 -->
-        <p class="profile-degree">
-            控制科学与工程<br>
-            硕士研究生
-        </p>
+            <!-- 个人照片 -->
+            <img
+                src="/assets/images/personal_Image.jpg"
+                alt="李佳个人照片"
+                class="avatar"
+            >
 
+            <!-- 姓名 -->
+            <h1>
+                李佳
+            </h1>
 
-        <!-- 联系信息 -->
-        <div class="profile-links">
-
-            <a href="mailto:your-email@example.com">
-                <i class="fas fa-envelope"></i>
-                Email
-            </a>
-
-            <a href="https://github.com/Revivelj"
-               target="_blank">
-                <i class="fab fa-github"></i>
-                GitHub
-            </a>
-
-            <a href="cv.html">
-                <i class="fas fa-file-pdf"></i>
-                Curriculum Vitae
-            </a>
-
-        </div>
-
-
-        <!-- 地理位置 -->
-        <div class="profile-location">
-
-            <i class="fas fa-location-dot"></i>
-
-            China / Japan
-
-        </div>
-
-
-        <!-- 技术标签 -->
-        <div class="sidebar-tags">
-
-            <span>AI</span>
-            <span>Robotics</span>
-            <span>Control</span>
-
-        </div>
-
-    </aside>
-
-
-
-    <!-- =================================================
-         右侧主要内容
-    ================================================== -->
-
-    <section class="content">
-
-
-        <!-- =================================================
-             个人介绍
-        ================================================== -->
-
-        <section class="intro-section">
-
-            <p class="intro-greeting">
-                你好，我是 <strong>李佳</strong>。
+            <!-- 英文名 -->
+            <p class="subtitle">
+                Li Jia
             </p>
 
-
-            <p class="intro-text">
-
-                我目前就读于
-                <strong>东南大学自动化学院</strong>，
-                攻读控制科学与工程硕士学位。
-
-            </p>
-
-
-            <p class="intro-text">
-
-                我的研究兴趣集中于
-                <strong>无人自主系统中的感知、决策与运动控制</strong>，
-                主要涉及深度学习、深度强化学习、多传感器融合、
-                机器人运动控制以及 AI 模型部署优化。
-
-            </p>
-
-
-            <!-- 高亮介绍框 -->
-
-            <div class="highlight-box">
-
-                <i class="fas fa-quote-left"></i>
+            <!-- 学校与研究方向 -->
+            <div class="sidebar-introduction">
 
                 <p>
-                    我关注从算法设计、仿真验证到实际系统部署的完整技术链路，
-                    探索智能系统在复杂环境中的自主决策与控制能力。
+                    东南大学
+                </p>
+
+                <p>
+                    自动化学院
+                </p>
+
+                <p>
+                    控制科学与工程
+                </p>
+
+                <p>
+                    硕士研究生
                 </p>
 
             </div>
 
 
-            <p class="intro-text">
+            <!-- 联系信息 -->
+            <div class="sidebar-info">
 
-                我的项目经历覆盖四足机器人、无人机自主抓取、
-                无人机抗扰飞行、相机-雷达联合标定以及
-                深度学习模型部署与优化。
+                <p>
+                    <i class="fas fa-location-dot"></i>
+                    <span>China / Japan</span>
+                </p>
 
-            </p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:your-email@example.com">
+                        Email
+                    </a>
+                </p>
 
+                <p>
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/Revivelj"
+                       target="_blank">
+                        GitHub
+                    </a>
+                </p>
 
-            <p class="contact-note">
-
-                欢迎交流科研合作、机器人控制、人工智能及相关工程实践。
-
-            </p>
-
-        </section>
-
-
-
-        <!-- =================================================
-             研究方向卡片
-        ================================================== -->
-
-        <section class="section-block">
-
-            <div class="section-title">
-
-                <h2>
-                    <i class="fas fa-flask"></i>
-                    研究方向
-                </h2>
+                <p>
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="cv.html">
+                        Curriculum Vitae
+                    </a>
+                </p>
 
             </div>
 
 
-            <div class="research-grid">
+            <!-- 研究标签 -->
+            <div class="profile-tags">
 
-
-                <!-- AI -->
-
-                <div class="research-card">
-
-                    <div class="card-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-
-                    <h3>
-                        AI & Deep Learning
-                    </h3>
-
-                    <p>
-                        深度学习模型、Transformer、
-                        模型部署、量化与推理优化。
-                    </p>
-
-                    <div class="card-tags">
-
-                        <span>PyTorch</span>
-                        <span>ONNX</span>
-                        <span>CANN</span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- 强化学习 -->
-
-                <div class="research-card">
-
-                    <div class="card-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-
-                    <h3>
-                        Reinforcement Learning
-                    </h3>
-
-                    <p>
-                        深度强化学习、策略优化、
-                        安全决策与机器人学习控制。
-                    </p>
-
-                    <div class="card-tags">
-
-                        <span>PPO</span>
-                        <span>MAPPO</span>
-                        <span>Isaac Gym</span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- 运动控制 -->
-
-                <div class="research-card">
-
-                    <div class="card-icon">
-                        <i class="fas fa-gears"></i>
-                    </div>
-
-                    <h3>
-                        Motion Control
-                    </h3>
-
-                    <p>
-                        四足机器人运动控制、
-                        MPC、PD 控制与复杂地形适应。
-                    </p>
-
-                    <div class="card-tags">
-
-                        <span>MPC</span>
-                        <span>PD Control</span>
-                        <span>Robotics</span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- 传感器融合 -->
-
-                <div class="research-card">
-
-                    <div class="card-icon">
-                        <i class="fas fa-satellite-dish"></i>
-                    </div>
-
-                    <h3>
-                        Sensor Fusion
-                    </h3>
-
-                    <p>
-                        多传感器融合、状态估计、
-                        视觉感知与相机-雷达标定。
-                    </p>
-
-                    <div class="card-tags">
-
-                        <span>Kalman Filter</span>
-                        <span>LiDAR</span>
-                        <span>Computer Vision</span>
-
-                    </div>
-
-                </div>
-
+                <span>AI</span>
+                <span>Robotics</span>
+                <span>Control</span>
 
             </div>
 
-        </section>
+
+            <!-- 社交链接 -->
+            <div class="social-links">
+
+                <a href="https://github.com/Revivelj"
+                   target="_blank"
+                   aria-label="GitHub">
+
+                    <i class="fab fa-github"></i>
+
+                </a>
+
+                <a href="mailto:your-email@example.com"
+                   aria-label="Email">
+
+                    <i class="fas fa-envelope"></i>
+
+                </a>
+
+            </div>
+
+        </aside>
 
 
 
-        <!-- =================================================
-             精选项目
-        ================================================== -->
+        <!-- =========================
+             右侧主要内容
+        ========================== -->
 
-        <section class="section-block">
+        <main class="main-content">
 
-            <div class="section-header">
 
-                <div class="section-title">
+            <!-- =========================
+                 个人介绍
+            ========================== -->
 
-                    <h2>
-                        <i class="fas fa-code-branch"></i>
+            <section class="intro-section">
+
+                <p>
+                    我目前就读于
+                    <strong>东南大学自动化学院</strong>，
+                    攻读
+                    <strong>控制科学与工程</strong>
+                    硕士学位。
+                </p>
+
+                <p>
+                    我的研究兴趣集中于
+                    <strong>无人自主系统中的感知、决策与运动控制</strong>，
+                    主要涉及深度学习、深度强化学习、多传感器融合、
+                    机器人运动控制以及 AI 模型部署优化。
+                </p>
+
+                <div class="highlight-box">
+
+                    <i class="fas fa-quote-left"></i>
+
+                    <p>
+                        我的研究目标是探索人工智能与机器人控制的结合，
+                        构建能够在复杂真实环境中自主感知、
+                        决策与执行的智能系统。
+                    </p>
+
+                </div>
+
+                <p>
+                    我关注从算法设计、仿真验证到实际系统部署的完整技术链路，
+                    致力于提升智能系统在复杂环境中的自主决策与控制能力。
+                </p>
+
+                <p>
+                    欢迎交流科研合作、机器人控制、人工智能及相关工程实践。
+                </p>
+
+            </section>
+
+
+
+            <!-- =========================
+                 研究方向
+            ========================== -->
+
+            <section class="section">
+
+                <div class="section-header">
+
+                    <h2 class="section-title">
+                        <i class="fas fa-flask"></i>
+                        研究方向
+                    </h2>
+
+                </div>
+
+
+                <div class="research-grid">
+
+
+                    <!-- AI -->
+                    <div class="research-card">
+
+                        <div class="research-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+
+                        <h3>
+                            AI &amp; Deep Learning
+                        </h3>
+
+                        <p>
+                            深度学习模型、Transformer、
+                            模型部署、量化与推理优化。
+                        </p>
+
+                        <div class="research-keywords">
+                            PyTorch · ONNX · CANN
+                        </div>
+
+                    </div>
+
+
+                    <!-- 强化学习 -->
+                    <div class="research-card">
+
+                        <div class="research-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+
+                        <h3>
+                            Reinforcement Learning
+                        </h3>
+
+                        <p>
+                            深度强化学习、策略优化、
+                            安全决策与机器人学习控制。
+                        </p>
+
+                        <div class="research-keywords">
+                            PPO · MAPPO · Isaac Gym
+                        </div>
+
+                    </div>
+
+
+                    <!-- 运动控制 -->
+                    <div class="research-card">
+
+                        <div class="research-icon">
+                            <i class="fas fa-gears"></i>
+                        </div>
+
+                        <h3>
+                            Motion Control
+                        </h3>
+
+                        <p>
+                            四足机器人、无人机及移动机器人的
+                            运动规划与控制。
+                        </p>
+
+                        <div class="research-keywords">
+                            Robotics · MPC · RL Control
+                        </div>
+
+                    </div>
+
+
+                    <!-- 传感器融合 -->
+                    <div class="research-card">
+
+                        <div class="research-icon">
+                            <i class="fas fa-satellite-dish"></i>
+                        </div>
+
+                        <h3>
+                            Sensor Fusion
+                        </h3>
+
+                        <p>
+                            相机、雷达、IMU 等多传感器融合、
+                            标定与环境感知。
+                        </p>
+
+                        <div class="research-keywords">
+                            Camera · LiDAR · IMU
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 精选项目
+            ========================== -->
+
+            <section class="section">
+
+                <div class="section-header">
+
+                    <h2 class="section-title">
+                        <i class="fas fa-code"></i>
                         精选项目
                     </h2>
 
                 </div>
 
-                <a href="projects.html" class="view-more">
-                    查看全部项目
-                    <i class="fas fa-arrow-right"></i>
-                </a>
 
-            </div>
+                <div class="project-grid">
 
 
-            <div class="project-grid">
+                    <!-- 项目一 -->
+                    <article class="project-card">
 
+                        <img
+                            src="/assets/images/quadruped.jpg"
+                            alt="四足机器人项目"
+                            class="project-image"
+                        >
 
-                <!-- 项目 1：四足机器人 -->
+                        <div class="project-content">
 
-                <article class="project-card">
+                            <span class="project-category">
+                                Motion Control
+                            </span>
 
-                    <div class="project-image">
+                            <h3>
+                                四足机器人运动控制
+                            </h3>
 
-                        <img src="assets/images/quadruped.jpg"
-                             alt="四足机器人强化学习控制">
+                            <p>
+                                基于深度强化学习实现四足机器人
+                                的运动策略学习、仿真训练与实际部署。
+                            </p>
 
-                    </div>
-
-
-                    <div class="project-content">
-
-                        <div class="project-category">
-                            Reinforcement Learning
-                        </div>
-
-
-                        <h3>
-                            四足机器人鲁棒运动控制
-                        </h3>
-
-
-                        <p>
-                            基于深度强化学习构建复杂地形下
-                            四足机器人鲁棒运动控制系统，
-                            结合残差预测与安全策略切换机制。
-                        </p>
-
-
-                        <div class="project-tags">
-
-                            <span>PyTorch</span>
-                            <span>Isaac Gym</span>
-                            <span>Motion Control</span>
+                            <div class="project-tags">
+                                <span>Reinforcement Learning</span>
+                                <span>Isaac Gym</span>
+                                <span>Robotics</span>
+                            </div>
 
                         </div>
 
-
-                        <a href="projects.html#quadruped"
-                           class="project-link">
-
-                            查看项目
-                            <i class="fas fa-arrow-right"></i>
-
-                        </a>
-
-                    </div>
-
-                </article>
+                    </article>
 
 
+                    <!-- 项目二 -->
+                    <article class="project-card">
 
-                <!-- 项目 2：无人机自主抓取 -->
+                        <img
+                            src="/assets/images/uav-grasping.jpg"
+                            alt="无人机自主抓取项目"
+                            class="project-image"
+                        >
 
-                <article class="project-card">
+                        <div class="project-content">
 
-                    <div class="project-image">
+                            <span class="project-category">
+                                UAV &amp; Robotics
+                            </span>
 
-                        <img src="assets/images/uav-grasping.jpg"
-                             alt="无人机自主抓取系统">
+                            <h3>
+                                无人机自主抓取
+                            </h3>
 
-                    </div>
+                            <p>
+                                面向复杂环境的无人机视觉感知、
+                                目标定位与自主抓取系统。
+                            </p>
 
-
-                    <div class="project-content">
-
-                        <div class="project-category">
-                            Robotics & Autonomous Systems
-                        </div>
-
-
-                        <h3>
-                            无人机自主抓取系统
-                        </h3>
-
-
-                        <p>
-                            融合 YOLOv8、深度相机、
-                            MPC 与 ROS，构建无人机自主抓取系统。
-                        </p>
-
-
-                        <div class="project-tags">
-
-                            <span>ROS</span>
-                            <span>YOLOv8</span>
-                            <span>MPC</span>
+                            <div class="project-tags">
+                                <span>UAV</span>
+                                <span>Computer Vision</span>
+                                <span>Control</span>
+                            </div>
 
                         </div>
 
-
-                        <a href="projects.html#uav-grasping"
-                           class="project-link">
-
-                            查看项目
-                            <i class="fas fa-arrow-right"></i>
-
-                        </a>
-
-                    </div>
-
-                </article>
+                    </article>
 
 
+                    <!-- 项目三 -->
+                    <article class="project-card">
 
-                <!-- 项目 3：AI 模型优化 -->
+                        <img
+                            src="/assets/images/ascend.jpg"
+                            alt="AI 模型部署优化项目"
+                            class="project-image"
+                        >
 
-                <article class="project-card">
+                        <div class="project-content">
 
-                    <div class="project-image">
+                            <span class="project-category">
+                                AI Deployment
+                            </span>
 
-                        <img src="assets/images/ascend.jpg"
-                             alt="AI 模型部署与优化">
+                            <h3>
+                                AI 模型部署与推理优化
+                            </h3>
 
-                    </div>
+                            <p>
+                                面向嵌入式 AI 平台进行模型转换、
+                                算子适配、量化与推理性能优化。
+                            </p>
 
-
-                    <div class="project-content">
-
-                        <div class="project-category">
-                            AI & Deep Learning
-                        </div>
-
-
-                        <h3>
-                            AI 模型部署与推理优化
-                        </h3>
-
-
-                        <p>
-                            面向 AI 推理平台开展模型结构优化、
-                            Transformer 优化与混合精度量化研究。
-                        </p>
-
-
-                        <div class="project-tags">
-
-                            <span>ONNX</span>
-                            <span>Transformer</span>
-                            <span>Quantization</span>
+                            <div class="project-tags">
+                                <span>ONNX</span>
+                                <span>CANN</span>
+                                <span>Model Optimization</span>
+                            </div>
 
                         </div>
 
-
-                        <a href="projects.html#ai-optimization"
-                           class="project-link">
-
-                            查看项目
-                            <i class="fas fa-arrow-right"></i>
-
-                        </a>
-
-                    </div>
-
-                </article>
+                    </article>
 
 
+                    <!-- 项目四 -->
+                    <article class="project-card">
 
-                <!-- 项目 4：相机雷达标定 -->
+                        <img
+                            src="/assets/images/calibration.jpg"
+                            alt="相机雷达联合标定项目"
+                            class="project-image"
+                        >
 
-                <article class="project-card">
+                        <div class="project-content">
 
-                    <div class="project-image">
+                            <span class="project-category">
+                                Sensor Fusion
+                            </span>
 
-                        <img src="assets/images/calibration.jpg"
-                             alt="相机雷达联合标定">
+                            <h3>
+                                相机-雷达联合标定
+                            </h3>
 
-                    </div>
+                            <p>
+                                研究相机与雷达之间的空间关系、
+                                外参标定及多传感器数据融合。
+                            </p>
 
-
-                    <div class="project-content">
-
-                        <div class="project-category">
-                            Sensor Fusion & Perception
-                        </div>
-
-
-                        <h3>
-                            相机-雷达联合标定
-                        </h3>
-
-
-                        <p>
-                            基于几何约束、RANSAC 与 SVD，
-                            设计相机与雷达外参联合标定算法。
-                        </p>
-
-
-                        <div class="project-tags">
-
-                            <span>C++</span>
-                            <span>LiDAR</span>
-                            <span>RANSAC</span>
+                            <div class="project-tags">
+                                <span>Camera</span>
+                                <span>LiDAR</span>
+                                <span>Calibration</span>
+                            </div>
 
                         </div>
 
+                    </article>
 
-                        <a href="projects.html#calibration"
-                           class="project-link">
+                </div>
 
-                            查看项目
-                            <i class="fas fa-arrow-right"></i>
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-        </section>
+            </section>
 
 
 
-        <!-- =================================================
-             研究成果 / 数学公式展示
-        ================================================== -->
+            <!-- =========================
+                 科研公式
+            ========================== -->
 
-        <section class="section-block">
+            <section class="section">
 
-            <div class="section-title">
+                <div class="section-header">
 
-                <h2>
-                    <i class="fas fa-square-root-variable"></i>
-                    Research Focus
-                </h2>
+                    <h2 class="section-title">
+                        <i class="fas fa-square-root-variable"></i>
+                        研究中的数学模型
+                    </h2>
 
-            </div>
-
-
-            <div class="research-focus-box">
-
-                <p>
-                    在强化学习与机器人控制研究中，
-                    我关注策略优化、状态估计和控制器设计之间的联系。
-                </p>
-
+                </div>
 
                 <div class="formula-box">
 
                     $$
-                    J(\pi)
+                    \mathcal{L}(\theta)
                     =
-                    \mathbb{E}_{\tau \sim \pi}
+                    \mathbb{E}_{(s,a)\sim\pi_\theta}
                     \left[
                     \sum_{t=0}^{T}
                     \gamma^t r_t
                     \right]
                     $$
 
+                    <p class="formula-description">
+                        强化学习中的目标函数：最大化策略在长期交互过程中获得的累积折扣奖励。
+                    </p>
+
                 </div>
 
+            </section>
 
-                <p class="formula-description">
 
-                    通过最大化期望累积回报，学习适用于复杂环境的控制策略。
 
+            <!-- =========================
+                 项目视频
+            ========================== -->
+
+            <section class="section">
+
+                <div class="section-header">
+
+                    <h2 class="section-title">
+                        <i class="fas fa-video"></i>
+                        项目演示
+                    </h2>
+
+                </div>
+
+                <div class="video-grid">
+
+
+                    <div class="video-card">
+
+                        <video controls preload="metadata">
+
+                            <source
+                                src="/assets/videos/quadruped-demo.mp4"
+                                type="video/mp4"
+                            >
+
+                            您的浏览器不支持视频播放。
+
+                        </video>
+
+                        <div class="video-caption">
+                            四足机器人运动控制演示
+                        </div>
+
+                    </div>
+
+
+                    <div class="video-card">
+
+                        <video controls preload="metadata">
+
+                            <source
+                                src="/assets/videos/uav-grasping-demo.mp4"
+                                type="video/mp4"
+                            >
+
+                            您的浏览器不支持视频播放。
+
+                        </video>
+
+                        <div class="video-caption">
+                            无人机自主抓取演示
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 教育经历
+            ========================== -->
+
+            <section class="section">
+
+                <div class="section-header">
+
+                    <h2 class="section-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        教育经历
+                    </h2>
+
+                </div>
+
+                <div class="timeline">
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-date">
+                            2024 - 至今
+                        </div>
+
+                        <h3>
+                            东南大学 · 控制科学与工程
+                        </h3>
+
+                        <p>
+                            硕士研究生，自动化学院
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-date">
+                            本科阶段
+                        </div>
+
+                        <h3>
+                            自动化及相关专业背景
+                        </h3>
+
+                        <p>
+                            学习控制理论、机器人学、人工智能及嵌入式系统等课程。
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 联系我
+            ========================== -->
+
+            <section class="section contact-section">
+
+                <div class="section-header">
+
+                    <h2 class="section-title">
+                        <i class="fas fa-paper-plane"></i>
+                        联系我
+                    </h2>
+
+                </div>
+
+                <p>
+                    如果你对我的研究方向、项目经历或科研合作感兴趣，
+                    欢迎通过 Email 或 GitHub 与我联系。
                 </p>
 
-            </div>
+                <div class="hero-buttons">
 
-        </section>
+                    <a
+                        href="mailto:your-email@example.com"
+                        class="btn btn-primary"
+                    >
+                        <i class="fas fa-envelope"></i>
+                        Email Me
+                    </a>
 
-
-
-        <!-- =================================================
-             视频展示
-        ================================================== -->
-
-        <section class="section-block">
-
-            <div class="section-title">
-
-                <h2>
-                    <i class="fas fa-video"></i>
-                    Project Demonstrations
-                </h2>
-
-            </div>
-
-
-            <div class="video-grid">
-
-
-                <!-- 四足机器人视频 -->
-
-                <div class="video-card">
-
-                    <video controls
-                           muted
-                           loop
-                           playsinline>
-
-                        <source
-                            src="assets/videos/quadruped-demo.mp4"
-                            type="video/mp4">
-
-                        您的浏览器不支持视频播放。
-
-                    </video>
-
-
-                    <h3>
-                        四足机器人运动控制实验
-                    </h3>
-
-                    <p>
-                        Complex Terrain Locomotion
-                    </p>
+                    <a
+                        href="https://github.com/Revivelj"
+                        target="_blank"
+                        class="btn btn-secondary"
+                    >
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
 
                 </div>
 
+            </section>
 
 
-                <!-- 无人机视频 -->
+        </main>
 
-                <div class="video-card">
-
-                    <video controls
-                           muted
-                           loop
-                           playsinline>
-
-                        <source
-                            src="assets/videos/uav-grasping-demo.mp4"
-                            type="video/mp4">
-
-                        您的浏览器不支持视频播放。
-
-                    </video>
-
-
-                    <h3>
-                        无人机自主抓取实验
-                    </h3>
-
-                    <p>
-                        Autonomous UAV Grasping
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </section>
+    </div>
 
 
 
-        <!-- =================================================
-             教育背景简要展示
-        ================================================== -->
+    <!-- =========================
+         页脚
+    ========================== -->
 
-        <section class="section-block">
+    <footer class="footer">
 
-            <div class="section-title">
+        <p>
+            © 2026 Li Jia.
+            All Rights Reserved.
+        </p>
 
-                <h2>
-                    <i class="fas fa-graduation-cap"></i>
-                    Education
-                </h2>
+        <p>
+            Built with HTML &amp; CSS.
+        </p>
 
-            </div>
-
-
-            <div class="timeline">
-
-
-                <div class="timeline-item">
-
-                    <div class="timeline-dot"></div>
-
-                    <div class="timeline-content">
-
-                        <span class="timeline-date">
-                            2024.09 – 至今
-                        </span>
-
-                        <h3>
-                            东南大学
-                        </h3>
-
-                        <p>
-                            控制科学与工程 · 硕士研究生
-                        </p>
-
-                        <p class="timeline-description">
-                            自动化学院
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="timeline-item">
-
-                    <div class="timeline-dot"></div>
-
-                    <div class="timeline-content">
-
-                        <span class="timeline-date">
-                            2020.09 – 2024.06
-                        </span>
-
-                        <h3>
-                            南京航空航天大学
-                        </h3>
-
-                        <p>
-                            飞行器设计与工程 · 本科
-                        </p>
-
-                        <p class="timeline-description">
-                            航空学院
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             页脚
-        ================================================== -->
-
-        <footer class="footer">
-
-            <p>
-                © 2026 Li Jia. All Rights Reserved.
-            </p>
-
-            <p>
-                Built with HTML · CSS · GitHub Pages
-            </p>
-
-        </footer>
-
-
-    </section>
-
-</main>
-
-
-
-<!-- JavaScript -->
-<script src="assets/js/main.js"></script>
+    </footer>
 
 
 </body>
