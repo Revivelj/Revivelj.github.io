@@ -280,52 +280,80 @@
 
             <article class="project-card">
 
-                <div class="project-image">
-                    <img
-                        src="assets/images/uav-grasping.jpg"
-                        alt="无人机自主抓取项目"
-                    >
-                </div>
+    <div class="project-image">
 
-                <div class="project-content">
+        <img
+            src="assets/images/uav-grasping.jpg"
+            alt="无人机自主抓取项目"
+        >
 
-                    <div class="project-meta">
-                        UAV · AUTONOMOUS SYSTEM
-                    </div>
+    </div>
 
-                    <h3>
-                        无人机自主抓取与视觉控制
-                    </h3>
+    <div class="project-content">
 
-                    <p class="project-description">
-                        面向无人机自主作业场景，
-                        结合视觉感知、目标定位与运动控制，
-                        实现无人机对目标物体的自主识别和抓取。
-                    </p>
+        <div class="project-meta">
+            UAV · COMPUTER VISION · NMPC
+        </div>
 
-                    <h4>主要工作</h4>
+        <h3>
+            无人机自主抓取系统
+        </h3>
 
-                    <ul>
-                        <li>目标检测与空间位置估计</li>
-                        <li>视觉信息与控制系统融合</li>
-                        <li>自主飞行与抓取流程设计</li>
-                    </ul>
+        <p class="project-description">
+            基于 YOLOv8、深度相机和非线性模型预测控制，
+            实现无人机自主搜索、目标定位、接近抓取及放置任务。
+            通过 EKF 与 FR-MHE 对负载突变和风扰进行估计补偿，
+            轨迹跟踪 RMSE 降低约 30%。
+        </p>
 
-                    <div class="project-tags">
-                        <span>UAV</span>
-                        <span>Computer Vision</span>
-                        <span>ROS</span>
-                        <span>Control</span>
-                    </div>
+        <h4>
+            主要工作
+        </h4>
 
-                    <a href="uav-grasping.html" class="project-button">
-                        View Project
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
+        <ul>
 
-                </div>
+            <li>
+                YOLOv8 小样本微调与目标三维定位
+            </li>
 
-            </article>
+            <li>
+                视觉引导路径规划与有限状态机
+            </li>
+
+            <li>
+                基于 acados 的 NMPC 控制器
+            </li>
+
+            <li>
+                EKF / FR-MHE 干扰估计与前馈补偿
+            </li>
+
+        </ul>
+
+        <div class="project-tags">
+
+            <span>YOLOv8</span>
+            <span>NMPC</span>
+            <span>ROS</span>
+            <span>PX4</span>
+            <span>EKF</span>
+
+        </div>
+
+        <a
+            href="uav-grasping.html"
+            class="project-button"
+        >
+
+            查看项目详情
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</article>
 
 
             <!-- Project 3 -->
