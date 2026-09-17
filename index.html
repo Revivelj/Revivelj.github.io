@@ -5,54 +5,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>李佳 | AI & Robotics Researcher</title>
+    <title>李佳 | AI & Robotics Portfolio</title>
 
+    <meta name="description"
+          content="李佳的个人作品集，研究方向包括人工智能、强化学习、机器人运动控制、无人机自主系统与多传感器融合。">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <!-- 主样式 -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- MathJax -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+
+    <script async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
 </head>
+
 
 <body>
 
-<!-- ================= Navigation ================= -->
+<!-- =====================================================
+     顶部导航
+===================================================== -->
 
 <header class="navbar">
+
     <div class="nav-container">
 
-        <a href="index.html" class="logo">LJ</a>
+        <a href="#top" class="logo">
+            LJ
+        </a>
 
         <nav class="nav-links">
-            <a href="index.html" class="active">Homepage</a>
-            <a href="#about">About Me</a>
-            <a href="#projects">Projects</a>
-            <a href="#competitions">Competitions</a>
-            <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
-            <a href="cv.html">CV</a>
+
+            <a href="#top" class="active">
+                首页
+            </a>
+
+            <a href="#about">
+                关于我
+            </a>
+
+            <a href="#overview">
+                项目概览
+            </a>
+
+            <a href="#projects">
+                项目
+            </a>
+
+            <a href="#competitions">
+                竞赛
+            </a>
+
+            <a href="#experience">
+                经历
+            </a>
+
+            <a href="#skills">
+                技术能力
+            </a>
+
         </nav>
 
     </div>
+
 </header>
 
 
-<!-- ================= Main Layout ================= -->
+<!-- =====================================================
+     页面主体
+===================================================== -->
 
-<div class="site-layout">
+<div class="site-layout" id="top">
 
-    <!-- ================= Sidebar ================= -->
+
+    <!-- =================================================
+         左侧个人信息栏
+    ================================================== -->
 
     <aside class="profile-sidebar">
 
         <img
-            src="assets/images/personal_Image.jpg"
+            src="assets/images/person_Image.jpg"
             alt="李佳个人照片"
             class="profile-photo"
         >
 
-        <h1>李佳</h1>
+        <h1>
+            李佳
+        </h1>
 
-        <p class="profile-name">Li Jia</p>
+        <p class="profile-name">
+            Li Jia
+        </p>
 
         <div class="profile-position">
             AI / Robotics / Control
@@ -111,12 +169,16 @@
     </aside>
 
 
-    <!-- ================= Main Content ================= -->
+    <!-- =================================================
+         右侧主要内容
+    ================================================== -->
 
     <main class="main-content">
 
 
-        <!-- ================= About ================= -->
+        <!-- =================================================
+             About Me
+        ================================================== -->
 
         <section class="about-section" id="about">
 
@@ -138,8 +200,10 @@
 
             <p>
                 我的研究与工程实践主要集中于
-                <strong>人工智能、深度强化学习、机器人运动控制、
-                多传感器融合以及 AI 模型部署优化</strong>。
+                <strong>
+                    人工智能、深度强化学习、机器人运动控制、
+                    多传感器融合以及 AI 模型部署优化
+                </strong>。
             </p>
 
             <p>
@@ -149,60 +213,301 @@
             </p>
 
             <div class="about-highlight">
+
                 <i class="fas fa-quote-left"></i>
 
                 <span>
                     Interested in building intelligent systems that connect
                     learning algorithms with real-world robotics.
                 </span>
+
             </div>
 
         </section>
 
 
-        <!-- ================= Overview Cards ================= -->
+        <!-- =================================================
+             方向概览卡片
+        ================================================== -->
 
         <section class="overview-grid">
 
             <div class="overview-card">
+
                 <i class="fas fa-brain"></i>
 
-                <h3>AI Research</h3>
+                <h3>
+                    AI Research
+                </h3>
 
                 <p>
                     Deep Learning, Reinforcement Learning,
                     Model Optimization
                 </p>
+
             </div>
 
 
             <div class="overview-card">
+
                 <i class="fas fa-robot"></i>
 
-                <h3>Robotics</h3>
+                <h3>
+                    Robotics
+                </h3>
 
                 <p>
                     Quadruped Robots, UAV,
                     Motion Control and Autonomous Systems
                 </p>
+
             </div>
 
 
             <div class="overview-card">
+
                 <i class="fas fa-code"></i>
 
-                <h3>Engineering</h3>
+                <h3>
+                    Engineering
+                </h3>
 
                 <p>
                     Python, C++, PyTorch, ONNX,
                     Embedded Deployment
                 </p>
+
             </div>
 
         </section>
 
 
-        <!-- ================= Projects ================= -->
+        <!-- =================================================
+             项目与竞赛汇总
+        ================================================== -->
+
+        <section class="portfolio-overview" id="overview">
+
+            <div class="section-heading">
+
+                <div class="small-label">
+                    PORTFOLIO OVERVIEW
+                </div>
+
+                <h2>
+                    <i class="fas fa-layer-group"></i>
+                    项目与竞赛概览
+                </h2>
+
+                <p>
+                    科研项目、工程实践与机器人竞赛经历
+                </p>
+
+            </div>
+
+
+            <div class="overview-list">
+
+
+                <!-- 项目汇总 -->
+
+                <div class="overview-group">
+
+                    <div class="overview-group-title">
+                        <i class="fas fa-folder-open"></i>
+                        <span>Selected Projects</span>
+                    </div>
+
+
+                    <a href="#quadruped-detail"
+                       class="overview-item">
+
+                        <div class="overview-item-index">
+                            01
+                        </div>
+
+                        <div class="overview-item-content">
+
+                            <h3>
+                                四足机器人强化学习运动控制
+                            </h3>
+
+                            <p>
+                                深度强化学习 · PPO · 仿真训练 · 机器人运动控制
+                            </p>
+
+                        </div>
+
+                        <i class="fas fa-arrow-down overview-item-arrow"></i>
+
+                    </a>
+
+
+                    <a href="#uav-detail"
+                       class="overview-item">
+
+                        <div class="overview-item-index">
+                            02
+                        </div>
+
+                        <div class="overview-item-content">
+
+                            <h3>
+                                无人机自主抓取系统
+                            </h3>
+
+                            <p>
+                                YOLOv8 · RGB-D定位 · NMPC · 干扰估计 · PX4
+                            </p>
+
+                        </div>
+
+                        <i class="fas fa-arrow-down overview-item-arrow"></i>
+
+                    </a>
+
+
+                    <a href="#model-detail"
+                       class="overview-item">
+
+                        <div class="overview-item-index">
+                            03
+                        </div>
+
+                        <div class="overview-item-content">
+
+                            <h3>
+                                深度学习模型部署与推理优化
+                            </h3>
+
+                            <p>
+                                PyTorch · ONNX · CANN · 模型转换与推理加速
+                            </p>
+
+                        </div>
+
+                        <i class="fas fa-arrow-down overview-item-arrow"></i>
+
+                    </a>
+
+
+                    <a href="#calibration-detail"
+                       class="overview-item">
+
+                        <div class="overview-item-index">
+                            04
+                        </div>
+
+                        <div class="overview-item-content">
+
+                            <h3>
+                                相机-雷达联合标定与多传感器融合
+                            </h3>
+
+                            <p>
+                                坐标系建模 · 外参标定 · 传感器融合
+                            </p>
+
+                        </div>
+
+                        <i class="fas fa-arrow-down overview-item-arrow"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- 竞赛汇总 -->
+
+                <div class="overview-group">
+
+                    <div class="overview-group-title">
+                        <i class="fas fa-trophy"></i>
+                        <span>Competition Experience</span>
+                    </div>
+
+
+                    <a href="#competitions"
+                       class="overview-item">
+
+                        <div class="overview-item-index">
+                            01
+                        </div>
+
+                        <div class="overview-item-content">
+
+                            <h3>
+                                RoboCup 2021
+                            </h3>
+
+                            <p>
+                                机器人足球 · 控制策略 · 系统调试
+                            </p>
+
+                        </div>
+
+                        <i class="fas fa-arrow-down overview-item-arrow"></i>
+
+                    </a>
+
+
+                    <a href="#competitions"
+                       class="overview-item">
+
+                        <div class="overview-item-index">
+                            02
+                        </div>
+
+                        <div class="overview-item-content">
+
+                            <h3>
+                                RoboMaster 2022
+                            </h3>
+
+                            <p>
+                                机器人系统 · 机械电控协同 · 工程实践
+                            </p>
+
+                        </div>
+
+                        <i class="fas fa-arrow-down overview-item-arrow"></i>
+
+                    </a>
+
+
+                    <a href="#competitions"
+                       class="overview-item">
+
+                        <div class="overview-item-index">
+                            03
+                        </div>
+
+                        <div class="overview-item-content">
+
+                            <h3>
+                                全国大学生机械创新设计大赛
+                            </h3>
+
+                            <p>
+                                机械设计 · 结构分析 · 原型实现
+                            </p>
+
+                        </div>
+
+                        <i class="fas fa-arrow-down overview-item-arrow"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             项目卡片
+        ================================================== -->
 
         <section class="projects-section" id="projects">
 
@@ -224,235 +529,634 @@
             </div>
 
 
-            <!-- Project 1 -->
+            <div class="project-card-list">
 
-            <article class="project-card">
 
-                <div class="project-image">
-                    <img
-                        src="assets/images/quadruped.jpg"
-                        alt="四足机器人项目"
-                    >
+                <!-- Project 1 -->
+
+                <article class="project-card">
+
+                    <div class="project-image">
+
+                        <img
+                            src="assets/images/quadruped.jpg"
+                            alt="四足机器人项目"
+                        >
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-meta">
+                            ROBOTICS · REINFORCEMENT LEARNING
+                        </div>
+
+                        <h3>
+                            四足机器人强化学习运动控制
+                        </h3>
+
+                        <p class="project-description">
+                            面向四足机器人复杂地形下的自主运动控制，
+                            基于深度强化学习实现机器人行走策略训练、
+                            仿真验证与真实平台部署。
+                        </p>
+
+                        <h4>
+                            主要工作
+                        </h4>
+
+                        <ul>
+                            <li>构建机器人仿真训练环境</li>
+                            <li>设计 PPO 强化学习控制策略</li>
+                            <li>实现策略网络部署与运动控制</li>
+                        </ul>
+
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>PyTorch</span>
+                            <span>PPO</span>
+                            <span>Isaac Gym</span>
+                        </div>
+
+                        <a href="#quadruped-detail"
+                           class="project-button">
+
+                            查看项目详情
+                            <i class="fas fa-arrow-down"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Project 2 -->
+
+                <article class="project-card">
+
+                    <div class="project-image">
+
+                        <img
+                            src="assets/images/uav-grasping.jpg"
+                            alt="无人机自主抓取项目"
+                        >
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-meta">
+                            UAV · COMPUTER VISION · NMPC
+                        </div>
+
+                        <h3>
+                            无人机自主抓取系统
+                        </h3>
+
+                        <p class="project-description">
+                            基于 YOLOv8、深度相机和非线性模型预测控制，
+                            实现无人机自主搜索、目标定位、接近抓取及放置任务。
+                            通过 EKF 与 FR-MHE 对负载突变和风扰进行估计补偿。
+                        </p>
+
+                        <h4>
+                            主要工作
+                        </h4>
+
+                        <ul>
+                            <li>YOLOv8 目标检测与三维定位</li>
+                            <li>视觉引导路径规划与有限状态机</li>
+                            <li>基于 NMPC 的轨迹跟踪控制</li>
+                            <li>干扰估计与前馈补偿</li>
+                        </ul>
+
+                        <div class="project-tags">
+                            <span>YOLOv8</span>
+                            <span>NMPC</span>
+                            <span>ROS</span>
+                            <span>PX4</span>
+                            <span>EKF</span>
+                        </div>
+
+                        <a href="#uav-detail"
+                           class="project-button">
+
+                            查看项目详情
+                            <i class="fas fa-arrow-down"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Project 3 -->
+
+                <article class="project-card">
+
+                    <div class="project-image">
+
+                        <img
+                            src="assets/images/model.png"
+                            alt="AI模型部署优化项目"
+                        >
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-meta">
+                            AI ENGINEERING · MODEL DEPLOYMENT
+                        </div>
+
+                        <h3>
+                            深度学习模型部署与推理优化
+                        </h3>
+
+                        <p class="project-description">
+                            针对深度学习模型在边缘设备上的部署需求，
+                            开展模型转换、推理加速以及部署适配工作。
+                        </p>
+
+                        <h4>
+                            主要工作
+                        </h4>
+
+                        <ul>
+                            <li>PyTorch 模型转换与推理测试</li>
+                            <li>ONNX / CANN 部署流程搭建</li>
+                            <li>模型性能与精度分析</li>
+                        </ul>
+
+                        <div class="project-tags">
+                            <span>PyTorch</span>
+                            <span>ONNX</span>
+                            <span>CANN</span>
+                            <span>Deployment</span>
+                        </div>
+
+                        <a href="#model-detail"
+                           class="project-button">
+
+                            查看项目详情
+                            <i class="fas fa-arrow-down"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Project 4 -->
+
+                <article class="project-card">
+
+                    <div class="project-image">
+
+                        <img
+                            src="assets/images/calibration.png"
+                            alt="相机雷达联合标定项目"
+                        >
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-meta">
+                            SENSOR FUSION · PERCEPTION
+                        </div>
+
+                        <h3>
+                            相机-雷达联合标定与多传感器融合
+                        </h3>
+
+                        <p class="project-description">
+                            面向机器人环境感知任务，
+                            研究相机与雷达之间的空间关系估计、
+                            坐标转换以及多传感器信息融合。
+                        </p>
+
+                        <h4>
+                            主要工作
+                        </h4>
+
+                        <ul>
+                            <li>相机与雷达坐标系建模</li>
+                            <li>外参标定与误差分析</li>
+                            <li>多源感知数据融合</li>
+                        </ul>
+
+                        <div class="project-tags">
+                            <span>Sensor Fusion</span>
+                            <span>Calibration</span>
+                            <span>Computer Vision</span>
+                            <span>Python</span>
+                        </div>
+
+                        <a href="#calibration-detail"
+                           class="project-button">
+
+                            查看项目详情
+                            <i class="fas fa-arrow-down"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             项目详细介绍
+        ================================================== -->
+
+        <section class="project-details-section"
+                 id="project-details">
+
+            <div class="section-heading">
+
+                <div class="small-label">
+                    PROJECT DETAILS
                 </div>
 
-                <div class="project-content">
+                <h2>
+                    <i class="fas fa-microscope"></i>
+                    项目详细介绍
+                </h2>
 
-                    <div class="project-meta">
-                        ROBOTICS · REINFORCEMENT LEARNING
-                    </div>
+                <p>
+                    主要科研项目与技术实现
+                </p>
 
-                    <h3>
-                        四足机器人强化学习运动控制
-                    </h3>
+            </div>
 
-                    <p class="project-description">
-                        面向四足机器人复杂地形下的自主运动控制，
-                        基于深度强化学习实现机器人行走策略训练、
-                        仿真验证与真实平台部署。
-                    </p>
 
-                    <h4>主要工作</h4>
+            <!-- =================================================
+                 四足机器人详情
+            ================================================== -->
 
-                    <ul>
-                        <li>构建机器人仿真训练环境</li>
-                        <li>设计 PPO 强化学习控制策略</li>
-                        <li>实现策略网络部署与运动控制</li>
-                    </ul>
+            <article class="project-detail-block"
+                     id="quadruped-detail">
 
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>PyTorch</span>
-                        <span>PPO</span>
-                        <span>Isaac Gym</span>
-                    </div>
+                <div class="project-detail-topline">
 
-                    <a href="quadruped.html" class="project-button">
-                        View Project
-                        <i class="fas fa-arrow-right"></i>
+                    <span>
+                        01 · ROBOTICS / REINFORCEMENT LEARNING
+                    </span>
+
+                    <a href="#overview">
+                        返回概览 ↑
                     </a>
+
+                </div>
+
+                <h3>
+                    四足机器人强化学习运动控制
+                </h3>
+
+                <p class="project-detail-intro">
+                    面向四足机器人在复杂地形下的自主运动控制问题，
+                    基于深度强化学习构建从仿真训练到实际机器人部署的运动控制流程。
+                </p>
+
+                <div class="project-detail-grid">
+
+                    <div>
+
+                        <h4>
+                            项目背景
+                        </h4>
+
+                        <p>
+                            传统四足机器人控制方法通常依赖精确建模和人工设计的运动规划器，
+                            在复杂地形和模型不确定条件下存在适应性不足的问题。
+                            本项目采用深度强化学习方法学习机器人运动策略，
+                            提高机器人对不同运动状态和环境条件的适应能力。
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            主要工作
+                        </h4>
+
+                        <ul>
+                            <li>构建四足机器人仿真训练环境</li>
+                            <li>设计基于 PPO 的运动控制策略</li>
+                            <li>完成观测空间、动作空间与奖励函数设计</li>
+                            <li>开展策略训练、运动测试与部署验证</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="detail-tech-row">
+
+                    <span>Python</span>
+                    <span>PyTorch</span>
+                    <span>PPO</span>
+                    <span>Isaac Gym</span>
+                    <span>Quadruped Robot</span>
 
                 </div>
 
             </article>
 
 
-            <!-- Project 2 -->
+            <!-- =================================================
+                 无人机详情
+            ================================================== -->
 
-            <article class="project-card">
+            <article class="project-detail-block"
+                     id="uav-detail">
 
-    <div class="project-image">
+                <div class="project-detail-topline">
 
-        <img
-            src="assets/images/uav-grasping.jpg"
-            alt="无人机自主抓取项目"
-        >
+                    <span>
+                        02 · UAV / COMPUTER VISION / CONTROL
+                    </span>
 
-    </div>
+                    <a href="#overview">
+                        返回概览 ↑
+                    </a>
 
-    <div class="project-content">
-
-        <div class="project-meta">
-            UAV · COMPUTER VISION · NMPC
-        </div>
-
-        <h3>
-            无人机自主抓取系统
-        </h3>
-
-        <p class="project-description">
-            基于 YOLOv8、深度相机和非线性模型预测控制，
-            实现无人机自主搜索、目标定位、接近抓取及放置任务。
-            通过 EKF 与 FR-MHE 对负载突变和风扰进行估计补偿，
-            轨迹跟踪 RMSE 降低约 30%。
-        </p>
-
-        <h4>
-            主要工作
-        </h4>
-
-        <ul>
-
-            <li>
-                YOLOv8 小样本微调与目标三维定位
-            </li>
-
-            <li>
-                视觉引导路径规划与有限状态机
-            </li>
-
-            <li>
-                基于 acados 的 NMPC 控制器
-            </li>
-
-            <li>
-                EKF / FR-MHE 干扰估计与前馈补偿
-            </li>
-
-        </ul>
-
-        <div class="project-tags">
-
-            <span>YOLOv8</span>
-            <span>NMPC</span>
-            <span>ROS</span>
-            <span>PX4</span>
-            <span>EKF</span>
-
-        </div>
-
-        <a
-            href="uav-grasping.html"
-            class="project-button"
-        >
-
-            查看项目详情
-
-            <i class="fa-solid fa-arrow-right"></i>
-
-        </a>
-
-    </div>
-
-</article>
-
-
-            <!-- Project 3 -->
-
-            <article class="project-card">
-
-                <div class="project-image">
-                    <img
-                        src="assets/images/model.png"
-                        alt="AI模型部署优化项目"
-                    >
                 </div>
 
-                <div class="project-content">
+                <h3>
+                    基于视觉引导与模型预测控制的无人机自主抓取系统
+                </h3>
 
-                    <div class="project-meta">
-                        AI ENGINEERING · MODEL DEPLOYMENT
+                <p class="project-detail-intro">
+                    面向复杂环境下的无人机自主抓取任务，
+                    融合视觉感知、自主规划、模型预测控制和干扰估计，
+                    实现从目标搜索到抓取运输的完整任务流程。
+                </p>
+
+
+                <div class="project-detail-grid">
+
+                    <div>
+
+                        <h4>
+                            项目背景
+                        </h4>
+
+                        <p>
+                            本项目针对无人机执行自主抓取任务时存在的目标定位误差、
+                            抓取后负载变化以及外部风扰等问题，设计了一套基于视觉引导
+                            与模型预测控制的自主抓取系统。系统在 PX4 Offboard 模式下，
+                            无需人工遥控即可完成目标搜索、识别定位、接近抓取、
+                            抓取确认、运输和释放。
+                        </p>
+
                     </div>
 
-                    <h3>
-                        深度学习模型部署与推理优化
-                    </h3>
 
-                    <p class="project-description">
-                        针对深度学习模型在边缘设备上的部署需求，
-                        开展模型压缩、格式转换、推理加速以及部署适配工作。
-                    </p>
+                    <div>
 
-                    <h4>主要工作</h4>
+                        <h4>
+                            主要工作
+                        </h4>
 
-                    <ul>
-                        <li>PyTorch 模型转换与推理测试</li>
-                        <li>ONNX / CANN 部署流程搭建</li>
-                        <li>模型性能与精度分析</li>
-                    </ul>
+                        <ul>
+                            <li>基于 YOLOv8 实现目标检测与三维定位</li>
+                            <li>设计视觉引导路径规划和有限状态机</li>
+                            <li>开发基于 NMPC 的轨迹跟踪控制器</li>
+                            <li>集成 EKF / FR-MHE 干扰估计与补偿</li>
+                            <li>通过压力传感器实现抓取状态判断</li>
+                            <li>完成 ROS、Gazebo、PX4 系统集成</li>
+                        </ul>
 
-                    <div class="project-tags">
-                        <span>PyTorch</span>
-                        <span>ONNX</span>
-                        <span>CANN</span>
-                        <span>Deployment</span>
                     </div>
 
-                    <a href="model-optimization.html" class="project-button">
-                        View Project
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
+                </div>
+
+
+                <!-- 核心公式 -->
+
+                <div class="project-formula-row">
+
+                    <div class="mini-formula">
+
+                        <span>
+                            NMPC Objective
+                        </span>
+
+                        $$
+                        J =
+                        \sum_{k=0}^{N-1}
+                        \left\|x_k-x_k^{ref}\right\|_Q^2
+                        +
+                        \left\|u_k\right\|_R^2
+                        +
+                        \left\|x_N-x_N^{ref}\right\|_P^2
+                        $$
+
+                    </div>
+
+
+                    <div class="mini-formula">
+
+                        <span>
+                            Disturbance Compensation
+                        </span>
+
+                        $$
+                        u =
+                        u_{\mathrm{NMPC}}
+                        -
+                        \hat{d}
+                        $$
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail-result">
+
+                    <strong>
+                        约 30%
+                    </strong>
+
+                    <span>
+                        引入干扰估计后轨迹跟踪 RMSE 降低
+                    </span>
+
+                </div>
+
+
+                <div class="detail-tech-row">
+
+                    <span>YOLOv8</span>
+                    <span>RealSense D435i</span>
+                    <span>PX4</span>
+                    <span>ROS1</span>
+                    <span>Gazebo</span>
+                    <span>NMPC</span>
+                    <span>EKF / FR-MHE</span>
 
                 </div>
 
             </article>
 
 
-            <!-- Project 4 -->
+            <!-- =================================================
+                 模型部署详情
+            ================================================== -->
 
-            <article class="project-card">
+            <article class="project-detail-block"
+                     id="model-detail">
 
-                <div class="project-image">
-                    <img
-                        src="assets/images/calibration.png"
-                        alt="相机雷达联合标定项目"
-                    >
+                <div class="project-detail-topline">
+
+                    <span>
+                        03 · AI ENGINEERING / MODEL DEPLOYMENT
+                    </span>
+
+                    <a href="#overview">
+                        返回概览 ↑
+                    </a>
+
                 </div>
 
-                <div class="project-content">
+                <h3>
+                    深度学习模型部署与推理优化
+                </h3>
 
-                    <div class="project-meta">
-                        SENSOR FUSION · PERCEPTION
+                <p class="project-detail-intro">
+                    面向深度学习模型在边缘计算设备上的部署需求，
+                    开展模型转换、推理优化、性能测试与部署适配工作。
+                </p>
+
+                <div class="project-detail-grid">
+
+                    <div>
+
+                        <h4>
+                            项目背景
+                        </h4>
+
+                        <p>
+                            深度学习模型在实际设备部署时通常受到计算资源、
+                            内存占用和推理延迟等因素限制。
+                            本项目围绕模型从训练框架到实际推理平台的转换流程，
+                            分析模型精度与推理性能之间的关系。
+                        </p>
+
                     </div>
 
-                    <h3>
-                        相机-雷达联合标定与多传感器融合
-                    </h3>
 
-                    <p class="project-description">
-                        面向机器人环境感知任务，
-                        研究相机与雷达之间的空间关系估计、
-                        坐标转换以及多传感器信息融合。
-                    </p>
+                    <div>
 
-                    <h4>主要工作</h4>
+                        <h4>
+                            主要工作
+                        </h4>
 
-                    <ul>
-                        <li>相机与雷达坐标系建模</li>
-                        <li>外参标定与误差分析</li>
-                        <li>多源感知数据融合</li>
-                    </ul>
+                        <ul>
+                            <li>完成 PyTorch 模型导出与格式转换</li>
+                            <li>搭建 ONNX 模型推理流程</li>
+                            <li>开展模型精度与推理速度测试</li>
+                            <li>进行边缘设备部署适配与性能分析</li>
+                        </ul>
 
-                    <div class="project-tags">
-                        <span>Sensor Fusion</span>
-                        <span>Calibration</span>
-                        <span>Computer Vision</span>
-                        <span>Python</span>
                     </div>
 
-                    <a href="calibration.html" class="project-button">
-                        View Project
-                        <i class="fas fa-arrow-right"></i>
+                </div>
+
+                <div class="detail-tech-row">
+
+                    <span>PyTorch</span>
+                    <span>ONNX</span>
+                    <span>CANN</span>
+                    <span>Model Optimization</span>
+                    <span>Edge Deployment</span>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 标定详情
+            ================================================== -->
+
+            <article class="project-detail-block"
+                     id="calibration-detail">
+
+                <div class="project-detail-topline">
+
+                    <span>
+                        04 · SENSOR FUSION / PERCEPTION
+                    </span>
+
+                    <a href="#overview">
+                        返回概览 ↑
                     </a>
+
+                </div>
+
+                <h3>
+                    相机-雷达联合标定与多传感器融合
+                </h3>
+
+                <p class="project-detail-intro">
+                    面向机器人环境感知任务，研究相机与雷达之间的空间关系估计、
+                    外参标定和多传感器数据融合方法。
+                </p>
+
+                <div class="project-detail-grid">
+
+                    <div>
+
+                        <h4>
+                            项目背景
+                        </h4>
+
+                        <p>
+                            单一传感器在复杂环境中容易受到视野、距离或环境条件的限制。
+                            通过建立相机与雷达之间的空间变换关系，
+                            可以将不同传感器的信息映射到统一坐标系，
+                            为机器人环境感知提供更加完整的数据基础。
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            主要工作
+                        </h4>
+
+                        <ul>
+                            <li>建立相机与雷达坐标系模型</li>
+                            <li>完成传感器外参标定</li>
+                            <li>分析标定误差及坐标转换误差</li>
+                            <li>实现多源感知数据的统一表达与融合</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="detail-tech-row">
+
+                    <span>Camera Calibration</span>
+                    <span>Sensor Fusion</span>
+                    <span>Coordinate Transform</span>
+                    <span>Computer Vision</span>
 
                 </div>
 
@@ -461,9 +1165,12 @@
         </section>
 
 
-        <!-- ================= Competitions ================= -->
+        <!-- =================================================
+             比赛经历
+        ================================================== -->
 
-        <section class="competitions-section" id="competitions">
+        <section class="competitions-section"
+                 id="competitions">
 
             <div class="section-heading">
 
@@ -486,7 +1193,7 @@
             <div class="competition-list">
 
 
-                <!-- RoboCup 2021 -->
+                <!-- RoboCup -->
 
                 <article class="competition-card">
 
@@ -497,6 +1204,7 @@
                     <div class="competition-main">
 
                         <div class="competition-topline">
+
                             <span class="competition-category">
                                 ROBOTICS COMPETITION
                             </span>
@@ -504,6 +1212,7 @@
                             <span class="competition-year">
                                 2021
                             </span>
+
                         </div>
 
                         <h3>
@@ -523,18 +1232,10 @@
 
                     </div>
 
-                    <a href="robocup2021.html"
-                       class="competition-link"
-                       aria-label="查看 RoboCup 2021 详情">
-
-                        <i class="fas fa-arrow-right"></i>
-
-                    </a>
-
                 </article>
 
 
-                <!-- RoboMaster 2022 -->
+                <!-- RoboMaster -->
 
                 <article class="competition-card">
 
@@ -545,6 +1246,7 @@
                     <div class="competition-main">
 
                         <div class="competition-topline">
+
                             <span class="competition-category">
                                 ROBOTICS · ENGINEERING
                             </span>
@@ -552,6 +1254,7 @@
                             <span class="competition-year">
                                 2022
                             </span>
+
                         </div>
 
                         <h3>
@@ -571,14 +1274,6 @@
 
                     </div>
 
-                    <a href="robomaster2022.html"
-                       class="competition-link"
-                       aria-label="查看 RoboMaster 2022 详情">
-
-                        <i class="fas fa-arrow-right"></i>
-
-                    </a>
-
                 </article>
 
 
@@ -593,6 +1288,7 @@
                     <div class="competition-main">
 
                         <div class="competition-topline">
+
                             <span class="competition-category">
                                 ENGINEERING DESIGN
                             </span>
@@ -600,6 +1296,7 @@
                             <span class="competition-year">
                                 2022
                             </span>
+
                         </div>
 
                         <h3>
@@ -619,14 +1316,6 @@
 
                     </div>
 
-                    <a href="mechanical-design.html"
-                       class="competition-link"
-                       aria-label="查看机械创新设计大赛详情">
-
-                        <i class="fas fa-arrow-right"></i>
-
-                    </a>
-
                 </article>
 
             </div>
@@ -634,9 +1323,12 @@
         </section>
 
 
-        <!-- ================= Skills ================= -->
+        <!-- =================================================
+             技术能力
+        ================================================== -->
 
-        <section class="skills-section" id="skills">
+        <section class="skills-section"
+                 id="skills">
 
             <div class="section-heading">
 
@@ -651,31 +1343,42 @@
 
             </div>
 
+
             <div class="skills-table">
 
                 <div class="skill-row">
                     <strong>Programming</strong>
-                    <span>Python, C++, MATLAB, Linux, Git</span>
+                    <span>
+                        Python, C++, MATLAB, Linux, Git
+                    </span>
                 </div>
 
                 <div class="skill-row">
                     <strong>Deep Learning</strong>
-                    <span>PyTorch, CNN, Transformer, ONNX, Model Deployment</span>
+                    <span>
+                        PyTorch, CNN, Transformer, ONNX, Model Deployment
+                    </span>
                 </div>
 
                 <div class="skill-row">
                     <strong>Reinforcement Learning</strong>
-                    <span>PPO, MAPPO, Isaac Gym, Policy Optimization</span>
+                    <span>
+                        PPO, MAPPO, Isaac Gym, Policy Optimization
+                    </span>
                 </div>
 
                 <div class="skill-row">
                     <strong>Robotics</strong>
-                    <span>ROS, Motion Control, Quadruped Robots, UAV</span>
+                    <span>
+                        ROS, Motion Control, Quadruped Robots, UAV
+                    </span>
                 </div>
 
                 <div class="skill-row">
                     <strong>Computer Vision</strong>
-                    <span>Object Detection, Camera Calibration, Sensor Fusion</span>
+                    <span>
+                        Object Detection, Camera Calibration, Sensor Fusion
+                    </span>
                 </div>
 
             </div>
@@ -683,9 +1386,12 @@
         </section>
 
 
-        <!-- ================= Experience ================= -->
+        <!-- =================================================
+             教育与经历
+        ================================================== -->
 
-        <section class="experience-section" id="experience">
+        <section class="experience-section"
+                 id="experience">
 
             <div class="section-heading">
 
@@ -754,9 +1460,12 @@
         </section>
 
 
-        <!-- ================= Contact ================= -->
+        <!-- =================================================
+             联系方式
+        ================================================== -->
 
-        <section class="contact-section">
+        <section class="contact-section"
+                 id="contact">
 
             <div class="contact-box">
 
@@ -781,15 +1490,20 @@
 
         </section>
 
+
     </main>
 
 </div>
 
 
-<!-- ================= Footer ================= -->
+<!-- =====================================================
+     Footer
+===================================================== -->
 
 <footer class="footer">
+
     © 2026 Li Jia · AI & Robotics Portfolio
+
 </footer>
 
 
