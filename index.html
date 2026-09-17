@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>李佳 | AI & Robotics Portfolio</title>
+    <title>李佳 | AI & Robotics Researcher</title>
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -15,7 +15,7 @@
 
 <body>
 
-<!-- ==================== Navigation ==================== -->
+<!-- ================= Navigation ================= -->
 
 <header class="navbar">
     <div class="nav-container">
@@ -26,6 +26,7 @@
             <a href="index.html" class="active">Homepage</a>
             <a href="#about">About Me</a>
             <a href="#projects">Projects</a>
+            <a href="#competitions">Competitions</a>
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="cv.html">CV</a>
@@ -35,16 +36,16 @@
 </header>
 
 
-<!-- ==================== Main Layout ==================== -->
+<!-- ================= Main Layout ================= -->
 
-<main class="site-layout">
+<div class="site-layout">
 
-    <!-- ==================== Sidebar ==================== -->
+    <!-- ================= Sidebar ================= -->
 
     <aside class="profile-sidebar">
 
         <img
-            src="assets/images/personal_Image.jpg"
+            src="assets/images/person_Image.jpg"
             alt="李佳个人照片"
             class="profile-photo"
         >
@@ -53,9 +54,9 @@
 
         <p class="profile-name">Li Jia</p>
 
-        <span class="profile-position">
+        <div class="profile-position">
             AI / Robotics / Control
-        </span>
+        </div>
 
         <p class="profile-school">
             东南大学 · 自动化学院
@@ -70,19 +71,19 @@
         <div class="profile-contact">
 
             <p>
-                <i class="fa-solid fa-location-dot"></i>
+                <i class="fas fa-location-dot"></i>
                 <span>China / Japan</span>
             </p>
 
             <p>
-                <i class="fa-solid fa-envelope"></i>
+                <i class="fas fa-envelope"></i>
                 <a href="mailto:your-email@example.com">
                     Email
                 </a>
             </p>
 
             <p>
-                <i class="fa-brands fa-github"></i>
+                <i class="fab fa-github"></i>
                 <a href="https://github.com/Revivelj"
                    target="_blank">
                     GitHub
@@ -90,7 +91,7 @@
             </p>
 
             <p>
-                <i class="fa-solid fa-file-pdf"></i>
+                <i class="fas fa-file-pdf"></i>
                 <a href="cv.html">
                     Curriculum Vitae
                 </a>
@@ -104,17 +105,18 @@
             <span>PyTorch</span>
             <span>Robotics</span>
             <span>RL</span>
-            <span>ROS</span>
+            <span>Motion Control</span>
         </div>
 
     </aside>
 
 
-    <!-- ==================== Main Content ==================== -->
+    <!-- ================= Main Content ================= -->
 
-    <section class="main-content">
+    <main class="main-content">
 
-        <!-- ==================== About ==================== -->
+
+        <!-- ================= About ================= -->
 
         <section class="about-section" id="about">
 
@@ -136,16 +138,18 @@
 
             <p>
                 我的研究与工程实践主要集中于
-                <strong>人工智能、深度强化学习、机器人运动控制、多传感器融合以及 AI 模型部署优化</strong>。
+                <strong>人工智能、深度强化学习、机器人运动控制、
+                多传感器融合以及 AI 模型部署优化</strong>。
             </p>
 
             <p>
-                我希望将机器学习算法与机器人系统相结合，从算法设计、仿真训练到真实设备部署，
-                构建能够在复杂现实环境中运行的智能系统。
+                我希望将机器学习算法与机器人系统相结合，
+                从算法设计、仿真训练到真实设备部署，
+                构建能够在实际复杂环境中运行的智能系统。
             </p>
 
             <div class="about-highlight">
-                <i class="fa-solid fa-quote-left"></i>
+                <i class="fas fa-quote-left"></i>
 
                 <span>
                     Interested in building intelligent systems that connect
@@ -156,12 +160,12 @@
         </section>
 
 
-        <!-- ==================== Overview Cards ==================== -->
+        <!-- ================= Overview Cards ================= -->
 
         <section class="overview-grid">
 
             <div class="overview-card">
-                <i class="fa-solid fa-brain"></i>
+                <i class="fas fa-brain"></i>
 
                 <h3>AI Research</h3>
 
@@ -171,32 +175,34 @@
                 </p>
             </div>
 
+
             <div class="overview-card">
-                <i class="fa-solid fa-robot"></i>
+                <i class="fas fa-robot"></i>
 
                 <h3>Robotics</h3>
 
                 <p>
                     Quadruped Robots, UAV,
-                    Motion Control and Planning
+                    Motion Control and Autonomous Systems
                 </p>
             </div>
 
+
             <div class="overview-card">
-                <i class="fa-solid fa-code"></i>
+                <i class="fas fa-code"></i>
 
                 <h3>Engineering</h3>
 
                 <p>
                     Python, C++, PyTorch, ONNX,
-                    ROS and Embedded Deployment
+                    Embedded Deployment
                 </p>
             </div>
 
         </section>
 
 
-        <!-- ==================== Projects ==================== -->
+        <!-- ================= Projects ================= -->
 
         <section class="projects-section" id="projects">
 
@@ -207,7 +213,7 @@
                 </div>
 
                 <h2>
-                    <i class="fa-solid fa-folder-open"></i>
+                    <i class="fas fa-folder-open"></i>
                     项目作品
                 </h2>
 
@@ -236,25 +242,33 @@
                     </div>
 
                     <h3>
-                        四足机器人运动控制与强化学习
+                        四足机器人强化学习运动控制
                     </h3>
 
                     <p class="project-description">
                         面向四足机器人复杂地形下的自主运动控制，
-                        研究基于深度强化学习的运动策略训练、
-                        仿真到现实迁移以及机器人运动稳定性。
+                        基于深度强化学习实现机器人行走策略训练、
+                        仿真验证与真实平台部署。
                     </p>
 
+                    <h4>主要工作</h4>
+
+                    <ul>
+                        <li>构建机器人仿真训练环境</li>
+                        <li>设计 PPO 强化学习控制策略</li>
+                        <li>实现策略网络部署与运动控制</li>
+                    </ul>
+
                     <div class="project-tags">
+                        <span>Python</span>
                         <span>PyTorch</span>
-                        <span>Isaac Gym</span>
                         <span>PPO</span>
-                        <span>Quadruped</span>
+                        <span>Isaac Gym</span>
                     </div>
 
                     <a href="quadruped.html" class="project-button">
-                        查看项目详情
-                        <i class="fa-solid fa-arrow-right"></i>
+                        View Project
+                        <i class="fas fa-arrow-right"></i>
                     </a>
 
                 </div>
@@ -276,28 +290,37 @@
                 <div class="project-content">
 
                     <div class="project-meta">
-                        UAV · MOTION PLANNING · CONTROL
+                        UAV · AUTONOMOUS SYSTEM
                     </div>
 
                     <h3>
-                        无人机自主抓取与视觉伺服控制
+                        无人机自主抓取与视觉控制
                     </h3>
 
                     <p class="project-description">
-                        面向无人机与机械执行机构协同作业场景，
-                        实现目标识别、位姿估计、轨迹规划以及自主抓取控制。
+                        面向无人机自主作业场景，
+                        结合视觉感知、目标定位与运动控制，
+                        实现无人机对目标物体的自主识别和抓取。
                     </p>
+
+                    <h4>主要工作</h4>
+
+                    <ul>
+                        <li>目标检测与空间位置估计</li>
+                        <li>视觉信息与控制系统融合</li>
+                        <li>自主飞行与抓取流程设计</li>
+                    </ul>
 
                     <div class="project-tags">
                         <span>UAV</span>
                         <span>Computer Vision</span>
-                        <span>Motion Planning</span>
+                        <span>ROS</span>
                         <span>Control</span>
                     </div>
 
                     <a href="uav-grasping.html" class="project-button">
-                        查看项目详情
-                        <i class="fa-solid fa-arrow-right"></i>
+                        View Project
+                        <i class="fas fa-arrow-right"></i>
                     </a>
 
                 </div>
@@ -323,24 +346,32 @@
                     </div>
 
                     <h3>
-                        深度学习模型压缩与边缘部署优化
+                        深度学习模型部署与推理优化
                     </h3>
 
                     <p class="project-description">
-                        面向边缘设备和嵌入式平台，
-                        开展深度学习模型转换、量化、推理加速以及部署优化。
+                        针对深度学习模型在边缘设备上的部署需求，
+                        开展模型压缩、格式转换、推理加速以及部署适配工作。
                     </p>
+
+                    <h4>主要工作</h4>
+
+                    <ul>
+                        <li>PyTorch 模型转换与推理测试</li>
+                        <li>ONNX / CANN 部署流程搭建</li>
+                        <li>模型性能与精度分析</li>
+                    </ul>
 
                     <div class="project-tags">
                         <span>PyTorch</span>
                         <span>ONNX</span>
                         <span>CANN</span>
-                        <span>Model Optimization</span>
+                        <span>Deployment</span>
                     </div>
 
                     <a href="model-optimization.html" class="project-button">
-                        查看项目详情
-                        <i class="fa-solid fa-arrow-right"></i>
+                        View Project
+                        <i class="fas fa-arrow-right"></i>
                     </a>
 
                 </div>
@@ -362,7 +393,7 @@
                 <div class="project-content">
 
                     <div class="project-meta">
-                        SENSOR FUSION · COMPUTER VISION
+                        SENSOR FUSION · PERCEPTION
                     </div>
 
                     <h3>
@@ -370,20 +401,29 @@
                     </h3>
 
                     <p class="project-description">
-                        研究相机与雷达之间的空间几何关系，
-                        完成外参标定、坐标系转换和多传感器数据融合。
+                        面向机器人环境感知任务，
+                        研究相机与雷达之间的空间关系估计、
+                        坐标转换以及多传感器信息融合。
                     </p>
 
+                    <h4>主要工作</h4>
+
+                    <ul>
+                        <li>相机与雷达坐标系建模</li>
+                        <li>外参标定与误差分析</li>
+                        <li>多源感知数据融合</li>
+                    </ul>
+
                     <div class="project-tags">
-                        <span>Camera</span>
-                        <span>LiDAR</span>
-                        <span>Calibration</span>
                         <span>Sensor Fusion</span>
+                        <span>Calibration</span>
+                        <span>Computer Vision</span>
+                        <span>Python</span>
                     </div>
 
                     <a href="calibration.html" class="project-button">
-                        查看项目详情
-                        <i class="fa-solid fa-arrow-right"></i>
+                        View Project
+                        <i class="fas fa-arrow-right"></i>
                     </a>
 
                 </div>
@@ -393,18 +433,191 @@
         </section>
 
 
-        <!-- ==================== Skills ==================== -->
+        <!-- ================= Competitions ================= -->
+
+        <section class="competitions-section" id="competitions">
+
+            <div class="section-heading">
+
+                <div class="small-label">
+                    COMPETITION EXPERIENCE
+                </div>
+
+                <h2>
+                    <i class="fas fa-trophy"></i>
+                    比赛经历
+                </h2>
+
+                <p>
+                    机器人竞赛、工程实践与团队协作经历
+                </p>
+
+            </div>
+
+
+            <div class="competition-list">
+
+
+                <!-- RoboCup 2021 -->
+
+                <article class="competition-card">
+
+                    <div class="competition-icon">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+
+                    <div class="competition-main">
+
+                        <div class="competition-topline">
+                            <span class="competition-category">
+                                ROBOTICS COMPETITION
+                            </span>
+
+                            <span class="competition-year">
+                                2021
+                            </span>
+                        </div>
+
+                        <h3>
+                            RoboCup 2021
+                        </h3>
+
+                        <p>
+                            参与机器人足球相关竞赛，
+                            负责机器人系统调试、控制策略设计及比赛现场问题排查。
+                        </p>
+
+                        <div class="competition-tags">
+                            <span>Robot Control</span>
+                            <span>Teamwork</span>
+                            <span>System Debugging</span>
+                        </div>
+
+                    </div>
+
+                    <a href="robocup2021.html"
+                       class="competition-link"
+                       aria-label="查看 RoboCup 2021 详情">
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- RoboMaster 2022 -->
+
+                <article class="competition-card">
+
+                    <div class="competition-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+
+                    <div class="competition-main">
+
+                        <div class="competition-topline">
+                            <span class="competition-category">
+                                ROBOTICS · ENGINEERING
+                            </span>
+
+                            <span class="competition-year">
+                                2022
+                            </span>
+                        </div>
+
+                        <h3>
+                            RoboMaster 2022
+                        </h3>
+
+                        <p>
+                            参与 RoboMaster 机器人竞赛，
+                            主要涉及机器人控制、系统集成、机械结构与电控协同调试。
+                        </p>
+
+                        <div class="competition-tags">
+                            <span>Robot System</span>
+                            <span>Control</span>
+                            <span>Engineering</span>
+                        </div>
+
+                    </div>
+
+                    <a href="robomaster2022.html"
+                       class="competition-link"
+                       aria-label="查看 RoboMaster 2022 详情">
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- Mechanical Design -->
+
+                <article class="competition-card">
+
+                    <div class="competition-icon">
+                        <i class="fas fa-gears"></i>
+                    </div>
+
+                    <div class="competition-main">
+
+                        <div class="competition-topline">
+                            <span class="competition-category">
+                                ENGINEERING DESIGN
+                            </span>
+
+                            <span class="competition-year">
+                                2022
+                            </span>
+                        </div>
+
+                        <h3>
+                            全国大学生机械创新设计大赛
+                        </h3>
+
+                        <p>
+                            参与机械创新设计类竞赛，
+                            负责方案设计、机械结构分析、功能实现与作品展示。
+                        </p>
+
+                        <div class="competition-tags">
+                            <span>Mechanical Design</span>
+                            <span>Innovation</span>
+                            <span>Prototyping</span>
+                        </div>
+
+                    </div>
+
+                    <a href="mechanical-design.html"
+                       class="competition-link"
+                       aria-label="查看机械创新设计大赛详情">
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= Skills ================= -->
 
         <section class="skills-section" id="skills">
 
             <div class="section-heading">
 
                 <div class="small-label">
-                    TECHNICAL SKILLS
+                    TECHNICAL BACKGROUND
                 </div>
 
                 <h2>
-                    <i class="fa-solid fa-layer-group"></i>
+                    <i class="fas fa-code"></i>
                     技术能力
                 </h2>
 
@@ -414,12 +627,12 @@
 
                 <div class="skill-row">
                     <strong>Programming</strong>
-                    <span>Python, C++, MATLAB, Bash</span>
+                    <span>Python, C++, MATLAB, Linux, Git</span>
                 </div>
 
                 <div class="skill-row">
-                    <strong>AI / Deep Learning</strong>
-                    <span>PyTorch, Transformer, CNN, ONNX, Model Quantization</span>
+                    <strong>Deep Learning</strong>
+                    <span>PyTorch, CNN, Transformer, ONNX, Model Deployment</span>
                 </div>
 
                 <div class="skill-row">
@@ -429,12 +642,12 @@
 
                 <div class="skill-row">
                     <strong>Robotics</strong>
-                    <span>ROS, Motion Planning, Robot Control, UAV, Quadruped Robot</span>
+                    <span>ROS, Motion Control, Quadruped Robots, UAV</span>
                 </div>
 
                 <div class="skill-row">
-                    <strong>Tools</strong>
-                    <span>Git, Linux, Docker, VS Code, MATLAB/Simulink</span>
+                    <strong>Computer Vision</strong>
+                    <span>Object Detection, Camera Calibration, Sensor Fusion</span>
                 </div>
 
             </div>
@@ -442,65 +655,68 @@
         </section>
 
 
-        <!-- ==================== Experience ==================== -->
+        <!-- ================= Experience ================= -->
 
         <section class="experience-section" id="experience">
 
             <div class="section-heading">
 
                 <div class="small-label">
-                    EXPERIENCE
+                    EDUCATION & EXPERIENCE
                 </div>
 
                 <h2>
-                    <i class="fa-solid fa-briefcase"></i>
+                    <i class="fas fa-graduation-cap"></i>
                     教育与经历
                 </h2>
 
             </div>
 
+
             <div class="timeline-item">
 
                 <div class="timeline-date">
-                    2024 - Present
+                    2024 — Present
                 </div>
 
                 <div class="timeline-content">
 
                     <h3>
-                        东南大学 · 自动化学院
+                        东南大学
                     </h3>
 
                     <p>
-                        控制科学与工程 · 硕士研究生
+                        自动化学院 · 控制科学与工程
                     </p>
 
                     <span>
-                        研究方向：人工智能、深度强化学习、机器人运动控制及多传感器融合。
+                        硕士研究生，研究方向包括深度强化学习、
+                        机器人运动控制与智能系统。
                     </span>
 
                 </div>
 
             </div>
 
+
             <div class="timeline-item">
 
                 <div class="timeline-date">
-                    Research
+                    2020 — 2024
                 </div>
 
                 <div class="timeline-content">
 
                     <h3>
-                        AI & Robotics Projects
+                        本科阶段
                     </h3>
 
                     <p>
-                        科研项目与工程实践
+                        自动化 / 机器人相关专业背景
                     </p>
 
                     <span>
-                        参与机器人控制、无人机系统、深度学习模型部署和视觉感知相关项目。
+                        参与机器人竞赛、工程项目及智能控制相关实践。
                     </span>
 
                 </div>
@@ -510,7 +726,7 @@
         </section>
 
 
-        <!-- ==================== Contact ==================== -->
+        <!-- ================= Contact ================= -->
 
         <section class="contact-section">
 
@@ -521,28 +737,33 @@
                 </h2>
 
                 <p>
-                    如果你对我的研究方向、项目经历或潜在合作感兴趣，
-                    欢迎通过邮件或 GitHub 与我联系。
+                    如果你对机器人、人工智能、强化学习或相关工程实践感兴趣，
+                    欢迎与我交流。
                 </p>
 
                 <a href="mailto:your-email@example.com"
                    class="contact-button">
-                    <i class="fa-solid fa-envelope"></i>
-                    联系我
+
+                    <i class="fas fa-envelope"></i>
+                    Contact Me
+
                 </a>
 
             </div>
 
         </section>
 
-    </section>
+    </main>
 
-</main>
+</div>
 
+
+<!-- ================= Footer ================= -->
 
 <footer class="footer">
-    © 2026 Li Jia. Built with GitHub Pages.
+    © 2026 Li Jia · AI & Robotics Portfolio
 </footer>
+
 
 </body>
 </html>
