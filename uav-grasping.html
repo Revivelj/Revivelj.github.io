@@ -3,35 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>无人机自主抓取系统 | Li Jia</title>
+    <title>无人机自主抓取系统 | Revive</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    >
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- MathJax -->
     <script>
         window.MathJax = {
             tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
             }
         };
     </script>
 
-    <script
-        async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    <script async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
 </head>
-
 
 <body>
 
@@ -39,45 +31,25 @@
          Navigation
     ========================== -->
 
-    <header class="navbar">
+    <nav class="navbar">
 
         <div class="nav-container">
 
             <a href="index.html" class="logo">
-                LJ
+                REVIVE
             </a>
 
-            <nav class="nav-links">
-
-                <a href="index.html">
-                    Homepage
-                </a>
-
-                <a href="about.html">
-                    About Me
-                </a>
-
-                <a href="projects.html" class="active">
-                    Projects
-                </a>
-
-                <a href="experience.html">
-                    Experience
-                </a>
-
-                <a href="skills.html">
-                    Skills
-                </a>
-
-                <a href="cv.html">
-                    CV
-                </a>
-
-            </nav>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="index.html#projects">项目</a>
+                <a href="index.html#skills">技能</a>
+                <a href="index.html#experience">经历</a>
+                <a href="index.html#contact">联系</a>
+            </div>
 
         </div>
 
-    </header>
+    </nav>
 
 
     <!-- =========================
@@ -86,22 +58,20 @@
 
     <main class="project-detail-container">
 
-        <!-- 返回项目主页 -->
+        <!-- Back -->
 
         <a href="index.html#projects" class="back-link">
             <i class="fa-solid fa-arrow-left"></i>
-            返回项目作品集
+            返回项目列表
         </a>
 
 
-        <!-- =========================
-             Project Header
-        ========================== -->
+        <!-- Header -->
 
-        <section class="project-detail-header">
+        <header class="project-detail-header">
 
-            <div class="small-label">
-                SELECTED PROJECT · UAV AUTONOMOUS GRASPING
+            <div class="project-meta">
+                AUTONOMOUS UAV · MOTION CONTROL · COMPUTER VISION
             </div>
 
             <h1>
@@ -109,160 +79,269 @@
             </h1>
 
             <p class="project-detail-subtitle">
-                视觉感知 · 6D位姿估计 · 路径规划 · NMPC · 干扰估计 · ROS/Gazebo
+                面向无人机自主搜索、目标定位、精准抓取与投放的完整任务链系统
             </p>
 
             <div class="detail-tags">
-
-                <span>UAV</span>
-                <span>Autonomous Grasping</span>
-                <span>YOLOv8</span>
-                <span>Depth Camera</span>
-                <span>NMPC</span>
-                <span>EKF</span>
-                <span>MHE</span>
                 <span>ROS1</span>
                 <span>PX4</span>
-
+                <span>Gazebo</span>
+                <span>YOLOv8</span>
+                <span>NMPC</span>
+                <span>EKF / MHE</span>
+                <span>C++</span>
             </div>
 
-        </section>
+        </header>
 
 
-        <!-- =========================
-             Hero Image
-        ========================== -->
+        <!-- Hero Image -->
 
         <div class="project-hero-media">
 
-            <img
-                src="assets/images/uav-grasping.jpg"
-                alt="无人机自主抓取系统"
-            >
+            <img src="assets/images/uav-grasping.jpg"
+                 alt="无人机自主抓取系统">
 
         </div>
 
 
         <!-- =========================
-             Project Overview
+             Project Background
         ========================== -->
 
         <section class="detail-section">
 
             <h2>
-                <i class="fa-solid fa-circle-info"></i>
-                项目概述
+                <i class="fa-solid fa-bullseye"></i>
+                项目背景
             </h2>
 
             <p>
-                本项目设计并验证了一套基于视觉引导与模型预测控制的无人机自主抓取系统。
-                系统运行于 PX4 Offboard 模式，无需人工遥控干预，能够自主完成目标搜索、
-                目标识别、三维定位、接近轨迹规划、吸附抓取、抓取结果判断以及目标放置等任务。
+                本项目面向无人机在复杂环境下执行自主抓取任务的需求，
+                设计并验证了一套集成视觉感知、位姿估计、路径规划、
+                运动控制与任务调度的完整自主抓取系统。
             </p>
 
             <p>
-                项目的核心研究重点并不是吸盘机械结构本身，而是
-                <strong>视觉感知、无人机精确运动控制以及负载突变和风扰条件下的干扰估计与补偿</strong>。
-                通过将目标检测、深度相机、路径规划、NMPC 控制器以及状态估计器进行系统集成，
-                构建了一套完整的自主抓取任务链路。
+                无人机在起飞后无需人工遥控，能够自主搜索预设区域内的目标，
+                通过视觉识别和深度信息估计目标位置，规划接近轨迹并完成抓取。
+                抓取成功后，系统进一步自主规划飞行路径，将目标运输至指定区域并释放。
             </p>
 
             <p>
-                仿真平台采用 ROS1 与 Gazebo，系统使用 C++ 完成各功能节点的开发与集成。
-                实验结果表明，在负载突变和外部风扰同时存在的情况下，
-                引入干扰估计与补偿后，轨迹跟踪 RMSE 相比纯 NMPC 控制方案降低约
-                <strong>30%</strong>。
+                项目重点不在于复杂抓取机构本身，而在于研究
+                <strong>目标负载突变和外部扰动条件下的高精度轨迹跟踪与鲁棒控制问题</strong>。
             </p>
 
         </section>
 
 
         <!-- =========================
-             Project Highlights
+             Project Goal
         ========================== -->
 
-        <section class="detail-two-column">
+        <section class="detail-section">
 
-            <div class="detail-info-card">
+            <h2>
+                <i class="fa-solid fa-flag-checkered"></i>
+                项目目标
+            </h2>
 
-                <h3>
-                    <i class="fa-solid fa-bullseye"></i>
-                    项目目标
-                </h3>
+            <div class="detail-two-column">
 
-                <ul>
+                <div class="detail-info-card">
 
-                    <li>
-                        实现无人机自主搜索与识别目标物体
-                    </li>
+                    <h3>
+                        <i class="fa-solid fa-robot"></i>
+                        自主任务执行
+                    </h3>
 
-                    <li>
-                        基于深度相机完成目标三维定位
-                    </li>
+                    <ul>
+                        <li>实现无人机自主搜索与目标识别</li>
+                        <li>完成目标定位、接近、抓取和释放</li>
+                        <li>减少人工遥控干预</li>
+                    </ul>
 
-                    <li>
-                        设计视觉引导的自主接近与抓取流程
-                    </li>
+                </div>
 
-                    <li>
-                        处理抓取瞬间的负载突变问题
-                    </li>
 
-                    <li>
-                        提升风扰环境下的轨迹跟踪精度
-                    </li>
+                <div class="detail-info-card">
 
-                    <li>
-                        构建可扩展的完整自主任务调度框架
-                    </li>
+                    <h3>
+                        <i class="fa-solid fa-crosshairs"></i>
+                        高精度运动控制
+                    </h3>
 
-                </ul>
+                    <ul>
+                        <li>提高目标接近阶段的位置跟踪精度</li>
+                        <li>应对风扰和抓取瞬间的负载变化</li>
+                        <li>增强系统的稳定性与鲁棒性</li>
+                    </ul>
+
+                </div>
 
             </div>
 
+        </section>
 
-            <div class="detail-info-card">
 
-                <h3>
-                    <i class="fa-solid fa-gears"></i>
-                    系统组成
-                </h3>
+        <!-- =========================
+             Main Work
+        ========================== -->
 
-                <ul>
+        <section class="detail-section">
 
-                    <li>
-                        PX4 Offboard 飞控控制
-                    </li>
+            <h2>
+                <i class="fa-solid fa-layer-group"></i>
+                主要工作
+            </h2>
 
-                    <li>
-                        YOLOv8 目标检测
-                    </li>
+            <div class="technical-list">
 
-                    <li>
-                        Intel RealSense D435i 深度相机
-                    </li>
+                <div class="technical-item">
 
-                    <li>
-                        ROS1 / Gazebo 仿真平台
-                    </li>
+                    <h3>
+                        01 · 硬件与系统设计
+                    </h3>
 
-                    <li>
-                        视觉引导路径规划节点
-                    </li>
+                    <p>
+                        完成MCU、气泵、电磁阀、压力传感器和深度相机等核心器件选型，
+                        设计吸附式抓取气路及控制电路，实现抓取机构与飞控系统的协同工作。
+                    </p>
 
-                    <li>
-                        NMPC 底层运动控制器
-                    </li>
+                </div>
 
-                    <li>
-                        EKF / FR-MHE 干扰估计器
-                    </li>
 
-                    <li>
-                        压力传感器抓取结果判断
-                    </li>
+                <div class="technical-item">
 
-                </ul>
+                    <h3>
+                        02 · 视觉检测与位姿估计
+                    </h3>
+
+                    <p>
+                        基于YOLOv8对目标物体进行检测，并针对手写数字目标数据集进行微调。
+                        结合深度相机获取目标三维位置，通过坐标系变换得到目标在世界坐标系中的位置。
+                    </p>
+
+                </div>
+
+
+                <div class="technical-item">
+
+                    <h3>
+                        03 · 自主路径规划
+                    </h3>
+
+                    <p>
+                        设计基于有限状态机的路径规划节点，
+                        根据目标位置计算安全观测点和接近轨迹，
+                        实现高度、水平位置和偏航角的分阶段精确调整。
+                    </p>
+
+                </div>
+
+
+                <div class="technical-item">
+
+                    <h3>
+                        04 · NMPC运动控制
+                    </h3>
+
+                    <p>
+                        基于无人机非线性动力学模型设计NMPC控制器，
+                        通过滚动时域优化实现对位置、速度和姿态的高精度跟踪，
+                        并考虑推力和姿态等控制约束。
+                    </p>
+
+                </div>
+
+
+                <div class="technical-item">
+
+                    <h3>
+                        05 · 干扰估计与补偿
+                    </h3>
+
+                    <p>
+                        集成扩展卡尔曼滤波和滚动时域估计两种干扰估计方法，
+                        对负载变化和外部风扰进行在线估计，
+                        并将估计结果用于修正NMPC预测模型。
+                    </p>
+
+                </div>
+
+
+                <div class="technical-item">
+
+                    <h3>
+                        06 · 全流程任务调度
+                    </h3>
+
+                    <p>
+                        设计嵌套有限状态机，实现起飞、目标搜索、抓取准备、
+                        抓取执行、结果判断、目标切换和降落等任务阶段的自动切换。
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             System Architecture
+        ========================== -->
+
+        <section class="detail-section">
+
+            <h2>
+                <i class="fa-solid fa-diagram-project"></i>
+                系统技术路线
+            </h2>
+
+            <div class="architecture-flow">
+
+                <div class="flow-item">
+                    <strong>目标检测</strong>
+                    <span>YOLOv8 + 深度相机</span>
+                </div>
+
+                <div class="flow-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+                <div class="flow-item">
+                    <strong>三维定位</strong>
+                    <span>坐标变换与滤波</span>
+                </div>
+
+                <div class="flow-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+                <div class="flow-item">
+                    <strong>路径规划</strong>
+                    <span>有限状态机</span>
+                </div>
+
+                <div class="flow-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+                <div class="flow-item">
+                    <strong>运动控制</strong>
+                    <span>NMPC + 干扰补偿</span>
+                </div>
+
+                <div class="flow-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+                <div class="flow-item">
+                    <strong>抓取与投放</strong>
+                    <span>压力反馈 + 任务调度</span>
+                </div>
 
             </div>
 
@@ -277,96 +356,50 @@
 
             <h2>
                 <i class="fa-solid fa-route"></i>
-                自主抓取任务流程
+                自主任务流程
             </h2>
 
-            <p>
-                系统在 PX4 Offboard 模式下运行，整个任务不需要人工遥控干预。
-                无人机起飞后按照预设任务区域进行搜索，并根据视觉检测结果动态调整飞行姿态。
-            </p>
+            <div class="detail-info-card">
 
+                <ul>
 
-            <div class="architecture-flow">
+                    <li>
+                        无人机进入PX4 Offboard模式并自主起飞
+                    </li>
 
-                <div class="flow-item">
+                    <li>
+                        在预设区域内执行目标搜索
+                    </li>
 
-                    <strong>起飞</strong>
+                    <li>
+                        通过YOLOv8识别带数字标记的圆柱目标
+                    </li>
 
-                    <span>
-                        进入指定高度并完成初始化
-                    </span>
+                    <li>
+                        根据深度信息估计目标三维位置
+                    </li>
 
-                </div>
+                    <li>
+                        规划目标前方安全观测点并完成精准对中
+                    </li>
 
-                <div class="flow-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
+                    <li>
+                        控制吸盘接触目标并通过压力变化判断抓取结果
+                    </li>
 
-                <div class="flow-item">
+                    <li>
+                        抓取失败时自动触发重试机制
+                    </li>
 
-                    <strong>目标搜索</strong>
+                    <li>
+                        抓取成功后规划至指定投放区域并完成释放
+                    </li>
 
-                    <span>
-                        在预设区域执行自主搜索
-                    </span>
+                    <li>
+                        根据任务状态决定继续下一个目标或返航降落
+                    </li>
 
-                </div>
-
-                <div class="flow-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-                <div class="flow-item">
-
-                    <strong>视觉识别</strong>
-
-                    <span>
-                        YOLOv8 检测数字圆柱目标
-                    </span>
-
-                </div>
-
-                <div class="flow-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-                <div class="flow-item">
-
-                    <strong>三维定位</strong>
-
-                    <span>
-                        深度相机估计目标空间位置
-                    </span>
-
-                </div>
-
-                <div class="flow-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-                <div class="flow-item">
-
-                    <strong>接近与抓取</strong>
-
-                    <span>
-                        规划轨迹并完成吸附
-                    </span>
-
-                </div>
-
-                <div class="flow-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-                <div class="flow-item">
-
-                    <strong>放置与返回</strong>
-
-                    <span>
-                        检测放置区域并释放目标
-                    </span>
-
-                </div>
+                </ul>
 
             </div>
 
@@ -374,55 +407,30 @@
 
 
         <!-- =========================
-             Hardware
+             Technical Highlights
         ========================== -->
 
         <section class="detail-section">
 
             <h2>
-                <i class="fa-solid fa-microchip"></i>
-                硬件设计与系统实现
+                <i class="fa-solid fa-gears"></i>
+                技术亮点
             </h2>
-
-            <p>
-                在硬件方面，独立完成 MCU、气泵、深度相机以及相关执行器件的选型，
-                并在预算约束下进行整体配置优化。
-                系统采用气压驱动的吸附式抓取方案，通过电磁阀控制气路通断，
-                实现对目标圆柱物体的吸附与释放。
-            </p>
 
             <div class="detail-two-column">
 
                 <div class="detail-info-card">
 
                     <h3>
-                        <i class="fa-solid fa-circuit-board"></i>
-                        控制电路设计
+                        <i class="fa-solid fa-eye"></i>
+                        小样本视觉微调
                     </h3>
 
-                    <ul>
-
-                        <li>
-                            使用 STM32 作为底层控制 MCU
-                        </li>
-
-                        <li>
-                            通过 MOS 管控制电磁阀供电回路
-                        </li>
-
-                        <li>
-                            利用 GPIO 高低电平控制电磁阀开关
-                        </li>
-
-                        <li>
-                            电磁阀感性负载采用续流二极管保护
-                        </li>
-
-                        <li>
-                            两个电磁阀分别配置独立续流回路
-                        </li>
-
-                    </ul>
+                    <p>
+                        针对仅包含450张图像的小样本数据集，
+                        采用冻结训练、全量解冻和低学习率精调的渐进式训练策略，
+                        提升目标检测模型在特定任务中的识别能力。
+                    </p>
 
                 </div>
 
@@ -431,1150 +439,16 @@
 
                     <h3>
                         <i class="fa-solid fa-wind"></i>
-                        气路与抓取判断
-                    </h3>
-
-                    <ul>
-
-                        <li>
-                            气泵提供吸附所需负压
-                        </li>
-
-                        <li>
-                            电磁阀控制吸附和释放过程
-                        </li>
-
-                        <li>
-                            压力传感器实时监测气路压力
-                        </li>
-
-                        <li>
-                            抓取后压力骤降并稳定表示吸附成功
-                        </li>
-
-                        <li>
-                            压力无明显变化则判定抓取失败
-                        </li>
-
-                        <li>
-                            抓取失败后触发重新尝试
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-            <div class="project-hero-media">
-
-                <img
-                    src="assets/images/uav-circuit.jpg"
-                    alt="无人机抓取系统电路设计"
-                >
-
-            </div>
-
-            <div class="project-hero-media">
-
-                <img
-                    src="assets/images/uav-air-system.jpg"
-                    alt="无人机抓取系统气路设计"
-                >
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             Vision Detection
-        ========================== -->
-
-        <section class="detail-section">
-
-            <h2>
-                <i class="fa-solid fa-eye"></i>
-                视觉检测与三维定位
-            </h2>
-
-            <p>
-                视觉部分采用 YOLOv8n 进行目标检测，检测对象为贴有数字标记的圆柱体。
-                针对项目数据集规模较小的问题，采用分阶段微调策略提升模型在特定目标上的识别效果。
-            </p>
-
-
-            <div class="detail-two-column">
-
-                <div class="detail-info-card">
-
-                    <h3>
-                        <i class="fa-solid fa-network-wired"></i>
-                        YOLOv8 网络结构
-                    </h3>
-
-                    <ul>
-
-                        <li>
-                            Backbone：负责提取图像特征
-                        </li>
-
-                        <li>
-                            使用 C2f 模块增强特征流动
-                        </li>
-
-                        <li>
-                            输出 P3、P4、P5 多尺度特征图
-                        </li>
-
-                        <li>
-                            Neck：使用 PAN-FPN 融合多尺度特征
-                        </li>
-
-                        <li>
-                            Head：采用解耦检测头
-                        </li>
-
-                        <li>
-                            使用 Anchor-Free 检测机制
-                        </li>
-
-                        <li>
-                            实际运行帧率约为 10–15 Hz
-                        </li>
-
-                    </ul>
-
-                </div>
-
-
-                <div class="detail-info-card">
-
-                    <h3>
-                        <i class="fa-solid fa-sliders"></i>
-                        小样本微调策略
-                    </h3>
-
-                    <ul>
-
-                        <li>
-                            数据集共 450 张图像
-                        </li>
-
-                        <li>
-                            训练集 380 张，验证集 70 张
-                        </li>
-
-                        <li>
-                            第一阶段：冻结前 10 层训练 50 轮
-                        </li>
-
-                        <li>
-                            第二阶段：全网络解冻训练 50 轮
-                        </li>
-
-                        <li>
-                            第三阶段：极低学习率精细微调 50 轮
-                        </li>
-
-                        <li>
-                            配合早停机制防止过拟合
-                        </li>
-
-                        <li>
-                            最终验证集 mAP 达到 95.6%
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-            <p>
-                分阶段微调的主要目的是在小样本条件下保留预训练模型的通用特征，
-                避免直接全量解冻时大梯度破坏已有特征。
-                通过逐步适应任务分布，再逐步调整底层特征，实现稳定迁移。
-            </p>
-
-
-            <div class="project-hero-media">
-
-                <img
-                    src="assets/images/uav-yolov8.jpg"
-                    alt="YOLOv8目标检测与视觉定位"
-                >
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             Depth Camera
-        ========================== -->
-
-        <section class="detail-section">
-
-            <h2>
-                <i class="fa-solid fa-camera"></i>
-                深度相机与 位姿估计
-            </h2>
-
-            <p>
-                仿真阶段使用 Gazebo 自带的深度相机模型，实机采用
-                Intel RealSense D435i 深度相机。
-                通过 RGB-D 图像流获取目标检测框中心点对应的深度信息，
-                再结合相机内参将二维像素坐标反投影为相机坐标系下的三维位置。
-            </p>
-
-            <p>
-                随后利用提前标定得到的相机到机体外参，以及飞控提供的机体到世界坐标系位姿，
-                将目标位置转换到世界坐标系，为后续路径规划提供输入。
-            </p>
-
-        </section>
-
-
-        <!-- =========================
-             Planning
-        ========================== -->
-
-        <section class="detail-section">
-
-            <h2>
-                <i class="fa-solid fa-location-crosshairs"></i>
-                视觉引导路径规划
-            </h2>
-
-            <p>
-                路径规划节点采用有限状态机架构，订阅 YOLOv8 输出的三维目标位置以及
-                MAVROS 发布的无人机当前位姿。
-                节点首先将视觉输出从相机坐标系转换到世界坐标系，
-                然后计算无人机相对于目标物体的安全观测点。
-            </p>
-
-            <p>
-                为了提高接近过程的稳定性，系统采用先高度、后水平位置与偏航角的渐进式调整策略。
-                位置容差设置为 2 cm，控制步长根据目标距离动态调整，
-                同时使用滑动窗口滤波降低视觉输出抖动。
-            </p>
-
-
-            <div class="detail-info-card">
-
-                <h3>
-                    <i class="fa-solid fa-diagram-project"></i>
-                    路径规划状态机
-                </h3>
-
-                <div class="architecture-flow">
-
-                    <div class="flow-item">
-
-                        <strong>INIT</strong>
-
-                        <span>
-                            初始化状态
-                        </span>
-
-                    </div>
-
-                    <div class="flow-arrow">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-
-                    <div class="flow-item">
-
-                        <strong>HOVER1</strong>
-
-                        <span>
-                            初始悬停
-                        </span>
-
-                    </div>
-
-                    <div class="flow-arrow">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-
-                    <div class="flow-item">
-
-                        <strong>ADJUST_Z</strong>
-
-                        <span>
-                            高度调整
-                        </span>
-
-                    </div>
-
-                    <div class="flow-arrow">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-
-                    <div class="flow-item">
-
-                        <strong>ADJUST_XY_YAW</strong>
-
-                        <span>
-                            水平位置与偏航调整
-                        </span>
-
-                    </div>
-
-                    <div class="flow-arrow">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-
-                    <div class="flow-item">
-
-                        <strong>HOVER2</strong>
-
-                        <span>
-                            抓取前稳定悬停
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="technical-list">
-
-                <div class="technical-item">
-
-                    <h3>
-                        渐进式位置调整
+                        干扰补偿控制
                     </h3>
 
                     <p>
-                        先进行高度方向调整，再进行水平位置和偏航角调整，
-                        避免无人机在多个自由度上同时大幅运动，提高目标对准过程的稳定性。
+                        将干扰估计结果直接引入NMPC预测模型，
+                        使控制器能够提前考虑风扰和抓取负载变化，
+                        降低模型失配造成的轨迹跟踪误差。
                     </p>
 
                 </div>
-
-
-                <div class="technical-item">
-
-                    <h3>
-                        动态步长控制
-                    </h3>
-
-                    <p>
-                        根据无人机与目标之间的距离动态调整位置步长，
-                        远距离快速接近，近距离精细调整。
-                    </p>
-
-                </div>
-
-
-                <div class="technical-item">
-
-                    <h3>
-                        滑动窗口滤波
-                    </h3>
-
-                    <p>
-                        对视觉输出的位置序列进行平滑处理，
-                        减少深度相机噪声和检测框抖动对路径规划的影响。
-                    </p>
-
-                </div>
-
-
-                <div class="technical-item">
-
-                    <h3>
-                        实时位姿发布
-                    </h3>
-
-                    <p>
-                        规划节点以 50 Hz 运行，将计算得到的期望位姿发布至
-                        <code>/desired_pose</code> 话题，供底层 NMPC 控制器跟踪。
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             NMPC
-        ========================== -->
-
-        <section class="detail-section">
-
-            <h2>
-                <i class="fa-solid fa-plane-up"></i>
-                非线性模型预测控制 NMPC
-            </h2>
-
-            <p>
-                项目采用非线性模型预测控制器作为无人机底层运动控制器。
-                与线性 MPC 在悬停点附近进行局部线性化不同，
-                NMPC 直接使用无人机非线性动力学模型进行未来状态预测，
-                更适合处理大机动、负载变化以及姿态耦合问题。
-            </p>
-
-            <p>
-                在每个采样时刻，控制器基于当前状态预测未来多个时间步，
-                在线求解带有输入约束和状态约束的优化问题，
-                但只执行当前控制序列的第一步，随后进入下一时刻重新优化。
-            </p>
-
-            <div class="technical-list">
-
-                <div class="technical-item">
-
-                    <h3>
-                        跟踪误差代价
-                    </h3>
-
-                    <p>
-                        惩罚预测状态与参考轨迹之间的偏差，
-                        使无人机位置、速度和姿态尽量贴近目标轨迹。
-                    </p>
-
-                </div>
-
-
-                <div class="technical-item">
-
-                    <h3>
-                        控制输入代价
-                    </h3>
-
-                    <p>
-                        惩罚控制量变化过大，使控制输出更加平滑，
-                        减少电机推力突变。
-                    </p>
-
-                </div>
-
-
-                <div class="technical-item">
-
-                    <h3>
-                        终端代价
-                    </h3>
-
-                    <p>
-                        约束预测窗口末端状态接近参考状态，
-                        减少预测时域有限导致的短视行为。
-                    </p>
-
-                </div>
-
-
-                <div class="technical-item">
-
-                    <h3>
-                        显式约束处理
-                    </h3>
-
-                    <p>
-                        对推力、电机输入、姿态角以及飞行区域进行约束，
-                        提高系统在实际任务中的安全性。
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="formula-box">
-
-                <p>
-                    NMPC 优化目标函数：
-                </p>
-
-                <div class="math-display">
-
-                    $$
-                    \min_{u_0,\cdots,u_{N_c-1}}
-                    \sum_{k=0}^{N_p-1}
-                    \left\|
-                    x_k-x_{ref,k}
-                    \right\|_Q^2
-                    +
-                    \sum_{k=0}^{N_c-1}
-                    \left\|
-                    u_k
-                    \right\|_R^2
-                    +
-                    \left\|
-                    x_{N_p}-x_{ref,N_p}
-                    \right\|_P^2
-                    $$
-
-                </div>
-
-                <p>
-                    约束条件：
-                </p>
-
-                <div class="math-display">
-
-                    $$
-                    u_{\min}\leq u_k\leq u_{\max}
-                    $$
-
-                    $$
-                    x_{\min}\leq x_k\leq x_{\max}
-                    $$
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             Disturbance Estimation
-        ========================== -->
-
-        <section class="detail-section">
-
-            <h2>
-                <i class="fa-solid fa-wave-square"></i>
-                干扰估计与前馈补偿
-            </h2>
-
-            <p>
-                抓取动作会导致无人机负载质量发生突变，同时实际飞行环境中还可能存在风扰。
-                如果控制器仍然使用固定标称模型进行预测，则模型与真实系统之间会产生明显失配，
-                造成轨迹跟踪误差增加。
-            </p>
-
-            <p>
-                本项目设计了统一的干扰估计器接口，
-                分别实现扩展卡尔曼滤波 EKF 和滚动时域估计 FR-MHE，
-                并将估计得到的机体坐标系干扰转换到惯性坐标系，
-                作为前馈项加入 NMPC 的预测模型。
-            </p>
-
-
-            <div class="architecture-flow">
-
-                <div class="flow-item">
-
-                    <strong>IMU / 动捕数据</strong>
-
-                    <span>
-                        获取位置、速度和加速度观测
-                    </span>
-
-                </div>
-
-                <div class="flow-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-                <div class="flow-item">
-
-                    <strong>EKF / FR-MHE</strong>
-
-                    <span>
-                        估计外部干扰
-                    </span>
-
-                </div>
-
-                <div class="flow-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-                <div class="flow-item">
-
-                    <strong>坐标变换</strong>
-
-                    <span>
-                        机体系转换到惯性系
-                    </span>
-
-                </div>
-
-                <div class="flow-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-                <div class="flow-item">
-
-                    <strong>NMPC预测模型</strong>
-
-                    <span>
-                        修正未来状态预测
-                    </span>
-
-                </div>
-
-                <div class="flow-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-                <div class="flow-item">
-
-                    <strong>控制输出</strong>
-
-                    <span>
-                        主动抵消负载和风扰影响
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <div class="detail-info-card">
-
-                <h3>
-                    <i class="fa-solid fa-arrows-rotate"></i>
-                    干扰补偿模型
-                </h3>
-
-                <p>
-                    估计得到的机体坐标系干扰
-                    $\hat{\delta}_B$
-                    经过旋转矩阵转换至惯性坐标系后，
-                    直接加入 NMPC 预测模型：
-                </p>
-
-                <div class="math-display">
-
-                    $$
-                    \hat{V}
-                    =
-                    R(\Theta)(T-g)
-                    +
-                    \hat{\delta}_I
-                    $$
-
-                </div>
-
-                <p>
-                    这种方式并不是简单地在控制输出端叠加补偿量，
-                    而是直接修正预测模型，使控制器在整个预测时域内都能够考虑当前干扰。
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             EKF
-        ========================== -->
-
-        <section class="detail-section">
-
-            <h2>
-                <i class="fa-solid fa-filter-circle-dollar"></i>
-                扩展卡尔曼滤波 EKF
-            </h2>
-
-            <p>
-                由于无人机动力学具有非线性特征，项目采用扩展卡尔曼滤波对系统状态和外部干扰进行联合估计。
-                EKF 的核心过程包括预测和更新两个阶段。
-                预测阶段根据系统模型推算状态，更新阶段根据传感器测量修正预测结果。
-            </p>
-
-
-            <div class="detail-two-column">
-
-                <div class="detail-info-card">
-
-                    <h3>
-                        <i class="fa-solid fa-database"></i>
-                        扩展状态与观测
-                    </h3>
-
-                    <p>
-                        扩展状态向量：
-                    </p>
-
-                    <div class="math-display">
-
-                        $$
-                        \chi
-                        =
-                        [P,V,\delta_B]^T
-                        $$
-
-                    </div>
-
-                    <p>
-                        观测向量：
-                    </p>
-
-                    <div class="math-display">
-
-                        $$
-                        \zeta
-                        =
-                        [P,V,\tilde{a}_B]^T
-                        $$
-
-                    </div>
-
-                </div>
-
-
-                <div class="detail-info-card">
-
-                    <h3>
-                        <i class="fa-solid fa-sliders"></i>
-                        参数调节原则
-                    </h3>
-
-                    <ul>
-
-                        <li>
-                            根据传感器噪声特性设置 R 初值
-                        </li>
-
-                        <li>
-                            R 增大表示降低对测量值的信任
-                        </li>
-
-                        <li>
-                            Q 增大表示允许状态快速变化
-                        </li>
-
-                        <li>
-                            估计值抖动时增大 R 或减小 Q
-                        </li>
-
-                        <li>
-                            响应滞后时减小 R 或增大 Q
-                        </li>
-
-                        <li>
-                            负载突变场景下不能将 Q 设置过小
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-            <div class="formula-box">
-
-                <p>
-                    EKF 预测：
-                </p>
-
-                <div class="math-display">
-
-                    $$
-                    \hat{\chi}_{k|k-1}
-                    =
-                    f(
-                    \hat{\chi}_{k-1|k-1},
-                    u_{k-1}
-                    )
-                    $$
-
-                    $$
-                    P_{k|k-1}
-                    =
-                    F_{k-1}
-                    P_{k-1|k-1}
-                    F_{k-1}^{T}
-                    +
-                    Q
-                    $$
-
-                </div>
-
-                <p>
-                    EKF 更新：
-                </p>
-
-                <div class="math-display">
-
-                    $$
-                    K_k
-                    =
-                    P_{k|k-1}
-                    H_k^T
-                    \left(
-                    H_kP_{k|k-1}H_k^T+R
-                    \right)^{-1}
-                    $$
-
-                    $$
-                    \hat{\chi}_{k|k}
-                    =
-                    \hat{\chi}_{k|k-1}
-                    +
-                    K_k
-                    \left(
-                    \zeta_k-H\hat{\chi}_{k|k-1}
-                    \right)
-                    $$
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             FR-MHE
-        ========================== -->
-
-        <section class="detail-section">
-
-            <h2>
-                <i class="fa-solid fa-clock-rotate-left"></i>
-                滚动时域估计 FR-MHE
-            </h2>
-
-            <p>
-                除 EKF 外，项目还实现了基于有限历史窗口优化的 FR-MHE 估计器。
-                与 EKF 主要依赖上一时刻估计不同，MHE 在每个时刻维护一个固定长度的历史窗口，
-                利用窗口内多个时刻的测量数据联合反推系统状态。
-            </p>
-
-            <p>
-                为满足实时控制需求，项目没有采用完整的大规模非线性优化，
-                而是采用 rollout 预测、梯度计算和单次梯度下降更新的轻量化实现方式，
-                将每次估计计算量控制在约 1–2 ms。
-            </p>
-
-
-            <div class="detail-two-column">
-
-                <div class="detail-info-card">
-
-                    <h3>
-                        <i class="fa-solid fa-window-maximize"></i>
-                        MHE 估计流程
-                    </h3>
-
-                    <ul>
-
-                        <li>
-                            保存长度为 N 的历史测量窗口
-                        </li>
-
-                        <li>
-                            将窗口起始状态作为优化变量
-                        </li>
-
-                        <li>
-                            从初始状态进行整个窗口的前向积分
-                        </li>
-
-                        <li>
-                            计算预测状态与测量值之间的残差
-                        </li>
-
-                        <li>
-                            计算目标函数对初始状态的梯度
-                        </li>
-
-                        <li>
-                            通过梯度下降更新初始状态
-                        </li>
-
-                        <li>
-                            再次前向积分得到当前状态估计
-                        </li>
-
-                    </ul>
-
-                </div>
-
-
-                <div class="detail-info-card">
-
-                    <h3>
-                        <i class="fa-solid fa-scale-balanced"></i>
-                        与 EKF 的区别
-                    </h3>
-
-                    <ul>
-
-                        <li>
-                            EKF 主要递归使用上一时刻估计
-                        </li>
-
-                        <li>
-                            MHE 同时利用一段历史测量信息
-                        </li>
-
-                        <li>
-                            MHE 可以显式加入估计约束
-                        </li>
-
-                        <li>
-                            MHE 对异常测量具有更强的鲁棒性潜力
-                        </li>
-
-                        <li>
-                            MHE 计算量通常高于 EKF
-                        </li>
-
-                        <li>
-                            本项目使用小窗口和单次梯度下降降低计算量
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-            <div class="formula-box">
-
-                <p>
-                    本项目采用的简化 MHE 优化目标：
-                </p>
-
-                <div class="math-display">
-
-                    $$
-                    \min_{\hat{x}_0}
-                    \sum_{k=0}^{W-1}
-                    \left\|
-                    z_k-Hx_k(\hat{x}_0)
-                    \right\|_W^2
-                    $$
-
-                </div>
-
-                <p>
-                    梯度计算：
-                </p>
-
-                <div class="math-display">
-
-                    $$
-                    \nabla J
-                    =
-                    -2
-                    \sum_{k=0}^{W-1}
-                    \left(
-                    \frac{\partial x_k}{\partial x_0}
-                    \right)^T
-                    H^T
-                    W
-                    \left(
-                    z_k-Hx_k
-                    \right)
-                    $$
-
-                </div>
-
-                <p>
-                    梯度下降更新：
-                </p>
-
-                <div class="math-display">
-
-                    $$
-                    x_0^{new}
-                    =
-                    x_0^{old}
-                    -
-                    \alpha\odot\nabla J
-                    $$
-
-                </div>
-
-            </div>
-
-
-            <div class="detail-info-card">
-
-                <h3>
-                    <i class="fa-solid fa-shield-halved"></i>
-                    约束处理
-                </h3>
-
-                <p>
-                    为兼容不同估计器接口，项目采用后验裁剪方式进行约束处理。
-                    估计完成后，将干扰值限制在
-                    $[-4,4]\,m/s^2$
-                    范围内，防止异常估计值进入控制器后造成系统发散。
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             FSM
-        ========================== -->
-
-        <section class="detail-section">
-
-            <h2>
-                <i class="fa-solid fa-diagram-project"></i>
-                全流程任务调度与有限状态机
-            </h2>
-
-            <p>
-                为实现从起飞到抓取再到放置的完整任务链路，系统设计了嵌套有限状态机。
-                上层状态机负责任务阶段切换，下层状态机负责目标接近、姿态调整以及抓取动作执行。
-            </p>
-
-
-            <div class="detail-info-card">
-
-                <h3>
-                    <i class="fa-solid fa-layer-group"></i>
-                    上层任务状态机
-                </h3>
-
-                <div class="architecture-flow">
-
-                    <div class="flow-item">
-
-                        <strong>起飞</strong>
-
-                        <span>
-                            完成起飞与初始化
-                        </span>
-
-                    </div>
-
-                    <div class="flow-arrow">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-
-                    <div class="flow-item">
-
-                        <strong>主轨迹</strong>
-
-                        <span>
-                            按预存轨迹自主飞行
-                        </span>
-
-                    </div>
-
-                    <div class="flow-arrow">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-
-                    <div class="flow-item">
-
-                        <strong>准备录制</strong>
-
-                        <span>
-                            检测目标并准备接近
-                        </span>
-
-                    </div>
-
-                    <div class="flow-arrow">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-
-                    <div class="flow-item">
-
-                        <strong>录制抓取</strong>
-
-                        <span>
-                            执行目标接近和吸附
-                        </span>
-
-                    </div>
-
-                    <div class="flow-arrow">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-
-                    <div class="flow-item">
-
-                        <strong>后处理</strong>
-
-                        <span>
-                            判断继续任务或返回轨迹
-                        </span>
-
-                    </div>
-
-                    <div class="flow-arrow">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-
-                    <div class="flow-item">
-
-                        <strong>降落</strong>
-
-                        <span>
-                            完成任务并安全降落
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <p>
-                当视觉节点检测到目标后，系统从主轨迹状态切换至准备录制状态。
-                收到目标到达信号后进入录制抓取阶段，执行接近、对准、吸附以及压力检测。
-                抓取完成后，后处理状态根据任务队列决定继续抓取下一个目标，
-                或返回主轨迹继续执行剩余任务。
-            </p>
-
-
-            <div class="project-hero-media">
-
-                <img
-                    src="assets/images/uav-fsm.jpg"
-                    alt="无人机自主抓取任务有限状态机"
-                >
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             Video Demonstration
-        ========================== -->
-
-        <section class="detail-section">
-
-            <h2>
-                <i class="fa-solid fa-video"></i>
-                系统演示
-            </h2>
-
-            <p>
-                以下视频用于展示无人机自主搜索、目标识别、接近、抓取以及任务调度过程。
-            </p>
-
-            <div class="detail-video">
-
-                <video controls preload="metadata">
-
-                    <source
-                        src="assets/videos/uav-grasping-demo.mp4"
-                        type="video/mp4"
-                    >
-
-                    当前浏览器不支持视频播放。
-
-                </video>
 
             </div>
 
@@ -1589,19 +463,17 @@
 
             <h2>
                 <i class="fa-solid fa-chart-line"></i>
-                实验结果与项目价值
+                项目成果
             </h2>
 
             <div class="result-grid">
 
                 <div class="result-card">
 
-                    <strong>
-                        轨迹跟踪 RMSE
-                    </strong>
+                    <strong>95.6%</strong>
 
                     <span>
-                        引入干扰估计与补偿后，相比纯 NMPC 方案降低约 30%。
+                        YOLOv8在特定目标验证集上的mAP
                     </span>
 
                 </div>
@@ -1609,12 +481,10 @@
 
                 <div class="result-card">
 
-                    <strong>
-                        YOLOv8 验证集 mAP
-                    </strong>
+                    <strong>30%</strong>
 
                     <span>
-                        通过三阶段微调，小样本目标检测验证集 mAP 达到 95.6%。
+                        引入干扰估计后轨迹跟踪RMSE降低
                     </span>
 
                 </div>
@@ -1622,51 +492,10 @@
 
                 <div class="result-card">
 
-                    <strong>
-                        视觉推理频率
-                    </strong>
+                    <strong>1–2 ms</strong>
 
                     <span>
-                        YOLOv8n 在笔记本平台运行时，话题帧率约为 10–15 Hz。
-                    </span>
-
-                </div>
-
-
-                <div class="result-card">
-
-                    <strong>
-                        NMPC 单次求解时间
-                    </strong>
-
-                    <span>
-                        使用 acados 后，单次优化求解时间约为 1–2 ms。
-                    </span>
-
-                </div>
-
-
-                <div class="result-card">
-
-                    <strong>
-                        控制频率
-                    </strong>
-
-                    <span>
-                        NMPC 控制器运行频率约为 30 Hz，满足实时控制需求。
-                    </span>
-
-                </div>
-
-
-                <div class="result-card">
-
-                    <strong>
-                        系统可扩展性
-                    </strong>
-
-                    <span>
-                        通过统一估计器接口支持 EKF 与 FR-MHE 等多种干扰估计方法对比。
+                        NMPC单次求解时间，满足实时控制需求
                     </span>
 
                 </div>
@@ -1677,65 +506,26 @@
 
 
         <!-- =========================
-             Engineering Reflection
+             Video
         ========================== -->
 
         <section class="detail-section">
 
             <h2>
-                <i class="fa-solid fa-lightbulb"></i>
-                工程思考与项目边界
+                <i class="fa-solid fa-video"></i>
+                系统演示
             </h2>
 
-            <p>
-                本项目的主要贡献集中在控制与干扰估计，而不是抓取机械结构本身。
-                在仿真中，抓取动作通过无人机到达抓取点并稳定后执行吸附来模拟，
-                没有对复杂接触力学进行建模。
-            </p>
+            <div class="detail-video">
 
-            <p>
-                因此，项目没有将抓取成功率作为主要评价指标，而是重点关注视觉定位精度、
-                轨迹跟踪性能以及负载突变条件下干扰估计器的响应速度。
-                在当前仿真条件下，只要视觉输出稳定且轨迹误差控制在约 5 cm 以内，
-                吸附式抓取通常能够完成。
-            </p>
+                <video controls preload="metadata">
 
-            <p>
-                该系统的控制与估计框架具有一定迁移价值，
-                可进一步应用于快递投放、空中操作、电力巡检以及其他需要高精度无人机轨迹跟踪的任务。
-            </p>
+                    <source src="assets/videos/uav-grasping-demo.mp4"
+                            type="video/mp4">
 
-        </section>
+                    您的浏览器不支持视频播放。
 
-
-        <!-- =========================
-             Technical Stack
-        ========================== -->
-
-        <section class="detail-section">
-
-            <h2>
-                <i class="fa-solid fa-code"></i>
-                技术栈
-            </h2>
-
-            <div class="detail-tags">
-
-                <span>Python</span>
-                <span>C++</span>
-                <span>ROS1</span>
-                <span>Gazebo</span>
-                <span>PX4</span>
-                <span>MAVROS</span>
-                <span>YOLOv8</span>
-                <span>PyTorch</span>
-                <span>OpenCV</span>
-                <span>Intel RealSense D435i</span>
-                <span>acados</span>
-                <span>NMPC</span>
-                <span>EKF</span>
-                <span>FR-MHE</span>
-                <span>Finite State Machine</span>
+                </video>
 
             </div>
 
@@ -1743,7 +533,7 @@
 
 
         <!-- =========================
-             Bottom Link
+             Bottom
         ========================== -->
 
         <div class="detail-bottom-link">
@@ -1751,8 +541,7 @@
             <a href="index.html#projects" class="project-button">
 
                 <i class="fa-solid fa-arrow-left"></i>
-
-                返回全部项目
+                返回项目列表
 
             </a>
 
@@ -1767,10 +556,9 @@
 
     <footer class="footer">
 
-        © 2026 Li Jia · AI & Robotics Portfolio
+        © 2026 Revive · Robotics & Intelligent Systems
 
     </footer>
-
 
 </body>
 
