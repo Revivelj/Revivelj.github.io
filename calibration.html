@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>相机雷达联合标定 | Li Jia</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">LJ</a>
+
+        <nav class="nav-links">
+            <a href="index.html">Homepage</a>
+            <a href="index.html#about">About Me</a>
+            <a href="index.html#projects" class="active">Projects</a>
+            <a href="index.html#experience">Experience</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="cv.html">CV</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main class="project-detail-container">
+
+    <a href="index.html#projects" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i>
+        返回项目列表
+    </a>
+
+
+    <header class="project-detail-header">
+
+        <div class="small-label">
+            SENSOR FUSION · COMPUTER VISION
+        </div>
+
+        <h1>
+            相机-雷达联合标定与多传感器融合
+        </h1>
+
+        <p class="project-detail-subtitle">
+            研究相机与雷达之间的空间几何关系，
+            完成传感器外参标定、坐标系转换以及多源感知数据融合。
+        </p>
+
+        <div class="detail-tags">
+            <span>Camera</span>
+            <span>LiDAR</span>
+            <span>Calibration</span>
+            <span>Point Cloud</span>
+            <span>Sensor Fusion</span>
+        </div>
+
+    </header>
+
+
+    <div class="project-hero-media">
+
+        <img
+            src="assets/images/calibration.jpg"
+            alt="相机雷达联合标定"
+        >
+
+    </div>
+
+
+    <section class="detail-section">
+
+        <h2>
+            <i class="fa-solid fa-circle-info"></i>
+            项目概述
+        </h2>
+
+        <p>
+            本项目面向机器人和智能系统中的多传感器感知任务，
+            研究相机与雷达之间的空间坐标关系，
+            通过联合标定将不同传感器采集的数据映射到统一坐标系。
+        </p>
+
+        <p>
+            通过建立准确的外参变换关系，
+            实现图像信息与三维点云信息的融合，
+            为目标检测、定位和环境感知提供基础。
+        </p>
+
+    </section>
+
+
+    <section class="detail-two-column">
+
+        <div class="detail-info-card">
+
+            <h3>
+                <i class="fa-solid fa-bullseye"></i>
+                项目目标
+            </h3>
+
+            <ul>
+                <li>建立相机和雷达坐标变换关系</li>
+                <li>估计传感器之间的旋转和平移参数</li>
+                <li>实现图像与点云空间对齐</li>
+                <li>提升多传感器融合精度</li>
+            </ul>
+
+        </div>
+
+
+        <div class="detail-info-card">
+
+            <h3>
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                使用技术
+            </h3>
+
+            <ul>
+                <li>OpenCV</li>
+                <li>Point Cloud Processing</li>
+                <li>Coordinate Transformation</li>
+                <li>Camera Calibration</li>
+                <li>Python / C++</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <section class="detail-section">
+
+        <h2>
+            <i class="fa-solid fa-diagram-project"></i>
+            数据处理流程
+        </h2>
+
+        <div class="architecture-flow">
+
+            <div class="flow-item">
+                <strong>Camera Data</strong>
+                <span>RGB Image</span>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <strong>LiDAR Data</strong>
+                <span>3D Point Cloud</span>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <strong>Extrinsic Calibration</strong>
+                <span>Rotation / Translation</span>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <strong>Coordinate Transform</strong>
+                <span>Common Coordinate</span>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <strong>Sensor Fusion</strong>
+                <span>Aligned Data</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="detail-section">
+
+        <h2>
+            <i class="fa-solid fa-gears"></i>
+            核心工作
+        </h2>
+
+        <div class="technical-list">
+
+            <div class="technical-item">
+
+                <h3>相机内参标定</h3>
+
+                <p>
+                    获取相机焦距、主点和畸变参数，
+                    建立图像像素坐标与相机坐标之间的关系。
+                </p>
+
+            </div>
+
+            <div class="technical-item">
+
+                <h3>雷达点云处理</h3>
+
+                <p>
+                    对原始点云进行滤波、降采样和噪声处理，
+                    提升后续标定计算的稳定性。
+                </p>
+
+            </div>
+
+            <div class="technical-item">
+
+                <h3>外参估计</h3>
+
+                <p>
+                    计算相机与雷达之间的旋转矩阵和平移向量，
+                    建立两个传感器之间的空间映射关系。
+                </p>
+
+            </div>
+
+            <div class="technical-item">
+
+                <h3>融合结果验证</h3>
+
+                <p>
+                    将雷达点云投影到图像平面，
+                    通过可视化方式验证标定结果的准确性。
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="detail-section">
+
+        <h2>
+            <i class="fa-solid fa-chart-line"></i>
+            项目成果
+        </h2>
+
+        <div class="result-grid">
+
+            <div class="result-card">
+                <strong>坐标对齐</strong>
+                <span>
+                    实现相机图像与雷达点云的空间对齐。
+                </span>
+            </div>
+
+            <div class="result-card">
+                <strong>标定精度</strong>
+                <span>
+                    通过可视化投影验证外参估计效果。
+                </span>
+            </div>
+
+            <div class="result-card">
+                <strong>融合应用</strong>
+                <span>
+                    为机器人环境感知和目标定位提供数据基础。
+                </span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="detail-bottom-link">
+
+        <a href="index.html#projects" class="project-button">
+            <i class="fa-solid fa-arrow-left"></i>
+            返回全部项目
+        </a>
+
+    </div>
+
+</main>
+
+
+<footer class="footer">
+    © 2026 Li Jia. Built with GitHub Pages.
+</footer>
+
+</body>
+</html>
