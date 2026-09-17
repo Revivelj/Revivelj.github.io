@@ -1541,3 +1541,127 @@ img {
     }
 
 }
+/* =========================================
+   Formula Display
+========================================= */
+
+.formula-box {
+    margin: 25px 0;
+    padding: 25px 30px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e8edf3;
+    border-left: 4px solid #b87591;
+
+    border-radius: 5px;
+
+    overflow-x: auto;
+}
+
+.formula-box p {
+    margin: 0 0 12px;
+
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.math-display {
+    margin: 18px 0;
+
+    color: #173b63;
+
+    font-size: 16px;
+    text-align: center;
+
+    overflow-x: auto;
+}
+
+
+/* Code inline */
+
+code {
+    padding: 2px 6px;
+
+    background: #f1f5f9;
+    color: #b87591;
+
+    border-radius: 3px;
+
+    font-family:
+        "Consolas",
+        "Courier New",
+        monospace;
+
+    font-size: 12px;
+}
+
+
+/* Better image behavior */
+
+.project-hero-media img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-height: 620px;
+
+    object-fit: contain;
+
+    background: #f8fafc;
+}
+
+
+/* Detail card paragraph */
+
+.detail-info-card p {
+    margin: 0 0 14px;
+
+    color: #64748b;
+
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* Detail page strong text */
+
+.detail-section strong {
+    color: #173b63;
+}
+
+
+/* Better flow layout for desktop */
+
+@media (min-width: 801px) {
+
+    .architecture-flow .flow-item {
+        min-width: 130px;
+    }
+
+    .architecture-flow .flow-item strong {
+        font-size: 13px;
+    }
+
+    .architecture-flow .flow-item span {
+        font-size: 11px;
+    }
+
+}
+
+
+/* Mobile formula */
+
+@media (max-width: 800px) {
+
+    .formula-box {
+        padding: 18px 15px;
+    }
+
+    .math-display {
+        font-size: 13px;
+    }
+
+}
