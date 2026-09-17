@@ -1944,3 +1944,88 @@ code {
         text-align: left;
     }
 }
+/* =========================
+   Project Page Header
+========================= */
+
+.site-header {
+    width: 100%;
+    border-bottom: 1px solid #edf0f3;
+    background: #ffffff;
+    position: relative;
+    z-index: 10;
+}
+
+.header-inner {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 22px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-logo {
+    color: #173b63;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+.site-logo span {
+    color: #9aa5b1;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    margin-left: 5px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.main-nav a {
+    color: #5e6b78;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: #173b63;
+}
+
+
+/* 页面主体顶部间距 */
+
+.project-detail-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 42px 40px 80px;
+}
+
+
+/* 移动端 */
+
+@media (max-width: 700px) {
+    .header-inner {
+        padding: 18px 22px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .main-nav {
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .project-detail-container {
+        padding: 30px 22px 60px;
+    }
+}
