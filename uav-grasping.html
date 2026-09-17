@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>无人机自主抓取 | Li Jia</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">LJ</a>
+
+        <nav class="nav-links">
+            <a href="index.html">Homepage</a>
+            <a href="index.html#about">About Me</a>
+            <a href="index.html#projects" class="active">Projects</a>
+            <a href="index.html#experience">Experience</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="cv.html">CV</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main class="project-detail-container">
+
+    <a href="index.html#projects" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i>
+        返回项目列表
+    </a>
+
+
+    <header class="project-detail-header">
+
+        <div class="small-label">
+            UAV · MOTION PLANNING · CONTROL
+        </div>
+
+        <h1>
+            无人机自主抓取与视觉伺服控制
+        </h1>
+
+        <p class="project-detail-subtitle">
+            面向无人机平台的目标感知、位姿估计、
+            轨迹规划与自主抓取控制系统。
+        </p>
+
+        <div class="detail-tags">
+            <span>UAV</span>
+            <span>Computer Vision</span>
+            <span>Motion Planning</span>
+            <span>Visual Servoing</span>
+            <span>Control</span>
+        </div>
+
+    </header>
+
+
+    <div class="project-hero-media">
+
+        <img
+            src="assets/images/uav-grasping.jpg"
+            alt="无人机自主抓取"
+        >
+
+    </div>
+
+
+    <section class="detail-section">
+
+        <h2>
+            <i class="fa-solid fa-circle-info"></i>
+            项目概述
+        </h2>
+
+        <p>
+            本项目研究无人机在动态或半结构化环境中的自主抓取任务，
+            通过视觉感知获取目标位置与姿态信息，
+            结合运动规划和控制算法实现无人机末端执行器对目标的自主接近与抓取。
+        </p>
+
+        <p>
+            系统涵盖图像处理、目标检测、坐标系转换、
+            轨迹生成、姿态控制和抓取动作执行等模块。
+        </p>
+
+    </section>
+
+
+    <section class="detail-two-column">
+
+        <div class="detail-info-card">
+
+            <h3>
+                <i class="fa-solid fa-bullseye"></i>
+                项目目标
+            </h3>
+
+            <ul>
+                <li>实现视觉目标定位</li>
+                <li>完成无人机末端位姿控制</li>
+                <li>规划平滑安全的飞行轨迹</li>
+                <li>实现目标自主抓取</li>
+            </ul>
+
+        </div>
+
+
+        <div class="detail-info-card">
+
+            <h3>
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                使用技术
+            </h3>
+
+            <ul>
+                <li>Python / C++</li>
+                <li>Computer Vision</li>
+                <li>Pose Estimation</li>
+                <li>Motion Planning</li>
+                <li>PID / Position Control</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <section class="detail-section">
+
+        <h2>
+            <i class="fa-solid fa-diagram-project"></i>
+            系统架构
+        </h2>
+
+        <div class="architecture-flow">
+
+            <div class="flow-item">
+                <strong>Camera</strong>
+                <span>Image Acquisition</span>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <strong>Target Detection</strong>
+                <span>Object Position</span>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <strong>Pose Estimation</strong>
+                <span>Target Pose</span>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <strong>Motion Planning</strong>
+                <span>Trajectory Generation</span>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <strong>Flight Control</strong>
+                <span>Autonomous Grasping</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="detail-section">
+
+        <h2>
+            <i class="fa-solid fa-gears"></i>
+            核心工作
+        </h2>
+
+        <div class="technical-list">
+
+            <div class="technical-item">
+
+                <h3>目标视觉检测</h3>
+
+                <p>
+                    对相机采集图像进行目标识别和位置提取，
+                    为后续抓取任务提供视觉输入。
+                </p>
+
+            </div>
+
+            <div class="technical-item">
+
+                <h3>坐标系转换</h3>
+
+                <p>
+                    建立相机坐标系、机体坐标系、
+                    世界坐标系和末端执行器坐标系之间的转换关系。
+                </p>
+
+            </div>
+
+            <div class="technical-item">
+
+                <h3>轨迹规划</h3>
+
+                <p>
+                    根据目标位置生成平滑的空间运动轨迹，
+                    避免运动过程中的剧烈姿态变化。
+                </p>
+
+            </div>
+
+            <div class="technical-item">
+
+                <h3>闭环控制</h3>
+
+                <p>
+                    根据视觉反馈实时修正无人机位置和姿态，
+                    提高目标接近和抓取过程中的定位精度。
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="detail-section">
+
+        <h2>
+            <i class="fa-solid fa-video"></i>
+            项目演示
+        </h2>
+
+        <div class="project-hero-media">
+
+            <video controls>
+                <source
+                    src="assets/videos/uav-grasping-demo.mp4"
+                    type="video/mp4"
+                >
+
+                您的浏览器不支持视频播放。
+            </video>
+
+        </div>
+
+    </section>
+
+
+    <section class="detail-section">
+
+        <h2>
+            <i class="fa-solid fa-chart-line"></i>
+            项目成果
+        </h2>
+
+        <div class="result-grid">
+
+            <div class="result-card">
+                <strong>视觉感知</strong>
+                <span>
+                    实现目标位置和姿态信息提取。
+                </span>
+            </div>
+
+            <div class="result-card">
+                <strong>自主控制</strong>
+                <span>
+                    实现无人机根据目标位置进行自主运动。
+                </span>
+            </div>
+
+            <div class="result-card">
+                <strong>系统集成</strong>
+                <span>
+                    完成感知、规划与控制模块的整体联调。
+                </span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="detail-bottom-link">
+
+        <a href="index.html#projects" class="project-button">
+            <i class="fa-solid fa-arrow-left"></i>
+            返回全部项目
+        </a>
+
+    </div>
+
+</main>
+
+
+<footer class="footer">
+    © 2026 Li Jia. Built with GitHub Pages.
+</footer>
+
+</body>
+</html>
