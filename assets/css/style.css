@@ -1291,3 +1291,90 @@ img {
     }
 
 }
+/* =========================
+   Competition Detail Layout
+========================= */
+
+.competition-card {
+    display: flex;
+    gap: 28px;
+    padding: 26px;
+    margin-bottom: 26px;
+    border: 1px solid #e1e7ee;
+    border-radius: 12px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.competition-image {
+    flex: 0 0 230px;
+    height: 190px;
+    border-radius: 9px;
+    overflow: hidden;
+    background: #f1f4f7;
+}
+
+.competition-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.competition-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.competition-intro {
+    margin: 12px 0 20px;
+    line-height: 1.8;
+}
+
+.competition-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 18px;
+}
+
+.competition-detail-grid h4 {
+    margin-bottom: 10px;
+    color: #173b63;
+    font-size: 15px;
+}
+
+.competition-detail-grid p,
+.competition-detail-grid li {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #687789;
+}
+
+.competition-detail-grid ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.competition-detail-grid li {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 800px) {
+
+    .competition-card {
+        flex-direction: column;
+    }
+
+    .competition-image {
+        width: 100%;
+        height: 220px;
+        flex-basis: auto;
+    }
+
+    .competition-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+}
