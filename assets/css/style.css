@@ -1,6 +1,6 @@
-/* =========================================================
+/* =========================================
    Global
-========================================================= */
+========================================= */
 
 * {
     box-sizing: border-box;
@@ -38,27 +38,20 @@ img {
     display: block;
 }
 
-button,
-a {
-    -webkit-tap-highlight-color: transparent;
-}
 
-
-/* =========================================================
+/* =========================================
    Navigation
-========================================================= */
+========================================= */
 
 .navbar {
     height: 68px;
 
-    background: rgba(255, 255, 255, 0.96);
+    background: #ffffff;
     border-bottom: 1px solid #edf0f4;
 
     position: sticky;
     top: 0;
     z-index: 100;
-
-    backdrop-filter: blur(12px);
 }
 
 .nav-container {
@@ -87,34 +80,12 @@ a {
 }
 
 .nav-links a {
-    position: relative;
-
     color: #26384d;
 
     font-size: 14px;
     font-weight: 600;
 
-    transition:
-        color 0.25s ease,
-        transform 0.25s ease;
-}
-
-.nav-links a::after {
-    content: "";
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -8px;
-
-    height: 2px;
-
-    background: #c47d99;
-
-    transform: scaleX(0);
-    transform-origin: center;
-
-    transition: transform 0.25s ease;
+    transition: color 0.2s ease;
 }
 
 .nav-links a:hover,
@@ -122,15 +93,10 @@ a {
     color: #b87591;
 }
 
-.nav-links a:hover::after,
-.nav-links a.active::after {
-    transform: scaleX(1);
-}
 
-
-/* =========================================================
+/* =========================================
    Main Layout
-========================================================= */
+========================================= */
 
 .site-layout {
     width: min(1320px, calc(100% - 80px));
@@ -147,9 +113,9 @@ a {
 }
 
 
-/* =========================================================
+/* =========================================
    Sidebar
-========================================================= */
+========================================= */
 
 .profile-sidebar {
     position: sticky;
@@ -196,12 +162,12 @@ a {
     display: inline-block;
 
     margin: 0 0 16px;
-    padding: 4px 10px;
+    padding: 4px 9px;
 
     color: #a36480;
     background: #f8edf2;
 
-    border-radius: 5px;
+    border-radius: 3px;
 
     font-size: 11px;
     font-weight: 700;
@@ -247,21 +213,9 @@ a {
 
     color: #315d85;
     font-size: 14px;
-
-    transition: color 0.25s ease;
-}
-
-.profile-contact a {
-    transition:
-        color 0.25s ease,
-        transform 0.25s ease;
 }
 
 .profile-contact a:hover {
-    color: #b87591;
-}
-
-.profile-contact p:hover i {
     color: #b87591;
 }
 
@@ -274,30 +228,20 @@ a {
 }
 
 .profile-skills span {
-    padding: 4px 9px;
+    padding: 4px 8px;
 
     color: #64748b;
     background: #f1f5f9;
 
-    border: 1px solid #e8edf3;
-    border-radius: 5px;
+    border-radius: 3px;
 
     font-size: 10px;
-
-    transition:
-        background 0.25s ease,
-        color 0.25s ease;
-}
-
-.profile-skills span:hover {
-    color: #315d85;
-    background: #edf4fa;
 }
 
 
-/* =========================================================
+/* =========================================
    Main Content
-========================================================= */
+========================================= */
 
 .main-content {
     min-width: 0;
@@ -369,7 +313,7 @@ a {
     background: #ffffff;
 
     border-left: 4px solid #d17d9b;
-    border-radius: 6px;
+    border-radius: 4px;
 
     box-shadow: 0 5px 22px rgba(15, 23, 42, 0.06);
 
@@ -383,9 +327,9 @@ a {
 }
 
 
-/* =========================================================
+/* =========================================
    Overview Cards
-========================================================= */
+========================================= */
 
 .overview-grid {
     display: grid;
@@ -404,26 +348,24 @@ a {
     background: #ffffff;
 
     border: 1px solid #edf0f4;
-    border-radius: 8px;
+    border-radius: 6px;
 
     box-shadow: 0 5px 20px rgba(15, 23, 42, 0.035);
 
     transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .overview-card:hover {
-    transform: translateY(-5px);
-
-    border-color: #e5d5dd;
+    transform: translateY(-4px);
 
     box-shadow:
-        0 12px 30px rgba(15, 23, 42, 0.08);
+        0 10px 28px rgba(15, 23, 42, 0.08);
 }
 
 .overview-card i {
+    display: block;
     margin-bottom: 10px;
 
     color: #315d85;
@@ -447,9 +389,9 @@ a {
 }
 
 
-/* =========================================================
-   Section Header
-========================================================= */
+/* =========================================
+   Section Heading
+========================================= */
 
 .section-heading {
     margin-bottom: 25px;
@@ -481,9 +423,9 @@ a {
 }
 
 
-/* =========================================================
+/* =========================================
    Projects
-========================================================= */
+========================================= */
 
 .projects-section {
     margin-bottom: 70px;
@@ -499,7 +441,7 @@ a {
     background: #ffffff;
 
     border: 1px solid #edf0f4;
-    border-radius: 9px;
+    border-radius: 7px;
 
     overflow: hidden;
 
@@ -508,23 +450,21 @@ a {
 
     transition:
         transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
+        box-shadow 0.25s ease;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
 
-    border-color: #e3d3dc;
-
     box-shadow:
-        0 14px 38px rgba(15, 23, 42, 0.10);
+        0 14px 35px rgba(15, 23, 42, 0.1);
 }
 
 .project-image {
     min-height: 300px;
 
     background: #eef2f7;
+
     overflow: hidden;
 }
 
@@ -535,17 +475,15 @@ a {
 
     object-fit: cover;
 
-    transition:
-        transform 0.45s ease,
-        filter 0.45s ease;
+    transition: transform 0.35s ease;
 }
 
 .project-card:hover .project-image img {
-    transform: scale(1.035);
+    transform: scale(1.04);
 }
 
 .project-content {
-    padding: 30px 32px;
+    padding: 27px 30px;
 }
 
 .project-meta {
@@ -578,189 +516,74 @@ a {
     line-height: 1.8;
 }
 
-.project-content h4 {
-    margin: 0 0 5px;
-
-    color: #173b63;
-
-    font-size: 14px;
-    font-weight: 750;
-}
-
-.project-content ul {
-    margin: 0 0 18px;
-    padding-left: 19px;
-}
-
-.project-content li {
-    margin-bottom: 3px;
-
-    color: #64748b;
-
-    font-size: 13px;
-    line-height: 1.75;
-}
-
 .project-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 7px;
+    gap: 6px;
 
-    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .project-tags span {
-    padding: 5px 10px;
+    padding: 4px 8px;
 
-    background: #f4f7fa;
+    background: #f1f5f9;
     color: #64748b;
 
-    border: 1px solid #e8edf3;
-    border-radius: 5px;
+    border-radius: 3px;
 
     font-size: 10px;
 }
 
 
-/* =========================================================
-   Beautiful Project Button
-========================================================= */
+/* =========================================
+   Project Button
+========================================= */
 
 .project-button {
-    position: relative;
-
     display: inline-flex;
     align-items: center;
-    justify-content: center;
     gap: 10px;
 
-    margin-top: 20px;
-    padding: 10px 17px;
+    margin-top: 18px;
+    padding: 9px 15px;
 
+    background: #173b63;
     color: #ffffff;
-    background: #315d85;
 
-    border: 1px solid #315d85;
-    border-radius: 6px;
+    border: 1px solid #173b63;
+    border-radius: 4px;
 
     font-size: 12px;
     font-weight: 700;
-    letter-spacing: 0.1px;
-
-    box-shadow:
-        0 4px 12px rgba(49, 93, 133, 0.16);
-
-    overflow: hidden;
 
     transition:
-        background 0.25s ease,
-        border-color 0.25s ease,
-        box-shadow 0.25s ease,
-        transform 0.25s ease;
-}
-
-.project-button::before {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    background: linear-gradient(
-        120deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.18) 45%,
-        transparent 70%
-    );
-
-    transform: translateX(-120%);
-
-    transition: transform 0.5s ease;
-}
-
-.project-button span,
-.project-button i {
-    position: relative;
-    z-index: 1;
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .project-button i {
     font-size: 11px;
 
-    transition:
-        transform 0.25s ease;
+    transition: transform 0.2s ease;
 }
 
 .project-button:hover {
-    color: #ffffff;
-    background: #244d73;
-    border-color: #244d73;
+    background: #b87591;
+    border-color: #b87591;
 
     transform: translateY(-2px);
-
-    box-shadow:
-        0 8px 20px rgba(49, 93, 133, 0.23);
-}
-
-.project-button:hover::before {
-    transform: translateX(120%);
 }
 
 .project-button:hover i {
     transform: translateX(4px);
 }
 
-.project-button:active {
-    transform: translateY(0);
-    box-shadow:
-        0 3px 8px rgba(49, 93, 133, 0.18);
-}
 
-
-/* =========================================================
-   Secondary Button
-========================================================= */
-
-.secondary-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-
-    padding: 10px 16px;
-
-    color: #315d85;
-    background: #ffffff;
-
-    border: 1px solid #dce5ee;
-    border-radius: 6px;
-
-    font-size: 12px;
-    font-weight: 700;
-
-    transition:
-        color 0.25s ease,
-        background 0.25s ease,
-        border-color 0.25s ease,
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-.secondary-button:hover {
-    color: #244d73;
-    background: #f5f8fb;
-
-    border-color: #b9ccdd;
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 6px 15px rgba(15, 23, 42, 0.06);
-}
-
-
-/* =========================================================
-   Skills Section
-========================================================= */
+/* =========================================
+   Skills
+========================================= */
 
 .skills-section {
     margin-bottom: 70px;
@@ -792,9 +615,9 @@ a {
 }
 
 
-/* =========================================================
+/* =========================================
    Experience
-========================================================= */
+========================================= */
 
 .experience-section {
     margin-bottom: 70px;
@@ -838,9 +661,9 @@ a {
 }
 
 
-/* =========================================================
+/* =========================================
    Contact
-========================================================= */
+========================================= */
 
 .contact-section {
     margin-bottom: 30px;
@@ -852,7 +675,7 @@ a {
     background: #f8fafc;
 
     border: 1px solid #e5ebf2;
-    border-radius: 8px;
+    border-radius: 6px;
 }
 
 .contact-box h2 {
@@ -874,42 +697,29 @@ a {
 .contact-button {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
     gap: 9px;
 
-    padding: 11px 18px;
+    padding: 10px 18px;
 
     background: #315d85;
     color: #ffffff;
 
-    border: 1px solid #315d85;
-    border-radius: 6px;
+    border-radius: 4px;
 
     font-size: 13px;
     font-weight: 700;
 
-    box-shadow:
-        0 4px 12px rgba(49, 93, 133, 0.14);
-
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+    transition: background 0.2s ease;
 }
 
 .contact-button:hover {
-    background: #244d73;
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 8px 20px rgba(49, 93, 133, 0.20);
+    background: #173b63;
 }
 
 
-/* =========================================================
+/* =========================================
    Footer
-========================================================= */
+========================================= */
 
 .footer {
     padding: 25px 20px;
@@ -923,16 +733,16 @@ a {
 }
 
 
-/* =========================================================
+/* =========================================
    Project Detail Page
-========================================================= */
+========================================= */
 
 .project-detail-container {
     width: min(1050px, calc(100% - 50px));
 
     margin: 0 auto;
 
-    padding: 45px 0 90px;
+    padding: 50px 0 90px;
 }
 
 .back-link {
@@ -941,40 +751,31 @@ a {
     gap: 9px;
 
     margin-bottom: 35px;
-    padding: 8px 13px;
 
     color: #64748b;
-    background: #f8fafc;
-
-    border: 1px solid #e8edf3;
-    border-radius: 6px;
 
     font-size: 13px;
     font-weight: 650;
 
-    transition:
-        color 0.25s ease,
-        background 0.25s ease,
-        border-color 0.25s ease,
-        transform 0.25s ease;
+    transition: color 0.2s ease;
 }
 
 .back-link:hover {
-    color: #315d85;
-    background: #f1f6fa;
-    border-color: #cddce9;
-
-    transform: translateX(-3px);
+    color: #b87591;
 }
 
 .project-detail-header {
     margin-bottom: 35px;
 }
 
-.project-detail-header h1 {
-    max-width: 850px;
+.project-detail-header .small-label {
+    margin-bottom: 13px;
+}
 
-    margin: 0 0 10px;
+.project-detail-header h1 {
+    max-width: 900px;
+
+    margin: 0 0 14px;
 
     color: #173b63;
 
@@ -989,6 +790,7 @@ a {
     color: #64748b;
 
     font-size: 17px;
+    line-height: 1.8;
 }
 
 .detail-tags {
@@ -1003,11 +805,15 @@ a {
     background: #f1f5f9;
     color: #64748b;
 
-    border: 1px solid #e6edf3;
-    border-radius: 5px;
+    border-radius: 3px;
 
     font-size: 11px;
 }
+
+
+/* =========================================
+   Project Hero Image
+========================================= */
 
 .project-hero-media {
     width: 100%;
@@ -1018,7 +824,7 @@ a {
 
     background: #f1f5f9;
 
-    border-radius: 9px;
+    border-radius: 8px;
 
     box-shadow:
         0 10px 35px rgba(15, 23, 42, 0.08);
@@ -1026,15 +832,24 @@ a {
 
 .project-hero-media img {
     width: 100%;
-    max-height: 550px;
+    max-height: 560px;
 
     object-fit: cover;
 }
 
+.project-hero-media video {
+    display: block;
 
-/* =========================================================
+    width: 100%;
+    max-height: 600px;
+
+    background: #0f172a;
+}
+
+
+/* =========================================
    Detail Sections
-========================================================= */
+========================================= */
 
 .detail-section {
     margin-bottom: 55px;
@@ -1062,6 +877,13 @@ a {
     font-size: 20px;
 }
 
+.detail-section h3 {
+    margin: 25px 0 10px;
+
+    color: #173b63;
+    font-size: 18px;
+}
+
 .detail-section p {
     max-width: 900px;
 
@@ -1072,6 +894,27 @@ a {
     font-size: 15px;
     line-height: 2;
 }
+
+.detail-section ul {
+    max-width: 900px;
+
+    margin: 0;
+    padding-left: 22px;
+}
+
+.detail-section li {
+    margin-bottom: 9px;
+
+    color: #64748b;
+
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+
+/* =========================================
+   Detail Two Columns
+========================================= */
 
 .detail-two-column {
     display: grid;
@@ -1089,18 +932,7 @@ a {
     background: #f8fafc;
 
     border: 1px solid #e8edf3;
-    border-radius: 8px;
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-.detail-info-card:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 8px 22px rgba(15, 23, 42, 0.06);
+    border-radius: 6px;
 }
 
 .detail-info-card h3 {
@@ -1111,7 +943,6 @@ a {
     margin: 0 0 15px;
 
     color: #173b63;
-
     font-size: 18px;
 }
 
@@ -1134,9 +965,9 @@ a {
 }
 
 
-/* =========================================================
+/* =========================================
    Architecture Flow
-========================================================= */
+========================================= */
 
 .architecture-flow {
     display: flex;
@@ -1162,21 +993,9 @@ a {
     background: #f8fafc;
 
     border: 1px solid #e5ebf2;
-    border-radius: 7px;
+    border-radius: 5px;
 
     text-align: center;
-
-    transition:
-        background 0.25s ease,
-        border-color 0.25s ease,
-        transform 0.25s ease;
-}
-
-.flow-item:hover {
-    background: #f2f7fb;
-    border-color: #cbdce9;
-
-    transform: translateY(-3px);
 }
 
 .flow-item strong {
@@ -1203,9 +1022,9 @@ a {
 }
 
 
-/* =========================================================
-   Technical List
-========================================================= */
+/* =========================================
+   Technical Items
+========================================= */
 
 .technical-list {
     display: grid;
@@ -1222,25 +1041,8 @@ a {
 
     background: #ffffff;
 
-    border-top: 1px solid #f0f2f5;
-    border-right: 1px solid #f0f2f5;
-    border-bottom: 1px solid #f0f2f5;
-
-    border-radius: 0 7px 7px 0;
-
     box-shadow:
         0 5px 20px rgba(15, 23, 42, 0.045);
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-.technical-item:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 9px 25px rgba(15, 23, 42, 0.08);
 }
 
 .technical-item h3 {
@@ -1259,34 +1061,9 @@ a {
 }
 
 
-/* =========================================================
-   Detail Video
-========================================================= */
-
-.detail-video {
-    width: 100%;
-
-    background: #0f172a;
-
-    border-radius: 8px;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 8px 25px rgba(15, 23, 42, 0.08);
-}
-
-.detail-video video {
-    display: block;
-
-    width: 100%;
-    max-height: 600px;
-}
-
-
-/* =========================================================
+/* =========================================
    Result Cards
-========================================================= */
+========================================= */
 
 .result-grid {
     display: grid;
@@ -1306,21 +1083,7 @@ a {
     background: #f8fafc;
 
     border: 1px solid #e5ebf2;
-    border-radius: 7px;
-
-    transition:
-        transform 0.25s ease,
-        background 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-.result-card:hover {
-    background: #f3f7fa;
-
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 8px 22px rgba(15, 23, 42, 0.06);
+    border-radius: 5px;
 }
 
 .result-card strong {
@@ -1341,48 +1104,41 @@ a {
 }
 
 
-/* =========================================================
-   Responsive - Tablet
-========================================================= */
+/* =========================================
+   Responsive
+========================================= */
 
-@media (max-width: 1050px) {
+@media (max-width: 1100px) {
 
     .site-layout {
         width: calc(100% - 50px);
 
-        grid-template-columns: 200px minmax(0, 1fr);
+        grid-template-columns: 210px minmax(0, 1fr);
 
-        gap: 40px;
+        gap: 45px;
     }
 
     .profile-sidebar {
-        width: 200px;
+        width: 210px;
     }
 
     .profile-photo {
-        width: 155px;
-        height: 200px;
+        width: 165px;
+        height: 210px;
     }
 
     .project-card {
-        grid-template-columns: 230px minmax(0, 1fr);
+        grid-template-columns: 245px minmax(0, 1fr);
     }
 
     .overview-grid {
         grid-template-columns: 1fr;
     }
 
-    .project-content {
-        padding: 25px;
-    }
 }
 
 
-/* =========================================================
-   Responsive - Mobile
-========================================================= */
-
-@media (max-width: 760px) {
+@media (max-width: 800px) {
 
     .navbar {
         height: auto;
@@ -1412,10 +1168,6 @@ a {
         font-size: 12px;
     }
 
-    .nav-links a::after {
-        bottom: -4px;
-    }
-
     .site-layout {
         display: block;
 
@@ -1430,25 +1182,11 @@ a {
         width: 100%;
 
         margin-bottom: 50px;
-
-        text-align: center;
     }
 
     .profile-photo {
-        width: 150px;
-        height: 190px;
-
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .profile-skills {
-        justify-content: center;
-    }
-
-    .profile-contact {
-        display: inline-block;
-        text-align: left;
+        width: 155px;
+        height: 195px;
     }
 
     .about-section h2 {
@@ -1459,22 +1197,18 @@ a {
         font-size: 17px;
     }
 
-    .overview-grid {
-        grid-template-columns: 1fr;
-    }
-
     .project-card {
         display: block;
     }
 
     .project-image {
-        height: 220px;
-        min-height: 220px;
+        height: 230px;
+        min-height: 230px;
     }
 
     .project-image img {
-        height: 220px;
-        min-height: 220px;
+        height: 230px;
+        min-height: 230px;
     }
 
     .project-content {
@@ -1483,10 +1217,6 @@ a {
 
     .project-content h3 {
         font-size: 20px;
-    }
-
-    .project-button {
-        padding: 10px 15px;
     }
 
     .skill-row {
@@ -1508,7 +1238,6 @@ a {
 
     .project-detail-container {
         width: calc(100% - 30px);
-
         padding-top: 30px;
     }
 
@@ -1541,11 +1270,4 @@ a {
         transform: rotate(90deg);
     }
 
-    .detail-section h2 {
-        font-size: 22px;
-    }
-
-    .contact-box {
-        padding: 25px;
-    }
 }
