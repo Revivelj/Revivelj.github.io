@@ -21,8 +21,14 @@
     <script>
         window.MathJax = {
             tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
             }
         };
     </script>
@@ -34,7 +40,7 @@
 </head>
 
 
-<body>
+<body id="top">
 
 <!-- =====================================================
      顶部导航
@@ -89,7 +95,7 @@
      页面主体
 ===================================================== -->
 
-<div class="site-layout" id="top">
+<div class="site-layout">
 
 
     <!-- =================================================
@@ -98,74 +104,86 @@
 
     <aside class="profile-sidebar">
 
-        <img
-            src="assets/images/personal_Image.jpg"
-            alt="李佳个人照片"
-            class="profile-photo"
-        >
+        <div class="profile-photo-wrapper">
 
-        <h1>
-            李佳
-        </h1>
-
-        <p class="profile-name">
-            Li Jia
-        </p>
-
-        <div class="profile-position">
-            AI / Robotics / Control
-        </div>
-
-        <p class="profile-school">
-            东南大学 · 自动化学院
-        </p>
-
-        <p class="profile-degree">
-            控制科学与工程硕士研究生
-        </p>
-
-        <div class="profile-divider"></div>
-
-        <div class="profile-contact">
-
-            <p>
-                <i class="fas fa-location-dot"></i>
-                <span>China / Japan</span>
-            </p>
-
-            <p>
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:your-email@example.com">
-                    Email
-                </a>
-            </p>
-
-            <p>
-                <i class="fab fa-github"></i>
-                <a href="https://github.com/Revivelj"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    GitHub
-                </a>
-            </p>
-
-            <p>
-                <i class="fas fa-file-pdf"></i>
-                <a href="cv.html">
-                    Curriculum Vitae
-                </a>
-            </p>
+            <img
+                src="assets/images/personal_Image.jpg"
+                alt="李佳个人照片"
+                class="profile-photo"
+            >
 
         </div>
 
-        <div class="profile-skills">
 
-            <span>Python</span>
-            <span>C++</span>
-            <span>PyTorch</span>
-            <span>Robotics</span>
-            <span>RL</span>
-            <span>Motion Control</span>
+        <div class="profile-information">
+
+            <h1>
+                李佳
+            </h1>
+
+            <p class="profile-name">
+                Li Jia
+            </p>
+
+            <div class="profile-position">
+                AI / Robotics / Control
+            </div>
+
+            <p class="profile-school">
+                东南大学 · 自动化学院
+            </p>
+
+            <p class="profile-degree">
+                控制科学与工程硕士研究生
+            </p>
+
+            <div class="profile-divider"></div>
+
+            <div class="profile-contact">
+
+                <p>
+                    <i class="fas fa-location-dot"></i>
+                    <span>China / Japan</span>
+                </p>
+
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:your-email@example.com">
+                        Email
+                    </a>
+                </p>
+
+                <p>
+                    <i class="fab fa-github"></i>
+                    <a
+                        href="https://github.com/Revivelj"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+                </p>
+
+                <p>
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="cv.html">
+                        Curriculum Vitae
+                    </a>
+                </p>
+
+            </div>
+
+
+            <div class="profile-skills">
+
+                <span>Python</span>
+                <span>C++</span>
+                <span>PyTorch</span>
+                <span>Robotics</span>
+                <span>RL</span>
+                <span>Motion Control</span>
+
+            </div>
 
         </div>
 
@@ -329,8 +347,10 @@
                     </div>
 
 
-                    <a href="#quadruped-detail"
-                       class="overview-item">
+                    <a
+                        href="#quadruped-detail"
+                        class="overview-item"
+                    >
 
                         <div class="overview-item-index">
                             01
@@ -353,8 +373,10 @@
                     </a>
 
 
-                    <a href="#uav-detail"
-                       class="overview-item">
+                    <a
+                        href="#uav-detail"
+                        class="overview-item"
+                    >
 
                         <div class="overview-item-index">
                             02
@@ -377,8 +399,10 @@
                     </a>
 
 
-                    <a href="#model-detail"
-                       class="overview-item">
+                    <a
+                        href="#model-detail"
+                        class="overview-item"
+                    >
 
                         <div class="overview-item-index">
                             03
@@ -401,8 +425,10 @@
                     </a>
 
 
-                    <a href="#calibration-detail"
-                       class="overview-item">
+                    <a
+                        href="#calibration-detail"
+                        class="overview-item"
+                    >
 
                         <div class="overview-item-index">
                             04
@@ -444,8 +470,10 @@
                     </div>
 
 
-                    <a href="#robocup-detail"
-                       class="overview-item">
+                    <a
+                        href="#robocup-detail"
+                        class="overview-item"
+                    >
 
                         <div class="overview-item-index">
                             01
@@ -468,8 +496,10 @@
                     </a>
 
 
-                    <a href="#robomaster-detail"
-                       class="overview-item">
+                    <a
+                        href="#robomaster-detail"
+                        class="overview-item"
+                    >
 
                         <div class="overview-item-index">
                             02
@@ -492,8 +522,10 @@
                     </a>
 
 
-                    <a href="#mechanical-detail"
-                       class="overview-item">
+                    <a
+                        href="#mechanical-detail"
+                        class="overview-item"
+                    >
 
                         <div class="overview-item-index">
                             03
@@ -526,8 +558,10 @@
              项目详细介绍
         ================================================== -->
 
-        <section class="project-details-section"
-                 id="projects">
+        <section
+            class="project-details-section"
+            id="projects"
+        >
 
             <div class="section-heading">
 
@@ -551,8 +585,10 @@
                  四足机器人项目
             ================================================== -->
 
-            <article class="project-detail-block"
-                     id="quadruped-detail">
+            <article
+                class="project-detail-block"
+                id="quadruped-detail"
+            >
 
                 <div class="project-detail-topline">
 
@@ -652,8 +688,10 @@
                  无人机项目
             ================================================== -->
 
-            <article class="project-detail-block"
-                     id="uav-detail">
+            <article
+                class="project-detail-block"
+                id="uav-detail"
+            >
 
                 <div class="project-detail-topline">
 
@@ -817,8 +855,10 @@
                  模型部署项目
             ================================================== -->
 
-            <article class="project-detail-block"
-                     id="model-detail">
+            <article
+                class="project-detail-block"
+                id="model-detail"
+            >
 
                 <div class="project-detail-topline">
 
@@ -918,8 +958,10 @@
                  相机雷达标定项目
             ================================================== -->
 
-            <article class="project-detail-block"
-                     id="calibration-detail">
+            <article
+                class="project-detail-block"
+                id="calibration-detail"
+            >
 
                 <div class="project-detail-topline">
 
@@ -1017,11 +1059,13 @@
 
 
         <!-- =================================================
-             比赛经历详细介绍
+             比赛经历
         ================================================== -->
 
-        <section class="competitions-section"
-                 id="competitions">
+        <section
+            class="competitions-section"
+            id="competitions"
+        >
 
             <div class="section-heading">
 
@@ -1048,8 +1092,10 @@
                      RoboCup 2021
                 ================================================== -->
 
-                <article class="competition-card"
-                         id="robocup-detail">
+                <article
+                    class="competition-card"
+                    id="robocup-detail"
+                >
 
                     <div class="competition-image">
 
@@ -1119,7 +1165,7 @@
                                     </li>
 
                                     <li>
-                                        分析比赛过程中出现的控制与通信问题
+                                        分析比赛过程中的控制与通信问题
                                     </li>
 
                                     <li>
@@ -1151,8 +1197,10 @@
                      RoboMaster 2022
                 ================================================== -->
 
-                <article class="competition-card"
-                         id="robomaster-detail">
+                <article
+                    class="competition-card"
+                    id="robomaster-detail"
+                >
 
                     <div class="competition-image">
 
@@ -1251,11 +1299,13 @@
 
 
                 <!-- =================================================
-                     全国大学生机械创新设计大赛
+                     机械创新设计大赛
                 ================================================== -->
 
-                <article class="competition-card"
-                         id="mechanical-detail">
+                <article
+                    class="competition-card"
+                    id="mechanical-detail"
+                >
 
                     <div class="competition-image">
 
@@ -1361,8 +1411,10 @@
              技术能力
         ================================================== -->
 
-        <section class="skills-section"
-                 id="skills">
+        <section
+            class="skills-section"
+            id="skills"
+        >
 
             <div class="section-heading">
 
@@ -1453,8 +1505,10 @@
              教育与经历
         ================================================== -->
 
-        <section class="experience-section"
-                 id="experience">
+        <section
+            class="experience-section"
+            id="experience"
+        >
 
             <div class="section-heading">
 
@@ -1527,8 +1581,10 @@
              联系方式
         ================================================== -->
 
-        <section class="contact-section"
-                 id="contact">
+        <section
+            class="contact-section"
+            id="contact"
+        >
 
             <div class="contact-box">
 
@@ -1541,8 +1597,10 @@
                     欢迎与我交流。
                 </p>
 
-                <a href="mailto:your-email@example.com"
-                   class="contact-button">
+                <a
+                    href="mailto:your-email@example.com"
+                    class="contact-button"
+                >
 
                     <i class="fas fa-envelope"></i>
                     Contact Me
