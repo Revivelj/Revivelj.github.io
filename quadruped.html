@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>四足机器人运动控制 | Li Jia</title>
+
+    <link
+        rel="stylesheet"
+        href="/assets/css/style.css?v=21"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- 顶部导航 -->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                LJ
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="index.html">
+                    Homepage
+                </a>
+
+                <a href="index.html#about">
+                    About Me
+                </a>
+
+                <a href="index.html#projects">
+                    Projects
+                </a>
+
+                <a href="index.html#experience">
+                    Experience
+                </a>
+
+                <a href="index.html#skills">
+                    Skills
+                </a>
+
+                <a href="cv.html">
+                    CV
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <main class="project-detail-container">
+
+        <!-- 返回按钮 -->
+        <a
+            href="index.html#projects"
+            class="back-link"
+        >
+            <i class="fas fa-arrow-left"></i>
+            返回项目列表
+        </a>
+
+
+
+        <!-- 项目标题 -->
+        <section class="project-detail-header">
+
+            <div class="small-label">
+                ROBOTICS · REINFORCEMENT LEARNING
+            </div>
+
+            <h1>
+                四足机器人运动控制与强化学习
+            </h1>
+
+            <p class="project-detail-subtitle">
+                Quadruped Robot Locomotion with Reinforcement Learning
+            </p>
+
+            <div class="detail-tags">
+
+                <span>Python</span>
+                <span>PyTorch</span>
+                <span>PPO</span>
+                <span>Isaac Gym</span>
+                <span>Robot Control</span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 主图 -->
+        <section class="project-hero-media">
+
+            <img
+                src="/assets/images/quadruped.jpg"
+                alt="四足机器人运动控制"
+            >
+
+        </section>
+
+
+
+        <!-- 项目概述 -->
+        <section class="detail-section">
+
+            <h2>
+                <i class="fas fa-circle-info"></i>
+                项目概述
+            </h2>
+
+            <p>
+                本项目面向四足机器人自主运动控制任务，
+                研究如何利用深度强化学习实现机器人在不同速度、
+                不同地形和不同运动指令下的稳定行走。
+            </p>
+
+            <p>
+                项目覆盖仿真环境搭建、机器人状态建模、
+                观测空间设计、奖励函数设计、策略训练、
+                运动性能分析以及控制策略部署等环节。
+            </p>
+
+        </section>
+
+
+
+        <!-- 两列信息 -->
+        <section class="detail-two-column">
+
+            <div class="detail-info-card">
+
+                <h3>
+                    <i class="fas fa-bullseye"></i>
+                    项目目标
+                </h3>
+
+                <ul>
+
+                    <li>
+                        实现四足机器人自主运动控制；
+                    </li>
+
+                    <li>
+                        提高复杂运动任务下的稳定性；
+                    </li>
+
+                    <li>
+                        支持不同速度和方向的运动指令；
+                    </li>
+
+                    <li>
+                        构建从仿真训练到实际部署的流程。
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="detail-info-card">
+
+                <h3>
+                    <i class="fas fa-user-gear"></i>
+                    我的工作
+                </h3>
+
+                <ul>
+
+                    <li>
+                        搭建强化学习仿真训练环境；
+                    </li>
+
+                    <li>
+                        设计状态、动作和奖励函数；
+                    </li>
+
+                    <li>
+                        使用 PPO 算法训练控制策略；
+                    </li>
+
+                    <li>
+                        分析策略训练过程和运动效果。
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 技术方案 -->
+        <section class="detail-section">
+
+            <h2>
+                <i class="fas fa-diagram-project"></i>
+                技术方案
+            </h2>
+
+            <div class="architecture-flow">
+
+                <div class="flow-item">
+                    <strong>Robot State</strong>
+                    <span>关节状态、姿态、速度</span>
+                </div>
+
+                <div class="flow-arrow">
+                    →
+                </div>
+
+                <div class="flow-item">
+                    <strong>Observation</strong>
+                    <span>状态归一化与特征构建</span>
+                </div>
+
+                <div class="flow-arrow">
+                    →
+                </div>
+
+                <div class="flow-item">
+                    <strong>PPO Policy</strong>
+                    <span>强化学习策略推理</span>
+                </div>
+
+                <div class="flow-arrow">
+                    →
+                </div>
+
+                <div class="flow-item">
+                    <strong>Robot Action</strong>
+                    <span>关节控制指令</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 关键技术 -->
+        <section class="detail-section">
+
+            <h2>
+                <i class="fas fa-code"></i>
+                关键技术
+            </h2>
+
+            <div class="technical-list">
+
+                <div class="technical-item">
+
+                    <h3>
+                        强化学习环境设计
+                    </h3>
+
+                    <p>
+                        根据机器人运动任务设计观测空间、
+                        动作空间和环境交互逻辑。
+                    </p>
+
+                </div>
+
+
+                <div class="technical-item">
+
+                    <h3>
+                        奖励函数设计
+                    </h3>
+
+                    <p>
+                        综合考虑速度跟踪、姿态稳定、
+                        能耗、足端接触和动作平滑性。
+                    </p>
+
+                </div>
+
+
+                <div class="technical-item">
+
+                    <h3>
+                        PPO 策略训练
+                    </h3>
+
+                    <p>
+                        使用近端策略优化算法训练机器人运动策略，
+                        并分析训练收敛过程。
+                    </p>
+
+                </div>
+
+
+                <div class="technical-item">
+
+                    <h3>
+                        运动性能分析
+                    </h3>
+
+                    <p>
+                        对不同速度、方向和环境条件下的机器人运动表现
+                        进行对比分析。
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 视频展示 -->
+        <section class="detail-section">
+
+            <h2>
+                <i class="fas fa-video"></i>
+                项目演示
+            </h2>
+
+            <div class="detail-video">
+
+                <video
+                    controls
+                    preload="metadata"
+                >
+
+                    <source
+                        src="/assets/videos/quadruped-demo.mp4"
+                        type="video/mp4"
+                    >
+
+                    您的浏览器不支持视频播放。
+
+                </video>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 项目成果 -->
+        <section class="detail-section">
+
+            <h2>
+                <i class="fas fa-chart-line"></i>
+                项目成果
+            </h2>
+
+            <div class="result-grid">
+
+                <div class="result-card">
+
+                    <strong>
+                        仿真训练
+                    </strong>
+
+                    <span>
+                        完成强化学习训练环境搭建
+                    </span>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <strong>
+                        策略控制
+                    </strong>
+
+                    <span>
+                        实现基于 PPO 的运动控制策略
+                    </span>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <strong>
+                        多任务运动
+                    </strong>
+
+                    <span>
+                        支持不同速度和方向控制指令
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 返回 -->
+        <div class="detail-bottom-link">
+
+            <a
+                href="index.html#projects"
+                class="project-button"
+            >
+                <i class="fas fa-arrow-left"></i>
+                返回全部项目
+            </a>
+
+        </div>
+
+    </main>
+
+
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Li Jia · Personal Portfolio
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
