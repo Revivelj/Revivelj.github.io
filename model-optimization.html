@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI模型部署优化 | Li Jia</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">LJ</a>
+
+        <nav class="nav-links">
+            <a href="index.html">Homepage</a>
+            <a href="index.html#about">About Me</a>
+            <a href="index.html#projects" class="active">Projects</a>
+            <a href="index.html#experience">Experience</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="cv.html">CV</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main class="project-detail-container">
+
+    <a href="index.html#projects" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i>
+        返回项目列表
+    </a>
+
+
+    <header class="project-detail-header">
+
+        <div class="small-label">
+            AI ENGINEERING · MODEL DEPLOYMENT
+        </div>
+
+        <h1>
+            深度学习模型压缩与边缘部署优化
+        </h1>
+
+        <p class="project-detail-subtitle">
+            面向嵌入式和边缘计算平台的深度学习模型转换、
+            量化、推理优化与工程部署。
+        </p>
+
+        <div class="detail-tags">
+            <span>PyTorch</span>
+            <span>ONNX</span>
+            <span>CANN</span>
+            <span>Quantization</span>
+            <span>Edge AI</span>
+        </div>
+
+    </header>
+
+
+    <div class="project-hero-media">
+
+        <img
+            src="assets/images/ascend.jpg"
+            alt="AI模型部署优化"
+        >
+
+    </div>
+
+
+    <section class="detail-section">
+
+        <h2>
+            <i class="fa-solid fa-circle-info"></i>
+            项目概述
+        </h2>
+
+        <p>
+            本项目面向资源受限的边缘计算设备，
+            研究如何将深度学习模型从训练框架转换到实际部署平台，
+            并通过模型简化、算子优化、精度转换和推理加速降低计算开销。
+        </p>
+
+        <p>
+            项目重点关注模型在真实硬件平台上的运行效率，
+            包括推理延迟、显存占用、模型精度以及部署稳定性。
+        </p>
+
+    </section>
+
+
+    <section class="detail-two-column">
+
+        <div class="detail-info-card">
+
+            <h3>
+                <i class="fa-solid fa-bullseye"></i>
+                项目目标
+            </h3>
+
+            <ul>
+                <li>降低模型推理延迟</li>
+                <li>减少模型计算量和存储占用</li>
+                <li>完成训练模型到部署模型的转换</li>
+                <li>保持模型精度稳定</li>
+            </ul>
+
+        </div>
+
+
+        <div class="detail-info-card">
+
+            <h3>
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                使用技术
+            </h3>
+
+            <ul>
+                <li>PyTorch</li>
+                <li>ONNX</li>
+                <li>TensorRT / CANN</li>
+                <li>FP16 / INT8 Quantization</li>
+                <li>Python / C++</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <section class="detail-section">
+
+        <h2>
+            <i class="fa-solid fa-diagram-project"></i>
+            部署流程
+        </h2>
+
+        <div class="architecture-flow">
+
+            <div class="flow-item">
+                <strong>Training Model</strong>
+                <span>PyTorch</span>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <strong>Model Export</strong>
+                <span>ONNX</span>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <strong>Graph Optimization</strong>
+                <span>Operator Fusion</span>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <strong>Quantization</strong>
+                <span>FP16 / INT8</span>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <strong>Edge Deployment</strong>
+                <span>Real Hardware</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="detail-section">
+
+        <h2>
+            <i class="fa-solid fa-gears"></i>
+            核心工作
+        </h2>
+
+        <div class="technical-list">
+
+            <div class="technical-item">
+
+                <h3>模型转换</h3>
+
+                <p>
+                    将 PyTorch 模型导出为 ONNX 格式，
+                    检查算子兼容性并解决转换过程中的算子问题。
+                </p>
+
+            </div>
+
+            <div class="technical-item">
+
+                <h3>计算图优化</h3>
+
+                <p>
+                    通过算子融合、冗余节点消除和计算图简化，
+                    降低模型执行过程中的额外开销。
+                </p>
+
+            </div>
+
+            <div class="technical-item">
+
+                <h3>低精度推理</h3>
+
+                <p>
+                    使用 FP16 或 INT8 进行推理加速，
+                    在精度和计算效率之间进行平衡。
+                </p>
+
+            </div>
+
+            <div class="technical-item">
+
+                <h3>性能分析</h3>
+
+                <p>
+                    对模型推理延迟、内存占用、吞吐率和精度进行测试，
+                    分析实际部署瓶颈。
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="detail-section">
+
+        <h2>
+            <i class="fa-solid fa-chart-line"></i>
+            项目成果
+        </h2>
+
+        <div class="result-grid">
+
+            <div class="result-card">
+                <strong>推理加速</strong>
+                <span>
+                    通过模型优化降低边缘设备上的推理时间。
+                </span>
+            </div>
+
+            <div class="result-card">
+                <strong>模型压缩</strong>
+                <span>
+                    减少模型参数量、计算量和存储空间。
+                </span>
+            </div>
+
+            <div class="result-card">
+                <strong>工程部署</strong>
+                <span>
+                    完成模型从训练环境到实际硬件平台的部署流程。
+                </span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="detail-bottom-link">
+
+        <a href="index.html#projects" class="project-button">
+            <i class="fa-solid fa-arrow-left"></i>
+            返回全部项目
+        </a>
+
+    </div>
+
+</main>
+
+
+<footer class="footer">
+    © 2026 Li Jia. Built with GitHub Pages.
+</footer>
+
+</body>
+</html>
