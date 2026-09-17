@@ -26,7 +26,7 @@ body {
         Arial,
         sans-serif;
 
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.7;
 
     -webkit-font-smoothing: antialiased;
@@ -38,6 +38,7 @@ a {
 }
 
 img {
+    display: block;
     max-width: 100%;
     vertical-align: middle;
 }
@@ -107,6 +108,7 @@ img {
 ===================================================== */
 
 .site-layout {
+    width: 100%;
     max-width: 1320px;
 
     margin: 0 auto;
@@ -119,22 +121,60 @@ img {
     align-items: start;
 }
 
+.main-content {
+    min-width: 0;
+    width: 100%;
+}
+
 
 /* =====================================================
-   Sidebar
+   Sidebar - Main Fix
 ===================================================== */
 
 .profile-sidebar {
+    width: 235px;
+    min-width: 0;
+
     position: sticky;
     top: 125px;
     align-self: start;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    overflow: visible;
 }
+
+
+/*
+   单独设置照片容器，避免照片和文字发生重叠
+*/
+
+.profile-photo-wrapper {
+    width: 100%;
+
+    display: block;
+    position: relative;
+
+    margin: 0 0 22px;
+    padding: 0;
+
+    clear: both;
+}
+
+
+/*
+   个人照片
+*/
 
 .profile-photo {
     display: block;
 
     width: 180px;
     height: 225px;
+
+    max-width: 180px;
 
     object-fit: cover;
     object-position: center;
@@ -146,10 +186,34 @@ img {
         0 0 0 1px #e5e7eb,
         0 8px 25px rgba(15, 23, 42, 0.08);
 
-    margin-bottom: 22px;
+    position: relative;
+    z-index: 1;
+
+    float: none;
+    clear: both;
 }
 
-.profile-sidebar h1 {
+
+/*
+   个人文字信息容器
+*/
+
+.profile-information {
+    width: 100%;
+    min-width: 0;
+
+    display: block;
+    position: relative;
+
+    clear: both;
+    overflow: visible;
+}
+
+.profile-information h1 {
+    display: block;
+
+    margin: 0;
+
     color: #173b63;
 
     font-size: 26px;
@@ -160,6 +224,8 @@ img {
 }
 
 .profile-name {
+    display: block;
+
     margin-top: 3px;
 
     color: #9aa5b1;
@@ -169,18 +235,23 @@ img {
 }
 
 .profile-position {
+    display: block;
+
     margin-top: 16px;
 
     color: #b87591;
 
     font-size: 11px;
     font-weight: 750;
+
     letter-spacing: 0.08em;
     text-transform: uppercase;
     line-height: 1.6;
 }
 
 .profile-school {
+    display: block;
+
     margin-top: 18px;
 
     color: #536a80;
@@ -191,6 +262,8 @@ img {
 }
 
 .profile-degree {
+    display: block;
+
     margin-top: 4px;
 
     color: #8b98a5;
@@ -200,6 +273,8 @@ img {
 }
 
 .profile-divider {
+    display: block;
+
     width: 42px;
     height: 2px;
 
@@ -209,6 +284,8 @@ img {
 }
 
 .profile-contact {
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     gap: 11px;
@@ -221,9 +298,13 @@ img {
 
     color: #81909e;
     font-size: 12px;
+
+    line-height: 1.5;
 }
 
 .profile-contact i {
+    flex: 0 0 15px;
+
     width: 15px;
 
     color: #9aabba;
@@ -243,6 +324,8 @@ img {
 }
 
 .profile-skills {
+    width: 100%;
+
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
@@ -251,6 +334,8 @@ img {
 }
 
 .profile-skills span {
+    display: inline-block;
+
     padding: 4px 8px;
 
     border: 1px solid #e2e8ee;
@@ -266,12 +351,8 @@ img {
 
 
 /* =====================================================
-   Main Content
+   Main About Section
 ===================================================== */
-
-.main-content {
-    min-width: 0;
-}
 
 .about-section {
     padding-top: 3px;
@@ -321,8 +402,8 @@ img {
 
     color: #667685;
 
-    font-size: 15px;
-    line-height: 1.95;
+    font-size: 14px;
+    line-height: 1.9;
 }
 
 .about-section strong {
@@ -345,12 +426,14 @@ img {
 
     color: #82909d;
 
-    font-size: 13px;
+    font-size: 12px;
     font-style: italic;
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
 .about-highlight i {
+    flex: 0 0 auto;
+
     margin-top: 3px;
 
     color: #c18ca2;
@@ -392,6 +475,8 @@ img {
 }
 
 .overview-card i {
+    display: block;
+
     margin-bottom: 13px;
 
     color: #b87591;
@@ -410,8 +495,8 @@ img {
 .overview-card p {
     color: #84919d;
 
-    font-size: 13px;
-    line-height: 1.7;
+    font-size: 12px;
+    line-height: 1.65;
 }
 
 
@@ -446,7 +531,7 @@ img {
     margin-top: 8px;
 
     color: #8794a1;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 
@@ -544,8 +629,8 @@ img {
 .overview-item-content p {
     color: #8a96a2;
 
-    font-size: 12px;
-    line-height: 1.6;
+    font-size: 11px;
+    line-height: 1.5;
 }
 
 .overview-item-arrow {
@@ -627,8 +712,8 @@ img {
 
     color: #6d7b88;
 
-    font-size: 15px;
-    line-height: 1.95;
+    font-size: 13px;
+    line-height: 1.85;
 }
 
 .project-detail-grid {
@@ -646,20 +731,20 @@ img {
 
     color: #315675;
 
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
 }
 
 .project-detail-grid p {
     color: #6d7b88;
 
-    font-size: 15px;
-    line-height: 1.9;
+    font-size: 13px;
+    line-height: 1.8;
 }
 
 .project-detail-grid ul {
     margin: 0;
-    padding-left: 20px;
+    padding-left: 18px;
 }
 
 .project-detail-grid li {
@@ -667,8 +752,8 @@ img {
 
     color: #6d7b88;
 
-    font-size: 15px;
-    line-height: 1.8;
+    font-size: 13px;
+    line-height: 1.6;
 }
 
 .detail-tech-row {
@@ -682,7 +767,7 @@ img {
 .detail-tech-row span {
     display: inline-block;
 
-    padding: 5px 9px;
+    padding: 4px 8px;
 
     border: 1px solid #dce5ed;
     border-radius: 3px;
@@ -691,7 +776,7 @@ img {
 
     color: #607b95;
 
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
     line-height: 1.4;
 }
@@ -702,19 +787,24 @@ img {
 ===================================================== */
 
 .project-detail-image {
-    display: block;
-
     width: 100%;
-    max-height: 420px;
+    max-height: 360px;
 
-    margin: 25px 0;
+    margin: 22px 0;
 
-    object-fit: cover;
+    overflow: hidden;
 
     border: 1px solid #e3e9ef;
     border-radius: 8px;
 
     background: #f4f6f8;
+}
+
+.project-detail-image img {
+    width: 100%;
+    max-height: 360px;
+
+    object-fit: cover;
 }
 
 
@@ -780,7 +870,7 @@ img {
 
 .detail-result span {
     color: #788694;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 
@@ -805,11 +895,12 @@ img {
 ===================================================== */
 
 .competition-card {
+    width: 100%;
+
     display: flex;
     align-items: flex-start;
     gap: 28px;
 
-    width: 100%;
     padding: 26px;
 
     border: 1px solid #e1e7ee;
@@ -827,7 +918,6 @@ img {
 
 .competition-card:hover {
     background: #fcfdff;
-
     transform: translateY(-2px);
 
     box-shadow:
@@ -875,8 +965,6 @@ img {
 .competition-main {
     flex: 1;
     min-width: 0;
-
-    overflow: hidden;
 }
 
 .competition-topline {
@@ -914,9 +1002,6 @@ img {
     font-size: 21px;
     font-weight: 750;
     line-height: 1.45;
-
-    overflow-wrap: break-word;
-    word-break: break-word;
 }
 
 .competition-intro {
@@ -924,11 +1009,8 @@ img {
 
     color: #6d7b88;
 
-    font-size: 15px;
-    line-height: 1.9;
-
-    overflow-wrap: break-word;
-    word-break: break-word;
+    font-size: 13px;
+    line-height: 1.8;
 }
 
 
@@ -952,7 +1034,7 @@ img {
 
     color: #173b63;
 
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 750;
     line-height: 1.5;
 }
@@ -960,16 +1042,13 @@ img {
 .competition-detail-grid p {
     color: #6d7b88;
 
-    font-size: 14px;
-    line-height: 1.9;
-
-    overflow-wrap: break-word;
-    word-break: break-word;
+    font-size: 13px;
+    line-height: 1.8;
 }
 
 .competition-detail-grid ul {
     margin: 0;
-    padding-left: 20px;
+    padding-left: 18px;
 }
 
 .competition-detail-grid li {
@@ -977,11 +1056,8 @@ img {
 
     color: #6d7b88;
 
-    font-size: 14px;
-    line-height: 1.75;
-
-    overflow-wrap: break-word;
-    word-break: break-word;
+    font-size: 13px;
+    line-height: 1.65;
 }
 
 .competition-tags {
@@ -995,7 +1071,7 @@ img {
 .competition-tags span {
     display: inline-block;
 
-    padding: 5px 9px;
+    padding: 4px 8px;
 
     border: 1px solid #dce5ed;
     border-radius: 3px;
@@ -1004,7 +1080,7 @@ img {
 
     color: #607b95;
 
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
     line-height: 1.4;
 }
@@ -1036,15 +1112,15 @@ img {
 .skill-row strong {
     color: #315675;
 
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
 }
 
 .skill-row span {
     color: #778692;
 
-    font-size: 14px;
-    line-height: 1.8;
+    font-size: 13px;
+    line-height: 1.6;
 }
 
 
@@ -1074,7 +1150,7 @@ img {
 .timeline-date {
     color: #b87591;
 
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.7;
 }
@@ -1084,7 +1160,7 @@ img {
 
     color: #315675;
 
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 700;
 }
 
@@ -1092,14 +1168,13 @@ img {
     margin-bottom: 6px;
 
     color: #65798c;
-    font-size: 14px;
-    line-height: 1.8;
+    font-size: 13px;
 }
 
 .timeline-content span {
     color: #87939e;
 
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.7;
 }
 
@@ -1138,8 +1213,8 @@ img {
 
     color: #c3d1df;
 
-    font-size: 14px;
-    line-height: 1.9;
+    font-size: 13px;
+    line-height: 1.8;
 }
 
 .contact-button {
@@ -1182,389 +1257,7 @@ img {
 
     text-align: center;
 
-    font-size: 12px;
-}
-
-
-/* =====================================================
-   Project Detail Page
-===================================================== */
-
-.project-detail-container {
-    max-width: 1080px;
-
-    margin: 0 auto;
-    padding: 45px 40px 80px;
-}
-
-/* 返回链接 */
-.back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-
-    margin-bottom: 35px;
-
-    color: #8292a1;
-
-    text-decoration: none;
-
-    font-size: 13px;
-    font-weight: 500;
-
-    transition: color 0.2s ease;
-}
-
-.back-link:hover {
-    color: #173b63;
-}
-
-/* 项目标题 */
-.project-detail-header {
-    margin-bottom: 32px;
-}
-
-.project-detail-header .small-label {
-    margin-bottom: 13px;
-}
-
-.project-detail-header h1 {
-    max-width: 900px;
-
-    margin-bottom: 15px;
-
-    color: #173b63;
-
-    font-size: clamp(30px, 4vw, 46px);
-    font-weight: 750;
-    line-height: 1.35;
-
-    letter-spacing: -0.045em;
-}
-
-.project-detail-subtitle {
-    max-width: 850px;
-
-    color: #7890a5;
-
-    font-size: 17px;
-    line-height: 1.85;
-}
-
-/* 项目标签 */
-.detail-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-
-    margin-top: 20px;
-}
-
-.detail-tags span {
-    display: inline-block;
-
-    padding: 5px 10px;
-
-    border: 1px solid #dce5ed;
-    border-radius: 4px;
-
-    background: #f8fafc;
-
-    color: #607b95;
-
     font-size: 11px;
-    font-weight: 600;
-    line-height: 1.4;
-}
-
-
-/* =====================================================
-   Project Hero Image
-===================================================== */
-
-.project-hero-media {
-    width: 100%;
-
-    margin: 30px 0 42px;
-
-    overflow: hidden;
-
-    border: 1px solid #e3e9ef;
-    border-radius: 9px;
-
-    background: #f5f7f9;
-}
-
-.project-hero-media img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-    max-height: 560px;
-
-    object-fit: cover;
-}
-
-
-/* =====================================================
-   Project Detail Sections
-===================================================== */
-
-.detail-section {
-    margin-bottom: 45px;
-}
-
-.detail-section h2 {
-    margin-bottom: 17px;
-
-    color: #173b63;
-
-    font-size: 27px;
-    font-weight: 750;
-    line-height: 1.4;
-
-    letter-spacing: -0.025em;
-}
-
-.detail-section h3 {
-    margin-bottom: 10px;
-
-    color: #315675;
-
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.detail-section p {
-    max-width: 920px;
-
-    margin-bottom: 17px;
-
-    color: #667685;
-
-    font-size: 16px;
-    line-height: 2;
-}
-
-
-/* =====================================================
-   Detail Two Column
-===================================================== */
-
-.detail-two-column {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-
-    margin: 25px 0 40px;
-}
-
-.detail-info-card {
-    padding: 23px 25px;
-
-    border: 1px solid #e3e9ef;
-    border-radius: 8px;
-
-    background: #ffffff;
-}
-
-.detail-info-card h3 {
-    margin-bottom: 12px;
-
-    color: #173b63;
-
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.detail-info-card p {
-    margin: 0;
-
-    color: #6d7b88;
-
-    font-size: 14px;
-    line-height: 1.9;
-}
-
-
-/* =====================================================
-   Technical List
-===================================================== */
-
-.technical-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-
-    margin-top: 20px;
-}
-
-.technical-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-
-    padding: 19px 21px;
-
-    border: 1px solid #e5ebf0;
-    border-radius: 7px;
-
-    background: #ffffff;
-}
-
-.technical-item::before {
-    content: "•";
-
-    flex: 0 0 auto;
-
-    color: #b87591;
-
-    font-size: 23px;
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-.technical-item h4 {
-    margin-bottom: 6px;
-
-    color: #315675;
-
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.technical-item p {
-    margin: 0;
-
-    color: #6d7b88;
-
-    font-size: 14px;
-    line-height: 1.9;
-}
-
-
-/* =====================================================
-   Architecture Flow
-===================================================== */
-
-.architecture-flow {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-
-    margin-top: 22px;
-    padding: 22px;
-
-    border: 1px solid #e4eaf0;
-    border-radius: 8px;
-
-    background: #f8fafc;
-}
-
-.flow-item {
-    padding: 9px 13px;
-
-    border: 1px solid #dce5ed;
-    border-radius: 5px;
-
-    background: #ffffff;
-
-    color: #315675;
-
-    font-size: 12px;
-    font-weight: 650;
-}
-
-.flow-item:not(:last-child)::after {
-    content: "→";
-
-    margin-left: 18px;
-
-    color: #b87591;
-}
-
-
-/* =====================================================
-   Detail Video
-===================================================== */
-
-.detail-video {
-    display: block;
-
-    width: 100%;
-    max-width: 900px;
-
-    margin: 25px auto;
-
-    border: 1px solid #e3e9ef;
-    border-radius: 8px;
-
-    background: #f4f6f8;
-}
-
-
-/* =====================================================
-   Result Grid
-===================================================== */
-
-.result-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-
-    margin-top: 23px;
-}
-
-.result-grid > div {
-    padding: 22px;
-
-    border: 1px solid #e3e9ef;
-    border-radius: 8px;
-
-    background: #ffffff;
-}
-
-.result-grid strong {
-    display: block;
-
-    margin-bottom: 6px;
-
-    color: #173b63;
-
-    font-size: 26px;
-    font-weight: 750;
-}
-
-.result-grid span {
-    color: #788694;
-
-    font-size: 13px;
-    line-height: 1.8;
-}
-
-
-/* =====================================================
-   Detail Bottom Link
-===================================================== */
-
-.detail-bottom-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-
-    margin-top: 15px;
-
-    color: #315d85;
-
-    text-decoration: none;
-
-    font-size: 14px;
-    font-weight: 650;
-}
-
-.detail-bottom-link:hover {
-    color: #b87591;
 }
 
 
@@ -1579,9 +1272,14 @@ img {
         gap: 45px;
     }
 
+    .profile-sidebar {
+        width: 200px;
+    }
+
     .profile-photo {
         width: 155px;
         height: 195px;
+        max-width: 155px;
     }
 
     .overview-list {
@@ -1626,13 +1324,21 @@ img {
     }
 
     .site-layout {
+        width: 100%;
+
         grid-template-columns: 1fr;
         gap: 45px;
 
         padding: 45px 25px 70px;
     }
 
+    /*
+       平板端左侧信息改成横向布局
+    */
+
     .profile-sidebar {
+        width: 100%;
+
         position: static;
 
         display: grid;
@@ -1642,17 +1348,26 @@ img {
         align-items: start;
     }
 
-    .profile-photo {
-        grid-row: span 6;
-
+    .profile-photo-wrapper {
         width: 145px;
-        height: 180px;
 
-        margin-bottom: 0;
+        grid-column: 1;
+        grid-row: 1 / span 2;
+
+        margin: 0;
     }
 
-    .profile-sidebar h1 {
-        margin-top: 4px;
+    .profile-photo {
+        width: 145px;
+        height: 180px;
+        max-width: 145px;
+    }
+
+    .profile-information {
+        width: 100%;
+
+        grid-column: 2;
+        grid-row: 1;
     }
 
     .profile-divider {
@@ -1689,22 +1404,6 @@ img {
         gap: 18px;
     }
 
-    .project-detail-container {
-        padding: 40px 25px 65px;
-    }
-
-    .detail-two-column {
-        grid-template-columns: 1fr;
-    }
-
-    .project-detail-header h1 {
-        font-size: 36px;
-    }
-
-    .project-hero-media img {
-        max-height: 450px;
-    }
-
 }
 
 
@@ -1730,23 +1429,37 @@ img {
         padding: 35px 20px 55px;
     }
 
+    /*
+       手机端恢复完全垂直布局
+    */
+
     .profile-sidebar {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-photo-wrapper {
+        width: 100%;
+
         display: block;
+        margin-bottom: 18px;
     }
 
     .profile-photo {
         width: 145px;
         height: 180px;
+        max-width: 145px;
+    }
 
-        margin-bottom: 18px;
+    .profile-information {
+        width: 100%;
     }
 
     .about-section h2 {
         font-size: 34px;
-    }
-
-    .about-section p {
-        font-size: 15px;
     }
 
     .overview-grid {
@@ -1813,60 +1526,6 @@ img {
 
     .contact-box {
         padding: 28px 23px;
-    }
-
-    .project-detail-container {
-        padding: 30px 20px 55px;
-    }
-
-    .project-detail-header h1 {
-        font-size: 29px;
-    }
-
-    .project-detail-subtitle {
-        font-size: 15px;
-    }
-
-    .detail-section h2 {
-        font-size: 23px;
-    }
-
-    .detail-section p {
-        font-size: 15px;
-        line-height: 1.95;
-    }
-
-    .technical-item {
-        padding: 16px;
-    }
-
-    .technical-item h4 {
-        font-size: 15px;
-    }
-
-    .technical-item p {
-        font-size: 14px;
-    }
-
-    .architecture-flow {
-        align-items: stretch;
-        flex-direction: column;
-    }
-
-    .flow-item {
-        width: 100%;
-        text-align: center;
-    }
-
-    .flow-item:not(:last-child)::after {
-        content: "↓";
-
-        display: block;
-        margin: 5px 0 0;
-    }
-
-    .result-grid {
-        grid-template-columns: 1fr;
     }
 
 }
