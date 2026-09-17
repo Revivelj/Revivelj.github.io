@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>无人机自主抓取系统 | Revive</title>
+    <title>无人机自主抓取系统 | Liu Jie</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -15,7 +14,8 @@
     <script>
         window.MathJax = {
             tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
             }
         };
     </script>
@@ -27,539 +27,316 @@
 
 <body>
 
-    <!-- =========================
-         Navigation
-    ========================== -->
-
-    <nav class="navbar">
-
-        <div class="nav-container">
-
-            <a href="index.html" class="logo">
-                REVIVE
-            </a>
-
-            <div class="nav-links">
-                <a href="index.html">首页</a>
-                <a href="index.html#projects">项目</a>
-                <a href="index.html#skills">技能</a>
-                <a href="index.html#experience">经历</a>
-                <a href="index.html#contact">联系</a>
-            </div>
-
-        </div>
-
-    </nav>
-
-
-    <!-- =========================
-         Project Detail
-    ========================== -->
-
-    <main class="project-detail-container">
-
-        <!-- Back -->
-
-        <a href="index.html#projects" class="back-link">
-            <i class="fa-solid fa-arrow-left"></i>
-            返回项目列表
+<header class="site-header">
+    <div class="header-inner">
+        <a href="index.html" class="site-logo">
+            LJ <span>/ PORTFOLIO</span>
         </a>
 
+        <nav class="main-nav">
+            <a href="index.html">首页</a>
+            <a href="index.html#about">关于我</a>
+            <a href="index.html#projects">项目</a>
+            <a href="index.html#experience">经历</a>
+            <a href="index.html#contact">联系</a>
+        </nav>
+    </div>
+</header>
 
-        <!-- Header -->
 
-        <header class="project-detail-header">
+<main class="project-detail-container">
 
-            <div class="project-meta">
-                AUTONOMOUS UAV · MOTION CONTROL · COMPUTER VISION
-            </div>
+    <a href="index.html#projects" class="back-link">
+        <i class="fas fa-arrow-left"></i>
+        返回项目列表
+    </a>
 
-            <h1>
-                基于视觉引导与模型预测控制的无人机自主抓取系统
-            </h1>
 
-            <p class="project-detail-subtitle">
-                面向无人机自主搜索、目标定位、精准抓取与投放的完整任务链系统
+    <!-- 项目标题 -->
+    <section class="project-detail-header">
+        <div class="project-detail-meta">
+            UAV · AUTONOMOUS GRASPING · CONTROL SYSTEM
+        </div>
+
+        <h1>基于视觉引导与模型预测控制的无人机自主抓取系统</h1>
+
+        <p class="project-detail-subtitle">
+            视觉感知 · 自主规划 · NMPC控制 · 干扰估计
+        </p>
+
+        <div class="detail-tags">
+            <span>YOLOv8</span>
+            <span>PX4</span>
+            <span>ROS1</span>
+            <span>Gazebo</span>
+            <span>NMPC</span>
+            <span>RealSense D435i</span>
+        </div>
+    </section>
+
+
+    <!-- 项目主图 -->
+    <div class="project-hero-media">
+        <img src="assets/images/uav-grasping.jpg"
+             alt="无人机自主抓取系统">
+    </div>
+
+
+    <!-- 项目概览 -->
+    <section class="detail-two-column compact-layout">
+
+        <div class="detail-section">
+            <h2>项目背景</h2>
+
+            <p>
+                本项目面向复杂环境下无人机自主抓取任务，设计了一套融合
+                视觉感知、任务规划和模型预测控制的自主抓取系统。
+                无人机在 PX4 Offboard 模式下，无需人工遥控即可完成目标搜索、
+                识别定位、接近抓取、抓取确认、运输和释放。
             </p>
 
-            <div class="detail-tags">
-                <span>ROS1</span>
-                <span>PX4</span>
-                <span>Gazebo</span>
-                <span>YOLOv8</span>
-                <span>NMPC</span>
-                <span>EKF / MHE</span>
-                <span>C++</span>
-            </div>
-
-        </header>
-
-
-        <!-- Hero Image -->
-
-        <div class="project-hero-media">
-
-            <img src="assets/images/uav-grasping.jpg"
-                 alt="无人机自主抓取系统">
-
+            <p>
+                项目重点关注目标定位误差、抓取瞬间负载突变以及风扰对飞行
+                稳定性的影响，并通过模型预测控制与干扰估计提高系统的轨迹
+                跟踪精度和任务执行鲁棒性。
+            </p>
         </div>
 
 
-        <!-- =========================
-             Project Background
-        ========================== -->
+        <aside class="detail-info-card">
+            <h3>项目概览</h3>
 
-        <section class="detail-section">
-
-            <h2>
-                <i class="fa-solid fa-bullseye"></i>
-                项目背景
-            </h2>
-
-            <p>
-                本项目面向无人机在复杂环境下执行自主抓取任务的需求，
-                设计并验证了一套集成视觉感知、位姿估计、路径规划、
-                运动控制与任务调度的完整自主抓取系统。
-            </p>
-
-            <p>
-                无人机在起飞后无需人工遥控，能够自主搜索预设区域内的目标，
-                通过视觉识别和深度信息估计目标位置，规划接近轨迹并完成抓取。
-                抓取成功后，系统进一步自主规划飞行路径，将目标运输至指定区域并释放。
-            </p>
-
-            <p>
-                项目重点不在于复杂抓取机构本身，而在于研究
-                <strong>目标负载突变和外部扰动条件下的高精度轨迹跟踪与鲁棒控制问题</strong>。
-            </p>
-
-        </section>
-
-
-        <!-- =========================
-             Project Goal
-        ========================== -->
-
-        <section class="detail-section">
-
-            <h2>
-                <i class="fa-solid fa-flag-checkered"></i>
-                项目目标
-            </h2>
-
-            <div class="detail-two-column">
-
-                <div class="detail-info-card">
-
-                    <h3>
-                        <i class="fa-solid fa-robot"></i>
-                        自主任务执行
-                    </h3>
-
-                    <ul>
-                        <li>实现无人机自主搜索与目标识别</li>
-                        <li>完成目标定位、接近、抓取和释放</li>
-                        <li>减少人工遥控干预</li>
-                    </ul>
-
-                </div>
-
-
-                <div class="detail-info-card">
-
-                    <h3>
-                        <i class="fa-solid fa-crosshairs"></i>
-                        高精度运动控制
-                    </h3>
-
-                    <ul>
-                        <li>提高目标接近阶段的位置跟踪精度</li>
-                        <li>应对风扰和抓取瞬间的负载变化</li>
-                        <li>增强系统的稳定性与鲁棒性</li>
-                    </ul>
-
-                </div>
-
+            <div class="info-row">
+                <span>系统类型</span>
+                <strong>自主无人机系统</strong>
             </div>
 
-        </section>
-
-
-        <!-- =========================
-             Main Work
-        ========================== -->
-
-        <section class="detail-section">
-
-            <h2>
-                <i class="fa-solid fa-layer-group"></i>
-                主要工作
-            </h2>
-
-            <div class="technical-list">
-
-                <div class="technical-item">
-
-                    <h3>
-                        01 · 硬件与系统设计
-                    </h3>
-
-                    <p>
-                        完成MCU、气泵、电磁阀、压力传感器和深度相机等核心器件选型，
-                        设计吸附式抓取气路及控制电路，实现抓取机构与飞控系统的协同工作。
-                    </p>
-
-                </div>
-
-
-                <div class="technical-item">
-
-                    <h3>
-                        02 · 视觉检测与位姿估计
-                    </h3>
-
-                    <p>
-                        基于YOLOv8对目标物体进行检测，并针对手写数字目标数据集进行微调。
-                        结合深度相机获取目标三维位置，通过坐标系变换得到目标在世界坐标系中的位置。
-                    </p>
-
-                </div>
-
-
-                <div class="technical-item">
-
-                    <h3>
-                        03 · 自主路径规划
-                    </h3>
-
-                    <p>
-                        设计基于有限状态机的路径规划节点，
-                        根据目标位置计算安全观测点和接近轨迹，
-                        实现高度、水平位置和偏航角的分阶段精确调整。
-                    </p>
-
-                </div>
-
-
-                <div class="technical-item">
-
-                    <h3>
-                        04 · NMPC运动控制
-                    </h3>
-
-                    <p>
-                        基于无人机非线性动力学模型设计NMPC控制器，
-                        通过滚动时域优化实现对位置、速度和姿态的高精度跟踪，
-                        并考虑推力和姿态等控制约束。
-                    </p>
-
-                </div>
-
-
-                <div class="technical-item">
-
-                    <h3>
-                        05 · 干扰估计与补偿
-                    </h3>
-
-                    <p>
-                        集成扩展卡尔曼滤波和滚动时域估计两种干扰估计方法，
-                        对负载变化和外部风扰进行在线估计，
-                        并将估计结果用于修正NMPC预测模型。
-                    </p>
-
-                </div>
-
-
-                <div class="technical-item">
-
-                    <h3>
-                        06 · 全流程任务调度
-                    </h3>
-
-                    <p>
-                        设计嵌套有限状态机，实现起飞、目标搜索、抓取准备、
-                        抓取执行、结果判断、目标切换和降落等任务阶段的自动切换。
-                    </p>
-
-                </div>
-
+            <div class="info-row">
+                <span>运行模式</span>
+                <strong>PX4 Offboard</strong>
             </div>
 
-        </section>
-
-
-        <!-- =========================
-             System Architecture
-        ========================== -->
-
-        <section class="detail-section">
-
-            <h2>
-                <i class="fa-solid fa-diagram-project"></i>
-                系统技术路线
-            </h2>
-
-            <div class="architecture-flow">
-
-                <div class="flow-item">
-                    <strong>目标检测</strong>
-                    <span>YOLOv8 + 深度相机</span>
-                </div>
-
-                <div class="flow-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-                <div class="flow-item">
-                    <strong>三维定位</strong>
-                    <span>坐标变换与滤波</span>
-                </div>
-
-                <div class="flow-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-                <div class="flow-item">
-                    <strong>路径规划</strong>
-                    <span>有限状态机</span>
-                </div>
-
-                <div class="flow-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-                <div class="flow-item">
-                    <strong>运动控制</strong>
-                    <span>NMPC + 干扰补偿</span>
-                </div>
-
-                <div class="flow-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-                <div class="flow-item">
-                    <strong>抓取与投放</strong>
-                    <span>压力反馈 + 任务调度</span>
-                </div>
-
+            <div class="info-row">
+                <span>软件环境</span>
+                <strong>ROS1 / Gazebo / C++</strong>
             </div>
 
-        </section>
-
-
-        <!-- =========================
-             Autonomous Workflow
-        ========================== -->
-
-        <section class="detail-section">
-
-            <h2>
-                <i class="fa-solid fa-route"></i>
-                自主任务流程
-            </h2>
-
-            <div class="detail-info-card">
-
-                <ul>
-
-                    <li>
-                        无人机进入PX4 Offboard模式并自主起飞
-                    </li>
-
-                    <li>
-                        在预设区域内执行目标搜索
-                    </li>
-
-                    <li>
-                        通过YOLOv8识别带数字标记的圆柱目标
-                    </li>
-
-                    <li>
-                        根据深度信息估计目标三维位置
-                    </li>
-
-                    <li>
-                        规划目标前方安全观测点并完成精准对中
-                    </li>
-
-                    <li>
-                        控制吸盘接触目标并通过压力变化判断抓取结果
-                    </li>
-
-                    <li>
-                        抓取失败时自动触发重试机制
-                    </li>
-
-                    <li>
-                        抓取成功后规划至指定投放区域并完成释放
-                    </li>
-
-                    <li>
-                        根据任务状态决定继续下一个目标或返航降落
-                    </li>
-
-                </ul>
-
+            <div class="info-row">
+                <span>感知设备</span>
+                <strong>RGB-D 深度相机</strong>
             </div>
 
-        </section>
+            <div class="info-row">
+                <span>控制方法</span>
+                <strong>NMPC + Disturbance Estimation</strong>
+            </div>
+        </aside>
+
+    </section>
 
 
-        <!-- =========================
-             Technical Highlights
-        ========================== -->
+    <!-- 主要工作 -->
+    <section class="detail-section compact-section">
+        <h2>主要工作</h2>
 
-        <section class="detail-section">
+        <div class="technical-list">
 
-            <h2>
-                <i class="fa-solid fa-gears"></i>
-                技术亮点
-            </h2>
-
-            <div class="detail-two-column">
-
-                <div class="detail-info-card">
-
-                    <h3>
-                        <i class="fa-solid fa-eye"></i>
-                        小样本视觉微调
-                    </h3>
-
+            <div class="technical-item">
+                <div class="technical-number">01</div>
+                <div>
+                    <h3>视觉感知与三维定位</h3>
                     <p>
-                        针对仅包含450张图像的小样本数据集，
-                        采用冻结训练、全量解冻和低学习率精调的渐进式训练策略，
-                        提升目标检测模型在特定任务中的识别能力。
+                        基于微调后的 YOLOv8 实现目标检测，结合 RealSense D435i
+                        获取目标深度信息，完成目标三维位置估计、坐标系转换
+                        与滤波处理，为后续自主接近和抓取提供视觉引导。
                     </p>
-
                 </div>
+            </div>
 
-
-                <div class="detail-info-card">
-
-                    <h3>
-                        <i class="fa-solid fa-wind"></i>
-                        干扰补偿控制
-                    </h3>
-
+            <div class="technical-item">
+                <div class="technical-number">02</div>
+                <div>
+                    <h3>自主任务规划与状态机</h3>
                     <p>
-                        将干扰估计结果直接引入NMPC预测模型，
-                        使控制器能够提前考虑风扰和抓取负载变化，
-                        降低模型失配造成的轨迹跟踪误差。
+                        设计视觉引导路径规划和嵌套有限状态机，实现目标搜索、
+                        目标接近、抓取执行、压力确认、运输释放及失败重试等
+                        完整任务流程。
                     </p>
-
                 </div>
-
             </div>
 
-        </section>
-
-
-        <!-- =========================
-             Results
-        ========================== -->
-
-        <section class="detail-section">
-
-            <h2>
-                <i class="fa-solid fa-chart-line"></i>
-                项目成果
-            </h2>
-
-            <div class="result-grid">
-
-                <div class="result-card">
-
-                    <strong>95.6%</strong>
-
-                    <span>
-                        YOLOv8在特定目标验证集上的mAP
-                    </span>
-
+            <div class="technical-item">
+                <div class="technical-number">03</div>
+                <div>
+                    <h3>NMPC轨迹跟踪与干扰补偿</h3>
+                    <p>
+                        开发带干扰补偿的非线性模型预测控制器，并集成 EKF
+                        与 FR-MHE 两种干扰估计接口，用于应对抓取后负载变化
+                        和外部风扰造成的模型不确定性。
+                    </p>
                 </div>
-
-
-                <div class="result-card">
-
-                    <strong>30%</strong>
-
-                    <span>
-                        引入干扰估计后轨迹跟踪RMSE降低
-                    </span>
-
-                </div>
-
-
-                <div class="result-card">
-
-                    <strong>1–2 ms</strong>
-
-                    <span>
-                        NMPC单次求解时间，满足实时控制需求
-                    </span>
-
-                </div>
-
             </div>
 
-        </section>
-
-
-        <!-- =========================
-             Video
-        ========================== -->
-
-        <section class="detail-section">
-
-            <h2>
-                <i class="fa-solid fa-video"></i>
-                系统演示
-            </h2>
-
-            <div class="detail-video">
-
-                <video controls preload="metadata">
-
-                    <source src="assets/videos/uav-grasping-demo.mp4"
-                            type="video/mp4">
-
-                    您的浏览器不支持视频播放。
-
-                </video>
-
+            <div class="technical-item">
+                <div class="technical-number">04</div>
+                <div>
+                    <h3>抓取反馈与系统集成</h3>
+                    <p>
+                        通过压力传感器检测吸盘气路压力变化判断抓取是否成功，
+                        并完成 MCU、气泵、深度相机、控制电路及 ROS 仿真系统
+                        的整体集成与验证。
+                    </p>
+                </div>
             </div>
-
-        </section>
-
-
-        <!-- =========================
-             Bottom
-        ========================== -->
-
-        <div class="detail-bottom-link">
-
-            <a href="index.html#projects" class="project-button">
-
-                <i class="fa-solid fa-arrow-left"></i>
-                返回项目列表
-
-            </a>
 
         </div>
+    </section>
 
-    </main>
+
+    <!-- 核心公式 -->
+    <section class="detail-section compact-section">
+        <h2>核心控制方法</h2>
+
+        <div class="formula-grid">
+
+            <div class="formula-card">
+                <div class="formula-label">NMPC Objective</div>
+
+                <div class="formula">
+                    $$
+                    J =
+                    \sum_{k=0}^{N-1}
+                    \left\|
+                    x_k-x_k^{ref}
+                    \right\|_Q^2
+                    +
+                    \left\|
+                    u_k
+                    \right\|_R^2
+                    +
+                    \left\|
+                    x_N-x_N^{ref}
+                    \right\|_P^2
+                    $$
+                </div>
+
+                <p>
+                    通过预测未来时域内的系统状态，在轨迹跟踪误差、
+                    控制输入变化和终端误差之间进行优化。
+                </p>
+            </div>
 
 
-    <!-- =========================
-         Footer
-    ========================== -->
+            <div class="formula-card">
+                <div class="formula-label">Disturbance Compensation</div>
 
-    <footer class="footer">
+                <div class="formula">
+                    $$
+                    u =
+                    u_{\mathrm{NMPC}}
+                    -
+                    \hat{d}
+                    $$
+                </div>
 
-        © 2026 Revive · Robotics & Intelligent Systems
+                <p>
+                    利用估计得到的外部扰动或模型误差对控制输入进行补偿，
+                    提高负载突变和风扰条件下的跟踪稳定性。
+                </p>
+            </div>
 
-    </footer>
+        </div>
+    </section>
+
+
+    <!-- 系统流程 -->
+    <section class="detail-section compact-section">
+        <h2>系统工作流程</h2>
+
+        <div class="architecture-flow">
+            <div class="flow-item">
+                <span>01</span>
+                <strong>目标搜索</strong>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <span>02</span>
+                <strong>YOLOv8检测</strong>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <span>03</span>
+                <strong>深度定位</strong>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <span>04</span>
+                <strong>NMPC跟踪</strong>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <span>05</span>
+                <strong>抓取确认</strong>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <span>06</span>
+                <strong>运输释放</strong>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 实验结果 -->
+    <section class="detail-section compact-section">
+        <h2>验证结果</h2>
+
+        <div class="result-grid">
+            <div class="result-card">
+                <strong>约 30%</strong>
+                <span>轨迹跟踪 RMSE 降低</span>
+            </div>
+
+            <div class="result-card">
+                <strong>全流程自主</strong>
+                <span>搜索、抓取、运输与释放</span>
+            </div>
+
+            <div class="result-card">
+                <strong>多估计器接口</strong>
+                <span>支持 EKF / FR-MHE 对比</span>
+            </div>
+        </div>
+
+        <p class="result-description">
+            仿真与系统测试表明，相比不带干扰补偿的纯 MPC 控制，
+            引入干扰估计后能够有效降低轨迹跟踪误差，并提升系统在
+            负载变化和外部扰动条件下的控制稳定性。
+        </p>
+    </section>
+
+
+    <a href="index.html#projects" class="detail-bottom-link">
+        返回全部项目
+        <i class="fas fa-arrow-right"></i>
+    </a>
+
+</main>
+
+
+<footer class="site-footer">
+    <p>© 2026 Liu Jie. All rights reserved.</p>
+</footer>
 
 </body>
-
 </html>
