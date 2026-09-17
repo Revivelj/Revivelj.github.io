@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>无人机自主抓取系统 | Liu Jie</title>
 
+    <!-- 主样式 -->
     <link rel="stylesheet" href="./assets/css/style.css">
 
+    <!-- Font Awesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <!-- MathJax -->
     <script>
         window.MathJax = {
             tex: {
@@ -23,320 +27,928 @@
     <script async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
+
+
+    <!-- 本页面专用样式，确保导航和紧凑布局正常 -->
+    <style>
+
+        /* =========================
+           页面基础
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #ffffff;
+            color: #26384a;
+        }
+
+
+        /* =========================
+           顶部导航
+        ========================= */
+
+        .site-header {
+            width: 100%;
+            height: 76px;
+            background: #ffffff;
+            border-bottom: 1px solid #e8edf2;
+            display: block;
+        }
+
+        .header-inner {
+            width: 100%;
+            max-width: 1320px;
+            height: 76px;
+            margin: 0 auto;
+            padding: 0 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .site-logo {
+            display: inline-block;
+            color: #173b63 !important;
+            text-decoration: none !important;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+        }
+
+        .site-logo span {
+            color: #9aa5b1 !important;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            margin-left: 5px;
+        }
+
+        .main-nav {
+            display: flex !important;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .main-nav a {
+            display: inline-block;
+            color: #687583 !important;
+            text-decoration: none !important;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1;
+            transition: color 0.2s ease;
+        }
+
+        .main-nav a:hover {
+            color: #173b63 !important;
+        }
+
+
+        /* =========================
+           页面主体
+        ========================= */
+
+        .project-detail-container {
+            width: 100%;
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 34px 40px 70px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 30px;
+            color: #52779d !important;
+            text-decoration: none !important;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            color: #173b63 !important;
+        }
+
+
+        /* =========================
+           项目标题
+        ========================= */
+
+        .project-detail-header {
+            margin-bottom: 22px;
+        }
+
+        .project-detail-meta {
+            margin-bottom: 12px;
+            color: #9b6c82;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+        }
+
+        .project-detail-header h1 {
+            max-width: 980px;
+            margin: 0 0 13px;
+            color: #173b63;
+            font-size: clamp(30px, 4vw, 52px);
+            font-weight: 750;
+            line-height: 1.25;
+            letter-spacing: -0.035em;
+        }
+
+        .project-detail-subtitle {
+            margin: 0 0 16px;
+            color: #718091;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .detail-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .detail-tags span {
+            display: inline-block;
+            padding: 5px 10px;
+            border: 1px solid #dce5ed;
+            border-radius: 4px;
+            color: #55718d;
+            background: #f8fafc;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           主图
+        ========================= */
+
+        .project-hero-media {
+            width: 100%;
+            height: 360px;
+            margin: 22px 0 30px;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #f1f4f7;
+        }
+
+        .project-hero-media img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        /* =========================
+           通用 section
+        ========================= */
+
+        .detail-section {
+            margin: 0;
+        }
+
+        .detail-section h2 {
+            margin: 0 0 15px;
+            color: #173b63;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .detail-section p {
+            margin: 0 0 11px;
+            color: #667482;
+            font-size: 14px;
+            line-height: 1.85;
+        }
+
+        .compact-section {
+            margin-top: 34px;
+        }
+
+
+        /* =========================
+           背景 + 项目概览
+        ========================= */
+
+        .compact-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.85fr);
+            align-items: start;
+            gap: 36px;
+            margin-top: 0;
+        }
+
+        .detail-info-card {
+            padding: 20px 22px;
+            border: 1px solid #e4eaf0;
+            border-radius: 8px;
+            background: #fafbfd;
+        }
+
+        .detail-info-card h3 {
+            margin: 0 0 12px;
+            color: #173b63;
+            font-size: 16px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 10px 0;
+            border-bottom: 1px solid #e8edf2;
+            font-size: 12px;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-row span {
+            color: #8a96a2;
+            white-space: nowrap;
+        }
+
+        .info-row strong {
+            color: #405b75;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: right;
+        }
+
+
+        /* =========================
+           主要工作 2×2
+        ========================= */
+
+        .technical-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px 18px;
+        }
+
+        .technical-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+            min-height: 145px;
+            padding: 17px 18px;
+            border: 1px solid #e5ebf0;
+            border-radius: 7px;
+            background: #ffffff;
+        }
+
+        .technical-number {
+            flex: 0 0 auto;
+            color: #b87591;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        .technical-item h3 {
+            margin: 0 0 7px;
+            color: #294b6d;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .technical-item p {
+            margin: 0;
+            color: #6c7986;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           核心公式
+        ========================= */
+
+        .formula-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .formula-card {
+            padding: 19px 22px;
+            border: 1px solid #e1e8ef;
+            border-radius: 8px;
+            background: #f8fafc;
+        }
+
+        .formula-label {
+            margin-bottom: 6px;
+            color: #b87591;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .formula {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: auto;
+            color: #173b63;
+            font-size: 16px;
+        }
+
+        .formula-card p {
+            margin: 7px 0 0;
+            color: #788592;
+            font-size: 12px;
+            line-height: 1.65;
+        }
+
+
+        /* =========================
+           系统流程
+        ========================= */
+
+        .architecture-flow {
+            display: flex;
+            align-items: stretch;
+            gap: 7px;
+            padding: 15px;
+            border: 1px solid #e5ebf0;
+            border-radius: 8px;
+            background: #fafbfd;
+        }
+
+        .flow-item {
+            flex: 1;
+            min-width: 0;
+            padding: 12px 6px;
+            border: 1px solid #e1e8ee;
+            border-radius: 6px;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .flow-item span {
+            display: block;
+            margin-bottom: 5px;
+            color: #b87591;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .flow-item strong {
+            display: block;
+            color: #315675;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .flow-arrow {
+            display: flex;
+            align-items: center;
+            color: #aab6c2;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           实验结果
+        ========================= */
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 15px;
+            margin-bottom: 14px;
+        }
+
+        .result-card {
+            padding: 18px 12px;
+            border: 1px solid #e4eaf0;
+            border-radius: 8px;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .result-card strong {
+            display: block;
+            margin-bottom: 7px;
+            color: #173b63;
+            font-size: 22px;
+            font-weight: 750;
+        }
+
+        .result-card span {
+            color: #7d8995;
+            font-size: 12px;
+        }
+
+        .result-description {
+            color: #6b7885 !important;
+            font-size: 13px !important;
+            line-height: 1.75 !important;
+        }
+
+
+        /* =========================
+           底部链接
+        ========================= */
+
+        .detail-bottom-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            margin-top: 36px;
+            color: #52779d !important;
+            text-decoration: none !important;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .detail-bottom-link:hover {
+            color: #173b63 !important;
+        }
+
+        .site-footer {
+            padding: 24px 20px;
+            border-top: 1px solid #edf0f3;
+            text-align: center;
+        }
+
+        .site-footer p {
+            margin: 0;
+            color: #9aa5b1;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           响应式
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .header-inner {
+                padding: 0 25px;
+            }
+
+            .project-detail-container {
+                padding: 30px 25px 60px;
+            }
+
+            .compact-layout {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .technical-list,
+            .formula-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-hero-media {
+                height: 300px;
+            }
+
+            .architecture-flow {
+                flex-wrap: wrap;
+            }
+
+            .flow-item {
+                flex: 0 0 calc(33.333% - 8px);
+            }
+
+            .flow-arrow {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .site-header {
+                height: auto;
+            }
+
+            .header-inner {
+                height: auto;
+                padding: 18px 20px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .main-nav {
+                gap: 18px !important;
+                flex-wrap: wrap;
+            }
+
+            .main-nav a {
+                font-size: 13px;
+            }
+
+            .project-detail-container {
+                padding: 25px 20px 50px;
+            }
+
+            .project-detail-header h1 {
+                font-size: 31px;
+            }
+
+            .project-hero-media {
+                height: 220px;
+            }
+
+            .flow-item {
+                flex: 0 0 calc(50% - 5px);
+            }
+
+            .result-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-row {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .info-row strong {
+                text-align: left;
+            }
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-<header class="site-header">
-    <div class="header-inner">
-        <a href="index.html" class="site-logo">
-            LJ <span>/ PORTFOLIO</span>
+    <!-- 顶部导航 -->
+    <header class="site-header">
+        <div class="header-inner">
+
+            <a href="index.html" class="site-logo">
+                LJ <span>/ PORTFOLIO</span>
+            </a>
+
+            <nav class="main-nav">
+                <a href="index.html">首页</a>
+                <a href="index.html#about">关于我</a>
+                <a href="index.html#projects">项目</a>
+                <a href="index.html#experience">经历</a>
+                <a href="index.html#contact">联系</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- 页面主体 -->
+    <main class="project-detail-container">
+
+        <!-- 返回链接 -->
+        <a href="index.html#projects" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            返回项目列表
         </a>
 
-        <nav class="main-nav">
-            <a href="index.html">首页</a>
-            <a href="index.html#about">关于我</a>
-            <a href="index.html#projects">项目</a>
-            <a href="index.html#experience">经历</a>
-            <a href="index.html#contact">联系</a>
-        </nav>
-    </div>
-</header>
 
+        <!-- 标题 -->
+        <section class="project-detail-header">
 
-<main class="project-detail-container">
+            <div class="project-detail-meta">
+                UAV · AUTONOMOUS GRASPING · CONTROL SYSTEM
+            </div>
 
-    <a href="index.html#projects" class="back-link">
-        <i class="fas fa-arrow-left"></i>
-        返回项目列表
-    </a>
+            <h1>
+                基于视觉引导与模型预测控制的无人机自主抓取系统
+            </h1>
 
-
-    <!-- 项目标题 -->
-    <section class="project-detail-header">
-        <div class="project-detail-meta">
-            UAV · AUTONOMOUS GRASPING · CONTROL SYSTEM
-        </div>
-
-        <h1>基于视觉引导与模型预测控制的无人机自主抓取系统</h1>
-
-        <p class="project-detail-subtitle">
-            视觉感知 · 自主规划 · NMPC控制 · 干扰估计
-        </p>
-
-        <div class="detail-tags">
-            <span>YOLOv8</span>
-            <span>PX4</span>
-            <span>ROS1</span>
-            <span>Gazebo</span>
-            <span>NMPC</span>
-            <span>RealSense D435i</span>
-        </div>
-    </section>
-
-
-    <!-- 项目主图 -->
-    <div class="project-hero-media">
-        <img src="assets/images/uav-grasping.jpg"
-             alt="无人机自主抓取系统">
-    </div>
-
-
-    <!-- 项目概览 -->
-    <section class="detail-two-column compact-layout">
-
-        <div class="detail-section">
-            <h2>项目背景</h2>
-
-            <p>
-                本项目面向复杂环境下无人机自主抓取任务，设计了一套融合
-                视觉感知、任务规划和模型预测控制的自主抓取系统。
-                无人机在 PX4 Offboard 模式下，无需人工遥控即可完成目标搜索、
-                识别定位、接近抓取、抓取确认、运输和释放。
+            <p class="project-detail-subtitle">
+                视觉感知 · 自主规划 · NMPC控制 · 干扰估计
             </p>
 
-            <p>
-                项目重点关注目标定位误差、抓取瞬间负载突变以及风扰对飞行
-                稳定性的影响，并通过模型预测控制与干扰估计提高系统的轨迹
-                跟踪精度和任务执行鲁棒性。
+            <div class="detail-tags">
+                <span>YOLOv8</span>
+                <span>PX4</span>
+                <span>ROS1</span>
+                <span>Gazebo</span>
+                <span>NMPC</span>
+                <span>RealSense D435i</span>
+            </div>
+
+        </section>
+
+
+        <!-- 项目主图 -->
+        <div class="project-hero-media">
+            <img src="assets/images/uav-grasping.jpg"
+                 alt="无人机自主抓取系统">
+        </div>
+
+
+        <!-- 项目背景和项目概览 -->
+        <section class="compact-layout">
+
+            <div class="detail-section">
+
+                <h2>项目背景</h2>
+
+                <p>
+                    本项目面向复杂环境下无人机自主抓取任务，设计了一套融合
+                    视觉感知、任务规划和模型预测控制的自主抓取系统。
+                    无人机在 PX4 Offboard 模式下，无需人工遥控即可完成目标搜索、
+                    识别定位、接近抓取、抓取确认、运输和释放。
+                </p>
+
+                <p>
+                    项目重点关注目标定位误差、抓取瞬间负载突变以及风扰对飞行
+                    稳定性的影响，并通过模型预测控制与干扰估计提高系统的轨迹
+                    跟踪精度和任务执行鲁棒性。
+                </p>
+
+            </div>
+
+
+            <aside class="detail-info-card">
+
+                <h3>项目概览</h3>
+
+                <div class="info-row">
+                    <span>系统类型</span>
+                    <strong>自主无人机系统</strong>
+                </div>
+
+                <div class="info-row">
+                    <span>运行模式</span>
+                    <strong>PX4 Offboard</strong>
+                </div>
+
+                <div class="info-row">
+                    <span>软件环境</span>
+                    <strong>ROS1 / Gazebo / C++</strong>
+                </div>
+
+                <div class="info-row">
+                    <span>感知设备</span>
+                    <strong>RGB-D 深度相机</strong>
+                </div>
+
+                <div class="info-row">
+                    <span>控制方法</span>
+                    <strong>NMPC + EKF / FR-MHE</strong>
+                </div>
+
+            </aside>
+
+        </section>
+
+
+        <!-- 主要工作 -->
+        <section class="detail-section compact-section">
+
+            <h2>主要工作</h2>
+
+            <div class="technical-list">
+
+                <div class="technical-item">
+                    <div class="technical-number">01</div>
+
+                    <div>
+                        <h3>视觉感知与三维定位</h3>
+
+                        <p>
+                            基于微调后的 YOLOv8 实现目标检测，结合 RealSense D435i
+                            获取目标深度信息，完成目标三维位置估计、坐标系转换
+                            与滤波处理，为自主接近和抓取提供视觉引导。
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="technical-item">
+                    <div class="technical-number">02</div>
+
+                    <div>
+                        <h3>自主任务规划与状态机</h3>
+
+                        <p>
+                            设计视觉引导路径规划和嵌套有限状态机，实现目标搜索、
+                            目标接近、抓取执行、压力确认、运输释放及失败重试等
+                            完整任务流程。
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="technical-item">
+                    <div class="technical-number">03</div>
+
+                    <div>
+                        <h3>NMPC轨迹跟踪与干扰补偿</h3>
+
+                        <p>
+                            开发带干扰补偿的非线性模型预测控制器，并集成 EKF
+                            与 FR-MHE 两种干扰估计接口，用于应对抓取后负载变化
+                            和外部风扰造成的模型不确定性。
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="technical-item">
+                    <div class="technical-number">04</div>
+
+                    <div>
+                        <h3>抓取反馈与系统集成</h3>
+
+                        <p>
+                            通过压力传感器检测吸盘气路压力变化判断抓取是否成功，
+                            并完成 MCU、气泵、深度相机、控制电路及 ROS 仿真系统
+                            的整体集成与验证。
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 核心公式 -->
+        <section class="detail-section compact-section">
+
+            <h2>核心控制方法</h2>
+
+            <div class="formula-grid">
+
+                <div class="formula-card">
+
+                    <div class="formula-label">
+                        NMPC Objective
+                    </div>
+
+                    <div class="formula">
+                        $$
+                        J =
+                        \sum_{k=0}^{N-1}
+                        \left\|
+                        x_k-x_k^{ref}
+                        \right\|_Q^2
+                        +
+                        \left\|
+                        u_k
+                        \right\|_R^2
+                        +
+                        \left\|
+                        x_N-x_N^{ref}
+                        \right\|_P^2
+                        $$
+                    </div>
+
+                    <p>
+                        在预测时域内综合优化轨迹跟踪误差、控制输入和终端误差。
+                    </p>
+
+                </div>
+
+
+                <div class="formula-card">
+
+                    <div class="formula-label">
+                        Disturbance Compensation
+                    </div>
+
+                    <div class="formula">
+                        $$
+                        u =
+                        u_{\mathrm{NMPC}}
+                        -
+                        \hat{d}
+                        $$
+                    </div>
+
+                    <p>
+                        利用估计得到的扰动对控制输入进行补偿，提高系统抗扰能力。
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 系统流程 -->
+        <section class="detail-section compact-section">
+
+            <h2>系统工作流程</h2>
+
+            <div class="architecture-flow">
+
+                <div class="flow-item">
+                    <span>01</span>
+                    <strong>目标搜索</strong>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-item">
+                    <span>02</span>
+                    <strong>YOLOv8检测</strong>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-item">
+                    <span>03</span>
+                    <strong>深度定位</strong>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-item">
+                    <span>04</span>
+                    <strong>NMPC跟踪</strong>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-item">
+                    <span>05</span>
+                    <strong>抓取确认</strong>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-item">
+                    <span>06</span>
+                    <strong>运输释放</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 实验结果 -->
+        <section class="detail-section compact-section">
+
+            <h2>验证结果</h2>
+
+            <div class="result-grid">
+
+                <div class="result-card">
+                    <strong>约 30%</strong>
+                    <span>轨迹跟踪 RMSE 降低</span>
+                </div>
+
+                <div class="result-card">
+                    <strong>全流程自主</strong>
+                    <span>搜索、抓取、运输与释放</span>
+                </div>
+
+                <div class="result-card">
+                    <strong>多估计器接口</strong>
+                    <span>支持 EKF / FR-MHE 对比</span>
+                </div>
+
+            </div>
+
+            <p class="result-description">
+                仿真与系统测试表明，相比不带干扰补偿的纯 MPC 控制，
+                引入干扰估计后能够有效降低轨迹跟踪误差，并提升系统在
+                负载变化和外部扰动条件下的控制稳定性。
             </p>
-        </div>
+
+        </section>
 
 
-        <aside class="detail-info-card">
-            <h3>项目概览</h3>
+        <!-- 底部返回 -->
+        <a href="index.html#projects" class="detail-bottom-link">
+            返回全部项目
+            <i class="fas fa-arrow-right"></i>
+        </a>
 
-            <div class="info-row">
-                <span>系统类型</span>
-                <strong>自主无人机系统</strong>
-            </div>
-
-            <div class="info-row">
-                <span>运行模式</span>
-                <strong>PX4 Offboard</strong>
-            </div>
-
-            <div class="info-row">
-                <span>软件环境</span>
-                <strong>ROS1 / Gazebo / C++</strong>
-            </div>
-
-            <div class="info-row">
-                <span>感知设备</span>
-                <strong>RGB-D 深度相机</strong>
-            </div>
-
-            <div class="info-row">
-                <span>控制方法</span>
-                <strong>NMPC + Disturbance Estimation</strong>
-            </div>
-        </aside>
-
-    </section>
+    </main>
 
 
-    <!-- 主要工作 -->
-    <section class="detail-section compact-section">
-        <h2>主要工作</h2>
-
-        <div class="technical-list">
-
-            <div class="technical-item">
-                <div class="technical-number">01</div>
-                <div>
-                    <h3>视觉感知与三维定位</h3>
-                    <p>
-                        基于微调后的 YOLOv8 实现目标检测，结合 RealSense D435i
-                        获取目标深度信息，完成目标三维位置估计、坐标系转换
-                        与滤波处理，为后续自主接近和抓取提供视觉引导。
-                    </p>
-                </div>
-            </div>
-
-            <div class="technical-item">
-                <div class="technical-number">02</div>
-                <div>
-                    <h3>自主任务规划与状态机</h3>
-                    <p>
-                        设计视觉引导路径规划和嵌套有限状态机，实现目标搜索、
-                        目标接近、抓取执行、压力确认、运输释放及失败重试等
-                        完整任务流程。
-                    </p>
-                </div>
-            </div>
-
-            <div class="technical-item">
-                <div class="technical-number">03</div>
-                <div>
-                    <h3>NMPC轨迹跟踪与干扰补偿</h3>
-                    <p>
-                        开发带干扰补偿的非线性模型预测控制器，并集成 EKF
-                        与 FR-MHE 两种干扰估计接口，用于应对抓取后负载变化
-                        和外部风扰造成的模型不确定性。
-                    </p>
-                </div>
-            </div>
-
-            <div class="technical-item">
-                <div class="technical-number">04</div>
-                <div>
-                    <h3>抓取反馈与系统集成</h3>
-                    <p>
-                        通过压力传感器检测吸盘气路压力变化判断抓取是否成功，
-                        并完成 MCU、气泵、深度相机、控制电路及 ROS 仿真系统
-                        的整体集成与验证。
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- 核心公式 -->
-    <section class="detail-section compact-section">
-        <h2>核心控制方法</h2>
-
-        <div class="formula-grid">
-
-            <div class="formula-card">
-                <div class="formula-label">NMPC Objective</div>
-
-                <div class="formula">
-                    $$
-                    J =
-                    \sum_{k=0}^{N-1}
-                    \left\|
-                    x_k-x_k^{ref}
-                    \right\|_Q^2
-                    +
-                    \left\|
-                    u_k
-                    \right\|_R^2
-                    +
-                    \left\|
-                    x_N-x_N^{ref}
-                    \right\|_P^2
-                    $$
-                </div>
-
-                <p>
-                    通过预测未来时域内的系统状态，在轨迹跟踪误差、
-                    控制输入变化和终端误差之间进行优化。
-                </p>
-            </div>
-
-
-            <div class="formula-card">
-                <div class="formula-label">Disturbance Compensation</div>
-
-                <div class="formula">
-                    $$
-                    u =
-                    u_{\mathrm{NMPC}}
-                    -
-                    \hat{d}
-                    $$
-                </div>
-
-                <p>
-                    利用估计得到的外部扰动或模型误差对控制输入进行补偿，
-                    提高负载突变和风扰条件下的跟踪稳定性。
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- 系统流程 -->
-    <section class="detail-section compact-section">
-        <h2>系统工作流程</h2>
-
-        <div class="architecture-flow">
-            <div class="flow-item">
-                <span>01</span>
-                <strong>目标搜索</strong>
-            </div>
-
-            <div class="flow-arrow">→</div>
-
-            <div class="flow-item">
-                <span>02</span>
-                <strong>YOLOv8检测</strong>
-            </div>
-
-            <div class="flow-arrow">→</div>
-
-            <div class="flow-item">
-                <span>03</span>
-                <strong>深度定位</strong>
-            </div>
-
-            <div class="flow-arrow">→</div>
-
-            <div class="flow-item">
-                <span>04</span>
-                <strong>NMPC跟踪</strong>
-            </div>
-
-            <div class="flow-arrow">→</div>
-
-            <div class="flow-item">
-                <span>05</span>
-                <strong>抓取确认</strong>
-            </div>
-
-            <div class="flow-arrow">→</div>
-
-            <div class="flow-item">
-                <span>06</span>
-                <strong>运输释放</strong>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- 实验结果 -->
-    <section class="detail-section compact-section">
-        <h2>验证结果</h2>
-
-        <div class="result-grid">
-            <div class="result-card">
-                <strong>约 30%</strong>
-                <span>轨迹跟踪 RMSE 降低</span>
-            </div>
-
-            <div class="result-card">
-                <strong>全流程自主</strong>
-                <span>搜索、抓取、运输与释放</span>
-            </div>
-
-            <div class="result-card">
-                <strong>多估计器接口</strong>
-                <span>支持 EKF / FR-MHE 对比</span>
-            </div>
-        </div>
-
-        <p class="result-description">
-            仿真与系统测试表明，相比不带干扰补偿的纯 MPC 控制，
-            引入干扰估计后能够有效降低轨迹跟踪误差，并提升系统在
-            负载变化和外部扰动条件下的控制稳定性。
-        </p>
-    </section>
-
-
-    <a href="index.html#projects" class="detail-bottom-link">
-        返回全部项目
-        <i class="fas fa-arrow-right"></i>
-    </a>
-
-</main>
-
-
-<footer class="site-footer">
-    <p>© 2026 Liu Jie. All rights reserved.</p>
-</footer>
+    <footer class="site-footer">
+        <p>© 2026 Liu Jie. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
