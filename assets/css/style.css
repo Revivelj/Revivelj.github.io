@@ -1395,3 +1395,10 @@ img {
     }
 
 }
+.competition-card {
+    display: flex;
+    gap: 28px;
+    padding: 26px;
+    margin-bottom: 26px;
+    ...
+}
