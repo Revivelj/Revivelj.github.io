@@ -1588,3 +1588,68 @@ img {
     }
 
 }
+/* =====================================================
+   UAV Simulation Videos
+===================================================== */
+
+.uav-video-section {
+    width: 100%;
+    margin: 28px 0 34px;
+}
+
+.uav-video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.uav-video-card {
+    min-width: 0;
+
+    overflow: hidden;
+
+    border: 1px solid #e3e9ef;
+    border-radius: 8px;
+
+    background: #ffffff;
+}
+
+.uav-video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background: #f3f6f8;
+}
+
+.uav-video-wrapper video {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    background: #f3f6f8;
+}
+
+.uav-video-caption {
+    padding: 16px 18px 18px;
+}
+
+.uav-video-caption h4 {
+    margin-bottom: 7px;
+
+    color: #315675;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.uav-video-caption p {
+    color: #6d7b88;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
