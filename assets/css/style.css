@@ -1763,8 +1763,4 @@ img {
 }
 
 
-/* 比赛项目概述和主要工作之间增加分隔 */
-.competition-detail-grid > div + div {
-    padding-top: 24px;
-    border-top: 1px solid var(--line-color, #e5e7eb);
-}
+
