@@ -1740,126 +1740,163 @@
                      RoboCup 2021
                 ================================================== -->
 
-                <article
-                    class="competition-card"
-                    id="robocup-detail"
+<!-- =================================================
+     RoboCup 2021
+================================================== -->
+
+<article
+    class="competition-card"
+    id="robocup-detail"
+>
+
+    <!-- 比赛图片 -->
+    <div class="competition-image">
+
+        <img
+            src="assets/images/Robocup2021.jpg"
+            alt="RoboCup 2021 中国机器人大赛自动分拣项目"
+        >
+
+    </div>
+
+
+    <div class="competition-main">
+
+        <!-- 比赛类别与时间 -->
+        <div class="competition-topline">
+
+            <span class="competition-category">
+                ROBOTICS · AUTONOMOUS SYSTEM
+            </span>
+
+            <span class="competition-year">
+                2021.10 — 2022.04
+            </span>
+
+        </div>
+
+
+        <!-- 比赛名称 -->
+        <h3>
+            RoboCup 2021 中国机器人大赛
+        </h3>
+
+
+        <!-- 获奖信息 -->
+        <p class="competition-intro">
+            自动分拣项目 · 全国一等奖（冠军）
+        </p>
+
+
+        <!-- =================================================
+             横向宽屏视频
+        ================================================== -->
+
+        <div class="competition-video-section">
+
+            <div class="competition-video-wrapper">
+
+                <video
+                    controls
+                    preload="metadata"
+                    playsinline
                 >
 
-                    <div class="competition-image">
+                    <source
+                        src="assets/videos/robocup2021.mp4"
+                        type="video/mp4"
+                    >
 
-                        <img
-                            src="assets/images/Robocup2021.jpg"
-                            alt="RoboCup 2021 中国机器人大赛自动分拣项目"
-                        >
+                    您的浏览器不支持 HTML5 视频播放。
 
-                    </div>
+                </video>
 
-
-                    <div class="competition-main">
-
-                        <div class="competition-topline">
-
-                            <span class="competition-category">
-                                ROBOTICS · AUTONOMOUS SYSTEM
-                            </span>
-
-                            <span class="competition-year">
-                                2021.10 — 2022.04
-                            </span>
-
-                        </div>
+            </div>
 
 
-                        <h3>
-                            RoboCup 2021 中国机器人大赛
-                        </h3>
+            <p class="competition-video-caption">
+                RoboCup 2021 自动分拣机器人比赛过程
+            </p>
+
+        </div>
 
 
-                        <p class="competition-intro">
-                            自动分拣项目 · 全国一等奖（冠军）
-                        </p>
+        <!-- =================================================
+             项目概述与主要工作：上下排列
+        ================================================== -->
+
+        <div
+            class="competition-detail-grid competition-detail-vertical"
+        >
+
+            <!-- 项目概述 -->
+            <div>
+
+                <h4>
+                    项目概述
+                </h4>
+
+                <p>
+                    面向机器人自动分拣任务，
+                    构建集循迹导航、视觉感知、目标抓取与路径规划
+                    于一体的移动机器人系统，实现物料检测、抓取、
+                    运输及分类投放的全流程自动化。
+                </p>
+
+            </div>
 
 
-                        <!-- 改为上下排列 -->
-                        <div
-                            class="competition-detail-grid"
-                            style="
-                                display: flex;
-                                flex-direction: column;
-                                gap: 28px;
-                            "
-                        >
+            <!-- 主要工作 -->
+            <div>
 
-                            <div>
+                <h4>
+                    主要工作
+                </h4>
 
-                                <h4>
-                                    项目概述
-                                </h4>
+                <ul class="competition-work-list">
 
-                                <p>
-                                    面向机器人自动分拣任务，
-                                    构建集循迹导航、视觉感知、目标抓取路径规划
-                                    于一体的移动机器人系统，实现物料检测、定位、
-                                    抓取、运输及分类投放的全流程自动化。
-                                </p>
+                    <li>
+                        基于灰度传感器采集道路信息，
+                        通过灰度重心计算白线偏差，
+                        结合预瞄控制与前馈 PID 实现稳定循迹。
+                    </li>
 
-                            </div>
+                    <li>
+                        基于 OpenMV 完成物料视觉检测与定位，
+                        控制机械末端完成目标对准与抓取。
+                    </li>
 
+                    <li>
+                        根据场地拓扑关系规划运输路径，
+                        结合障碍物检测实现自主绕行与路径调整。
+                    </li>
 
-                            <div>
+                    <li>
+                        参与循迹控制、视觉识别、机械执行机构及路径规划
+                        等模块的系统集成、参数调试与整机联调。
+                    </li>
 
-                                <h4>
-                                    主要工作
-                                </h4>
+                </ul>
 
-                                <div class="competition-work">
+            </div>
 
-                                    <p>
-                                        基于灰度传感器构建道路信息感知方法，
-                                        通过灰度重心解算提取白线偏差，并结合预瞄控制
-                                        与前馈 PID 调节运动控制指令，实现机器人白线循迹
-                                        及复杂场地条件下的抗扰运行。
-                                    </p>
-
-                                    <p>
-                                        基于 OpenMV 搭建物料视觉检测与定位模块，
-                                        通过图像处理获取目标位置，结合视觉伺服控制
-                                        实现机械末端对目标物料的对准与抓取，
-                                        提升物料操作过程中的定位精度与稳定性。
-                                    </p>
-
-                                    <p>
-                                        根据场地拓扑关系生成运输路径，并结合障碍物检测
-                                        实现遇障后的自主绕行与路径调整，
-                                        完成从物料获取到指定站点投放的自动分拣流程。
-                                    </p>
-
-                                    <p>
-                                        参与循迹控制、视觉识别、机械执行机构与路径规划
-                                        等模块的系统集成、参数调试及现场测试，
-                                        完成机器人全流程任务的联调与性能验证。
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
+        </div>
 
 
-                        <div class="competition-tags">
+        <!-- 技术标签 -->
+        <div class="competition-tags">
 
-                            <span>Gray Centroid Tracking</span>
-                            <span>Feedforward PID</span>
-                            <span>OpenMV Vision</span>
-                            <span>A* Path Planning</span>
-                            <span>Autonomous Sorting</span>
+            <span>Gray Centroid Tracking</span>
+            <span>Feedforward PID</span>
+            <span>OpenMV Vision</span>
+            <span>A* Path Planning</span>
+            <span>Autonomous Sorting</span>
 
-                        </div>
+        </div>
 
-                    </div>
+    </div>
 
-                </article>
+</article>
 
 
 
