@@ -1155,15 +1155,6 @@
         在保持模型精度的同时降低模型存储与计算开销。
     </p>
 
-    <div class="project-detail-image">
-
-        <img
-            src="assets/images/quantization.png"
-            alt="Transformer 混合精度量化与模型压缩"
-        >
-
-    </div>
-
     <div class="project-detail-grid">
 
         <div>
@@ -1313,9 +1304,6 @@
                 <li>
                     针对 Ascend 310、Ascend 910 等不同目标芯片设计参数适配机制，
                     根据目标硬件自动匹配对应的 ATC 编译参数和转换配置。
-                </li>
-
-                <li>
                     打通模型仓库、模型解析工具、配置生成模块与 OM 转换工具链，
                     实现从模型文件输入到目标平台 OM 文件输出的一键式生成流程。
                 </li>
@@ -1328,10 +1316,10 @@
 
     <div class="detail-result">
 
-        <strong>ONNX → OM</strong>
+        <strong>多芯片平台自动适配</strong>
 
         <span>
-            支持多芯片平台自动适配与模型转换流程一键编排
+            ONNX → OM支持多芯片平台自动适配与模型转换流程一键编排
         </span>
 
     </div>
@@ -1354,103 +1342,134 @@
             ================================================== -->
 
             <article
-                class="project-detail-block"
-                id="calibration-detail"
-            >
+    class="project-detail-block"
+    id="calibration-detail"
+>
 
-                <div class="project-detail-topline">
+    <div class="project-detail-topline">
 
-                    <span>
-                        06 · SENSOR FUSION / PERCEPTION
-                    </span>
+        <span>
+            06 · SENSOR CALIBRATION / 3D PERCEPTION
+        </span>
 
-                    <a href="#overview">
-                        返回概览 ↑
-                    </a>
+        <a href="#overview">
+            返回概览 ↑
+        </a>
 
-                </div>
-
-                <h3>
-                    相机-雷达联合标定与多传感器融合
-                </h3>
-
-                <p class="project-detail-intro">
-                    面向机器人环境感知任务，研究相机与雷达之间的空间关系估计、
-                    外参标定和多传感器数据融合方法。
-                </p>
+    </div>
 
 
-                <div class="project-detail-image">
-
-                    <img
-                        src="assets/images/calibration.png"
-                        alt="相机雷达联合标定与多传感器融合"
-                    >
-
-                </div>
+    <h3>
+        相机-雷达联合标定与多传感器空间对齐
+    </h3>
 
 
-                <div class="project-detail-grid">
-
-                    <div>
-
-                        <h4>
-                            项目背景
-                        </h4>
-
-                        <p>
-                            单一传感器在复杂环境中容易受到视野、距离或环境条件的限制。
-                            通过建立相机与雷达之间的空间变换关系，
-                            可以将不同传感器的信息映射到统一坐标系，
-                            为机器人环境感知提供更加完整的数据基础。
-                        </p>
-
-                    </div>
+    <p class="project-detail-intro">
+        面向机器人三维环境感知任务，设计基于棋盘格标定板的相机内参标定、
+        雷达平面提取及相机-雷达外参优化流程，
+        通过多帧多板联合约束实现传感器之间的高精度空间对齐。
+    </p>
 
 
-                    <div>
+    <div class="project-detail-image">
 
-                        <h4>
-                            主要工作
-                        </h4>
+        <img
+            src="assets/images/calibration.png"
+            alt="相机雷达联合标定与多传感器空间对齐"
+        >
 
-                        <ul>
-
-                            <li>
-                                建立相机与雷达坐标系模型
-                            </li>
-
-                            <li>
-                                完成传感器外参标定
-                            </li>
-
-                            <li>
-                                分析标定误差及坐标转换误差
-                            </li>
-
-                            <li>
-                                实现多源感知数据的统一表达与融合
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                </div>
+    </div>
 
 
-                <div class="detail-tech-row">
+    <div class="project-detail-grid">
 
-                    <span>Camera Calibration</span>
-                    <span>Sensor Fusion</span>
-                    <span>Coordinate Transform</span>
-                    <span>Computer Vision</span>
+        <!-- 项目背景 -->
+        <div>
 
-                </div>
+            <h4>
+                项目背景
+            </h4>
 
-            </article>
+            <p>
+                相机能够提供丰富的纹理和语义信息，但缺乏直接的三维距离测量能力；
+                激光雷达具有准确的空间测距能力，却缺少图像中的视觉表达。
+                为实现图像与点云在统一坐标系下的对应，需要准确估计相机内参、
+                畸变参数以及相机与雷达之间的六自由度外参。
+                本项目采用棋盘格标定板作为共同观测目标，
+                将相机和雷达标定过程解耦，并通过多帧、多标定板的几何约束完成联合优化。
+            </p>
 
-        </section>
+        </div>
+
+
+        <!-- 主要工作 -->
+        <div>
+
+            <h4>
+                主要工作
+            </h4>
+
+            <ul>
+
+                <li>
+                    设计棋盘格图像角点自动提取与时序跟踪流程，
+                    基于多尺度四象限模板响应、NMS、梯度方向分析和均值漂移聚类
+                    获取亚像素角点，并通过棋盘格结构能量函数完成拓扑重建；
+                    结合金字塔光流与标定板形心匹配，建立多帧稳定的 3D-2D 对应关系。
+                </li>
+
+                <li>
+                    基于 OpenCV 重投影误差模型优化相机内参、畸变参数及各帧相机位姿，
+                    以标定板角点的三维真实坐标和图像观测坐标为约束，
+                    通过非线性最小二乘最小化多帧重投影误差，完成相机侧独立标定。
+                </li>
+
+                <li>
+                    针对雷达点云设计粗精结合的 RANSAC 平面提取方法，
+                    以标定板中心为引导进行局部点云筛选和精拟合，
+                    通过多板联合迭代、点到平面距离重新分配及交线附近点剔除，
+                    稳定获取各标定板的平面法向、中心点和高质量内点集合。
+                </li>
+
+                <li>
+                    基于雷达平面内点到相机平面的距离构建外参优化残差，
+                    先利用多帧平面法向 SVD 求解旋转初值，再通过线性最小二乘估计平移初值，
+                    采用 Ceres 对旋转角轴和平移向量进行非线性优化，
+                    并通过时间戳最近邻匹配实现图像与点云数据同步。
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="detail-result">
+
+        <strong>6-DoF</strong>
+
+        <span>
+            基于多帧多平面约束求解相机-雷达旋转与平移外参
+        </span>
+
+    </div>
+
+
+    <div class="detail-tech-row">
+
+        <span>OpenCV</span>
+        <span>Camera Calibration</span>
+        <span>LK Optical Flow</span>
+        <span>RANSAC</span>
+        <span>Point Cloud</span>
+        <span>SVD</span>
+        <span>Ceres Solver</span>
+        <span>Sensor Fusion</span>
+
+    </div>
+
+</article>
 
 
         <!-- =================================================
