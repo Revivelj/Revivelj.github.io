@@ -1815,7 +1815,7 @@
 
 
             <p class="competition-video-caption">
-                RoboCup 2021 自动分拣机器人比赛过程
+                RoboCup 2021 自动分拣机器人比赛视频
             </p>
 
         </div>
@@ -1903,123 +1903,133 @@
                      RoboMaster 2022
                 ================================================== -->
 
-                <article
-                    class="competition-card"
-                    id="robomaster-detail"
-                >
+              <!-- =================================================
+     RoboMaster 2022
+================================================= -->
 
-                    <div class="competition-image">
+<article
+    class="competition-card"
+    id="robomaster-detail"
+>
 
-                        <img
-                            src="assets/images/Robomaster2022.jpg"
-                            alt="RoboMaster 2022 机甲大师超级对抗赛"
-                        >
+    <div class="competition-image">
 
-                    </div>
+        <img
+            src="assets/images/Robomaster2022.jpg"
+            alt="RoboMaster 2022 机甲大师超级对抗赛"
+        >
 
-
-                    <div class="competition-main">
-
-                        <div class="competition-topline">
-
-                            <span class="competition-category">
-                                ROBOMASTER · MECHANICAL SYSTEM
-                            </span>
-
-                            <span class="competition-year">
-                                2021.10 — 2022.08
-                            </span>
-
-                        </div>
+    </div>
 
 
-                        <h3>
-                            RoboMaster 2022 机甲大师超级对抗赛
-                        </h3>
+    <div class="competition-main">
+
+        <div class="competition-topline">
+
+            <span class="competition-category">
+                ROBOMASTER · VISION & CONTROL
+            </span>
+
+            <span class="competition-year">
+                2021.10 — 2022.08
+            </span>
+
+        </div>
 
 
-                        <p class="competition-intro">
-                            全国一等奖
-                        </p>
+        <h3>
+            RoboMaster 2022 机甲大师超级对抗赛
+        </h3>
 
 
-                        <!-- 改为上下排列 -->
-                        <div
-                            class="competition-detail-grid"
-                            style="
-                                display: flex;
-                                flex-direction: column;
-                                gap: 28px;
-                            "
-                        >
-
-                            <div>
-
-                                <h4>
-                                    项目概述
-                                </h4>
-
-                                <p>
-                                    面向步兵机器人云台系统的快速响应与稳定控制需求，
-                                    开展云台机械结构设计、运动部件惯量分析及动态性能测试，
-                                    为机器人姿态控制与视觉瞄准等上层控制任务提供可靠的机械平台。
-                                </p>
-
-                            </div>
+        <p class="competition-intro">
+            全国一等奖 · 步兵机器人自瞄与目标预测系统
+        </p>
 
 
-                            <div>
+        <!-- 上下排列 -->
+        <div
+            class="competition-detail-grid competition-detail-vertical"
+        >
 
-                                <h4>
-                                    主要工作
-                                </h4>
+            <div>
 
-                                <div class="competition-work">
+                <h4>
+                    项目概述
+                </h4>
 
-                                    <p>
-                                        负责步兵机器人云台机械系统的结构设计与装配测试，
-                                        根据机器人运动需求完成关键机械部件的方案设计、
-                                        结构布局及工程实现。
-                                    </p>
+                <p>
+                    面向 RoboMaster 步兵机器人在高速运动和高画面延迟条件下的精准射击需求，
+                    设计并实现基于视觉感知的自动瞄准系统。系统通过装甲板检测、目标三维位置解算、
+                    卡尔曼滤波、运动预测及弹道补偿，将视觉识别结果转换为云台的实时瞄准指令，
+                    同时支持能量机关目标识别与运动预测，提高机器人对机动目标的跟踪能力和射击命中率。
+                </p>
 
-                                    <p>
-                                        分析云台旋转部件的质量分布与转动惯量特性，
-                                        开展机械系统惯量匹配与结构参数优化，
-                                        降低运动过程中的负载变化对系统响应性能的影响。
-                                    </p>
-
-                                    <p>
-                                        搭建云台动态性能测试流程，采集系统运动过程中的
-                                        角度、速度及响应数据，分析机械系统的动态特性，
-                                        为后续控制算法设计、参数整定与性能优化提供实验依据。
-                                    </p>
-
-                                    <p>
-                                        参与云台机械系统迭代、整机装配与联调测试，
-                                        根据测试结果定位机械结构与运动性能问题，
-                                        完成方案优化及比赛前系统验证。
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
+            </div>
 
 
-                        <div class="competition-tags">
+            <div>
 
-                            <span>Gimbal Mechanism</span>
-                            <span>Mechanical Design</span>
-                            <span>Inertia Matching</span>
-                            <span>Dynamic Response</span>
-                            <span>System Testing</span>
+                <h4>
+                    主要工作
+                </h4>
 
-                        </div>
+                <div class="competition-work">
 
-                    </div>
+                    <p>
+                        负责步兵机器人视觉自瞄算法开发，基于颜色通道差分、二值化、
+                        形态学处理及轮廓分析提取敌方装甲板灯条特征，并通过灯条匹配完成装甲板识别。
+                    </p>
 
-                </article>
+                    <p>
+                        基于装甲板四个角点及相机内参，使用 PnP 位姿解算方法获取目标装甲板
+                        在相机坐标系下的三维位置，并结合相机与云台之间的坐标变换，
+                        将目标位置映射至云台控制坐标系。
+                    </p>
+
+                    <p>
+                        建立基于匀速运动模型的卡尔曼滤波器，对装甲板位置和速度进行状态估计，
+                        对视觉测量噪声进行平滑处理，并利用估计速度预测目标未来位置，
+                        补偿图像处理、通信及弹丸飞行造成的系统延迟。
+                    </p>
+
+                    <p>
+                        设计弹道补偿算法，根据目标距离、弹丸初速度及弹道拟合模型，
+                        计算云台俯仰角补偿和弹丸飞行时间，结合目标运动速度计算水平提前量，
+                        实现带提前量的自动瞄准。
+                    </p>
+
+                    <p>
+                        针对能量机关的圆周运动特征，建立以角度和角速度为状态变量的卡尔曼滤波模型，
+                        实现对目标旋转状态的估计与预测；同时根据目标速度方差判断目标加减速程度，
+                        自适应调整射频，降低机动目标预测误差对命中率的影响。
+                    </p>
+
+                    <p>
+                        参与自瞄系统的软件测试与参数调试，验证滤波平滑效果、目标速度收敛特性、
+                        弹道拟合精度及不同弹速、目标距离条件下的射击补偿效果。
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="competition-tags">
+
+            <span>Armor Detection</span>
+            <span>PnP Pose Estimation</span>
+            <span>Kalman Filter</span>
+            <span>Motion Prediction</span>
+            <span>Adaptive Firing</span>
+
+        </div>
+
+    </div>
+
+</article>
 
 
 
@@ -2108,12 +2118,6 @@
                                     </p>
 
                                     <p>
-                                        基于气动仿真分析不同扑翼运动时序及参数
-                                        对飞行器气动力与运动效果的影响，
-                                        优化扑翼频率、运动相位及舵机输出策略。
-                                    </p>
-
-                                    <p>
                                         参与飞行器样机装配、执行机构调试与迭代测试，
                                         对比仿真分析与实际驱动效果，
                                         验证扑翼机构设计及参数优化方案的可行性。
@@ -2135,8 +2139,6 @@
 
                             <span>Flapping-Wing UAV</span>
                             <span>Actuator Design</span>
-                            <span>Aerodynamic Simulation</span>
-                            <span>Servo Control</span>
                             <span>Prototype Testing</span>
 
                         </div>
