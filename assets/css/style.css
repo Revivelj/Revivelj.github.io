@@ -1653,3 +1653,43 @@ img {
     font-size: 15px;
     line-height: 1.8;
 }
+.calibration-image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 28px 0 34px;
+}
+
+.calibration-image-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calibration-image-item img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    border: 1px solid var(--line-color, #e5e7eb);
+    border-radius: 8px;
+    background: #f7f7f7;
+}
+
+.calibration-image-item span {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--muted-text, #777);
+    text-align: center;
+}
+@media (max-width: 900px) {
+    .calibration-image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .calibration-image-grid {
+        grid-template-columns: 1fr;
+    }
+}
