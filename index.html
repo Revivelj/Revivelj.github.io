@@ -689,172 +689,190 @@
             ================================================== -->
 
             <article
-                class="project-detail-block"
-                id="uav-detail"
-            >
+    class="project-detail-block"
+    id="uav-detail"
+>
 
-                <div class="project-detail-topline">
+    <div class="project-detail-topline">
 
-                    <span>
-                        02 · UAV / COMPUTER VISION / CONTROL
-                    </span>
+        <span>
+            02 · UAV / COMPUTER VISION / CONTROL
+        </span>
 
-                    <a href="#overview">
-                        返回概览 ↑
-                    </a>
-
-                </div>
-
-                <h3>
-                    基于视觉引导与模型预测控制的无人机自主抓取系统
-                </h3>
-
-                <p class="project-detail-intro">
-                    面向复杂环境下的无人机自主抓取任务，
-                    融合视觉感知、自主规划、模型预测控制和干扰估计，
-                    实现从目标搜索到抓取运输的完整任务流程。
-                </p>
-
-
-                <div class="project-detail-image">
-
-                    <img
-                        src="assets/images/uav-grasping.jpg"
-                        alt="无人机自主抓取系统"
-                    >
-
-                </div>
-
-
-                <div class="project-detail-grid">
-
-    <!-- 项目背景 -->
-    <div>
-
-        <h4>
-            项目背景
-        </h4>
-
-        <p>
-            本项目针对无人机执行自主抓取任务时存在的目标定位误差、
-            抓取后负载变化以及外部风扰等问题，设计了一套基于视觉引导
-            与模型预测控制的自主抓取系统。系统在 PX4 Offboard 模式下，
-            无需人工遥控即可完成目标搜索、识别定位、接近抓取、
-            抓取确认、运输和释放。
-        </p>
+        <a href="#overview">
+            返回概览 ↑
+        </a>
 
     </div>
 
 
-    <!-- 主要工作 -->
-    <div>
-
-        <h4>
-            主要工作
-        </h4>
-
-        <ul>
-
-            <li>
-                搭建基于 ROS1 / Gazebo / PX4 Offboard 的无人机自主抓取仿真环境，
-                完成飞控、深度相机、气泵、电磁阀及压力传感器等软硬件模块集成，
-                构建目标搜索、接近、抓取、运输与释放的全流程任务场景。
-            </li>
-
-            <li>
-                部署并微调 YOLOv8n 目标检测模型，融合 RealSense D435i 深度信息，
-                通过像素坐标反投影、坐标系变换及滤波处理实现目标三维位置与位姿估计，
-                为无人机自主接近和抓取提供视觉观测。
-            </li>
-
-            <li>
-                设计基于有限状态机的视觉引导路径规划方法，
-                实现目标搜索、位置对准、姿态调整、抓取确认及目标运输等任务状态切换，
-                并利用压力传感器检测气路压力变化判断吸附是否成功，支持失败重试。
-            </li>
-
-            <li>
-                建立四旋翼无人机非线性运动模型，基于 acados 开发 NMPC 轨迹跟踪控制器，
-                将推力与姿态控制指令纳入滚动优化过程，显式处理推力饱和、
-                姿态角和飞行区域等约束，实现复杂任务过程中的实时轨迹跟踪。
-            </li>
-
-        </ul>
+    <h3>
+        基于视觉引导与模型预测控制的无人机自主抓取系统
+    </h3>
 
 
-        <!-- NMPC 公式插入到对应工作之后 -->
-        <div class="project-inline-formula">
-
-            <span>NMPC Objective</span>
-
-            $$  
-            J =
-            \sum_{k=0}^{N-1}
-            \left\|x_k-x_k^{ref}\right\|_Q^2
-            +
-            \left\|u_k\right\|_R^2
-            +
-            \left\|x_N-x_N^{ref}\right\|_P^2
-            $$
-
-        </div>
+    <p class="project-detail-intro">
+        面向复杂环境下的无人机自主抓取任务，
+        融合视觉感知、自主规划、模型预测控制和干扰估计，
+        实现从目标搜索到抓取运输的完整任务流程。
+    </p>
 
 
-        <ul>
+    <div class="project-detail-image">
 
-            <li>
-                集成 EKF 与 FR-MHE 两种干扰估计器，将负载突变和风扰引起的等效加速度干扰
-                通过前馈补偿引入 NMPC 预测模型，并开展多算法对比验证，
-                使轨迹跟踪 RMSE 降低约 30%，提升系统抗干扰能力与鲁棒性。
-            </li>
-
-        </ul>
-
-
-        <!-- 干扰补偿公式插入到对应工作之后 -->
-        <div class="project-inline-formula">
-
-            <span>Disturbance Compensation</span>
-
-            $$ 
-            u =
-            u_{\mathrm{NMPC}}
-            -
-            \hat{d}
-            $$
-
-        </div>
+        <img
+            src="assets/images/uav-grasping.jpg"
+            alt="无人机自主抓取系统"
+        >
 
     </div>
 
-</div>
 
-                <div class="detail-result">
+    <!-- 内容主体：强制上下排列 -->
+    <div
+        class="project-detail-grid"
+        style="
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+        "
+    >
 
-                    <strong>
-                        约 30%
-                    </strong>
+        <!-- 项目背景 -->
+        <section>
 
-                    <span>
-                        引入干扰估计后轨迹跟踪 RMSE 降低
-                    </span>
+            <h4>
+                项目背景
+            </h4>
 
-                </div>
+            <p>
+                本项目针对无人机执行自主抓取任务时存在的目标定位误差、
+                抓取后负载变化以及外部风扰等问题，设计了一套基于视觉引导
+                与模型预测控制的自主抓取系统。系统在 PX4 Offboard 模式下，
+                无需人工遥控即可完成目标搜索、识别定位、接近抓取、
+                抓取确认、运输和释放。
+            </p>
+
+        </section>
 
 
-                <div class="detail-tech-row">
+        <!-- 主要工作 -->
+        <section>
 
-                    <span>YOLOv8</span>
-                    <span>RealSense D435i</span>
-                    <span>PX4</span>
-                    <span>ROS1</span>
-                    <span>Gazebo</span>
-                    <span>NMPC</span>
-                    <span>EKF / FR-MHE</span>
+            <h4>
+                主要工作
+            </h4>
 
-                </div>
+            <ul>
 
-            </article>
+                <li>
+                    搭建基于 ROS1 / Gazebo / PX4 Offboard 的无人机自主抓取仿真环境，
+                    完成飞控、深度相机、气泵、电磁阀及压力传感器等软硬件模块集成，
+                    构建目标搜索、接近、抓取、运输与释放的全流程任务场景。
+                </li>
+
+                <li>
+                    部署并微调 YOLOv8n 目标检测模型，融合 RealSense D435i 深度信息，
+                    通过像素坐标反投影、坐标系变换及滤波处理实现目标三维位置与位姿估计，
+                    为无人机自主接近和抓取提供视觉观测。
+                </li>
+
+                <li>
+                    设计基于有限状态机的视觉引导路径规划方法，
+                    实现目标搜索、位置对准、姿态调整、抓取确认及目标运输等任务状态切换，
+                    并利用压力传感器检测气路压力变化判断吸附是否成功，支持失败重试。
+                </li>
+
+                <li>
+                    建立四旋翼无人机非线性运动模型，基于 acados 开发 NMPC 轨迹跟踪控制器，
+                    将推力与姿态控制指令纳入滚动优化过程，显式处理推力饱和、
+                    姿态角和飞行区域等约束，实现复杂任务过程中的实时轨迹跟踪。
+                </li>
+
+            </ul>
+
+
+            <!-- NMPC 目标函数 -->
+            <div class="project-inline-formula">
+
+                <span>
+                    NMPC Objective
+                </span>
+
+                $$
+                J =
+                \sum_{k=0}^{N-1}
+                \left\|x_k-x_k^{ref}\right\|_Q^2
+                +
+                \left\|u_k\right\|_R^2
+                +
+                \left\|x_N-x_N^{ref}\right\|_P^2
+                $$
+
+            </div>
+
+
+            <ul>
+
+                <li>
+                    集成 EKF 与 FR-MHE 两种干扰估计器，将负载突变和风扰引起的等效加速度干扰
+                    通过前馈补偿引入 NMPC 预测模型，并开展多算法对比验证，
+                    使轨迹跟踪 RMSE 降低约 30%，提升系统抗干扰能力与鲁棒性。
+                </li>
+
+            </ul>
+
+
+            <!-- 干扰补偿公式 -->
+            <div class="project-inline-formula">
+
+                <span>
+                    Disturbance Compensation
+                </span>
+
+                $$
+                u =
+                u_{\mathrm{NMPC}}
+                -
+                \hat{d}
+                $$
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- 项目结果 -->
+    <div class="detail-result">
+
+        <strong>
+            约 30%
+        </strong>
+
+        <span>
+            引入干扰估计后轨迹跟踪 RMSE 降低
+        </span>
+
+    </div>
+
+
+    <!-- 技术栈 -->
+    <div class="detail-tech-row">
+
+        <span>YOLOv8</span>
+        <span>RealSense D435i</span>
+        <span>PX4</span>
+        <span>ROS1</span>
+        <span>Gazebo</span>
+        <span>NMPC</span>
+        <span>EKF / FR-MHE</span>
+
+    </div>
+
+
+</article>
 
 
             <!-- =================================================
