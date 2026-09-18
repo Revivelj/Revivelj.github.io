@@ -586,103 +586,139 @@
             ================================================== -->
 
             <article
-                class="project-detail-block"
-                id="quadruped-detail"
-            >
+    class="project-detail-block"
+    id="quadruped-detail"
+>
 
-                <div class="project-detail-topline">
+    <div class="project-detail-topline">
 
-                    <span>
-                        01 · ROBOTICS / REINFORCEMENT LEARNING
-                    </span>
+        <span>
+            01 · ROBOTICS / REINFORCEMENT LEARNING
+        </span>
 
-                    <a href="#overview">
-                        返回概览 ↑
-                    </a>
+        <a href="#overview">
+            返回概览 ↑
+        </a>
 
-                </div>
+    </div>
 
-                <h3>
-                    四足机器人强化学习运动控制
-                </h3>
+    <h3>
+        四足机器人强化学习运动控制
+    </h3>
 
-                <p class="project-detail-intro">
-                    面向四足机器人在复杂地形下的自主运动控制问题，
-                    基于深度强化学习构建从仿真训练到实际机器人部署的运动控制流程。
-                </p>
-
-
-                <div class="project-detail-image">
-
-                    <img
-                        src="assets/images/quadruped.jpg"
-                        alt="四足机器人强化学习运动控制"
-                    >
-
-                </div>
+    <p class="project-detail-intro">
+        面向复杂地形与动力学不确定条件下的四足机器人自主运动控制问题，
+        融合深度强化学习、时序残差预测与可达性安全评估，
+        构建从仿真训练、风险感知到实机部署的鲁棒运动控制系统。
+    </p>
 
 
-                <div class="project-detail-grid">
+    <div class="project-detail-image">
 
-                    <div>
+        <img
+            src="assets/images/quadruped.jpg"
+            alt="四足机器人强化学习运动控制"
+        >
 
-                        <h4>
-                            项目背景
-                        </h4>
-
-                        <p>
-                            传统四足机器人控制方法通常依赖精确建模和人工设计的运动规划器，
-                            在复杂地形和模型不确定条件下存在适应性不足的问题。
-                            本项目采用深度强化学习方法学习机器人运动策略，
-                            提高机器人对不同运动状态和环境条件的适应能力。
-                        </p>
-
-                    </div>
+    </div>
 
 
-                    <div>
+    <div class="project-detail-grid">
 
-                        <h4>
-                            主要工作
-                        </h4>
+        <!-- 项目背景 -->
+        <div>
 
-                        <ul>
+            <h4>
+                项目背景
+            </h4>
 
-                            <li>
-                                构建四足机器人仿真训练环境
-                            </li>
+            <p>
+                针对四足机器人在陌生地形、负载变化及模型失配条件下容易出现运动性能下降
+                甚至失稳的问题，本项目采用深度强化学习学习复杂环境下的运动策略，
+                并引入时序残差预测建模标称动力学与真实动力学之间的差异。
+                同时结合基于 Hamilton-Jacobi 可达性理论的 Reach-Avoid 值网络，
+                对机器人潜在碰撞与失稳风险进行实时评估，实现敏捷策略与恢复策略之间的安全切换，
+                提升机器人在复杂环境中的运动鲁棒性与安全性。
+            </p>
 
-                            <li>
-                                设计基于 PPO 的运动控制策略
-                            </li>
-
-                            <li>
-                                完成观测空间、动作空间与奖励函数设计
-                            </li>
-
-                            <li>
-                                开展策略训练、运动测试与部署验证
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                </div>
+        </div>
 
 
-                <div class="detail-tech-row">
+        <!-- 主要工作 -->
+        <div>
 
-                    <span>Python</span>
-                    <span>PyTorch</span>
-                    <span>PPO</span>
-                    <span>Isaac Gym</span>
-                    <span>Quadruped Robot</span>
+            <h4>
+                主要工作
+            </h4>
 
-                </div>
+            <ul>
 
-            </article>
+                <li>
+                    基于 Isaac Gym 搭建四足机器人大规模并行强化学习训练环境，
+                    完成地形、摩擦系数、机器人质量、质心偏移、执行器时延及传感器噪声等
+                    物理参数与感知噪声的域随机化设计，并实现多环境独立重置，
+                    提升策略对复杂环境和动力学变化的适应能力。
+                </li>
 
+                <li>
+                    设计基于 PPO 的四足机器人运动控制策略，
+                    完成包括本体感知、地形射线、目标运动指令及历史动作在内的观测空间构建，
+                    设计融合位置追踪、航向跟踪、碰撞惩罚、停滞惩罚和动作平滑约束的奖励函数，
+                    输出 12 维关节目标角度并通过固定增益 PD 控制器实现底层力矩控制。
+                </li>
+
+                <li>
+                    构建基于时序残差预测的动力学补偿模块，
+                    利用历史残差序列刻画标称模型与真实运动状态之间的偏差，
+                    通过 MLP 预测未来残差，并采用一维卷积、BatchNorm、ReLU 与全局平均池化
+                    提取历史及未来残差特征，将其注入策略观测空间以增强策略对动力学漂移的预测能力。
+                </li>
+
+                <li>
+                    设计基于 Hamilton-Jacobi 可达性理论的 Reach-Avoid 值网络，
+                    通过离线采集敏捷策略运行轨迹并学习可达性值函数，
+                    实时评估机器人在当前状态下的碰撞与失稳风险，
+                    根据安全阈值动态切换敏捷策略与恢复策略，实现面向安全约束的双策略控制框架。
+                </li>
+
+                <li>
+                    开展 Sim-to-Real 部署与实机验证，
+                    针对深度图射线预测误差、状态数据传输不稳定、PointLIO 状态更新间隔
+                    以及残差分布差异等问题，采用监督重训练、数据复用、定时器缓存和噪声增强等方法
+                    进行系统改进，并通过消融实验分析历史残差、未来残差及域随机化对运动性能的影响。
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="detail-result">
+
+        <strong>双策略安全切换</strong>
+
+        <span>
+            融合残差预测与 Reach-Avoid 风险评估的四足机器人鲁棒控制框架
+        </span>
+
+    </div>
+
+
+    <div class="detail-tech-row">
+
+        <span>Python</span>
+        <span>PyTorch</span>
+        <span>PPO</span>
+        <span>Isaac Gym</span>
+        <span>Reach-Avoid</span>
+        <span>Residual Prediction</span>
+        <span>Sim-to-Real</span>
+
+    </div>
+
+</article>
 
             <!-- =================================================
                  无人机项目
@@ -944,7 +980,6 @@
     <div class="detail-tech-row">
 
         <span>YOLOv8</span>
-        <span>RealSense D435i</span>
         <span>PX4</span>
         <span>ROS1</span>
         <span>Gazebo</span>
