@@ -1761,6 +1761,117 @@ img {
     flex-direction: column;
     gap: 28px;
 }
+/* =====================================================
+   Competition Wide Video
+===================================================== */
 
+.competition-video-section {
+    width: 100%;
+    margin: 28px 0 34px;
+}
+
+
+/* 视频外层：适合超宽视频 */
+
+.competition-video-wrapper {
+    width: 100%;
+    aspect-ratio: 21 / 9;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #111;
+    border: 1px solid var(--line-color, #e5e7eb);
+}
+
+
+/* 视频本体 */
+
+.competition-video-wrapper video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #111;
+}
+
+
+/* 视频说明 */
+
+.competition-video-caption {
+    margin: 10px 0 0;
+    text-align: center;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: var(--muted-text, #777);
+}
+
+
+/* =====================================================
+   Competition Detail Vertical Layout
+===================================================== */
+
+.competition-detail-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+
+/* 防止默认 grid 样式影响上下排列 */
+
+.competition-detail-vertical > div {
+    width: 100%;
+}
+
+
+/* =====================================================
+   Competition Work List
+===================================================== */
+
+.competition-work-list {
+    margin: 0;
+    padding-left: 22px;
+}
+
+
+.competition-work-list li {
+    margin-bottom: 11px;
+    line-height: 1.8;
+}
+
+
+.competition-work-list li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   Responsive Design
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .competition-video-wrapper {
+        aspect-ratio: 16 / 9;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .competition-video-section {
+        margin: 22px 0 28px;
+    }
+
+    .competition-video-wrapper {
+        aspect-ratio: 16 / 9;
+        border-radius: 8px;
+    }
+
+    .competition-video-caption {
+        font-size: 0.78rem;
+    }
+
+}
 
 
