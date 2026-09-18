@@ -26,8 +26,9 @@ body {
         Arial,
         sans-serif;
 
-    font-size: 14px;
-    line-height: 1.7;
+    /* 全局正文基准字号 */
+    font-size: 15px;
+    line-height: 1.8;
 
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -128,7 +129,7 @@ img {
 
 
 /* =====================================================
-   Sidebar - Main Fix
+   Sidebar
 ===================================================== */
 
 .profile-sidebar {
@@ -146,11 +147,6 @@ img {
     overflow: visible;
 }
 
-
-/*
-   单独设置照片容器，避免照片和文字发生重叠
-*/
-
 .profile-photo-wrapper {
     width: 100%;
 
@@ -163,17 +159,11 @@ img {
     clear: both;
 }
 
-
-/*
-   个人照片
-*/
-
 .profile-photo {
     display: block;
 
     width: 180px;
     height: 225px;
-
     max-width: 180px;
 
     object-fit: cover;
@@ -193,11 +183,6 @@ img {
     clear: both;
 }
 
-
-/*
-   个人文字信息容器
-*/
-
 .profile-information {
     width: 100%;
     min-width: 0;
@@ -211,7 +196,6 @@ img {
 
 .profile-information h1 {
     display: block;
-
     margin: 0;
 
     color: #173b63;
@@ -256,7 +240,7 @@ img {
 
     color: #536a80;
 
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 650;
     line-height: 1.7;
 }
@@ -268,7 +252,7 @@ img {
 
     color: #8b98a5;
 
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.7;
 }
 
@@ -297,9 +281,9 @@ img {
     gap: 10px;
 
     color: #81909e;
-    font-size: 12px;
 
-    line-height: 1.5;
+    font-size: 15px;
+    line-height: 1.6;
 }
 
 .profile-contact i {
@@ -308,7 +292,7 @@ img {
     width: 15px;
 
     color: #9aabba;
-    font-size: 12px;
+    font-size: 13px;
     text-align: center;
 }
 
@@ -345,7 +329,7 @@ img {
 
     color: #71859a;
 
-    font-size: 10px;
+    font-size: 11px;
     line-height: 1.4;
 }
 
@@ -391,7 +375,7 @@ img {
 
     color: #7890a5;
 
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 500;
     line-height: 1.5;
 }
@@ -402,7 +386,7 @@ img {
 
     color: #667685;
 
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.9;
 }
 
@@ -426,18 +410,18 @@ img {
 
     color: #82909d;
 
-    font-size: 12px;
+    font-size: 15px;
     font-style: italic;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 .about-highlight i {
     flex: 0 0 auto;
 
-    margin-top: 3px;
+    margin-top: 4px;
 
     color: #c18ca2;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 
@@ -488,15 +472,16 @@ img {
 
     color: #315675;
 
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
+    line-height: 1.5;
 }
 
 .overview-card p {
     color: #84919d;
 
-    font-size: 12px;
-    line-height: 1.65;
+    font-size: 15px;
+    line-height: 1.75;
 }
 
 
@@ -531,7 +516,9 @@ img {
     margin-top: 8px;
 
     color: #8794a1;
-    font-size: 13px;
+
+    font-size: 15px;
+    line-height: 1.7;
 }
 
 
@@ -571,8 +558,9 @@ img {
 
     color: #173b63;
 
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
+    line-height: 1.5;
 }
 
 .overview-group-title i {
@@ -607,7 +595,7 @@ img {
 
     color: #b87591;
 
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 750;
 }
 
@@ -621,23 +609,23 @@ img {
 
     color: #315675;
 
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 650;
-    line-height: 1.55;
+    line-height: 1.6;
 }
 
 .overview-item-content p {
     color: #8a96a2;
 
-    font-size: 11px;
-    line-height: 1.5;
+    font-size: 15px;
+    line-height: 1.6;
 }
 
 .overview-item-arrow {
     flex: 0 0 auto;
 
     color: #aebac5;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 
@@ -685,7 +673,7 @@ img {
 
     text-decoration: none;
 
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
     letter-spacing: 0;
 }
@@ -713,48 +701,154 @@ img {
     color: #6d7b88;
 
     font-size: 15px;
-    line-height: 1.85;
+    line-height: 1.9;
 }
 
+
+/*
+   项目背景与主要工作强制上下排列
+*/
+
 .project-detail-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
 
     padding-top: 21px;
 
     border-top: 1px solid #edf0f3;
 }
 
+.project-detail-grid > div,
+.project-detail-grid > section {
+    width: 100%;
+}
+
 .project-detail-grid h4 {
-    margin-bottom: 9px;
+    margin-bottom: 12px;
 
     color: #315675;
 
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
+    line-height: 1.5;
 }
 
 .project-detail-grid p {
     color: #6d7b88;
 
     font-size: 15px;
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
 .project-detail-grid ul {
     margin: 0;
-    padding-left: 18px;
+    padding-left: 22px;
 }
 
 .project-detail-grid li {
-    margin-bottom: 7px;
+    margin-bottom: 12px;
 
     color: #6d7b88;
 
-    font-size: 13px;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.project-detail-grid li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   Inline Formula
+===================================================== */
+
+.project-inline-formula {
+    width: 100%;
+
+    margin: 24px 0 28px;
+    padding: 18px 22px;
+
+    border-left: 3px solid #cbd5e1;
+    border-top: 1px solid #e5ebf0;
+    border-right: 1px solid #e5ebf0;
+    border-bottom: 1px solid #e5ebf0;
+
+    background: #f8fafc;
+    border-radius: 8px;
+
+    color: #334155;
+
+    overflow-x: auto;
+}
+
+.project-inline-formula > span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #64748b;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+.project-inline-formula mjx-container {
+    font-size: 95% !important;
+    color: #173b63;
+}
+
+
+/* 兼容旧公式容器，防止旧 HTML 影响布局 */
+
+.project-formula-row {
+    display: none;
+}
+
+.mini-formula {
+    display: none;
+}
+
+
+/* =====================================================
+   Project Result
+===================================================== */
+
+.detail-result {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 12px;
+
+    margin-top: 28px;
+    padding: 13px 18px;
+
+    border-left: 3px solid #b87591;
+    background: #fafbfd;
+}
+
+.detail-result strong {
+    color: #173b63;
+
+    font-size: 25px;
+    font-weight: 750;
+    line-height: 1.3;
+}
+
+.detail-result span {
+    color: #788694;
+
+    font-size: 15px;
     line-height: 1.6;
 }
+
+
+/* =====================================================
+   Project Technology Tags
+===================================================== */
 
 .detail-tech-row {
     display: flex;
@@ -776,7 +870,7 @@ img {
 
     color: #607b95;
 
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 600;
     line-height: 1.4;
 }
@@ -805,72 +899,6 @@ img {
     max-height: 360px;
 
     object-fit: cover;
-}
-
-
-/* =====================================================
-   UAV Formula
-===================================================== */
-
-.project-formula-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-
-    margin-top: 23px;
-}
-
-.mini-formula {
-    overflow-x: auto;
-
-    padding: 15px 19px;
-
-    border: 1px solid #e2e9ef;
-    border-radius: 6px;
-
-    background: #f8fafc;
-    color: #173b63;
-}
-
-.mini-formula > span {
-    display: block;
-
-    margin-bottom: 8px;
-
-    color: #b87591;
-
-    font-size: 10px;
-    font-weight: 750;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-
-.mini-formula mjx-container {
-    font-size: 90% !important;
-}
-
-.detail-result {
-    display: inline-flex;
-    align-items: baseline;
-    gap: 12px;
-
-    margin-top: 23px;
-    padding: 12px 17px;
-
-    border-left: 3px solid #b87591;
-    background: #fafbfd;
-}
-
-.detail-result strong {
-    color: #173b63;
-
-    font-size: 23px;
-    font-weight: 750;
-}
-
-.detail-result span {
-    color: #788694;
-    font-size: 12px;
 }
 
 
@@ -979,7 +1007,7 @@ img {
 .competition-category {
     color: #b87591;
 
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 750;
     letter-spacing: 0.1em;
     line-height: 1.5;
@@ -990,7 +1018,7 @@ img {
 
     color: #9ba8b5;
 
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
 }
 
@@ -999,7 +1027,7 @@ img {
 
     color: #315675;
 
-    font-size: 21px;
+    font-size: 22px;
     font-weight: 750;
     line-height: 1.45;
 }
@@ -1009,8 +1037,8 @@ img {
 
     color: #6d7b88;
 
-    font-size: 13px;
-    line-height: 1.8;
+    font-size: 15px;
+    line-height: 1.9;
 }
 
 
@@ -1030,11 +1058,11 @@ img {
 }
 
 .competition-detail-grid h4 {
-    margin-bottom: 9px;
+    margin-bottom: 10px;
 
     color: #173b63;
 
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 750;
     line-height: 1.5;
 }
@@ -1042,22 +1070,22 @@ img {
 .competition-detail-grid p {
     color: #6d7b88;
 
-    font-size: 13px;
-    line-height: 1.8;
+    font-size: 15px;
+    line-height: 1.9;
 }
 
 .competition-detail-grid ul {
     margin: 0;
-    padding-left: 18px;
+    padding-left: 22px;
 }
 
 .competition-detail-grid li {
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 
     color: #6d7b88;
 
-    font-size: 13px;
-    line-height: 1.65;
+    font-size: 15px;
+    line-height: 1.85;
 }
 
 .competition-tags {
@@ -1080,7 +1108,7 @@ img {
 
     color: #607b95;
 
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 600;
     line-height: 1.4;
 }
@@ -1112,15 +1140,16 @@ img {
 .skill-row strong {
     color: #315675;
 
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
+    line-height: 1.6;
 }
 
 .skill-row span {
     color: #778692;
 
-    font-size: 13px;
-    line-height: 1.6;
+    font-size: 15px;
+    line-height: 1.9;
 }
 
 
@@ -1150,31 +1179,34 @@ img {
 .timeline-date {
     color: #b87591;
 
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     line-height: 1.7;
 }
 
 .timeline-content h3 {
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 
     color: #315675;
 
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 700;
+    line-height: 1.5;
 }
 
 .timeline-content p {
-    margin-bottom: 6px;
+    margin-bottom: 7px;
 
     color: #65798c;
-    font-size: 13px;
+
+    font-size: 15px;
+    line-height: 1.85;
 }
 
 .timeline-content span {
     color: #87939e;
 
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.7;
 }
 
@@ -1201,7 +1233,7 @@ img {
 
     color: #ffffff;
 
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 750;
 
     letter-spacing: -0.025em;
@@ -1213,8 +1245,8 @@ img {
 
     color: #c3d1df;
 
-    font-size: 13px;
-    line-height: 1.8;
+    font-size: 15px;
+    line-height: 1.9;
 }
 
 .contact-button {
@@ -1230,7 +1262,7 @@ img {
     color: #ffffff;
     text-decoration: none;
 
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 650;
 
     transition:
@@ -1257,7 +1289,8 @@ img {
 
     text-align: center;
 
-    font-size: 11px;
+    font-size: 13px;
+    line-height: 1.6;
 }
 
 
@@ -1333,7 +1366,7 @@ img {
     }
 
     /*
-       平板端左侧信息改成横向布局
+       平板端侧边栏改为纵向，避免照片与文字重叠
     */
 
     .profile-sidebar {
@@ -1341,20 +1374,16 @@ img {
 
         position: static;
 
-        display: grid;
-        grid-template-columns: 145px minmax(0, 1fr);
-        column-gap: 25px;
-
-        align-items: start;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .profile-photo-wrapper {
-        width: 145px;
+        width: 100%;
 
-        grid-column: 1;
-        grid-row: 1 / span 2;
-
-        margin: 0;
+        display: block;
+        margin-bottom: 18px;
     }
 
     .profile-photo {
@@ -1365,9 +1394,6 @@ img {
 
     .profile-information {
         width: 100%;
-
-        grid-column: 2;
-        grid-row: 1;
     }
 
     .profile-divider {
@@ -1384,9 +1410,14 @@ img {
         margin-top: 15px;
     }
 
+    /*
+       项目背景和主要工作保持上下排列
+    */
+
     .project-detail-grid {
-        grid-template-columns: 1fr;
-        gap: 23px;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
     }
 
     .competition-card {
@@ -1429,10 +1460,6 @@ img {
         padding: 35px 20px 55px;
     }
 
-    /*
-       手机端恢复完全垂直布局
-    */
-
     .profile-sidebar {
         width: 100%;
 
@@ -1462,6 +1489,10 @@ img {
         font-size: 34px;
     }
 
+    .about-section h3 {
+        font-size: 18px;
+    }
+
     .overview-grid {
         grid-template-columns: 1fr;
         margin-bottom: 55px;
@@ -1485,8 +1516,36 @@ img {
         font-size: 21px;
     }
 
-    .project-formula-row {
-        grid-template-columns: 1fr;
+    .project-detail-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .project-detail-grid h4 {
+        font-size: 17px;
+    }
+
+    .project-detail-grid p,
+    .project-detail-grid li {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+    .project-inline-formula {
+        padding: 15px 16px;
+        margin: 20px 0 24px;
+    }
+
+    .project-inline-formula mjx-container {
+        font-size: 82% !important;
+    }
+
+    .detail-result {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 3px;
     }
 
     .competition-card {
@@ -1502,7 +1561,7 @@ img {
     }
 
     .competition-main h3 {
-        font-size: 19px;
+        font-size: 20px;
     }
 
     .competition-topline {
@@ -1528,23 +1587,4 @@ img {
         padding: 28px 23px;
     }
 
-}
-.project-inline-formula {
-    margin: 24px 0 28px;
-    padding: 18px 22px;
-    border-left: 3px solid #cbd5e1;
-    background: #f8fafc;
-    border-radius: 8px;
-    color: #334155;
-    overflow-x: auto;
-}
-
-.project-inline-formula > span {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #64748b;
 }
