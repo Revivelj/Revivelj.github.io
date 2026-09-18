@@ -1742,3 +1742,29 @@ img {
     }
 
 }
+/* =====================================================
+   比赛经历与项目详情之间的间距
+===================================================== */
+
+.competitions-section {
+    margin-top: 110px;
+    padding-top: 30px;
+}
+
+
+/* =====================================================
+   比赛卡片内部改为上下结构
+===================================================== */
+
+.competition-detail-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+
+/* 比赛项目概述和主要工作之间增加分隔 */
+.competition-detail-grid > div + div {
+    padding-top: 24px;
+    border-top: 1px solid var(--line-color, #e5e7eb);
+}
