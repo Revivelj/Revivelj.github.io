@@ -1371,14 +1371,50 @@
     </p>
 
 
-    <div class="project-detail-image">
+    <div class="calibration-image-grid">
+
+    <div class="calibration-image-item">
+
+        <img
+            src="assets/images/calibration-camera-tracking.png"
+            alt="图像侧棋盘格角点跟踪结果"
+        >
+
+        <span>
+            图像侧角点跟踪结果
+        </span>
+
+    </div>
+
+
+    <div class="calibration-image-item">
+
+        <img
+            src="assets/images/calibration-lidar-plane.png"
+            alt="雷达侧标定板平面提取结果"
+        >
+
+        <span>
+            雷达侧平面提取结果
+        </span>
+
+    </div>
+
+
+    <div class="calibration-image-item">
 
         <img
             src="assets/images/calibration.png"
-            alt="相机雷达联合标定与多传感器空间对齐"
+            alt="相机与雷达联合标定结果"
         >
 
+        <span>
+            相机-雷达联合标定结果
+        </span>
+
     </div>
+
+</div>
 
 
     <div class="project-detail-grid">
@@ -1391,12 +1427,13 @@
             </h4>
 
             <p>
-                相机能够提供丰富的纹理和语义信息，但缺乏直接的三维距离测量能力；
-                激光雷达具有准确的空间测距能力，却缺少图像中的视觉表达。
-                为实现图像与点云在统一坐标系下的对应，需要准确估计相机内参、
-                畸变参数以及相机与雷达之间的六自由度外参。
-                本项目采用棋盘格标定板作为共同观测目标，
-                将相机和雷达标定过程解耦，并通过多帧、多标定板的几何约束完成联合优化。
+                人形机器人需要融合相机与激光雷达完成环境建图、障碍物感知和三维定位。
+                其中，相机提供丰富的纹理与语义信息，激光雷达提供高精度的三维空间测量能力，
+                但两者在安装位置和坐标系上的差异会影响感知结果的空间一致性。
+                本项目面向人形机器人上的相机-雷达传感器标定需求，
+                通过棋盘格标定板建立共同几何约束，
+                分别完成相机内参标定、雷达平面提取以及相机与雷达六自由度外参优化，
+                实现多传感器数据的准确空间对齐。
             </p>
 
         </div>
@@ -1413,7 +1450,7 @@
 
                 <li>
                     设计棋盘格图像角点自动提取与时序跟踪流程，
-                    基于多尺度四象限模板响应、NMS、梯度方向分析和均值漂移聚类
+                    基于多尺度四象限模板响应、NMS、梯度方向分析等，
                     获取亚像素角点，并通过棋盘格结构能量函数完成拓扑重建；
                     结合金字塔光流与标定板形心匹配，建立多帧稳定的 3D-2D 对应关系。
                 </li>
