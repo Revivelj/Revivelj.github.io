@@ -1693,3 +1693,52 @@ img {
         grid-template-columns: 1fr;
     }
 }
+/* 昇腾项目：两张 MatMul 图片并排 */
+.ascend-image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin: 28px 0 34px;
+}
+
+
+/* 单张图片及其标题 */
+.ascend-image-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+
+/* 图片样式 */
+.ascend-image-item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background: #f7f7f7;
+    border: 1px solid var(--line-color, #e5e7eb);
+    border-radius: 8px;
+}
+
+
+/* 图片下方标题 */
+.ascend-image-item span {
+    display: block;
+    text-align: center;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--muted-text, #777);
+}
+
+
+/* 移动端自动改为上下排列 */
+@media (max-width: 700px) {
+
+    .ascend-image-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+}
