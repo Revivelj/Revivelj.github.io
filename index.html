@@ -2,45 +2,62 @@
 <html lang="zh-CN">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>李佳 | AI & Robotics Portfolio</title>
 
-    <meta name="description"
-          content="李佳的个人作品集，研究方向包括人工智能、强化学习、机器人运动控制、无人机自主系统与多传感器融合。">
+    <meta
+        name="description"
+        content="李佳的个人作品集，研究方向包括人工智能、强化学习、机器人运动控制、无人机自主系统与多传感器融合。"
+    >
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
 
     <!-- 主样式 -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css"
+    >
 
     <!-- MathJax -->
     <script>
+
         window.MathJax = {
+
             tex: {
+
                 inlineMath: [
                     ['$', '$'],
                     ['\\(', '\\)']
                 ],
+
                 displayMath: [
                     ['$$', '$$'],
                     ['\\[', '\\]']
                 ]
+
             }
+
         };
+
     </script>
 
-    <script async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+    <script
+        async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
 
 </head>
 
 
 <body id="top">
+
 
 <!-- =====================================================
      顶部导航
@@ -50,13 +67,20 @@
 
     <div class="nav-container">
 
-        <a href="#top" class="logo">
+        <a
+            href="#top"
+            class="logo"
+        >
             LJ
         </a>
 
+
         <nav class="nav-links">
 
-            <a href="#top" class="active">
+            <a
+                href="#top"
+                class="active"
+            >
                 首页
             </a>
 
@@ -89,6 +113,7 @@
     </div>
 
 </header>
+
 
 
 <!-- =====================================================
@@ -139,6 +164,7 @@
 
             <div class="profile-divider"></div>
 
+
             <div class="profile-contact">
 
                 <p>
@@ -148,6 +174,7 @@
 
                 <p>
                     <i class="fas fa-envelope"></i>
+
                     <a href="mailto:your-email@example.com">
                         Email
                     </a>
@@ -155,6 +182,7 @@
 
                 <p>
                     <i class="fab fa-github"></i>
+
                     <a
                         href="https://github.com/Revivelj"
                         target="_blank"
@@ -166,6 +194,7 @@
 
                 <p>
                     <i class="fas fa-file-pdf"></i>
+
                     <a href="cv.html">
                         Curriculum Vitae
                     </a>
@@ -190,6 +219,7 @@
     </aside>
 
 
+
     <!-- =================================================
          右侧主要内容
     ================================================== -->
@@ -201,7 +231,10 @@
              About Me
         ================================================== -->
 
-        <section class="about-section" id="about">
+        <section
+            class="about-section"
+            id="about"
+        >
 
             <div class="small-label">
                 PERSONAL PORTFOLIO
@@ -233,6 +266,7 @@
                 构建能够在实际复杂环境中运行的智能系统。
             </p>
 
+
             <div class="about-highlight">
 
                 <i class="fas fa-quote-left"></i>
@@ -245,6 +279,7 @@
             </div>
 
         </section>
+
 
 
         <!-- =================================================
@@ -303,11 +338,15 @@
         </section>
 
 
+
         <!-- =================================================
              项目与竞赛汇总
         ================================================== -->
 
-        <section class="portfolio-overview" id="overview">
+        <section
+            class="portfolio-overview"
+            id="overview"
+        >
 
             <div class="section-heading">
 
@@ -321,7 +360,7 @@
                 </h2>
 
                 <p>
-                    科研项目、工程实践与机器人竞赛经历
+                    按照机器人控制、无人机系统、AI 模型优化及感知融合进行分类
                 </p>
 
             </div>
@@ -331,17 +370,17 @@
 
 
                 <!-- =================================================
-                     项目汇总
+                     机器人与运动控制
                 ================================================== -->
 
                 <div class="overview-group">
 
                     <div class="overview-group-title">
 
-                        <i class="fas fa-folder-open"></i>
+                        <i class="fas fa-robot"></i>
 
                         <span>
-                            Selected Projects
+                            Robotics & Motion Control
                         </span>
 
                     </div>
@@ -363,85 +402,7 @@
                             </h3>
 
                             <p>
-                                深度强化学习 · PPO · 仿真训练 · 机器人运动控制
-                            </p>
-
-                        </div>
-
-                        <i class="fas fa-arrow-down overview-item-arrow"></i>
-
-                    </a>
-
-
-                    <a
-                        href="#uav-detail"
-                        class="overview-item"
-                    >
-
-                        <div class="overview-item-index">
-                            02
-                        </div>
-
-                        <div class="overview-item-content">
-
-                            <h3>
-                                无人机自主抓取系统
-                            </h3>
-
-                            <p>
-                                YOLOv8 · RGB-D定位 · NMPC · 干扰估计 · PX4
-                            </p>
-
-                        </div>
-
-                        <i class="fas fa-arrow-down overview-item-arrow"></i>
-
-                    </a>
-
-
-                    <a
-                        href="#model-detail"
-                        class="overview-item"
-                    >
-
-                        <div class="overview-item-index">
-                            03
-                        </div>
-
-                        <div class="overview-item-content">
-
-                            <h3>
-                                深度学习模型部署与推理优化
-                            </h3>
-
-                            <p>
-                                PyTorch · ONNX · CANN · 模型转换与推理加速
-                            </p>
-
-                        </div>
-
-                        <i class="fas fa-arrow-down overview-item-arrow"></i>
-
-                    </a>
-
-
-                    <a
-                        href="#calibration-detail"
-                        class="overview-item"
-                    >
-
-                        <div class="overview-item-index">
-                            04
-                        </div>
-
-                        <div class="overview-item-content">
-
-                            <h3>
-                                相机-雷达联合标定与多传感器融合
-                            </h3>
-
-                            <p>
-                                坐标系建模 · 外参标定 · 传感器融合
+                                深度强化学习 · PPO · Isaac Gym · 残差预测 · 安全策略切换
                             </p>
 
                         </div>
@@ -453,8 +414,199 @@
                 </div>
 
 
+
                 <!-- =================================================
-                     竞赛汇总
+                     无人机自主系统
+                ================================================== -->
+
+                <div class="overview-group">
+
+                    <div class="overview-group-title">
+
+                        <i class="fas fa-helicopter"></i>
+
+                        <span>
+                            UAV & Autonomous Systems
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="#uav-detail"
+                        class="overview-item"
+                    >
+
+                        <div class="overview-item-index">
+                            01
+                        </div>
+
+                        <div class="overview-item-content">
+
+                            <h3>
+                                基于视觉引导与模型预测控制的无人机自主抓取系统
+                            </h3>
+
+                            <p>
+                                YOLOv8 · RGB-D 定位 · FSM 规划 · NMPC · EKF / FR-MHE · PX4
+                            </p>
+
+                        </div>
+
+                        <i class="fas fa-arrow-down overview-item-arrow"></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     AI 模型优化与部署
+                ================================================== -->
+
+                <div class="overview-group">
+
+                    <div class="overview-group-title">
+
+                        <i class="fas fa-microchip"></i>
+
+                        <span>
+                            AI Model Optimization & Deployment
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="#ascend-optimization-detail"
+                        class="overview-item"
+                    >
+
+                        <div class="overview-item-index">
+                            01
+                        </div>
+
+                        <div class="overview-item-content">
+
+                            <h3>
+                                昇腾 CANN 平台模型图与算子级推理优化
+                            </h3>
+
+                            <p>
+                                CANN · ATC · 图优化 · 算子融合 · Fixpipe · NZ-ND
+                            </p>
+
+                        </div>
+
+                        <i class="fas fa-arrow-down overview-item-arrow"></i>
+
+                    </a>
+
+
+                    <a
+                        href="#quantization-detail"
+                        class="overview-item"
+                    >
+
+                        <div class="overview-item-index">
+                            02
+                        </div>
+
+                        <div class="overview-item-content">
+
+                            <h3>
+                                Transformer 混合精度量化与模型压缩
+                            </h3>
+
+                            <p>
+                                PTQ · IFMR · Per-channel Quantization · INT8 / FP32
+                            </p>
+
+                        </div>
+
+                        <i class="fas fa-arrow-down overview-item-arrow"></i>
+
+                    </a>
+
+
+                    <a
+                        href="#ascend-skill-detail"
+                        class="overview-item"
+                    >
+
+                        <div class="overview-item-index">
+                            03
+                        </div>
+
+                        <div class="overview-item-content">
+
+                            <h3>
+                                基于 Agent Skill 的昇腾模型转换自动化工具链
+                            </h3>
+
+                            <p>
+                                Agent · Skill · ONNX → OM · ATC · 多芯片平台适配
+                            </p>
+
+                        </div>
+
+                        <i class="fas fa-arrow-down overview-item-arrow"></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     计算机视觉与传感器融合
+                ================================================== -->
+
+                <div class="overview-group">
+
+                    <div class="overview-group-title">
+
+                        <i class="fas fa-camera"></i>
+
+                        <span>
+                            Computer Vision & Sensor Fusion
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="#calibration-detail"
+                        class="overview-item"
+                    >
+
+                        <div class="overview-item-index">
+                            01
+                        </div>
+
+                        <div class="overview-item-content">
+
+                            <h3>
+                                相机-雷达联合标定与多传感器空间对齐
+                            </h3>
+
+                            <p>
+                                OpenCV · 棋盘格角点 · RANSAC · SVD · Ceres · 6-DoF 外参
+                            </p>
+
+                        </div>
+
+                        <i class="fas fa-arrow-down overview-item-arrow"></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     竞赛经历
                 ================================================== -->
 
                 <div class="overview-group">
@@ -482,11 +634,11 @@
                         <div class="overview-item-content">
 
                             <h3>
-                                RoboCup 2021
+                                RoboCup 2021 中国机器人大赛
                             </h3>
 
                             <p>
-                                机器人足球 · 控制策略 · 系统调试
+                                自动分拣机器人 · 全国一等奖（冠军）
                             </p>
 
                         </div>
@@ -508,11 +660,11 @@
                         <div class="overview-item-content">
 
                             <h3>
-                                RoboMaster 2022
+                                RoboMaster 2022 机甲大师超级对抗赛
                             </h3>
 
                             <p>
-                                机器人系统 · 机械电控协同 · 工程实践
+                                步兵机器人云台机械系统 · 全国一等奖
                             </p>
 
                         </div>
@@ -534,11 +686,11 @@
                         <div class="overview-item-content">
 
                             <h3>
-                                全国大学生机械创新设计大赛
+                                第九届江苏省大学生机械创新设计大赛
                             </h3>
 
                             <p>
-                                机械设计 · 结构分析 · 原型实现
+                                扑翼飞行器设计与实现 · 省级二等奖
                             </p>
 
                         </div>
@@ -552,6 +704,7 @@
             </div>
 
         </section>
+
 
 
         <!-- =================================================
@@ -581,1324 +734,1384 @@
             </div>
 
 
+
             <!-- =================================================
                  四足机器人项目
             ================================================== -->
 
             <article
-    class="project-detail-block"
-    id="quadruped-detail"
->
+                class="project-detail-block"
+                id="quadruped-detail"
+            >
 
-    <div class="project-detail-topline">
+                <div class="project-detail-topline">
 
-        <span>
-            01 · ROBOTICS / REINFORCEMENT LEARNING
-        </span>
+                    <span>
+                        01 · ROBOTICS / REINFORCEMENT LEARNING
+                    </span>
 
-        <a href="#overview">
-            返回概览 ↑
-        </a>
+                    <a href="#overview">
+                        返回概览 ↑
+                    </a>
 
-    </div>
-
-    <h3>
-        四足机器人强化学习运动控制
-    </h3>
-
-    <p class="project-detail-intro">
-        面向复杂地形与动力学不确定条件下的四足机器人自主运动控制问题，
-        融合深度强化学习、时序残差预测与可达性安全评估，
-        构建从仿真训练、风险感知到实机部署的鲁棒运动控制系统。
-    </p>
+                </div>
 
 
-    <div class="project-detail-image">
-
-        <img
-            src="assets/images/quadruped.jpg"
-            alt="四足机器人强化学习运动控制"
-        >
-
-    </div>
+                <h3>
+                    四足机器人强化学习运动控制
+                </h3>
 
 
-    <div class="project-detail-grid">
-
-        <!-- 项目背景 -->
-        <div>
-
-            <h4>
-                项目背景
-            </h4>
-
-            <p>
-                针对四足机器人在陌生地形、负载变化及模型失配条件下容易出现运动性能下降
-                甚至失稳的问题，本项目采用深度强化学习学习复杂环境下的运动策略，
-                并引入时序残差预测建模标称动力学与真实动力学之间的差异。
-                同时结合基于 Hamilton-Jacobi 可达性理论的 Reach-Avoid 值网络，
-                对机器人潜在碰撞与失稳风险进行实时评估，实现敏捷策略与恢复策略之间的安全切换，
-                提升机器人在复杂环境中的运动鲁棒性与安全性。
-            </p>
-
-        </div>
+                <p class="project-detail-intro">
+                    面向复杂地形与动力学不确定条件下的四足机器人自主运动控制问题，
+                    融合深度强化学习、时序残差预测与可达性安全评估，
+                    构建从仿真训练、风险感知到实机部署的鲁棒运动控制系统。
+                </p>
 
 
-        <!-- 主要工作 -->
-        <div>
+                <div class="project-detail-image">
 
-            <h4>
-                主要工作
-            </h4>
+                    <img
+                        src="assets/images/quadruped.jpg"
+                        alt="四足机器人强化学习运动控制"
+                    >
 
-            <ul>
-
-                <li>
-                    基于 Isaac Gym 搭建四足机器人大规模并行强化学习训练环境，
-                    完成地形、摩擦系数、机器人质量、质心偏移、执行器时延及传感器噪声等物理参数与感知噪声的域随机化设计，并实现多环境独立重置，
-                    提升策略对复杂环境和动力学变化的适应能力。
-                </li>
-
-                <li>
-                    设计基于 PPO 的四足机器人运动控制策略，
-                    完成包括本体感知、地形射线、目标运动指令及历史动作在内的观测空间构建，
-                    设计融合位置追踪、航向跟踪、碰撞惩罚、停滞惩罚和动作平滑约束的奖励函数，
-                    输出 12 维关节目标角度并通过固定增益 PD 控制器实现底层力矩控制。
-                </li>
-
-                <li>
-                    构建基于时序残差预测的动力学补偿模块，
-                    利用历史残差序列刻画标称模型与真实运动状态之间的偏差，
-                    通过 MLP 预测未来残差，并提取历史及未来残差特征，
-                    将其注入策略观测空间以增强策略对动力学漂移的预测能力。
-                </li>
-
-                <li>
-                    设计基于 Hamilton-Jacobi 可达性理论的 Reach-Avoid 值网络，
-                    通过离线采集敏捷策略运行轨迹并学习可达性值函数，
-                    实时评估机器人在当前状态下的碰撞与失稳风险，
-                    根据安全阈值动态切换敏捷策略与恢复策略，实现面向安全约束的双策略控制框架。
-                </li>
-
-                <li>
-                    开展 Sim-to-Real 部署与实机验证，
-                    针对深度图射线预测误差、状态数据传输不稳定、PointLIO 状态更新间隔以及残差分布差异等问题，
-                    采用监督重训练、数据复用、定时器缓存和噪声增强等方法进行系统改进，
-                    并通过消融实验分析历史残差、未来残差及域随机化对运动性能的影响。
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
+                </div>
 
 
-    <div class="detail-result">
+                <div class="project-detail-grid">
 
-        <strong>融合残差预测</strong>
+                    <div>
 
-        <span>
-            双策略安全切换与 Reach-Avoid 风险评估的四足机器人鲁棒控制框架
-        </span>
+                        <h4>
+                            项目背景
+                        </h4>
 
-    </div>
+                        <p>
+                            针对四足机器人在陌生地形、负载变化及模型失配条件下容易出现运动性能下降
+                            甚至失稳的问题，本项目采用深度强化学习学习复杂环境下的运动策略，
+                            并引入时序残差预测建模标称动力学与真实动力学之间的差异。
+                            同时结合基于 Hamilton-Jacobi 可达性理论的 Reach-Avoid 值网络，
+                            对机器人潜在碰撞与失稳风险进行实时评估，实现敏捷策略与恢复策略之间的安全切换，
+                            提升机器人在复杂环境中的运动鲁棒性与安全性。
+                        </p>
+
+                    </div>
 
 
-    <div class="detail-tech-row">
+                    <div>
 
-        <span>Python</span>
-        <span>PyTorch</span>
-        <span>PPO</span>
-        <span>Isaac Gym</span>
-        <span>Reach-Avoid</span>
-        <span>Residual Prediction</span>
-        <span>Sim-to-Real</span>
+                        <h4>
+                            主要工作
+                        </h4>
 
-    </div>
+                        <ul>
 
-</article>
+                            <li>
+                                基于 Isaac Gym 搭建四足机器人大规模并行强化学习训练环境，
+                                完成地形、摩擦系数、机器人质量、质心偏移、执行器时延及传感器噪声等
+                                物理参数与感知噪声的域随机化设计，并实现多环境独立重置，
+                                提升策略对复杂环境和动力学变化的适应能力。
+                            </li>
+
+                            <li>
+                                设计基于 PPO 的四足机器人运动控制策略，
+                                完成本体感知、地形射线、目标运动指令及历史动作观测空间构建，
+                                设计融合位置追踪、航向跟踪、碰撞惩罚、停滞惩罚和动作平滑约束的奖励函数，
+                                输出 12 维关节目标角度并通过固定增益 PD 控制器实现底层力矩控制。
+                            </li>
+
+                            <li>
+                                构建基于时序残差预测的动力学补偿模块，
+                                利用历史残差序列刻画标称模型与真实运动状态之间的偏差，
+                                通过 MLP 预测未来残差，并提取历史及未来残差特征，
+                                将其注入策略观测空间以增强策略对动力学漂移的预测能力。
+                            </li>
+
+                            <li>
+                                设计基于 Hamilton-Jacobi 可达性理论的 Reach-Avoid 值网络，
+                                通过离线采集敏捷策略运行轨迹并学习可达性值函数，
+                                实时评估机器人在当前状态下的碰撞与失稳风险，
+                                根据安全阈值动态切换敏捷策略与恢复策略，实现面向安全约束的双策略控制框架。
+                            </li>
+
+                            <li>
+                                开展 Sim-to-Real 部署与实机验证，
+                                针对深度图射线预测误差、状态数据传输不稳定、PointLIO 状态更新间隔
+                                以及残差分布差异等问题，采用监督重训练、数据复用、定时器缓存和噪声增强等方法
+                                进行系统改进，并通过消融实验分析历史残差、未来残差及域随机化对运动性能的影响。
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail-result">
+
+                    <strong>
+                        融合残差预测
+                    </strong>
+
+                    <span>
+                        双策略安全切换与 Reach-Avoid 风险评估的四足机器人鲁棒控制框架
+                    </span>
+
+                </div>
+
+
+                <div class="detail-tech-row">
+
+                    <span>Python</span>
+                    <span>PyTorch</span>
+                    <span>PPO</span>
+                    <span>Isaac Gym</span>
+                    <span>Reach-Avoid</span>
+                    <span>Residual Prediction</span>
+                    <span>Sim-to-Real</span>
+
+                </div>
+
+            </article>
+
+
 
             <!-- =================================================
                  无人机项目
             ================================================== -->
 
-<article
-    class="project-detail-block"
-    id="uav-detail"
->
+            <article
+                class="project-detail-block"
+                id="uav-detail"
+            >
 
-    <div class="project-detail-topline">
+                <div class="project-detail-topline">
 
-        <span>
-            02 · UAV / COMPUTER VISION / CONTROL
-        </span>
+                    <span>
+                        02 · UAV / COMPUTER VISION / CONTROL
+                    </span>
 
-        <a href="#overview">
-            返回概览 ↑
-        </a>
-
-    </div>
-
-
-    <h3>
-        基于视觉引导与模型预测控制的无人机自主抓取系统
-    </h3>
-
-
-    <p class="project-detail-intro">
-        面向复杂环境下的无人机自主抓取任务，
-        融合视觉感知、自主规划、模型预测控制和干扰估计，
-        实现从目标搜索到抓取运输的完整任务流程。
-    </p>
-
-
-    <!-- =================================================
-         UAV Simulation Videos
-    ================================================== -->
-
-    <div class="uav-video-section">
-
-        <div class="uav-video-grid">
-
-            <!-- 视频一：视觉感知与自主规划 -->
-            <div class="uav-video-card">
-
-                <div class="uav-video-wrapper">
-
-                    <video
-                        controls
-                        preload="metadata"
-                        playsinline
-                    >
-                        <source
-                            src="assets/videos/uav-third-view.mp4"
-                            type="video/mp4"
-                        >
-
-                        您的浏览器不支持 HTML5 视频播放。
-                    </video>
+                    <a href="#overview">
+                        返回概览 ↑
+                    </a>
 
                 </div>
 
-                <div class="uav-video-caption">
 
-                    <h4>
-                        无人机第三视角
-                    </h4>
+                <h3>
+                    基于视觉引导与模型预测控制的无人机自主抓取系统
+                </h3>
 
-                    <p>
-                        展示无人机完成目标检测、三维定位、
-                        干扰估计及自主路径规划的初步仿真流程程。
-                    </p>
+
+                <p class="project-detail-intro">
+                    面向复杂环境下的无人机自主抓取任务，
+                    融合视觉感知、自主规划、模型预测控制和干扰估计，
+                    实现从目标搜索到抓取运输的完整任务流程。
+                </p>
+
+
+                <div class="uav-video-section">
+
+                    <div class="uav-video-grid">
+
+                        <div class="uav-video-card">
+
+                            <div class="uav-video-wrapper">
+
+                                <video
+                                    controls
+                                    preload="metadata"
+                                    playsinline
+                                >
+
+                                    <source
+                                        src="assets/videos/uav-third-view.mp4"
+                                        type="video/mp4"
+                                    >
+
+                                    您的浏览器不支持 HTML5 视频播放。
+
+                                </video>
+
+                            </div>
+
+
+                            <div class="uav-video-caption">
+
+                                <h4>
+                                    无人机第三视角
+                                </h4>
+
+                                <p>
+                                    展示无人机完成目标检测、三维定位、
+                                    干扰估计及自主路径规划的仿真流程。
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="uav-video-card">
+
+                            <div class="uav-video-wrapper">
+
+                                <video
+                                    controls
+                                    preload="metadata"
+                                    playsinline
+                                >
+
+                                    <source
+                                        src="assets/videos/uav-first-view.mp4"
+                                        type="video/mp4"
+                                    >
+
+                                    您的浏览器不支持 HTML5 视频播放。
+
+                                </video>
+
+                            </div>
+
+
+                            <div class="uav-video-caption">
+
+                                <h4>
+                                    无人机第一视角
+                                </h4>
+
+                                <p>
+                                    展示无人机目标识别与视觉检测功能。
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
-            </div>
+
+                <div
+                    class="project-detail-grid"
+                    style="
+                        display: flex;
+                        flex-direction: column;
+                        gap: 36px;
+                    "
+                >
+
+                    <section>
+
+                        <h4>
+                            项目背景
+                        </h4>
+
+                        <p>
+                            本项目针对无人机执行自主抓取任务时存在的目标定位误差、
+                            抓取后负载变化以及外部风扰等问题，设计了一套基于视觉引导
+                            与模型预测控制的自主抓取系统。系统在 PX4 Offboard 模式下，
+                            无需人工遥控即可完成目标搜索、识别定位、接近抓取、
+                            抓取确认、运输和释放。
+                        </p>
+
+                    </section>
 
 
-            <!-- 视频二：干扰估计与补偿 -->
-            <div class="uav-video-card">
+                    <section>
 
-                <div class="uav-video-wrapper">
+                        <h4>
+                            主要工作
+                        </h4>
 
-                    <video
-                        controls
-                        preload="metadata"
-                        playsinline
-                    >
-                        <source
-                            src="assets/videos/uav-first-view.mp4"
-                            type="video/mp4"
-                        >
+                        <ul>
 
-                        您的浏览器不支持 HTML5 视频播放。
-                    </video>
+                            <li>
+                                搭建基于 ROS1 / Gazebo / PX4 Offboard 的无人机自主抓取仿真环境，
+                                完成飞控、深度相机、气泵、电磁阀及压力传感器等软硬件模块集成，
+                                构建目标搜索、接近、抓取、运输与释放的全流程任务场景。
+                            </li>
+
+                            <li>
+                                部署并微调 YOLOv8n 目标检测模型，融合相机深度信息，
+                                通过像素坐标反投影、坐标系变换及滤波处理实现目标三维位置与位姿估计，
+                                为无人机自主接近和抓取提供视觉观测。
+                            </li>
+
+                            <li>
+                                设计基于有限状态机的视觉引导路径规划方法，
+                                实现目标搜索、位置对准、姿态调整、抓取确认及目标运输等任务状态切换，
+                                并利用压力传感器检测气路压力变化判断吸附是否成功，支持失败重试。
+                            </li>
+
+                            <li>
+                                建立四旋翼无人机非线性运动模型，基于 acados 开发 NMPC 轨迹跟踪控制器，
+                                将推力与姿态控制指令纳入滚动优化过程，显式处理推力饱和、
+                                姿态角和飞行区域等约束，实现复杂任务过程中的实时轨迹跟踪。
+                            </li>
+
+                        </ul>
+
+
+                        <div class="project-inline-formula">
+
+                            <span>
+                                NMPC Objective
+                            </span>
+
+                            $$
+
+                            J =
+                            \sum_{k=0}^{N-1}
+                            \left\|x_k-x_k^{ref}\right\|_Q^2
+                            +
+                            \left\|u_k\right\|_R^2
+                            +
+                            \left\|x_N-x_N^{ref}\right\|_P^2
+
+                            $$
+
+                        </div>
+
+
+                        <ul>
+
+                            <li>
+                                集成 EKF 与 FR-MHE 两种干扰估计器，
+                                将负载突变和风扰引起的等效加速度干扰通过前馈补偿引入 NMPC 预测模型，
+                                并开展多算法对比验证，使轨迹跟踪 RMSE 降低约 30%，
+                                提升系统抗干扰能力与鲁棒性。
+                            </li>
+
+                        </ul>
+
+
+                        <div class="project-inline-formula">
+
+                            <span>
+                                Disturbance Compensation
+                            </span>
+
+                            $$
+
+                            u =
+                            u_{\mathrm{NMPC}}
+                            -
+                            \hat{d}
+
+                            $$
+
+                        </div>
+
+                    </section>
 
                 </div>
 
-                <div class="uav-video-caption">
 
-                    <h4>
-                        无人机第一视角
-                    </h4>
+                <div class="detail-result">
 
-                    <p>
-                        展示无人机识别和检测功能。
-                    </p>
+                    <strong>
+                        约 30%
+                    </strong>
+
+                    <span>
+                        引入干扰估计后轨迹跟踪 RMSE 降低
+                    </span>
 
                 </div>
 
-            </div>
 
-        </div>
+                <div class="detail-tech-row">
 
-    </div>
+                    <span>YOLOv8</span>
+                    <span>PX4</span>
+                    <span>ROS1</span>
+                    <span>Gazebo</span>
+                    <span>NMPC</span>
+                    <span>EKF / FR-MHE</span>
 
+                </div>
 
-    <!-- =================================================
-         Project Content
-    ================================================== -->
+            </article>
 
-    <div
-        class="project-detail-grid"
-        style="
-            display: flex;
-            flex-direction: column;
-            gap: 36px;
-        "
-    >
-
-        <!-- 项目背景 -->
-        <section>
-
-            <h4>
-                项目背景
-            </h4>
-
-            <p>
-                本项目针对无人机执行自主抓取任务时存在的目标定位误差、
-                抓取后负载变化以及外部风扰等问题，设计了一套基于视觉引导
-                与模型预测控制的自主抓取系统。系统在 PX4 Offboard 模式下，
-                无需人工遥控即可完成目标搜索、识别定位、接近抓取、
-                抓取确认、运输和释放。
-            </p>
-
-        </section>
-
-
-        <!-- 主要工作 -->
-        <section>
-
-            <h4>
-                主要工作
-            </h4>
-
-            <ul>
-
-                <li>
-                    搭建基于 ROS1 / Gazebo / PX4 Offboard 的无人机自主抓取仿真环境，
-                    完成飞控、深度相机、气泵、电磁阀及压力传感器等软硬件模块集成，
-                    构建目标搜索、接近、抓取、运输与释放的全流程任务场景。
-                </li>
-
-                <li>
-                    部署并微调 YOLOv8n 目标检测模型，融合相机深度信息，
-                    通过像素坐标反投影、坐标系变换及滤波处理实现目标三维位置与位姿估计，
-                    为无人机自主接近和抓取提供视觉观测。
-                </li>
-
-                <li>
-                    设计基于有限状态机的视觉引导路径规划方法，
-                    实现目标搜索、位置对准、姿态调整、抓取确认及目标运输等任务状态切换，
-                    并利用压力传感器检测气路压力变化判断吸附是否成功，支持失败重试。
-                </li>
-
-                <li>
-                    建立四旋翼无人机非线性运动模型，基于 acados 开发 NMPC 轨迹跟踪控制器，
-                    将推力与姿态控制指令纳入滚动优化过程，显式处理推力饱和、
-                    姿态角和飞行区域等约束，实现复杂任务过程中的实时轨迹跟踪。
-                </li>
-
-            </ul>
-
-
-            <!-- NMPC 目标函数 -->
-            <div class="project-inline-formula">
-
-                <span>
-                    NMPC Objective
-                </span>
-
-                $$
-                J =
-                \sum_{k=0}^{N-1}
-                \left\|x_k-x_k^{ref}\right\|_Q^2
-                +
-                \left\|u_k\right\|_R^2
-                +
-                \left\|x_N-x_N^{ref}\right\|_P^2
-                $$
-
-            </div>
-
-
-            <ul>
-
-                <li>
-                    集成 EKF 与 FR-MHE 两种干扰估计器，将负载突变和风扰引起的等效加速度干扰
-                    通过前馈补偿引入 NMPC 预测模型，并开展多算法对比验证，
-                    使轨迹跟踪 RMSE 降低约 30%，提升系统抗干扰能力与鲁棒性。
-                </li>
-
-            </ul>
-
-
-            <!-- 干扰补偿公式 -->
-            <div class="project-inline-formula">
-
-                <span>
-                    Disturbance Compensation
-                </span>
-
-                $$
-                u =
-                u_{\mathrm{NMPC}}
-                -
-                \hat{d}
-                $$
-
-            </div>
-
-        </section>
-
-    </div>
-
-
-    <!-- =================================================
-         Project Result
-    ================================================== -->
-
-    <div class="detail-result">
-
-        <strong>
-            约 30%
-        </strong>
-
-        <span>
-            引入干扰估计后轨迹跟踪 RMSE 降低
-        </span>
-
-    </div>
-
-
-    <!-- =================================================
-         Technology Tags
-    ================================================== -->
-
-    <div class="detail-tech-row">
-
-        <span>YOLOv8</span>
-        <span>PX4</span>
-        <span>ROS1</span>
-        <span>Gazebo</span>
-        <span>NMPC</span>
-        <span>EKF / FR-MHE</span>
-
-    </div>
-
-
-</article>
 
 
             <!-- =================================================
-                 模型部署项目
+                 昇腾图优化项目
             ================================================== -->
 
-    <article
-    class="project-detail-block"
-    id="ascend-optimization-detail"
->
-
-    <div class="project-detail-topline">
-
-        <span>
-            03 · AI INFRA / GRAPH & OPERATOR OPTIMIZATION
-        </span>
-
-        <a href="#overview">
-            返回概览 ↑
-        </a>
-
-    </div>
-
-
-    <h3>
-        昇腾 CANN 平台模型图与算子级推理优化
-    </h3>
-
-
-    <p class="project-detail-intro">
-        面向昇腾 CANN 平台上的视觉感知与 Transformer 模型部署需求，
-        从计算图结构、算子执行路径和数据内存布局三个层面开展推理性能优化，
-        通过图级冗余消除、算子融合及硬件友好的数据排布设计，
-        在保持模型计算结果与特征响应一致的前提下降低推理时延和内存访问开销。
-    </p>
-
-
-    <!-- MatMul 原始过程与优化过程，两张图片并排展示 -->
-    <div class="ascend-image-grid">
-
-        <div class="ascend-image-item">
-
-            <img
-                src="assets/images/matmul-original.png"
-                alt="MatMul 算子原始计算过程"
+            <article
+                class="project-detail-block"
+                id="ascend-optimization-detail"
             >
 
-            <span>
-                MatMul 算子原始计算过程
-            </span>
+                <div class="project-detail-topline">
 
-        </div>
+                    <span>
+                        03 · AI INFRA / GRAPH & OPERATOR OPTIMIZATION
+                    </span>
+
+                    <a href="#overview">
+                        返回概览 ↑
+                    </a>
+
+                </div>
 
 
-        <div class="ascend-image-item">
+                <h3>
+                    昇腾 CANN 平台模型图与算子级推理优化
+                </h3>
 
-            <img
-                src="assets/images/matmul-optimized.png"
-                alt="MatMul 算子优化计算过程"
+
+                <p class="project-detail-intro">
+                    面向昇腾 CANN 平台上的视觉感知与 Transformer 模型部署需求，
+                    从计算图结构、算子执行路径和数据内存布局三个层面开展推理性能优化，
+                    通过图级冗余消除、算子融合及硬件友好的数据排布设计，
+                    在保持模型计算结果与特征响应一致的前提下降低推理时延和内存访问开销。
+                </p>
+
+
+                <div class="ascend-image-grid">
+
+                    <div class="ascend-image-item">
+
+                        <img
+                            src="assets/images/matmul-original.png"
+                            alt="MatMul 算子原始计算过程"
+                        >
+
+                        <span>
+                            MatMul 算子原始计算过程
+                        </span>
+
+                    </div>
+
+
+                    <div class="ascend-image-item">
+
+                        <img
+                            src="assets/images/matmul-optimized.png"
+                            alt="MatMul 算子优化计算过程"
+                        >
+
+                        <span>
+                            MatMul 算子优化计算过程
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-detail-grid">
+
+                    <div>
+
+                        <h4>
+                            项目背景
+                        </h4>
+
+                        <p>
+                            深度学习 ONNX 模型可能存在计算图冗余、算子组合不合理以及中间张量频繁搬运等问题。
+                            本项目围绕自动驾驶视觉感知模型与 Transformer 模型，
+                            分别从计算图级别和底层算子级别开展性能调优。
+                            一方面通过删除无效节点、等价融合等方式减少冗余计算；
+                            另一方面针对多头注意力中的矩阵乘法与数据排布转换，
+                            优化计算结果的搬出路径和内存布局，
+                            降低额外访存与 Kernel 调度开销。
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            主要工作
+                        </h4>
+
+                        <ul>
+
+                            <li>
+                                基于昇腾 CANN / ATC 完成模型转换、算子分析与性能 profiling，
+                                针对 IPM-PID 视觉感知模型检查计算图中的冗余分支、
+                                恒等映射及无效计算节点，并进行图级裁剪与结构清理。
+                            </li>
+
+                            <li>
+                                对模型中的 Conv-BN 等连续算子进行等价变换与融合，
+                                在保证模型输出和关键中间层特征响应一致的前提下，
+                                减少不必要的算子执行与中间张量传递，
+                                优化整体计算图执行路径。
+                            </li>
+
+                            <li>
+                                针对 Transformer 多头注意力中的 QKV 映射与数据排布转换问题，
+                                分析 MatMul 输出布局与下游所需 [B, H, S, D] 布局之间的重排开销，
+                                设计 MatMul-Transpose 融合方案，
+                                避免中间 [B, S, N] 张量的额外写回、读取和再次写回。
+                            </li>
+
+                            <li>
+                                基于 MatMulImpl 与 Datacopyout callback 实现计算与数据搬出协同，
+                                利用 Fixpipe 的 NZ-ND 转换能力直接生成目标布局，
+                                并结合多核任务切分和计算-搬出流水线重叠，
+                                降低数据搬运、Kernel 调度及下游算子等待开销。
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail-result">
+
+                    <strong>
+                        6.5%
+                    </strong>
+
+                    <span>
+                        IPM-PID 推理时延降低；Transformer 内存访问开销降低约 60%
+                    </span>
+
+                </div>
+
+
+                <div class="detail-tech-row">
+
+                    <span>CANN</span>
+                    <span>ATC</span>
+                    <span>OM</span>
+                    <span>Graph Optimization</span>
+                    <span>Operator Fusion</span>
+                    <span>Fixpipe</span>
+                    <span>NZ-ND</span>
+                    <span>Transformer</span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 Transformer 量化项目
+            ================================================== -->
+
+            <article
+                class="project-detail-block"
+                id="quantization-detail"
             >
 
-            <span>
-                MatMul 算子优化计算过程
-            </span>
+                <div class="project-detail-topline">
 
-        </div>
+                    <span>
+                        04 · MODEL COMPRESSION / QUANTIZATION
+                    </span>
 
-    </div>
+                    <a href="#overview">
+                        返回概览 ↑
+                    </a>
 
-
-    <div class="project-detail-grid">
-
-        <!-- 项目背景 -->
-        <div>
-
-            <h4>
-                项目背景
-            </h4>
-
-            <p>
-                深度学习onnx模型可能存在计算图冗余、算子组合不合理以及中间张量频繁搬运等问题。
-                本项目围绕自动驾驶视觉感知模型与 Transformer 模型，
-                分别从计算图级别和底层算子级别开展性能调优。
-                一方面通过删除无效节点、等价融合等方式减少冗余计算；
-                另一方面针对多头注意力中的矩阵乘法与数据排布转换，
-                优化计算结果的搬出路径和内存布局，
-                降低额外访存与 Kernel 调度开销。
-            </p>
-
-        </div>
+                </div>
 
 
-        <!-- 主要工作 -->
-        <div>
-
-            <h4>
-                主要工作
-            </h4>
-
-            <ul>
-
-                <li>
-                    基于昇腾 CANN / ATC 完成模型转换、算子分析与性能 profiling，
-                    针对 IPM-PID 视觉感知模型检查计算图中的冗余分支、
-                    恒等映射及无效计算节点，并进行图级裁剪与结构清理。
-                </li>
-
-                <li>
-                    对模型中的 Conv-BN 等连续算子进行等价变换与融合，
-                    在保证模型输出和关键中间层特征响应一致的前提下，
-                    减少不必要的算子执行与中间张量传递，
-                    优化整体计算图执行路径。
-                </li>
-
-                <li>
-                    针对 Transformer 多头注意力中的 QKV 映射与数据排布转换问题，
-                    分析 MatMul 输出布局与下游所需
-                    [B, H, S, D] 布局之间的重排开销，
-                    设计 MatMul-Transpose 融合方案，
-                    避免中间 [B, S, N] 张量的额外写回、
-                    读取和再次写回。
-                </li>
-
-                <li>
-                    基于 MatMulImpl 与 Datacopyout callback 实现计算与数据搬出协同，
-                    利用 Fixpipe 的 NZ-ND 转换能力直接生成目标布局，
-                    并结合多核任务切分和计算-搬出流水线重叠，
-                    降低数据搬运、Kernel 调度及下游算子等待开销。
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
+                <h3>
+                    Transformer 混合精度量化与模型压缩
+                </h3>
 
 
-    <div class="detail-result">
-
-        <strong>
-            6.5%
-        </strong>
-
-        <span>
-            IPM-PID 推理时延降低；Transformer 内存访问开销降低约 60%
-        </span>
-
-    </div>
+                <p class="project-detail-intro">
+                    面向 Transformer 模型在昇腾平台上的高效部署需求，
+                    设计融合激活校准、通道级权重量化与逐层敏感度回退的混合精度量化方案，
+                    在保持模型精度的同时降低模型存储与计算开销。
+                </p>
 
 
-    <div class="detail-tech-row">
+                <div class="project-detail-grid">
 
-        <span>CANN</span>
-        <span>ATC</span>
-        <span>OM</span>
-        <span>Graph Optimization</span>
-        <span>Operator Fusion</span>
-        <span>Transformer</span>
+                    <div>
 
-    </div>
+                        <h4>
+                            项目背景
+                        </h4>
 
-</article>
+                        <p>
+                            Transformer 模型通常具有较大的参数规模和较高的计算开销，
+                            直接采用低比特量化容易受到激活分布、异常值和不同层敏感度差异的影响，
+                            导致模型精度下降。本项目针对 Transformer 模型设计混合精度量化流程，
+                            在模型压缩率、推理效率和任务精度之间进行平衡。
+                        </p>
+
+                    </div>
 
 
-            <article
-    class="project-detail-block"
-    id="quantization-detail"
->
+                    <div>
 
-    <div class="project-detail-topline">
+                        <h4>
+                            主要工作
+                        </h4>
 
-        <span>
-            04 · MODEL COMPRESSION / QUANTIZATION
-        </span>
+                        <ul>
 
-        <a href="#overview">
-            返回概览 ↑
-        </a>
+                            <li>
+                                基于标定数据实现 IFMR 激活校准与 per-channel 权重量化，
+                                通过百分位阈值初始化、候选阈值搜索及 KL 散度评估确定激活量化范围，
+                                并针对不同算子特性自适应选择对称或非对称量化方式。
+                            </li>
 
-    </div>
+                            <li>
+                                设计逐层量化敏感度分析与混合精度回退机制，
+                                通过单层量化评估定位高敏感度层，并结合 AMCT 自动校准二分搜索及业务规则跳过策略，
+                                为不同层分配 INT8 或 FP32 精度，降低量化误差累积。
+                            </li>
 
-    <h3>
-        Transformer 混合精度量化与模型压缩
-    </h3>
+                            <li>
+                                搭建量化模型端到端精度验证与压缩率评估流程，
+                                对比量化前后模型输出及任务结果，在 210×13 输出规模验证中实现零精度损失，
+                                最终将模型压缩至原始大小的约 33%。
+                            </li>
 
-    <p class="project-detail-intro">
-        面向 Transformer 模型在昇腾平台上的高效部署需求，
-        设计融合激活校准、通道级权重量化与逐层敏感度回退的混合精度量化方案，
-        在保持模型精度的同时降低模型存储与计算开销。
-    </p>
+                        </ul>
 
-    <div class="project-detail-grid">
+                    </div>
 
-        <div>
+                </div>
 
-            <h4>
-                项目背景
-            </h4>
 
-            <p>
-                Transformer 模型通常具有较大的参数规模和较高的计算开销，
-                直接采用低比特量化容易受到激活分布、异常值和不同层敏感度差异的影响，
-                导致模型精度下降。本项目针对 Transformer 模型设计混合精度量化流程，
-                在模型压缩率、推理效率和任务精度之间进行平衡。
-            </p>
+                <div class="detail-result">
 
-        </div>
+                    <strong>
+                        33%
+                    </strong>
 
-       <div>
+                    <span>
+                        模型压缩至原始大小的约 33%，验证中实现零精度损失
+                    </span>
 
-    <h4>
-        主要工作
-    </h4>
+                </div>
 
-    <ul>
 
-        <li>
-            基于标定数据实现 IFMR 激活校准与 per-channel 权重量化，
-            通过百分位阈值初始化、候选阈值搜索及 KL 散度评估确定激活量化范围，
-            并针对不同算子特性自适应选择对称或非对称量化方式。
-        </li>
+                <div class="detail-tech-row">
 
-        <li>
-            设计逐层量化敏感度分析与混合精度回退机制，
-            通过单层量化评估定位高敏感度层，并结合 AMCT 自动校准二分搜索及业务规则跳过策略，
-            为不同层分配 INT8 或 FP32 精度，降低量化误差累积。
-        </li>
+                    <span>PTQ</span>
+                    <span>Mixed Precision</span>
+                    <span>IFMR</span>
+                    <span>Per-channel Quantization</span>
+                    <span>Transformer</span>
+                    <span>CANN</span>
 
-        <li>
-            搭建量化模型端到端精度验证与压缩率评估流程，
-            对比量化前后模型输出及任务结果，在 210×13 输出规模验证中实现零精度损失，
-            最终将模型压缩至原始大小的约 33%。
-        </li>
+                </div>
 
-    </ul>
+            </article>
 
-</div>
 
-    </div>
 
-    <div class="detail-result">
-
-        <strong>33%</strong>
-
-        <span>
-            模型压缩至原始大小的约 33%，验证中实现零精度损失
-        </span>
-
-    </div>
-
-    <div class="detail-tech-row">
-
-        <span>PTQ</span>
-        <span>Mixed Precision</span>
-        <span>IFMR</span>
-        <span>Per-channel Quantization</span>
-        <span>Transformer</span>
-
-    </div>
-
-</article>
-
+            <!-- =================================================
+                 Agent Skill 项目
+            ================================================== -->
 
             <article
-    class="project-detail-block"
-    id="ascend-skill-detail"
->
+                class="project-detail-block"
+                id="ascend-skill-detail"
+            >
 
-    <div class="project-detail-topline">
+                <div class="project-detail-topline">
 
-        <span>
-            05 · AGENT / AI ENGINEERING / TOOLCHAIN
-        </span>
+                    <span>
+                        05 · AGENT / AI ENGINEERING / TOOLCHAIN
+                    </span>
 
-        <a href="#overview">
-            返回概览 ↑
-        </a>
+                    <a href="#overview">
+                        返回概览 ↑
+                    </a>
 
-    </div>
-
-    <h3>
-        基于 Agent Skill 的昇腾模型转换自动化工具链
-    </h3>
-
-    <p class="project-detail-intro">
-        面向昇腾模型部署流程中模型解析、配置生成与 OM 转换等重复性操作，
-        设计基于 Agent Skill 的自动化编排工具链，
-        实现从 ONNX 模型到目标芯片 OM 文件的端到端自动转换与平台适配。
-    </p>
+                </div>
 
 
-    <div class="project-detail-grid">
+                <h3>
+                    基于 Agent Skill 的昇腾模型转换自动化工具链
+                </h3>
 
-        <div>
 
-            <h4>
-                项目背景
-            </h4>
+                <p class="project-detail-intro">
+                    面向昇腾模型部署流程中模型解析、配置生成与 OM 转换等重复性操作，
+                    设计基于 Agent Skill 的自动化编排工具链，
+                    实现从 ONNX 模型到目标芯片 OM 文件的端到端自动转换与平台适配。
+                </p>
 
-            <p>
-                昇腾模型部署通常需要依次完成模型结构解析、输入输出配置、
-                ATC 参数设置、目标芯片适配及 OM 文件生成等操作。
-                不同模型和芯片平台之间存在配置差异，人工执行过程繁琐且容易出现参数错误。
-                本项目将模型转换流程封装为可调用的 Agent Skill，
-                通过工具链编排实现模型部署过程的自动化和标准化。
-            </p>
 
-        </div>
+                <div class="project-detail-grid">
 
-        <div>
+                    <div>
 
-            <h4>
-                主要工作
-            </h4>
+                        <h4>
+                            项目背景
+                        </h4>
 
-            <ul>
+                        <p>
+                            昇腾模型部署通常需要依次完成模型结构解析、输入输出配置、
+                            ATC 参数设置、目标芯片适配及 OM 文件生成等操作。
+                            不同模型和芯片平台之间存在配置差异，人工执行过程繁琐且容易出现参数错误。
+                            本项目将模型转换流程封装为可调用的 Agent Skill，
+                            通过工具链编排实现模型部署过程的自动化和标准化。
+                        </p>
 
-                <li>
-                    设计端到端 ONNX → OM 模型转换 Skill，
-                    将模型解析、输入输出信息提取、配置文件生成及 ATC 转换等步骤
-                    封装为可被 Agent 调用的工具能力。
-                </li>
+                    </div>
 
-                <li>
-                    构建模型转换流程的自动化编排逻辑，
-                    根据模型结构和用户输入自动生成转换配置，
-                    减少人工填写动态尺寸、输入格式及数据类型等参数的工作量。
-                </li>
 
-                <li>
-                    针对 Ascend 310、Ascend 910 等不同目标芯片设计参数适配机制，
-                    根据目标硬件自动匹配对应的 ATC 编译参数和转换配置。
-                    打通模型仓库、模型解析工具、配置生成模块与 OM 转换工具链，
-                    实现从模型文件输入到目标平台 OM 文件输出的一键式生成流程。
-                </li>
+                    <div>
 
-            </ul>
+                        <h4>
+                            主要工作
+                        </h4>
 
-        </div>
+                        <ul>
 
-    </div>
+                            <li>
+                                设计端到端 ONNX → OM 模型转换 Skill，
+                                将模型解析、输入输出信息提取、配置文件生成及 ATC 转换等步骤
+                                封装为可被 Agent 调用的工具能力。
+                            </li>
 
-    <div class="detail-result">
+                            <li>
+                                构建模型转换流程的自动化编排逻辑，
+                                根据模型结构和用户输入自动生成转换配置，
+                                减少人工填写动态尺寸、输入格式及数据类型等参数的工作量。
+                            </li>
 
-        <strong>多芯片平台自动适配</strong>
+                            <li>
+                                针对 Ascend 310、Ascend 910 等不同目标芯片设计参数适配机制，
+                                根据目标硬件自动匹配对应的 ATC 编译参数和转换配置。
+                                打通模型仓库、模型解析工具、配置生成模块与 OM 转换工具链，
+                                实现从模型文件输入到目标平台 OM 文件输出的一键式生成流程。
+                            </li>
 
-        <span>
-            ONNX → OM支持多芯片平台自动适配与模型转换流程一键编排
-        </span>
+                        </ul>
 
-    </div>
+                    </div>
 
-    <div class="detail-tech-row">
+                </div>
 
-        <span>Agent</span>
-        <span>Skill</span>
-        <span>ONNX</span>
-        <span>ATC</span>
-        <span>OM</span>
-        <span>Ascend 310/910</span>
 
-    </div>
+                <div class="detail-result">
 
-</article>
+                    <strong>
+                        多芯片平台自动适配
+                    </strong>
+
+                    <span>
+                        ONNX → OM 支持多芯片平台自动适配与模型转换流程一键编排
+                    </span>
+
+                </div>
+
+
+                <div class="detail-tech-row">
+
+                    <span>Agent</span>
+                    <span>Skill</span>
+                    <span>ONNX</span>
+                    <span>ATC</span>
+                    <span>OM</span>
+                    <span>Ascend 310/910</span>
+
+                </div>
+
+            </article>
+
+
 
             <!-- =================================================
                  相机雷达标定项目
             ================================================== -->
 
             <article
-    class="project-detail-block"
-    id="calibration-detail"
->
+                class="project-detail-block"
+                id="calibration-detail"
+            >
 
-    <div class="project-detail-topline">
+                <div class="project-detail-topline">
 
-        <span>
-            06 · SENSOR CALIBRATION / 3D PERCEPTION
-        </span>
+                    <span>
+                        06 · SENSOR CALIBRATION / 3D PERCEPTION
+                    </span>
 
-        <a href="#overview">
-            返回概览 ↑
-        </a>
+                    <a href="#overview">
+                        返回概览 ↑
+                    </a>
 
-    </div>
-
-
-    <h3>
-        相机-雷达联合标定与多传感器空间对齐
-    </h3>
+                </div>
 
 
-    <p class="project-detail-intro">
-        面向机器人三维环境感知任务，设计基于棋盘格标定板的相机内参标定、
-        雷达平面提取及相机-雷达外参优化流程，
-        通过多帧多板联合约束实现传感器之间的高精度空间对齐。
-    </p>
+                <h3>
+                    相机-雷达联合标定与多传感器空间对齐
+                </h3>
 
 
-    <div class="calibration-image-grid">
-
-    <div class="calibration-image-item">
-
-        <img
-            src="assets/images/calibration-camera-tracking.png"
-            alt="图像侧棋盘格角点跟踪结果"
-        >
-
-        <span>
-            图像侧角点跟踪结果
-        </span>
-
-    </div>
+                <p class="project-detail-intro">
+                    面向机器人三维环境感知任务，设计基于棋盘格标定板的相机内参标定、
+                    雷达平面提取及相机-雷达外参优化流程，
+                    通过多帧多板联合约束实现传感器之间的高精度空间对齐。
+                </p>
 
 
-    <div class="calibration-image-item">
+                <div class="calibration-image-grid">
 
-        <img
-            src="assets/images/calibration-lidar-plane.png"
-            alt="雷达侧标定板平面提取结果"
-        >
+                    <div class="calibration-image-item">
 
-        <span>
-            雷达侧平面提取结果
-        </span>
+                        <img
+                            src="assets/images/calibration-camera-tracking.png"
+                            alt="图像侧棋盘格角点跟踪结果"
+                        >
 
-    </div>
+                        <span>
+                            图像侧角点跟踪结果
+                        </span>
 
-
-    <div class="calibration-image-item">
-
-        <img
-            src="assets/images/calibration.png"
-            alt="相机与雷达联合标定结果"
-        >
-
-        <span>
-            相机-雷达联合标定结果
-        </span>
-
-    </div>
-
-</div>
+                    </div>
 
 
-    <div class="project-detail-grid">
+                    <div class="calibration-image-item">
 
-        <!-- 项目背景 -->
-        <div>
+                        <img
+                            src="assets/images/calibration-lidar-plane.png"
+                            alt="雷达侧标定板平面提取结果"
+                        >
 
-            <h4>
-                项目背景
-            </h4>
+                        <span>
+                            雷达侧平面提取结果
+                        </span>
 
-            <p>
-                人形机器人需要融合相机与激光雷达完成环境建图、障碍物感知和三维定位。
-                其中，相机提供丰富的纹理与语义信息，激光雷达提供高精度的三维空间测量能力，
-                但两者在安装位置和坐标系上的差异会影响感知结果的空间一致性。
-                本项目面向人形机器人上的相机-雷达传感器标定需求，
-                通过棋盘格标定板建立共同几何约束，
-                分别完成相机内参标定、雷达平面提取以及相机与雷达六自由度外参优化，
-                实现多传感器数据的准确空间对齐。
-            </p>
-
-        </div>
+                    </div>
 
 
-        <!-- 主要工作 -->
-        <div>
+                    <div class="calibration-image-item">
 
-            <h4>
-                主要工作
-            </h4>
+                        <img
+                            src="assets/images/calibration.png"
+                            alt="相机与雷达联合标定结果"
+                        >
 
-            <ul>
+                        <span>
+                            相机-雷达联合标定结果
+                        </span>
 
-                <li>
-                    设计棋盘格图像角点自动提取与时序跟踪流程，
-                    基于多尺度四象限模板响应、NMS、梯度方向分析等，
-                    获取亚像素角点，并通过棋盘格结构能量函数完成拓扑重建；
-                    结合金字塔光流与标定板形心匹配，建立多帧稳定的 3D-2D 对应关系。
-                </li>
+                    </div>
 
-                <li>
-                    基于 OpenCV 重投影误差模型优化相机内参、畸变参数及各帧相机位姿，
-                    以标定板角点的三维真实坐标和图像观测坐标为约束，
-                    通过非线性最小二乘最小化多帧重投影误差，完成相机侧独立标定。
-                </li>
-
-                <li>
-                    针对雷达点云设计粗精结合的 RANSAC 平面提取方法，
-                    以标定板中心为引导进行局部点云筛选和精拟合，
-                    通过多板联合迭代、点到平面距离重新分配及交线附近点剔除，
-                    稳定获取各标定板的平面法向、中心点和高质量内点集合。
-                </li>
-
-                <li>
-                    基于雷达平面内点到相机平面的距离构建外参优化残差，
-                    先利用多帧平面法向 SVD 求解旋转初值，再通过线性最小二乘估计平移初值，
-                    采用 Ceres 对旋转角轴和平移向量进行非线性优化，
-                    并通过时间戳最近邻匹配实现图像与点云数据同步。
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
+                </div>
 
 
-    <div class="detail-result">
+                <div class="project-detail-grid">
 
-        <strong>6-DoF</strong>
+                    <div>
 
-        <span>
-            基于多帧多平面约束求解相机-雷达旋转与平移外参
-        </span>
+                        <h4>
+                            项目背景
+                        </h4>
 
-    </div>
+                        <p>
+                            人形机器人需要融合相机与激光雷达完成环境建图、障碍物感知和三维定位。
+                            其中，相机提供丰富的纹理与语义信息，激光雷达提供高精度的三维空间测量能力，
+                            但两者在安装位置和坐标系上的差异会影响感知结果的空间一致性。
+                            本项目面向人形机器人上的相机-雷达传感器标定需求，
+                            通过棋盘格标定板建立共同几何约束，
+                            分别完成相机内参标定、雷达平面提取以及相机与雷达六自由度外参优化，
+                            实现多传感器数据的准确空间对齐。
+                        </p>
+
+                    </div>
 
 
-    <div class="detail-tech-row">
+                    <div>
 
-        <span>OpenCV</span>
-        <span>Camera Calibration</span>
-        <span>RANSAC</span>
-        <span>Point Cloud</span>
-        <span>SVD</span>
-        <span>Ceres Solver</span>
-        <span>Sensor Fusion</span>
+                        <h4>
+                            主要工作
+                        </h4>
 
-    </div>
+                        <ul>
 
-</article>
+                            <li>
+                                设计棋盘格图像角点自动提取与时序跟踪流程，
+                                基于多尺度四象限模板响应、NMS、梯度方向分析等方法获取亚像素角点，
+                                并通过棋盘格结构能量函数完成拓扑重建；
+                                结合金字塔光流与标定板形心匹配，建立多帧稳定的 3D-2D 对应关系。
+                            </li>
+
+                            <li>
+                                基于 OpenCV 重投影误差模型优化相机内参、畸变参数及各帧相机位姿，
+                                以标定板角点的三维真实坐标和图像观测坐标为约束，
+                                通过非线性最小二乘最小化多帧重投影误差，完成相机侧独立标定。
+                            </li>
+
+                            <li>
+                                针对雷达点云设计粗精结合的 RANSAC 平面提取方法，
+                                以标定板中心为引导进行局部点云筛选和精拟合，
+                                通过多板联合迭代、点到平面距离重新分配及交线附近点剔除，
+                                稳定获取各标定板的平面法向、中心点和高质量内点集合。
+                            </li>
+
+                            <li>
+                                基于雷达平面内点到相机平面的距离构建外参优化残差，
+                                先利用多帧平面法向 SVD 求解旋转初值，
+                                再通过线性最小二乘估计平移初值，
+                                采用 Ceres 对旋转角轴和平移向量进行非线性优化，
+                                并通过时间戳最近邻匹配实现图像与点云数据同步。
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail-result">
+
+                    <strong>
+                        6-DoF
+                    </strong>
+
+                    <span>
+                        基于多帧多平面约束求解相机-雷达旋转与平移外参
+                    </span>
+
+                </div>
+
+
+                <div class="detail-tech-row">
+
+                    <span>OpenCV</span>
+                    <span>Camera Calibration</span>
+                    <span>RANSAC</span>
+                    <span>Point Cloud</span>
+                    <span>SVD</span>
+                    <span>Ceres Solver</span>
+                    <span>Sensor Fusion</span>
+
+                </div>
+
+            </article>
+
+        </section>
+
 
 
         <!-- =================================================
              比赛经历
         ================================================== -->
 
-<section
-    class="competitions-section"
-    id="competitions"
->
-
-    <div class="section-heading">
-
-        <div class="small-label">
-            COMPETITION EXPERIENCE
-        </div>
-
-        <h2>
-            <i class="fas fa-trophy"></i>
-            比赛经历
-        </h2>
-
-        <p>
-            机器人竞赛、智能控制工程实践
-        </p>
-
-    </div>
-
-
-    <div class="competition-list">
-
-
-        <!-- =================================================
-             RoboCup 2021
-        ================================================== -->
-
-        <article
-            class="competition-card"
-            id="robocup-detail"
+        <section
+            class="competitions-section"
+            id="competitions"
+            style="
+                margin-top: 110px;
+                padding-top: 30px;
+            "
         >
 
-            <div class="competition-image">
+            <div class="section-heading">
 
-                <img
-                    src="assets/images/Robocup2021.jpg"
-                    alt="RoboCup 2021 中国机器人大赛自动分拣项目"
-                >
+                <div class="small-label">
+                    COMPETITION EXPERIENCE
+                </div>
+
+                <h2>
+                    <i class="fas fa-trophy"></i>
+                    比赛经历
+                </h2>
+
+                <p>
+                    机器人竞赛、智能控制与机械系统工程实践
+                </p>
 
             </div>
 
 
-            <div class="competition-main">
-
-                <div class="competition-topline">
-
-                    <span class="competition-category">
-                        ROBOTICS · AUTONOMOUS SYSTEM
-                    </span>
-
-                    <span class="competition-year">
-                        2021.10 — 2022.04
-                    </span>
-
-                </div>
-
-                <h3>
-                    RoboCup 2021 中国机器人大赛
-                </h3>
-
-                <p class="competition-intro">
-                    自动分拣项目 · 全国一等奖（冠军）
-                </p>
+            <div class="competition-list">
 
 
-                <div class="competition-detail-grid">
+                <!-- =================================================
+                     RoboCup 2021
+                ================================================== -->
 
-                    <div>
+                <article
+                    class="competition-card"
+                    id="robocup-detail"
+                >
 
-                        <h4>
-                            项目概述
-                        </h4>
+                    <div class="competition-image">
 
-                        <p>
-                            面向机器人自动分拣任务，
-                            构建集循迹导航、视觉感知、目标抓取路径规划
-                            于一体的移动机器人系统，实现物料检测、定位、
-                            抓取、运输及分类投放的全流程自动化。
-                        </p>
+                        <img
+                            src="assets/images/Robocup2021.jpg"
+                            alt="RoboCup 2021 中国机器人大赛自动分拣项目"
+                        >
 
                     </div>
 
 
-                    <div>
+                    <div class="competition-main">
 
-                        <h4>
-                            主要工作
-                        </h4>
+                        <div class="competition-topline">
 
-                        <div class="competition-work">
+                            <span class="competition-category">
+                                ROBOTICS · AUTONOMOUS SYSTEM
+                            </span>
 
-                            <p>
-                                基于灰度传感器构建道路信息感知方法，
-                                通过灰度重心解算提取白线偏差，并结合预瞄控制
-                                与前馈 PID 调节运动控制指令，实现机器人白线循迹
-                                及复杂场地条件下的抗扰运行。
-                            </p>
+                            <span class="competition-year">
+                                2021.10 — 2022.04
+                            </span>
 
-                            <p>
-                                基于 OpenMV 搭建物料视觉检测与定位模块，
-                                通过图像处理获取目标位置，结合视觉伺服控制
-                                实现机械末端对目标物料的对准与抓取，
-                                提升物料操作过程中的定位精度与稳定性。
-                            </p>
+                        </div>
 
-                            <p>
-                                根据场地拓扑关系生成运输路径，并结合障碍物检测
-                                实现遇障后的自主绕行与路径调整，
-                                完成从物料获取到指定站点投放的自动分拣流程。
-                            </p>
 
-                            <p>
-                                参与循迹控制、视觉识别、机械执行机构与路径规划
-                                等模块的系统集成、参数调试及现场测试，
-                                完成机器人全流程任务的联调与性能验证。
-                            </p>
+                        <h3>
+                            RoboCup 2021 中国机器人大赛
+                        </h3>
+
+
+                        <p class="competition-intro">
+                            自动分拣项目 · 全国一等奖（冠军）
+                        </p>
+
+
+                        <!-- 改为上下排列 -->
+                        <div
+                            class="competition-detail-grid"
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                gap: 28px;
+                            "
+                        >
+
+                            <div>
+
+                                <h4>
+                                    项目概述
+                                </h4>
+
+                                <p>
+                                    面向机器人自动分拣任务，
+                                    构建集循迹导航、视觉感知、目标抓取路径规划
+                                    于一体的移动机器人系统，实现物料检测、定位、
+                                    抓取、运输及分类投放的全流程自动化。
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <h4>
+                                    主要工作
+                                </h4>
+
+                                <div class="competition-work">
+
+                                    <p>
+                                        基于灰度传感器构建道路信息感知方法，
+                                        通过灰度重心解算提取白线偏差，并结合预瞄控制
+                                        与前馈 PID 调节运动控制指令，实现机器人白线循迹
+                                        及复杂场地条件下的抗扰运行。
+                                    </p>
+
+                                    <p>
+                                        基于 OpenMV 搭建物料视觉检测与定位模块，
+                                        通过图像处理获取目标位置，结合视觉伺服控制
+                                        实现机械末端对目标物料的对准与抓取，
+                                        提升物料操作过程中的定位精度与稳定性。
+                                    </p>
+
+                                    <p>
+                                        根据场地拓扑关系生成运输路径，并结合障碍物检测
+                                        实现遇障后的自主绕行与路径调整，
+                                        完成从物料获取到指定站点投放的自动分拣流程。
+                                    </p>
+
+                                    <p>
+                                        参与循迹控制、视觉识别、机械执行机构与路径规划
+                                        等模块的系统集成、参数调试及现场测试，
+                                        完成机器人全流程任务的联调与性能验证。
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="competition-tags">
+
+                            <span>Gray Centroid Tracking</span>
+                            <span>Feedforward PID</span>
+                            <span>OpenMV Vision</span>
+                            <span>A* Path Planning</span>
+                            <span>Autonomous Sorting</span>
 
                         </div>
 
                     </div>
 
-                </div>
+                </article>
 
 
-                <div class="competition-tags">
 
-                    <span>Gray Centroid Tracking</span>
-                    <span>Feedforward PID</span>
-                    <span>OpenMV Vision</span>
-                    <span>A* Path Planning</span>
-                    <span>Autonomous Sorting</span>
+                <!-- =================================================
+                     RoboMaster 2022
+                ================================================== -->
 
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- =================================================
-             RoboMaster 2022
-        ================================================== -->
-
-        <article
-            class="competition-card"
-            id="robomaster-detail"
-        >
-
-            <div class="competition-image">
-
-                <img
-                    src="assets/images/Robomaster2022.jpg"
-                    alt="RoboMaster 2022 机甲大师超级对抗赛"
+                <article
+                    class="competition-card"
+                    id="robomaster-detail"
                 >
 
-            </div>
+                    <div class="competition-image">
 
-
-            <div class="competition-main">
-
-                <div class="competition-topline">
-
-                    <span class="competition-category">
-                        ROBOMASTER · MECHANICAL SYSTEM
-                    </span>
-
-                    <span class="competition-year">
-                        2021.10 — 2022.08
-                    </span>
-
-                </div>
-
-                <h3>
-                    RoboMaster 2022 机甲大师超级对抗赛
-                </h3>
-
-                <p class="competition-intro">
-                    全国一等奖
-                </p>
-
-
-                <div class="competition-detail-grid">
-
-                    <div>
-
-                        <h4>
-                            项目概述
-                        </h4>
-
-                        <p>
-                            面向步兵机器人云台系统的快速响应与稳定控制需求，
-                            开展云台机械结构设计、运动部件惯量分析及动态性能测试，
-                            为机器人姿态控制与视觉瞄准等上层控制任务提供可靠的机械平台。
-                        </p>
+                        <img
+                            src="assets/images/Robomaster2022.jpg"
+                            alt="RoboMaster 2022 机甲大师超级对抗赛"
+                        >
 
                     </div>
 
 
-                    <div>
+                    <div class="competition-main">
 
-                        <h4>
-                            主要工作
-                        </h4>
+                        <div class="competition-topline">
 
-                        <div class="competition-work">
+                            <span class="competition-category">
+                                ROBOMASTER · MECHANICAL SYSTEM
+                            </span>
 
-                            <p>
-                                负责步兵机器人云台机械系统的结构设计与装配测试，
-                                根据机器人运动需求完成关键机械部件的方案设计、
-                                结构布局及工程实现。
-                            </p>
+                            <span class="competition-year">
+                                2021.10 — 2022.08
+                            </span>
 
-                            <p>
-                                分析云台旋转部件的质量分布与转动惯量特性，
-                                开展机械系统惯量匹配与结构参数优化，
-                                降低运动过程中的负载变化对系统响应性能的影响。
-                            </p>
+                        </div>
 
-                            <p>
-                                搭建云台动态性能测试流程，采集系统运动过程中的
-                                角度、速度及响应数据，分析机械系统的动态特性，
-                                为后续控制算法设计、参数整定与性能优化提供实验依据。
-                            </p>
 
-                            <p>
-                                参与云台机械系统迭代、整机装配与联调测试，
-                                根据测试结果定位机械结构与运动性能问题，
-                                完成方案优化及比赛前系统验证。
-                            </p>
+                        <h3>
+                            RoboMaster 2022 机甲大师超级对抗赛
+                        </h3>
+
+
+                        <p class="competition-intro">
+                            全国一等奖
+                        </p>
+
+
+                        <!-- 改为上下排列 -->
+                        <div
+                            class="competition-detail-grid"
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                gap: 28px;
+                            "
+                        >
+
+                            <div>
+
+                                <h4>
+                                    项目概述
+                                </h4>
+
+                                <p>
+                                    面向步兵机器人云台系统的快速响应与稳定控制需求，
+                                    开展云台机械结构设计、运动部件惯量分析及动态性能测试，
+                                    为机器人姿态控制与视觉瞄准等上层控制任务提供可靠的机械平台。
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <h4>
+                                    主要工作
+                                </h4>
+
+                                <div class="competition-work">
+
+                                    <p>
+                                        负责步兵机器人云台机械系统的结构设计与装配测试，
+                                        根据机器人运动需求完成关键机械部件的方案设计、
+                                        结构布局及工程实现。
+                                    </p>
+
+                                    <p>
+                                        分析云台旋转部件的质量分布与转动惯量特性，
+                                        开展机械系统惯量匹配与结构参数优化，
+                                        降低运动过程中的负载变化对系统响应性能的影响。
+                                    </p>
+
+                                    <p>
+                                        搭建云台动态性能测试流程，采集系统运动过程中的
+                                        角度、速度及响应数据，分析机械系统的动态特性，
+                                        为后续控制算法设计、参数整定与性能优化提供实验依据。
+                                    </p>
+
+                                    <p>
+                                        参与云台机械系统迭代、整机装配与联调测试，
+                                        根据测试结果定位机械结构与运动性能问题，
+                                        完成方案优化及比赛前系统验证。
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="competition-tags">
+
+                            <span>Gimbal Mechanism</span>
+                            <span>Mechanical Design</span>
+                            <span>Inertia Matching</span>
+                            <span>Dynamic Response</span>
+                            <span>System Testing</span>
 
                         </div>
 
                     </div>
 
-                </div>
+                </article>
 
 
-                <div class="competition-tags">
 
-                    <span>Gimbal Mechanism</span>
-                    <span>Mechanical Design</span>
-                    <span>Inertia Matching</span>
-                    <span>Dynamic Response</span>
-                    <span>System Testing</span>
+                <!-- =================================================
+                     机械创新设计大赛
+                ================================================== -->
 
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- =================================================
-             机械创新设计大赛
-        ================================================== -->
-
-        <article
-            class="competition-card"
-            id="mechanical-detail"
-        >
-
-            <div class="competition-image">
-
-                <img
-                    src="assets/images/design.jpg"
-                    alt="第九届江苏省大学生机械创新设计大赛"
+                <article
+                    class="competition-card"
+                    id="mechanical-detail"
                 >
 
-            </div>
+                    <div class="competition-image">
 
-
-            <div class="competition-main">
-
-                <div class="competition-topline">
-
-                    <span class="competition-category">
-                        MECHANICAL INNOVATION · AERODYNAMICS
-                    </span>
-
-                    <span class="competition-year">
-                        2021.12 — 2022.07
-                    </span>
-
-                </div>
-
-                <h3>
-                    第九届江苏省大学生机械创新设计大赛
-                </h3>
-
-                <p class="competition-intro">
-                    省级二等奖 · 扑翼飞行器设计与实现
-                </p>
-
-
-                <div class="competition-detail-grid">
-
-                    <div>
-
-                        <h4>
-                            项目概述
-                        </h4>
-
-                        <p>
-                            面向扑翼飞行器的驱动与姿态调整需求，
-                            结合执行机构设计、扑翼运动参数分析与气动仿真，
-                            开展扑翼时序优化、舵机控制及样机实验验证，
-                            实现飞行器驱动系统的设计与性能优化。
-                        </p>
+                        <img
+                            src="assets/images/design.jpg"
+                            alt="第九届江苏省大学生机械创新设计大赛"
+                        >
 
                     </div>
 
 
-                    <div>
+                    <div class="competition-main">
 
-                        <h4>
-                            主要工作
-                        </h4>
+                        <div class="competition-topline">
 
-                        <div class="competition-work">
+                            <span class="competition-category">
+                                MECHANICAL INNOVATION · AERODYNAMICS
+                            </span>
 
-                            <p>
-                                负责扑翼飞行器执行驱动机构与姿态调整方案设计，
-                                根据飞行器运动需求分析扑翼机构的运动形式、
-                                驱动方式及舵机执行参数。
-                            </p>
+                            <span class="competition-year">
+                                2021.12 — 2022.07
+                            </span>
 
-                            <p>
-                                基于气动仿真分析不同扑翼运动时序及参数
-                                对飞行器气动力与运动效果的影响，
-                                优化扑翼频率、运动相位及舵机输出策略。
-                            </p>
+                        </div>
 
-                            <p>
-                                参与飞行器样机装配、执行机构调试与迭代测试，
-                                对比仿真分析与实际驱动效果，
-                                验证扑翼机构设计及参数优化方案的可行性。
-                            </p>
 
-                            <p>
-                                根据实验现象与测试结果调整机械结构及驱动参数，
-                                完成扑翼执行系统的优化与性能验证。
-                            </p>
+                        <h3>
+                            第九届江苏省大学生机械创新设计大赛
+                        </h3>
+
+
+                        <p class="competition-intro">
+                            省级二等奖 · 扑翼飞行器设计与实现
+                        </p>
+
+
+                        <!-- 改为上下排列 -->
+                        <div
+                            class="competition-detail-grid"
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                gap: 28px;
+                            "
+                        >
+
+                            <div>
+
+                                <h4>
+                                    项目概述
+                                </h4>
+
+                                <p>
+                                    面向扑翼飞行器的驱动与姿态调整需求，
+                                    结合执行机构设计、扑翼运动参数分析与气动仿真，
+                                    开展扑翼时序优化、舵机控制及样机实验验证，
+                                    实现飞行器驱动系统的设计与性能优化。
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <h4>
+                                    主要工作
+                                </h4>
+
+                                <div class="competition-work">
+
+                                    <p>
+                                        负责扑翼飞行器执行驱动机构与姿态调整方案设计，
+                                        根据飞行器运动需求分析扑翼机构的运动形式、
+                                        驱动方式及舵机执行参数。
+                                    </p>
+
+                                    <p>
+                                        基于气动仿真分析不同扑翼运动时序及参数
+                                        对飞行器气动力与运动效果的影响，
+                                        优化扑翼频率、运动相位及舵机输出策略。
+                                    </p>
+
+                                    <p>
+                                        参与飞行器样机装配、执行机构调试与迭代测试，
+                                        对比仿真分析与实际驱动效果，
+                                        验证扑翼机构设计及参数优化方案的可行性。
+                                    </p>
+
+                                    <p>
+                                        根据实验现象与测试结果调整机械结构及驱动参数，
+                                        完成扑翼执行系统的优化与性能验证。
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="competition-tags">
+
+                            <span>Flapping-Wing UAV</span>
+                            <span>Actuator Design</span>
+                            <span>Aerodynamic Simulation</span>
+                            <span>Servo Control</span>
+                            <span>Prototype Testing</span>
 
                         </div>
 
                     </div>
 
-                </div>
-
-
-                <div class="competition-tags">
-
-                    <span>Flapping-Wing UAV</span>
-                    <span>Actuator Design</span>
-                    <span>Aerodynamic Simulation</span>
-                    <span>Servo Control</span>
-                    <span>Prototype Testing</span>
-
-                </div>
+                </article>
 
             </div>
 
-        </article>
-
-    </div>
-
-</section>
+        </section>
 
 
 
@@ -1996,6 +2209,7 @@
         </section>
 
 
+
         <!-- =================================================
              教育与经历
         ================================================== -->
@@ -2072,6 +2286,7 @@
         </section>
 
 
+
         <!-- =================================================
              联系方式
         ================================================== -->
@@ -2106,10 +2321,10 @@
 
         </section>
 
-
     </main>
 
 </div>
+
 
 
 <!-- =====================================================
@@ -2124,4 +2339,5 @@
 
 
 </body>
+
 </html>
