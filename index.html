@@ -688,7 +688,7 @@
                  无人机项目
             ================================================== -->
 
-            <article
+<article
     class="project-detail-block"
     id="uav-detail"
 >
@@ -728,7 +728,95 @@
     </div>
 
 
-    <!-- 内容主体：强制上下排列 -->
+    <!-- =================================================
+         UAV Simulation Videos
+    ================================================== -->
+
+    <div class="uav-video-section">
+
+        <div class="uav-video-grid">
+
+            <!-- 视频一：视觉感知与自主规划 -->
+            <div class="uav-video-card">
+
+                <div class="uav-video-wrapper">
+
+                    <video
+                        controls
+                        preload="metadata"
+                        playsinline
+                    >
+                        <source
+                            src="assets/videos/uav-vision-planning.mp4"
+                            type="video/mp4"
+                        >
+
+                        您的浏览器不支持 HTML5 视频播放。
+                    </video>
+
+                </div>
+
+                <div class="uav-video-caption">
+
+                    <h4>
+                        视觉感知与自主规划仿真
+                    </h4>
+
+                    <p>
+                        展示无人机基于 YOLOv8 与深度相机完成目标检测、
+                        三维定位、视觉引导接近及自主路径规划的仿真过程。
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 视频二：干扰估计与补偿 -->
+            <div class="uav-video-card">
+
+                <div class="uav-video-wrapper">
+
+                    <video
+                        controls
+                        preload="metadata"
+                        playsinline
+                    >
+                        <source
+                            src="assets/videos/uav-disturbance-estimation.mp4"
+                            type="video/mp4"
+                        >
+
+                        您的浏览器不支持 HTML5 视频播放。
+                    </video>
+
+                </div>
+
+                <div class="uav-video-caption">
+
+                    <h4>
+                        干扰估计与补偿仿真
+                    </h4>
+
+                    <p>
+                        展示负载变化及外部扰动条件下，
+                        EKF / FR-MHE 对等效加速度干扰进行估计，
+                        并将估计结果引入 NMPC 预测模型进行补偿的初步验证。
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         Project Content
+    ================================================== -->
+
     <div
         class="project-detail-grid"
         style="
@@ -844,7 +932,10 @@
     </div>
 
 
-    <!-- 项目结果 -->
+    <!-- =================================================
+         Project Result
+    ================================================== -->
+
     <div class="detail-result">
 
         <strong>
@@ -858,7 +949,10 @@
     </div>
 
 
-    <!-- 技术栈 -->
+    <!-- =================================================
+         Technology Tags
+    ================================================== -->
+
     <div class="detail-tech-row">
 
         <span>YOLOv8</span>
