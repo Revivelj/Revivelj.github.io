@@ -995,104 +995,350 @@
                  模型部署项目
             ================================================== -->
 
+           <article
+    class="project-detail-block"
+    id="ascend-optimization-detail"
+>
+
+    <div class="project-detail-topline">
+
+        <span>
+            03 · AI INFRA / GRAPH OPTIMIZATION
+        </span>
+
+        <a href="#overview">
+            返回概览 ↑
+        </a>
+
+    </div>
+
+    <h3>
+        昇腾 CANN 平台模型图与算子级推理优化
+    </h3>
+
+    <p class="project-detail-intro">
+        面向昇腾 CANN 平台上的视觉感知与 Transformer 模型部署需求，
+        开展计算图冗余消除、算子融合、数据排布优化与结构级性能调优，
+        在保持模型特征响应一致性的前提下降低推理时延与内存访问开销。
+    </p>
+
+    <div class="project-detail-image">
+
+        <img
+            src="assets/images/ascend-optimization.png"
+            alt="昇腾 CANN 平台模型图与算子级推理优化"
+        >
+
+    </div>
+
+    <div class="project-detail-grid">
+
+        <div>
+
+            <h4>
+                项目背景
+            </h4>
+
+            <p>
+                深度学习模型经 ATC 转换至昇腾 OM 格式后，
+                仍可能存在冗余计算、算子结构不合理及数据排布转换开销较大的问题。
+                本项目针对 IPM-PID 视觉感知模型与 Transformer 模型，
+                从计算图结构和算子执行路径两个层面开展优化，
+                在保证模型计算结果与特征响应一致的前提下提升推理效率。
+            </p>
+
+        </div>
+
+        <div>
+
+            <h4>
+                主要工作
+            </h4>
+
+            <ul>
+
+                <li>
+                    基于昇腾 CANN 平台经 ATC 完成模型转换与性能分析，
+                    针对 IPM-PID 视觉感知模型开展冗余检测与图级裁剪，
+                    剔除零概率分支、恒等映射等无效计算节点，
+                    并将 Conv-BN 结构等价融合至卷积层。
+                </li>
+
+                <li>
+                    针对 Transformer 推理过程中的数据排布与算子访问开销，
+                    重构 QKV 映射与多头拆分流程，将转置操作下沉至 MatMul 输出侧，
+                    减少中间张量搬运与 Layout Transform 开销。
+                </li>
+
+                <li>
+                    设计结构优化前后的精度对齐与特征响应验证流程，
+                    对比模型输出、关键中间层特征及端到端推理结果，
+                    确保图优化与算子重构不改变模型计算语义。
+                </li>
+
+                <li>
+                    完成不同优化策略的性能测试与收益分析，
+                    使 IPM-PID 模型推理时延降低约 6.5%，
+                    Transformer 内存访问开销降低约 60%。
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="detail-result">
+
+        <strong>6.5%</strong>
+
+        <span>
+            IPM-PID 推理时延降低；Transformer 内存访问开销降低约 60%
+        </span>
+
+    </div>
+
+    <div class="detail-tech-row">
+
+        <span>CANN</span>
+        <span>ATC</span>
+        <span>OM</span>
+        <span>Graph Optimization</span>
+        <span>Operator Optimization</span>
+        <span>Transformer</span>
+
+    </div>
+
+</article>
+
+
             <article
-                class="project-detail-block"
-                id="model-detail"
-            >
+    class="project-detail-block"
+    id="quantization-detail"
+>
 
-                <div class="project-detail-topline">
+    <div class="project-detail-topline">
 
-                    <span>
-                        03 · AI ENGINEERING / MODEL DEPLOYMENT
-                    </span>
+        <span>
+            04 · MODEL COMPRESSION / QUANTIZATION
+        </span>
 
-                    <a href="#overview">
-                        返回概览 ↑
-                    </a>
+        <a href="#overview">
+            返回概览 ↑
+        </a>
 
-                </div>
+    </div>
 
-                <h3>
-                    深度学习模型部署与推理优化
-                </h3>
+    <h3>
+        Transformer 混合精度量化与模型压缩
+    </h3>
 
-                <p class="project-detail-intro">
-                    面向深度学习模型在边缘计算设备上的部署需求，
-                    开展模型转换、推理优化、性能测试与部署适配工作。
-                </p>
+    <p class="project-detail-intro">
+        面向 Transformer 模型在昇腾平台上的高效部署需求，
+        设计融合激活校准、通道级权重量化与逐层敏感度回退的混合精度量化方案，
+        在保持模型精度的同时降低模型存储与计算开销。
+    </p>
+
+    <div class="project-detail-image">
+
+        <img
+            src="assets/images/quantization.png"
+            alt="Transformer 混合精度量化与模型压缩"
+        >
+
+    </div>
+
+    <div class="project-detail-grid">
+
+        <div>
+
+            <h4>
+                项目背景
+            </h4>
+
+            <p>
+                Transformer 模型通常具有较大的参数规模和较高的计算开销，
+                直接采用低比特量化容易受到激活分布、异常值和不同层敏感度差异的影响，
+                导致模型精度下降。本项目针对 Transformer 模型设计混合精度量化流程，
+                在模型压缩率、推理效率和任务精度之间进行平衡。
+            </p>
+
+        </div>
+
+        <div>
+
+            <h4>
+                主要工作
+            </h4>
+
+            <ul>
+
+                <li>
+                    设计面向 Transformer 的混合精度量化方案，
+                    融合 IFMR 激活校准、per-channel 权重量化及自适应对称/非对称量化策略，
+                    根据不同层的数值分布选择合适的量化方式。
+                </li>
+
+                <li>
+                    建立逐层量化敏感度分析流程，
+                    通过对关键层进行精度评估并结合二分回退策略，
+                    对高敏感度层保留更高精度，降低整体量化误差累积。
+                </li>
+
+                <li>
+                    搭建量化模型的端到端精度验证流程，
+                    对比量化前后模型输出及任务指标，
+                    在 210×13 输出规模验证中实现零精度损失。
+                </li>
+
+                <li>
+                    在满足精度约束的前提下优化模型位宽分配，
+                    将量化模型压缩至原始模型大小的约 33%，
+                    降低模型存储和部署成本。
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="detail-result">
+
+        <strong>33%</strong>
+
+        <span>
+            模型压缩至原始大小的约 33%，验证中实现零精度损失
+        </span>
+
+    </div>
+
+    <div class="detail-tech-row">
+
+        <span>PTQ</span>
+        <span>Mixed Precision</span>
+        <span>IFMR</span>
+        <span>Per-channel Quantization</span>
+        <span>Transformer</span>
+        <span>CANN</span>
+
+    </div>
+
+</article>
 
 
-                <div class="project-detail-image">
+            <article
+    class="project-detail-block"
+    id="ascend-skill-detail"
+>
 
-                    <img
-                        src="assets/images/model.png"
-                        alt="深度学习模型部署与推理优化"
-                    >
+    <div class="project-detail-topline">
 
-                </div>
+        <span>
+            05 · AGENT / AI ENGINEERING / TOOLCHAIN
+        </span>
 
+        <a href="#overview">
+            返回概览 ↑
+        </a>
 
-                <div class="project-detail-grid">
+    </div>
 
-                    <div>
+    <h3>
+        基于 Agent Skill 的昇腾模型转换自动化工具链
+    </h3>
 
-                        <h4>
-                            项目背景
-                        </h4>
+    <p class="project-detail-intro">
+        面向昇腾模型部署流程中模型解析、配置生成与 OM 转换等重复性操作，
+        设计基于 Agent Skill 的自动化编排工具链，
+        实现从 ONNX 模型到目标芯片 OM 文件的端到端自动转换与平台适配。
+    </p>
 
-                        <p>
-                            深度学习模型在实际设备部署时通常受到计算资源、
-                            内存占用和推理延迟等因素限制。
-                            本项目围绕模型从训练框架到实际推理平台的转换流程，
-                            分析模型精度与推理性能之间的关系。
-                        </p>
+    <div class="project-detail-image">
 
-                    </div>
+        <img
+            src="assets/images/ascend-skill.png"
+            alt="基于 Agent Skill 的昇腾模型转换自动化工具链"
+        >
 
+    </div>
 
-                    <div>
+    <div class="project-detail-grid">
 
-                        <h4>
-                            主要工作
-                        </h4>
+        <div>
 
-                        <ul>
+            <h4>
+                项目背景
+            </h4>
 
-                            <li>
-                                完成 PyTorch 模型导出与格式转换
-                            </li>
+            <p>
+                昇腾模型部署通常需要依次完成模型结构解析、输入输出配置、
+                ATC 参数设置、目标芯片适配及 OM 文件生成等操作。
+                不同模型和芯片平台之间存在配置差异，人工执行过程繁琐且容易出现参数错误。
+                本项目将模型转换流程封装为可调用的 Agent Skill，
+                通过工具链编排实现模型部署过程的自动化和标准化。
+            </p>
 
-                            <li>
-                                搭建 ONNX 模型推理流程
-                            </li>
+        </div>
 
-                            <li>
-                                开展模型精度与推理速度测试
-                            </li>
+        <div>
 
-                            <li>
-                                进行边缘设备部署适配与性能分析
-                            </li>
+            <h4>
+                主要工作
+            </h4>
 
-                        </ul>
+            <ul>
 
-                    </div>
+                <li>
+                    设计端到端 ONNX → OM 模型转换 Skill，
+                    将模型解析、输入输出信息提取、配置文件生成及 ATC 转换等步骤
+                    封装为可被 Agent 调用的工具能力。
+                </li>
 
-                </div>
+                <li>
+                    构建模型转换流程的自动化编排逻辑，
+                    根据模型结构和用户输入自动生成转换配置，
+                    减少人工填写动态尺寸、输入格式及数据类型等参数的工作量。
+                </li>
 
+                <li>
+                    针对 Ascend 310、Ascend 910 等不同目标芯片设计参数适配机制，
+                    根据目标硬件自动匹配对应的 ATC 编译参数和转换配置。
+                </li>
 
-                <div class="detail-tech-row">
+                <li>
+                    打通模型仓库、模型解析工具、配置生成模块与 OM 转换工具链，
+                    实现从模型文件输入到目标平台 OM 文件输出的一键式生成流程。
+                </li>
 
-                    <span>PyTorch</span>
-                    <span>ONNX</span>
-                    <span>CANN</span>
-                    <span>Model Optimization</span>
-                    <span>Edge Deployment</span>
+            </ul>
 
-                </div>
+        </div>
 
-            </article>
+    </div>
 
+    <div class="detail-result">
+
+        <strong>ONNX → OM</strong>
+
+        <span>
+            支持多芯片平台自动适配与模型转换流程一键编排
+        </span>
+
+    </div>
+
+    <div class="detail-tech-row">
+
+        <span>Agent</span>
+        <span>Skill</span>
+        <span>ONNX</span>
+        <span>ATC</span>
+        <span>OM</span>
+        <span>Ascend 310/910</span>
+
+    </div>
+
+</article>
 
             <!-- =================================================
                  相机雷达标定项目
