@@ -995,7 +995,7 @@
                  模型部署项目
             ================================================== -->
 
-        <article
+     <article
     class="project-detail-block"
     id="ascend-optimization-detail"
 >
@@ -1003,7 +1003,7 @@
     <div class="project-detail-topline">
 
         <span>
-            03 · AI INFRA / GRAPH OPTIMIZATION
+            03 · AI INFRA / GRAPH & OPERATOR OPTIMIZATION
         </span>
 
         <a href="#overview">
@@ -1020,10 +1020,20 @@
 
     <p class="project-detail-intro">
         面向昇腾 CANN 平台上的视觉感知与 Transformer 模型部署需求，
-        开展计算图冗余消除、算子融合、数据排布重映射与自定义算子优化，
-        在保持模型计算语义与特征响应一致的前提下，
-        降低推理时延、内存访问开销及算子调度成本。
+        从计算图结构、算子执行路径和数据内存布局三个层面开展推理性能优化，
+        通过图级冗余消除、算子融合及硬件友好的数据排布设计，
+        在保持模型计算结果与特征响应一致的前提下降低推理时延和内存访问开销。
     </p>
+
+
+    <div class="project-detail-image">
+
+        <img
+            src="assets/images/ascend-optimization.png"
+            alt="昇腾 CANN 平台模型图与算子级推理优化"
+        >
+
+    </div>
 
 
     <div class="project-detail-grid">
@@ -1036,12 +1046,13 @@
             </h4>
 
             <p>
-                原始深度学习模型存在计算图冗余、算子执行路径不合理以及中间张量频繁搬运等问题。
-                本项目针对自动驾驶视觉感知模型与 Transformer 模型，
-                从计算图结构优化和底层算子执行优化两个层面开展性能调优。
-                重点针对多头注意力中的矩阵乘法与数据排布转换过程，
-                通过图级裁剪、算子融合及硬件友好的数据布局设计，
-                减少不必要的全局内存访问和 Kernel 调度开销。
+                深度学习模型经 ATC 转换为昇腾 OM 格式后，
+                仍可能存在计算图冗余、算子组合不合理以及中间张量频繁搬运等问题。
+                本项目围绕自动驾驶视觉感知模型与 Transformer 模型，
+                分别从计算图级别和底层算子级别开展性能调优。
+                一方面通过删除无效节点、等价融合等方式减少冗余计算；
+                另一方面针对多头注意力中的矩阵乘法与数据排布转换，
+                优化计算结果的搬出路径和内存布局，降低额外访存与 Kernel 调度开销。
             </p>
 
         </div>
@@ -1057,40 +1068,38 @@
             <ul>
 
                 <li>
-                    基于昇腾 CANN 平台经 ATC 完成模型转换、算子分析与性能 profiling，
-                    针对 IPM-PID 视觉感知模型开展计算图冗余检测与结构级裁剪，
-                    剔除零概率分支、恒等映射等无效节点，
-                    并将 Conv-BN 结构进行等价融合，在保持特征响应一致的前提下减少冗余计算。
+                    基于昇腾 CANN / ATC 完成模型转换、算子分析与性能 profiling，
+                    针对 IPM-PID 视觉感知模型检查计算图中的冗余分支、
+                    恒等映射及无效计算节点，并进行图级裁剪与结构清理。
                 </li>
 
                 <li>
-                    针对 Transformer 多头注意力中的 QKV 映射与多头数据排布问题，
-                    分析 MatMul 输出布局与下游 Attention 所需
-                    [B, H, S, D] 布局之间的数据重排开销，
-                    设计 QKV 映射重构与数据排布重映射方案，
-                    减少独立 Transpose 算子带来的中间张量写回、重新读取及调度开销。
+                    对模型中的 Conv-BN 等连续算子进行等价变换与融合，
+                    在保证模型输出和关键中间层特征响应一致的前提下，
+                    减少不必要的算子执行与中间张量传递，优化整体计算图执行路径。
                 </li>
 
                 <li>
-                    采用 MatMulImpl 与 Datacopyout callback 融合实现计算与数据搬出协同，
-                    在矩阵乘法结果写回阶段直接完成目标布局映射，
-                    利用硬件 Fixpipe 的 NZ-ND 数据转换能力，
-                    将结果直接写入多头注意力所需的目标内存位置，
-                    避免生成中间 [B, S, N] 张量后再执行独立 Transpose。
+                    针对 Transformer 多头注意力中的 QKV 映射与数据排布转换问题，
+                    分析 MatMul 输出布局与下游所需
+                    [B, H, S, D] 布局之间的重排开销，
+                    设计 MatMul-Transpose 融合方案，避免中间
+                    [B, S, N] 张量的额外写回、读取和再次写回。
                 </li>
 
                 <li>
-                    设计面向多核执行的数据切分与协作机制，
-                    通过按序列长度和 Head Dimension 进行任务划分，
-                    保证单个计算任务的 head 维度完整性，
-                    并利用计算与搬出流水线重叠降低同步等待和流水线空泡。
+                    基于 MatMulImpl 与 Datacopyout callback 实现计算与数据搬出协同，
+                    利用 Fixpipe 的 NZ-ND 转换能力直接生成目标布局，
+                    并结合多核任务切分和计算-搬出流水线重叠，
+                    降低数据搬运、Kernel 调度及下游算子等待开销。
                 </li>
 
                 <li>
                     搭建优化前后的精度对齐与性能评估流程，
-                    对比端到端输出、关键中间层特征及算子级访存行为，
-                    验证图优化与算子重构的计算等价性，
-                    并分析 GM 访存次数、Kernel 调度数量和内存访问开销等指标。
+                    对比端到端输出、关键中间层特征、GM 访存行为及 Kernel 数量，
+                    验证图优化和算子重构的计算等价性，
+                    使 IPM-PID 推理时延降低约 6.5%，
+                    Transformer 内存访问开销降低约 60%。
                 </li>
 
             </ul>
@@ -1119,6 +1128,7 @@
         <span>Graph Optimization</span>
         <span>Operator Fusion</span>
         <span>Fixpipe</span>
+        <span>NZ-ND</span>
         <span>Transformer</span>
 
     </div>
