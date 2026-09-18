@@ -1907,6 +1907,10 @@
      RoboMaster 2022
 ================================================= -->
 
+<!-- =================================================
+     RoboMaster 2022
+================================================== -->
+
 <article
     class="competition-card"
     id="robomaster-detail"
@@ -1947,10 +1951,9 @@
         </p>
 
 
-        <!-- 上下排列 -->
-        <div
-            class="competition-detail-grid competition-detail-vertical"
-        >
+        <div class="competition-detail-grid competition-detail-vertical">
+
+            <!-- 项目概述 -->
 
             <div>
 
@@ -1959,14 +1962,13 @@
                 </h4>
 
                 <p>
-                    面向 RoboMaster 步兵机器人在高速运动和高画面延迟条件下的精准射击需求，
-                    设计并实现基于视觉感知的自动瞄准系统。系统通过装甲板检测、目标三维位置解算、
-                    卡尔曼滤波、运动预测及弹道补偿，将视觉识别结果转换为云台的实时瞄准指令，
-                    同时支持能量机关目标识别与运动预测，提高机器人对机动目标的跟踪能力和射击命中率。
+                    面向 RoboMaster 步兵机器人精准射击需求，实现集装甲板识别、目标预测与弹道补偿于一体的视觉自瞄系统，提升机动目标跟踪和射击命中率。
                 </p>
 
             </div>
 
+
+            <!-- 主要工作 -->
 
             <div>
 
@@ -1974,43 +1976,34 @@
                     主要工作
                 </h4>
 
-                <div class="competition-work">
+                <ul class="competition-work-list">
 
-                    <p>
-                        负责步兵机器人视觉自瞄算法开发，基于颜色通道差分、二值化、
-                        形态学处理及轮廓分析提取敌方装甲板灯条特征，并通过灯条匹配完成装甲板识别。
-                    </p>
+                    <li>
+                        基于颜色通道差分、形态学处理及灯条匹配，
+                        实现敌方装甲板检测与目标筛选。
+                    </li>
 
-                    <p>
-                        基于装甲板四个角点及相机内参，使用 PnP 位姿解算方法获取目标装甲板
-                        在相机坐标系下的三维位置，并结合相机与云台之间的坐标变换，
-                        将目标位置映射至云台控制坐标系。
-                    </p>
+                    <li>
+                        使用 PnP 位姿解算获取装甲板三维位置，
+                        完成相机坐标系到云台坐标系的转换。
+                    </li>
 
-                    <p>
-                        建立基于匀速运动模型的卡尔曼滤波器，对装甲板位置和速度进行状态估计，
-                        对视觉测量噪声进行平滑处理，并利用估计速度预测目标未来位置，
-                        补偿图像处理、通信及弹丸飞行造成的系统延迟。
-                    </p>
+                    <li>
+                        建立匀速运动模型卡尔曼滤波器，
+                        实现目标位置估计、速度估计及运动预测。
+                    </li>
 
-                    <p>
-                        设计弹道补偿算法，根据目标距离、弹丸初速度及弹道拟合模型，
-                        计算云台俯仰角补偿和弹丸飞行时间，结合目标运动速度计算水平提前量，
-                        实现带提前量的自动瞄准。
-                    </p>
+                    <li>
+                        结合弹丸飞行时间、目标距离和运动速度，
+                        实现水平提前量及俯仰角弹道补偿。
+                    </li>
 
-                    <p>
-                        针对能量机关的圆周运动特征，建立以角度和角速度为状态变量的卡尔曼滤波模型，
-                        实现对目标旋转状态的估计与预测；同时根据目标速度方差判断目标加减速程度，
-                        自适应调整射频，降低机动目标预测误差对命中率的影响。
-                    </p>
+                    <li>
+                        针对能量机关建立角度—角速度预测模型，
+                        并根据目标速度方差实现自适应射频控制。
+                    </li>
 
-                    <p>
-                        参与自瞄系统的软件测试与参数调试，验证滤波平滑效果、目标速度收敛特性、
-                        弹道拟合精度及不同弹速、目标距离条件下的射击补偿效果。
-                    </p>
-
-                </div>
+                </ul>
 
             </div>
 
@@ -2033,119 +2026,120 @@
 
 
 
-                <!-- =================================================
-                     机械创新设计大赛
-                ================================================== -->
+<!-- =================================================
+     机械创新设计大赛
+================================================== -->
 
-                <article
-                    class="competition-card"
-                    id="mechanical-detail"
-                >
+<article
+    class="competition-card"
+    id="mechanical-detail"
+>
 
-                    <div class="competition-image">
+    <div class="competition-image">
 
-                        <img
-                            src="assets/images/design.jpg"
-                            alt="第九届江苏省大学生机械创新设计大赛"
-                        >
+        <img
+            src="assets/images/design.jpg"
+            alt="第九届江苏省大学生机械创新设计大赛"
+        >
 
-                    </div>
-
-
-                    <div class="competition-main">
-
-                        <div class="competition-topline">
-
-                            <span class="competition-category">
-                                MECHANICAL INNOVATION · AERODYNAMICS
-                            </span>
-
-                            <span class="competition-year">
-                                2021.12 — 2022.07
-                            </span>
-
-                        </div>
+    </div>
 
 
-                        <h3>
-                            第九届江苏省大学生机械创新设计大赛
-                        </h3>
+    <div class="competition-main">
+
+        <div class="competition-topline">
+
+            <span class="competition-category">
+                MECHANICAL INNOVATION · AERODYNAMICS
+            </span>
+
+            <span class="competition-year">
+                2021.12 — 2022.07
+            </span>
+
+        </div>
 
 
-                        <p class="competition-intro">
-                            省级二等奖 · 扑翼飞行器设计与实现
-                        </p>
+        <h3>
+            第九届江苏省大学生机械创新设计大赛
+        </h3>
 
 
-                        <!-- 改为上下排列 -->
-                        <div
-                            class="competition-detail-grid"
-                            style="
-                                display: flex;
-                                flex-direction: column;
-                                gap: 28px;
-                            "
-                        >
-
-                            <div>
-
-                                <h4>
-                                    项目概述
-                                </h4>
-
-                                <p>
-                                    面向扑翼飞行器的驱动与姿态调整需求，
-                                    结合执行机构设计、扑翼运动参数分析与气动仿真，
-                                    开展扑翼时序优化、舵机控制及样机实验验证，
-                                    实现飞行器驱动系统的设计与性能优化。
-                                </p>
-
-                            </div>
+        <p class="competition-intro">
+            省级二等奖 · 扑翼飞行器设计与实现
+        </p>
 
 
-                            <div>
+        <div class="competition-detail-grid competition-detail-vertical">
 
-                                <h4>
-                                    主要工作
-                                </h4>
+            <!-- 项目概述 -->
 
-                                <div class="competition-work">
+            <div>
 
-                                    <p>
-                                        负责扑翼飞行器执行驱动机构与姿态调整方案设计，
-                                        根据飞行器运动需求分析扑翼机构的运动形式、
-                                        驱动方式及舵机执行参数。
-                                    </p>
+                <h4>
+                    项目概述
+                </h4>
 
-                                    <p>
-                                        参与飞行器样机装配、执行机构调试与迭代测试，
-                                        对比仿真分析与实际驱动效果，
-                                        验证扑翼机构设计及参数优化方案的可行性。
-                                    </p>
+                <p>
+                    面向扑翼飞行器的驱动与姿态调整需求，
+                    结合执行机构设计、扑翼运动参数分析与气动仿真，
+                    开展扑翼时序优化、舵机控制及样机实验验证，
+                    实现飞行器驱动系统的设计与性能优化。
+                </p>
 
-                                    <p>
-                                        根据实验现象与测试结果调整机械结构及驱动参数，
-                                        完成扑翼执行系统的优化与性能验证。
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
+            </div>
 
 
-                        <div class="competition-tags">
+            <!-- 主要工作 -->
 
-                            <span>Flapping-Wing UAV</span>
-                            <span>Actuator Design</span>
-                            <span>Prototype Testing</span>
+            <div>
 
-                        </div>
+                <h4>
+                    主要工作
+                </h4>
 
-                    </div>
+                <ul class="competition-work-list">
 
-                </article>
+                    <li>
+                        负责扑翼飞行器执行机构与姿态调整方案设计，
+                        分析扑翼运动形式、驱动方式及舵机参数。
+                    </li>
+
+                    <li>
+                        参与扑翼机构运动参数分析与气动仿真，
+                        优化扑翼时序及执行机构设计方案。
+                    </li>
+
+                    <li>
+                        完成飞行器样机装配、舵机调试及实验测试，
+                        验证机械结构与驱动方案的可行性。
+                    </li>
+
+                    <li>
+                        根据仿真和实验结果调整机械结构及驱动参数，
+                        完成扑翼执行系统的迭代优化。
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="competition-tags">
+
+            <span>Flapping-Wing UAV</span>
+            <span>Actuator Design</span>
+            <span>Motion Analysis</span>
+            <span>Aerodynamic Simulation</span>
+            <span>Prototype Testing</span>
+
+        </div>
+
+    </div>
+
+</article>
 
             </div>
 
