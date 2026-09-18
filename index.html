@@ -995,7 +995,7 @@
                  模型部署项目
             ================================================== -->
 
-     <article
+    <article
     class="project-detail-block"
     id="ascend-optimization-detail"
 >
@@ -1026,12 +1026,35 @@
     </p>
 
 
-    <div class="project-detail-image">
+    <!-- MatMul 原始过程与优化过程，两张图片并排展示 -->
+    <div class="ascend-image-grid">
 
-        <img
-            src="assets/images/ascend-optimization.png"
-            alt="昇腾 CANN 平台模型图与算子级推理优化"
-        >
+        <div class="ascend-image-item">
+
+            <img
+                src="assets/images/matmul-original.png"
+                alt="MatMul 算子原始计算过程"
+            >
+
+            <span>
+                MatMul 算子原始计算过程
+            </span>
+
+        </div>
+
+
+        <div class="ascend-image-item">
+
+            <img
+                src="assets/images/matmul-optimized.png"
+                alt="MatMul 算子优化计算过程"
+            >
+
+            <span>
+                MatMul 算子优化计算过程
+            </span>
+
+        </div>
 
     </div>
 
@@ -1046,13 +1069,13 @@
             </h4>
 
             <p>
-                深度学习模型经 ATC 转换为昇腾 OM 格式后，
-                仍可能存在计算图冗余、算子组合不合理以及中间张量频繁搬运等问题。
+                深度学习onnx模型可能存在计算图冗余、算子组合不合理以及中间张量频繁搬运等问题。
                 本项目围绕自动驾驶视觉感知模型与 Transformer 模型，
                 分别从计算图级别和底层算子级别开展性能调优。
                 一方面通过删除无效节点、等价融合等方式减少冗余计算；
                 另一方面针对多头注意力中的矩阵乘法与数据排布转换，
-                优化计算结果的搬出路径和内存布局，降低额外访存与 Kernel 调度开销。
+                优化计算结果的搬出路径和内存布局，
+                降低额外访存与 Kernel 调度开销。
             </p>
 
         </div>
@@ -1076,15 +1099,17 @@
                 <li>
                     对模型中的 Conv-BN 等连续算子进行等价变换与融合，
                     在保证模型输出和关键中间层特征响应一致的前提下，
-                    减少不必要的算子执行与中间张量传递，优化整体计算图执行路径。
+                    减少不必要的算子执行与中间张量传递，
+                    优化整体计算图执行路径。
                 </li>
 
                 <li>
                     针对 Transformer 多头注意力中的 QKV 映射与数据排布转换问题，
                     分析 MatMul 输出布局与下游所需
                     [B, H, S, D] 布局之间的重排开销，
-                    设计 MatMul-Transpose 融合方案，避免中间
-                    [B, S, N] 张量的额外写回、读取和再次写回。
+                    设计 MatMul-Transpose 融合方案，
+                    避免中间 [B, S, N] 张量的额外写回、
+                    读取和再次写回。
                 </li>
 
                 <li>
@@ -1103,7 +1128,9 @@
 
     <div class="detail-result">
 
-        <strong>6.5%</strong>
+        <strong>
+            6.5%
+        </strong>
 
         <span>
             IPM-PID 推理时延降低；Transformer 内存访问开销降低约 60%
@@ -1119,8 +1146,6 @@
         <span>OM</span>
         <span>Graph Optimization</span>
         <span>Operator Fusion</span>
-        <span>Fixpipe</span>
-        <span>NZ-ND</span>
         <span>Transformer</span>
 
     </div>
@@ -1497,7 +1522,6 @@
 
         <span>OpenCV</span>
         <span>Camera Calibration</span>
-        <span>LK Optical Flow</span>
         <span>RANSAC</span>
         <span>Point Cloud</span>
         <span>SVD</span>
