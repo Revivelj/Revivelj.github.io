@@ -1873,13 +1873,16 @@ img {
     }
 
 }
+.overview-item-content p {
+    margin-bottom: 0;
+}
+
 .overview-item-meta {
     display: block;
     margin-top: 7px;
     font-size: 0.72rem;
     line-height: 1.5;
     color: var(--muted-text, #888);
-    letter-spacing: 0.01em;
 }
 
 
